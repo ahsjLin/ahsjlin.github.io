@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Selection Sort</title>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+	<h2>Selection Sort</h2>
+	\(f(n)=\frac{n(n-1)}{2}\)
+	<br>
+	Time Complexity:\(O(n^2)\)
+	<p>
+	<hr>
+	<p>
+	Input: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+	<br />
+	Output: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
+	<br>
+	\(n=10\)
+	<br>
+	counter: \(106\) (why not \(45\)
+	<hr>
+	The 106 means number of executions.
+	<br />
+	The 45 means number of checking.(whether the v[i] is less than the v[j] in code.)
+	<h2>Code:(cpp)</h2>
+	<table>
+		<tr>
+			<td>
+	<embed type="text/html" src="selection_sort.cpp" width="500" height="500"> 
+			</td>
+			<td>
+		Red: int max(the graph number is inverted)
+		<br>
+		Blue: int j
+		<br>
+		Yellow: Sorted (first iteration)(int i)
+		<br>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif">
+			</td>
+		</tr>
+	</table>
+<hr>
+<h2>Reference</h2>
+<a href="https://en.wikipedia.org/wiki/Selection_sort" target="_blank">wiki</a>
+</body>
+</html>
