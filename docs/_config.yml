@@ -1,6 +1,6 @@
 theme: jekyll-theme-architect
-title: (7b)+1=7b
-author: sjay
+title: sjay
+description: 7b+1=7b
 language: zh
 avatar: "hidden.png"
-
+round-avatar: true
