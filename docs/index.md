@@ -6,7 +6,7 @@
 ### Algorithm
 <a href="cpp/algorithm/selection_sort/selection_sort.html" target="_blank">Selection Sort</a>
 <br />
-<a href="twitch/test.md" target="_blank">test</a>
+<a href="twitch/index.md" target="_blank">test</a>
 ### sam1268
 <a href="https://www.youtube.com/watch?v=xwKDL3vBC5U" target="_blank">海上的人</a>
 <br />
