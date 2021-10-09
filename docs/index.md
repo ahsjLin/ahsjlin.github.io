@@ -36,6 +36,16 @@
 <br />
 <a href="https://www.youtube.com/watch?v=C7mHc9HCRUc" target="_blank">陰天</a>
 <br />
+<a href="https://www.youtube.com/watch?v=2VsrZDGvuYs" target="_blank">洋蔥</a>
+<br />
+<a href="https://www.youtube.com/watch?v=YQpd5CwaZXA" target="_blank">偷走</a>
+<br />
+<a href="https://www.youtube.com/watch?v=zdCNtIpkbI0" target="_blank">我的世界沒有你</a>
+<br />
+<a href="https://www.youtube.com/watch?v=rJOAA7zmZ2M" target="_blank">小酒窩</a>
+<br />
+<a href="https://www.youtube.com/watch?v=rbNxlPrBdE8" target="_blank">你聽聽就好</a>
+<br />
 <a href="https://www.youtube.com/watch?v=HsnTxKrNvyo" target="_blank">死了都要爱</a>
 <br />
 
@@ -77,6 +87,10 @@
 ### Overload Rules
 <a href="https://www.youtube.com/watch?v=AdudcVcMOgg" target="_blank">辣台妹 HOT CHICK && SPOTLIGHT</a>
 <br />
+<a href="https://www.youtube.com/watch?v=Lc0W60S5vV0" target="_blank">RB生日會</a>
+<br />
+<a href="https://www.youtube.com/watch?v=BYPu6kjn8jo" target="_blank">車車世界</a>
+<br />
 <a href="https://www.youtube.com/watch?v=i-iq4Isn4Cg" target="_blank">戲謔派對</a>
 <br />
 <a href="https://www.youtube.com/watch?v=XTekN6XUvqA" target="_blank">RRRRRRRRR</a>
@@ -93,6 +107,8 @@
 <br />
 <a href="https://www.youtube.com/watch?v=cPFhQU0v364" target="_blank">分手發瘋了</a>
 <br />
+<a href="https://www.youtube.com/watch?v=sNDA7kJq3rA" target="_blank">RB測謊</a>
+<br />
 <a href="https://www.youtube.com/watch?v=amrKkdY1KQ8" target="_blank">RB爸爸選媳婦</a>
 <br />
 <a href="https://www.youtube.com/watch?v=3DU_m7Y1j2g" target="_blank">RB call in環節</a>
@@ -100,6 +116,8 @@
 <a href="https://www.youtube.com/watch?v=ZGuKpXmq6oE" target="_blank">RB call in .feat. 超負荷</a>
 <br />
 <a href="https://www.youtube.com/watch?v=aHlvmW7TXFk" target="_blank">連士兵</a>
+<br />
+<a href="https://www.youtube.com/watch?v=cRnJCsrGU0Y" target="_blank">1212</a>
 <br />
 <a href="https://www.youtube.com/watch?v=ux0lx89C51E" target="_blank">戰力指數飆起來</a>
 <br />
