@@ -6,6 +6,13 @@
 ### Algorithm
 <a href="cpp/algorithm/selection_sort/selection_sort.html" target="_blank">Selection Sort</a>
 <br />
+
+
+### Music
+<a href="https://www.youtube.com/watch?v=oCTGXSK9hWo" target="_blank">喜劇之王</a>
+<br />
+
+
 ### sam1268
 <a href="https://www.youtube.com/watch?v=xwKDL3vBC5U" target="_blank">海上的人</a>
 <br />
