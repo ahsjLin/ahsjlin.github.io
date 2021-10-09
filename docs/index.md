@@ -29,9 +29,6 @@
 <br />
 <a href="https://www.youtube.com/watch?v=HsnTxKrNvyo" target="_blank">死了都要爱</a>
 <br />
-<a href="https://www.youtube.com/watch?v=bnikzM43h3c" target="_blank">市長勉勵</a>
-<br />
-<a href="https://www.youtube.com/watch?v=rxrVSVRS_Ck" target="_blank">十大藥頭</a>
 
 
 
@@ -96,3 +93,7 @@
 <a href="https://www.youtube.com/watch?v=zSf12rwQ5G4" target="_blank">賭博默示錄</a>
 <br />
 <a href="https://www.youtube.com/watch?v=HLVYx81aG4o" target="_blank">自言自語</a>
+<br />
+<a href="https://www.youtube.com/watch?v=bnikzM43h3c" target="_blank">市長勉勵</a>
+<br />
+<a href="https://www.youtube.com/watch?v=rxrVSVRS_Ck" target="_blank">十大藥頭</a>
