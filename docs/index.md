@@ -83,6 +83,8 @@
 <br />
 <a href="https://www.youtube.com/watch?v=T0rm3hwY8lk" target="_blank">阿倪和9Q玩Apex</a>
 <br />
+<a href="https://www.youtube.com/watch?v=MuO9Dliddl8" target="_blank">緣分測試</a>
+<br />
 <a href="https://www.youtube.com/watch?v=5tD8lAw8lzQ" target="_blank">69兔</a>
 <br />
 <a href="https://www.youtube.com/watch?v=hneL2XbFQxs" target="_blank">不要4誠</a>
