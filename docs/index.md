@@ -97,6 +97,8 @@
 <br />
 <a href="https://www.youtube.com/watch?v=ZGuKpXmq6oE" target="_blank">RB call in .feat. 超負荷</a>
 <br />
+<a href="https://www.youtube.com/watch?v=aHlvmW7TXFk" target="_blank">連士兵</a>
+<br />
 <a href="https://www.youtube.com/watch?v=ux0lx89C51E" target="_blank">戰力指數飆起來</a>
 <br />
 <a href="https://www.youtube.com/watch?v=7juGn-kXFKE" target="_blank">秀才不出門</a>
