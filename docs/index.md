@@ -63,8 +63,6 @@
 <br />
 <a href="https://www.youtube.com/watch?v=ftfAAINr1zc" target="_blank">美秀集團-檔一根</a>
 <br />
-<a href="https://www.youtube.com/watch?v=Af_DsB0jwh4" target="_blank">我的世界沒有你</a>
-<br />
 <a href="https://www.youtube.com/watch?v=ynaARgs_yvQ" target="_blank">你的酒館對我打了烊</a>
 <br />
 <a href="https://www.youtube.com/watch?v=M1tmYdeh6ZM" target="_blank">你啊你啊</a>
