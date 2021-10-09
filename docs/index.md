@@ -11,6 +11,8 @@
 ### Music
 <a href="https://www.youtube.com/watch?v=oCTGXSK9hWo" target="_blank">Here we are again</a>
 <br />
+<a href="https://www.youtube.com/watch?v=OeJYC04XKh4" target="_blank">青春禮讚</a>
+<br />
 
 
 ### sam1268
