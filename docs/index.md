@@ -19,8 +19,6 @@
 <br />
 <a href="https://www.youtube.com/watch?v=TLTV9ty_Ngo" target="_blank">嘉賓</a>
 <br />
-<a href="https://www.youtube.com/watch?v=qRVUUmqgsi4" target="_blank">靠北工程師59930 </a>
-<br />
 <a href="https://www.youtube.com/watch?v=bnikzM43h3c" target="_blank">市長勉勵</a>
 <br />
 <a href="https://www.youtube.com/watch?v=rxrVSVRS_Ck" target="_blank">十大藥頭</a>
@@ -57,6 +55,15 @@
 <a href="https://www.youtube.com/watch?v=5tD8lAw8lzQ" target="_blank">69兔</a>
 <br />
 <a href="https://www.youtube.com/watch?v=hneL2XbFQxs" target="_blank">不要4誠</a>
-
-
-
+<br />
+<a href="https://www.youtube.com/watch?v=TvHMG53dAGg" target="_blank">2ㄏ2ㄏ</a>
+<br />
+<a href="https://www.youtube.com/watch?v=cPFhQU0v364" target="_blank">分手發瘋了</a>
+<br />
+<a href="https://www.youtube.com/watch?v=amrKkdY1KQ8" target="_blank">RB爸爸選媳婦</a>
+<br />
+<a href="https://www.youtube.com/watch?v=3DU_m7Y1j2g" target="_blank">RB call in環節</a>
+<br />
+<a href="https://www.youtube.com/watch?v=ZGuKpXmq6oE" target="_blank">RB call in .feat 超負荷</a>
+<br />
+<a href="https://www.youtube.com/watch?v=ux0lx89C51E" target="_blank">戰力指數飆起來</a>
