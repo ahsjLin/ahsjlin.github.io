@@ -64,6 +64,6 @@
 <br />
 <a href="https://www.youtube.com/watch?v=3DU_m7Y1j2g" target="_blank">RB call in環節</a>
 <br />
-<a href="https://www.youtube.com/watch?v=ZGuKpXmq6oE" target="_blank">RB call in .feat 超負荷</a>
+<a href="https://www.youtube.com/watch?v=ZGuKpXmq6oE" target="_blank">RB call in .feat. 超負荷</a>
 <br />
 <a href="https://www.youtube.com/watch?v=ux0lx89C51E" target="_blank">戰力指數飆起來</a>
