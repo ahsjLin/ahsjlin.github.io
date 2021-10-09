@@ -11,7 +11,63 @@
 ### Music
 <a href="https://www.youtube.com/watch?v=oCTGXSK9hWo" target="_blank">Here we are again</a>
 <br />
+<a href="https://www.youtube.com/watch?v=-MBN6ar79Fc" target="_blank">只要為你活一天</a>
+<br />
+<a href="https://www.youtube.com/watch?v=PORWzNz9o90" target="_blank">凹與山</a>
+<br />
+<a href="https://www.youtube.com/watch?v=peEAo2J7SuU" target="_blank">拼圖</a>
+<br />
+<a href="https://www.youtube.com/watch?v=vcncUq1Jc2M" target="_blank">房東的貓-斑馬 斑馬</a>
+<br />
+<a href="https://www.youtube.com/watch?v=DHMx_B9-zdY" target="_blank">房東的貓-你是我最愚蠢的一次浪漫</a>
+<br />
+<a href="https://www.youtube.com/watch?v=1kM4-o4c-qY" target="_blank">蒙毅將軍</a>
+<br />
+<a href="https://www.youtube.com/watch?v=6D79CYTxvOM" target="_blank">愛人錯過</a>
+<br />
+<a href="https://www.youtube.com/watch?v=137QoB4tQfc" target="_blank">堯十三 他媽的</a>
+<br />
+<a href="https://www.youtube.com/watch?v=PdX3Fu0dkWI" target="_blank">大海</a>
+<br />
+<a href="https://www.youtube.com/watch?v=GzoV8klyGrQ" target="_blank">聰明的寂寞</a>
+<br />
+<a href="https://www.youtube.com/watch?v=3Jec0Q1gsOo" target="_blank">草東沒有派對-山海</a>
+<br />
+<a href="https://www.youtube.com/watch?v=e0eHvsAFZbU" target="_blank">Frandé 法蘭黛樂團-Every Word</a>
+<br />
+<a href="https://www.youtube.com/watch?v=p6c4TztpxC4" target="_blank">Tizzy Bac - You'll see</a>
+<br />
 <a href="https://www.youtube.com/watch?v=OeJYC04XKh4" target="_blank">青春禮讚</a>
+<br />
+<a href="https://www.youtube.com/watch?v=UBT0_HEsKaI" target="_blank">你迎面走來，再面無表情地離開</a>
+<br />
+<a href="https://www.youtube.com/watch?v=YhjK6n-EOjY" target="_blank">怕胖團-魚</a>
+<br />
+<a href="https://www.youtube.com/watch?v=wtFWcZGZO5w" target="_blank">乾淨的房間-疤</a>
+<br />
+<a href="https://www.youtube.com/watch?v=iWenK1ys9U4" target="_blank">沈以誠 - 15樓窗外</a>
+<br />
+<a href="https://www.youtube.com/watch?v=UF2dBuJo9z0" target="_blank">沈以誠 - 裡面</a>
+<br />
+<a href="https://www.youtube.com/watch?v=qEx_jCzEjHI" target="_blank">沈以誠 - 說愛你</a>
+<br />
+<a href="https://www.youtube.com/watch?v=C9Nfp4pnXmQ" target="_blank">河仁傑 - 接不接受</a>
+<br />
+<a href="https://www.youtube.com/watch?v=GedcwChv85k" target="_blank">渣泥ZANI - 半心</a>
+<br />
+<a href="https://www.youtube.com/watch?v=pM9zZinLvkA" target="_blank">王藍茵-惡作劇</a>
+<br />
+<a href="https://www.youtube.com/watch?v=sq6r4JQpO7Y" target="_blank">天真世界的叛徒 - 叛徒版</a>
+<br />
+<a href="https://www.youtube.com/watch?v=Q0Nn4TUXH5Y" target="_blank">甜約翰 Sweet John - 留給你的我從未 Those Things I Kept</a>
+<br />
+<a href="https://www.youtube.com/watch?v=ftfAAINr1zc" target="_blank">美秀集團-檔一根</a>
+<br />
+<a href="https://www.youtube.com/watch?v=Af_DsB0jwh4" target="_blank">我的世界沒有你</a>
+<br />
+<a href="https://www.youtube.com/watch?v=ynaARgs_yvQ" target="_blank">你的酒館對我打了烊</a>
+<br />
+<a href="https://www.youtube.com/watch?v=M1tmYdeh6ZM" target="_blank">你啊你啊</a>
 <br />
 
 
