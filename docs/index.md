@@ -11,8 +11,6 @@
 ### Music
 <a href="https://www.youtube.com/watch?v=oCTGXSK9hWo" target="_blank">Here we are again</a>
 <br />
-<a href="https://www.youtube.com/watch?v=-MBN6ar79Fc" target="_blank">只要為你活一天</a>
-<br />
 <a href="https://www.youtube.com/watch?v=PORWzNz9o90" target="_blank">凹與山</a>
 <br />
 <a href="https://www.youtube.com/watch?v=peEAo2J7SuU" target="_blank">拼圖</a>
@@ -65,7 +63,11 @@
 <br />
 <a href="https://www.youtube.com/watch?v=ynaARgs_yvQ" target="_blank">你的酒館對我打了烊</a>
 <br />
+<a href="https://www.youtube.com/watch?v=9MMIB61e6sM" target="_blank">我把我的青春給你</a>
+<br />
 <a href="https://www.youtube.com/watch?v=M1tmYdeh6ZM" target="_blank">你啊你啊</a>
+<br />
+<a href="https://www.youtube.com/watch?v=y_oFumwbj3k" target="_blank">飛機場的10:30</a>
 <br />
 
 
