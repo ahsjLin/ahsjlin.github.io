@@ -10,10 +10,25 @@
 ### Music
 <a href="https://www.youtube.com/watch?v=oCTGXSK9hWo" target="_blank">Here we are again</a>
 <br />
-<!--
-<a href="https://www.youtube.com/watch?v=OeJYC04XKh4" target="_blank">青春禮讚</a>
+<a href="https://www.youtube.com/watch?v=sq6r4JQpO7Y" target="_blank">天真世界的叛徒(叛徒版)</a>
 <br />
 <a href="https://www.youtube.com/watch?v=PORWzNz9o90" target="_blank">凹與山</a>
+<br />
+<a href="https://www.youtube.com/watch?v=1kM4-o4c-qY" target="_blank">蒙毅將軍</a>
+<br />
+<a href="https://www.youtube.com/watch?v=6D79CYTxvOM" target="_blank">愛人錯過</a>
+<br />
+<a href="https://www.youtube.com/watch?v=GzoV8klyGrQ" target="_blank">聰明的寂寞</a>
+<br />
+<a href="https://www.youtube.com/watch?v=YhjK6n-EOjY" target="_blank">魚</a>
+<br />
+<a href="https://www.youtube.com/watch?v=ynaARgs_yvQ" target="_blank">你的酒館對我打了烊</a>
+<br />
+<a href="https://www.youtube.com/watch?v=M1tmYdeh6ZM" target="_blank">你啊你啊</a>
+<br />
+<a href="https://www.youtube.com/watch?v=y_oFumwbj3k" target="_blank">飛機場的10:30</a>
+<br />
+<a href="https://www.youtube.com/watch?v=4bSeT_9gmJs" target="_blank">安九</a>
 <br />
 <a href="https://www.youtube.com/watch?v=peEAo2J7SuU" target="_blank">拼圖</a>
 <br />
@@ -21,15 +36,9 @@
 <br />
 <a href="https://www.youtube.com/watch?v=DHMx_B9-zdY" target="_blank">你是我最愚蠢的一次浪漫</a>
 <br />
-<a href="https://www.youtube.com/watch?v=1kM4-o4c-qY" target="_blank">蒙毅將軍</a>
-<br />
-<a href="https://www.youtube.com/watch?v=6D79CYTxvOM" target="_blank">愛人錯過</a>
-<br />
 <a href="https://www.youtube.com/watch?v=137QoB4tQfc" target="_blank">他媽的</a>
 <br />
 <a href="https://www.youtube.com/watch?v=PdX3Fu0dkWI" target="_blank">大海</a>
-<br />
-<a href="https://www.youtube.com/watch?v=GzoV8klyGrQ" target="_blank">聰明的寂寞</a>
 <br />
 <a href="https://www.youtube.com/watch?v=3Jec0Q1gsOo" target="_blank">山海</a>
 <br />
@@ -38,8 +47,6 @@
 <a href="https://www.youtube.com/watch?v=p6c4TztpxC4" target="_blank">You'll see</a>
 <br />
 <a href="https://www.youtube.com/watch?v=UBT0_HEsKaI" target="_blank">你迎面走來 再面無表情地離開</a>
-<br />
-<a href="https://www.youtube.com/watch?v=YhjK6n-EOjY" target="_blank">魚</a>
 <br />
 <a href="https://www.youtube.com/watch?v=wtFWcZGZO5w" target="_blank">疤</a>
 <br />
@@ -55,23 +62,14 @@
 <br />
 <a href="https://www.youtube.com/watch?v=pM9zZinLvkA" target="_blank">惡作劇</a>
 <br />
-<a href="https://www.youtube.com/watch?v=sq6r4JQpO7Y" target="_blank">天真世界的叛徒(叛徒版)</a>
-<br />
 <a href="https://www.youtube.com/watch?v=Q0Nn4TUXH5Y" target="_blank">留給你的我從未</a>
 <br />
-<a href="https://www.youtube.com/watch?v=ftfAAINr1zc" target="_blank">美秀集團-檔一根</a>
-<br />
-<a href="https://www.youtube.com/watch?v=ynaARgs_yvQ" target="_blank">你的酒館對我打了烊</a>
+<a href="https://www.youtube.com/watch?v=ftfAAINr1zc" target="_blank">檔一根</a>
 <br />
 <a href="https://www.youtube.com/watch?v=9MMIB61e6sM" target="_blank">我把我的青春給你</a>
 <br />
-<a href="https://www.youtube.com/watch?v=M1tmYdeh6ZM" target="_blank">你啊你啊</a>
+<a href="https://www.youtube.com/watch?v=OeJYC04XKh4" target="_blank">青春禮讚</a>
 <br />
-<a href="https://www.youtube.com/watch?v=y_oFumwbj3k" target="_blank">飛機場的10:30</a>
-<br />
-<a href="https://www.youtube.com/watch?v=4bSeT_9gmJs" target="_blank">安九</a>
-<br />
--->
 
 ### sam1268
 <a href="https://www.youtube.com/watch?v=xwKDL3vBC5U" target="_blank">海上的人</a>
