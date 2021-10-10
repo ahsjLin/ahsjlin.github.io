@@ -24,8 +24,6 @@
 <br />
 <a href="https://www.youtube.com/watch?v=YhjK6n-EOjY" target="_blank">魚</a>
 <br />
-<a href="https://www.youtube.com/watch?v=ynaARgs_yvQ" target="_blank">你的酒館對我打了烊</a>
-<br />
 <a href="https://www.youtube.com/watch?v=M1tmYdeh6ZM" target="_blank">你啊你啊</a>
 <br />
 <a href="https://www.youtube.com/watch?v=y_oFumwbj3k" target="_blank">飛機場的10:30</a>
@@ -124,6 +122,8 @@
 <a href="https://www.youtube.com/watch?v=DUXAYN4itGk" target="_blank">嘉賓</a>
 <br />
 <a href="https://www.youtube.com/watch?v=NI_lTsIhhwA" target="_blank">專屬天使</a>
+<br />
+<a href="https://www.youtube.com/watch?v=fIxORGDtDw0" target="_blank">你的酒館對我打了烊</a>
 <br />
 <a href="https://www.youtube.com/watch?v=t6ArcdE_MI4" target="_blank">SPOTLIGHT</a>
 <br />
