@@ -8,7 +8,7 @@
 ### Algorithm
 <a href="cpp/algorithm/selection_sort/selection_sort.html" target="_blank">Selection Sort</a> <br />
 
-### mathematical
+### mathematics
 <a href="mathematics/proof/proof.html" target="_blank">proof</a> <br />
 
 ### sam1268
