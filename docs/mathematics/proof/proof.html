@@ -1,27 +1,78 @@
 <html>
+
 <head>
-	<title>
-	Mathematical proof
-	</title>
-	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+<title>
+Mathematical proof
+</title>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
 </head>
-	<body>
-		<h2>PQ</h2>
-		If \(P\), then \(Q\). <br/>
-		\(P\): sufficient condition. <br/>
-		\(Q\): necessary condition. <br/>
-		<h3>Direct proof</h3>
-		\(P\rightarrow P_1\rightarrow P_2\dots\rightarrow P_{n-1}\rightarrow P_n\rightarrow Q\) <br />
-		<h3>Proof by contrapositive</h3>
-		\((P\rightarrow Q)\) \(\equiv\)
-		\((\neg Q\rightarrow\neg P)\) <br />
-		Suppose \(\neg Q\) is right, then \(\neg P\)
-		is right.
-		<h3>Proof by contradiction</h3>
-		Suppose \(P\rightarrow\neg Q\) is right.<br/>
-		Try to proof this suppose is wrong.
-		<hr>
-		<h2>Reference</h2>
-		<a href="https://en.wikipedia.org/wiki/Mathematical_proof">wiki</a>
-	</body>
+
+<body>
+
+<!--If P ,then Q.-->
+<h2>PQ</h2>
+If \(P\), then \(Q\). <br/>
+\(P\): sufficient condition. <br/>
+\(Q\): necessary condition. <br/>
+<h3>Direct proof</h3>
+\(P\rightarrow P_1\rightarrow P_2\dots\rightarrow P_{n-1}\rightarrow P_n\rightarrow Q\) <br />
+<h3>Proof by contrapositive</h3>
+\((P\rightarrow Q)\) \(\equiv\)
+\((\neg Q\rightarrow\neg P)\) <br />
+Suppose \(\neg Q\) is right, then \(\neg P\)
+is right.
+<h3>Proof by contradiction</h3>
+Suppose \(P\rightarrow\neg Q\) is right.<br/>
+Try to proof this suppose is wrong.
+<hr>
+
+<!-- Example -->
+<h3>Example</h3>
+Suppose \(n\in Z\), show that
+if \(n^2\) is odd, then \(n\) is odd.
+
+<!-- list -->
+<ul>
+<li><p>direct proof:<br/>
+Suppose \(n^2\) is odd, 
+let \(n^2=2k+1\), for some \(k\in Z\).<br>
+\(n^2-1=2k\) is even. <br>
+\(\rightarrow (n+1)(n-1)=2k\) <br>
+Because \((n+1)\) and \((n-1)\) are even. <br/>
+Therefore, \(n\) is odd. Q.E.D. 
+</p>
+</li>
+<li><p>proof by contrapositive:<br/>
+Show that \(n\) is even, then \(n^2\) is even. <br/>
+Suppose \(n=2k\) for some \(k\in Z\), <br>
+then \(n^2=(2k)^2=4k^2=2(2k^2)\) is even. Q.E.D. <br>
+</p>
+</li>
+<li><p>proof by contradiction:<br/> 
+Suppose \(n^2\) is odd, then \(n\) is even. <br>
+Show that suppose is wrong. <br>
+let \(n=2k\), for some \(k\in Z\). <br>
+Thus, \(n^2=(2k)^2=4k^2=2(2k^2)\) is even.
+This is contradiction from your suppose. <br>
+Therefore, \(n\) is odd. Q.E.D.
+</p>	
+</li>
+</ul>
+<hr>
+<h2>mathematical induction</h2>
+Suppose \(P(n)\), \(n\in Z^+\) <br>
+Step 1: \(P(1)\) is true. <br>
+Step 2: \(\forall k> 1\), \(P(k)\) is true. <br>
+Show that \(P(k+1)\) is true. <br>
+Therefore, \(n\in Z^+\), \(P(n)\) is true.
+<hr>
+<h2>strong mathematical induction</h2>
+Suppose \(P(n)\), \(n\in Z^+\) <br>
+Step 1: \(P(n_0)\) is true. <br>
+Step 2: if \(\forall n_0\leq t\leq k\), \(P(t)\) is true. 
+\(\rightarrow P(k+1)\) is true. <br/>
+Therefore, \(\forall n\geq n_0\), \(P(n)\) is true.
+<h2>Reference</h2>
+<a href="https://en.wikipedia.org/wiki/Mathematical_proof">wiki</a>
+</body>
 </html>

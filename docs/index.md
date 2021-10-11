@@ -1,11 +1,15 @@
 <head>
 <link ref="icon" type="image/png" href="hidden.png"/>
 </head>
+
 ## C++ 
 <a href="cpp/Mouse_Maze/Mouse_Maze.html" target="_blank">Mouse Maze(exercise)</a>
+
 ### Algorithm
-<a href="cpp/algorithm/selection_sort/selection_sort.html" target="_blank">Selection Sort</a>
-<br />
+<a href="cpp/algorithm/selection_sort/selection_sort.html" target="_blank">Selection Sort</a> <br />
+
+### mathematical
+<a href="mathematical/proof/proof.html" target="_blank">proof</a> <br />
 
 ### sam1268
 <a href="https://www.youtube.com/watch?v=xwKDL3vBC5U" target="_blank">海上的人</a> <br />
@@ -79,7 +83,6 @@
 
 ### Music
 <a href="https://www.youtube.com/watch?v=oCTGXSK9hWo" target="_blank">Here we are again</a> <br />
-<!--
 <a href="https://www.youtube.com/watch?v=YhjK6n-EOjY" target="_blank">魚</a> <br />
 <a href="https://www.youtube.com/watch?v=C46SFG6vHHQ" target="_blank">猫</a> <br />
 <a href="https://www.youtube.com/watch?v=wtFWcZGZO5w" target="_blank">疤</a> <br />
@@ -207,4 +210,3 @@
 <a href="https://www.youtube.com/watch?v=hkOaSf5aqUA" target="_blank">那些事情是真的有意思嗎</a> <br />
 <a href="https://www.youtube.com/watch?v=FNJG6MsKO0k" target="_blank">他們說我是沒有用的年輕人</a> <br />
 <a href="https://www.youtube.com/watch?v=UKmUMx2-ToQ" target="_blank">美好的事可不可以發生在我身上</a> <br />
--->
