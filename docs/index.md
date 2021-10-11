@@ -8,6 +8,7 @@
 <br />
 
 ### Music
+<a href="https://www.youtube.com/watch?v=oCTGXSK9hWo" target="_blank">Here we are again</a> <br />
 <a href="https://www.youtube.com/watch?v=YhjK6n-EOjY" target="_blank">魚</a> <br />
 <a href="https://www.youtube.com/watch?v=wtFWcZGZO5w" target="_blank">疤</a> <br />
 <a href="https://www.youtube.com/watch?v=GedcwChv85k" target="_blank">半心</a> <br />
@@ -36,7 +37,6 @@
 <a href="https://www.youtube.com/watch?v=y_oFumwbj3k" target="_blank">飛機場的10:30</a> <br />
 <a href="https://www.youtube.com/watch?v=Q0Nn4TUXH5Y" target="_blank">留給你的我從未</a> <br />
 <a href="https://www.youtube.com/watch?v=9MMIB61e6sM" target="_blank">我把我的青春給你</a> <br />
-<a href="https://www.youtube.com/watch?v=oCTGXSK9hWo" target="_blank">Here we are again</a> <br />
 <a href="https://www.youtube.com/watch?v=sq6r4JQpO7Y" target="_blank">天真世界的叛徒(叛徒版)</a> <br />
 <a href="https://www.youtube.com/watch?v=DHMx_B9-zdY" target="_blank">你是我最愚蠢的一次浪漫</a> <br />
 <a href="https://www.youtube.com/watch?v=UBT0_HEsKaI" target="_blank">你迎面走來 再面無表情地離開</a> <br />
@@ -63,7 +63,7 @@
 
 
 ### bbbb87
-<a href="https://www.youtube.com/watch?v=XprdTvnqVIg" target="_blank">輸了你贏了世界又如何</a>
+<a href="https://www.youtube.com/watch?v=XprdTvnqVIg" target="_blank">輸了你贏了世界又如何</a><br >
 <a href="https://www.youtube.com/watch?v=xXjNgWPzZVM" target="_blank">(B)與我無關</a> <br />
 <a href="https://www.youtube.com/watch?v=lRnHHYoGa0s" target="_blank">無人之島</a> <br />
 <a href="https://www.youtube.com/watch?v=DUXAYN4itGk" target="_blank">嘉賓</a> <br />
@@ -82,9 +82,10 @@
 
 
 ### Overload Rules
-<a href="https://www.youtube.com/watch?v=AdudcVcMOgg" target="_blank">辣台妹 HOT CHICK && SPOTLIGHT</a> <br />
+<a href="https://www.youtube.com/watch?v=AdudcVcMOgg" target="_blank">雙ni出擊</a> <br />
 <a href="https://www.youtube.com/watch?v=5tD8lAw8lzQ" target="_blank">69兔</a> <br />
-<a href="https://www.youtube.com/watch?v=p3BqSjS1xBw" target="_blank">測謊啊</a> <br />
+<a href="https://www.youtube.com/watch?v=4HpO3FYCEGs" target="_blank">測謊啊</a> <br />
+<a href="https://www.youtube.com/watch?v=p3BqSjS1xBw" target="_blank">兄弟女人</a> <br />
 <a href="https://www.youtube.com/watch?v=TvHMG53dAGg" target="_blank">2ㄏ2ㄏ</a> <br />
 <a href="https://www.youtube.com/watch?v=hneL2XbFQxs" target="_blank">不要4誠</a> <br />
 <a href="https://www.youtube.com/watch?v=HLVYx81aG4o" target="_blank">自言自語</a> <br />
@@ -93,16 +94,17 @@
 <a href="https://www.youtube.com/watch?v=Lc0W60S5vV0" target="_blank">RB生日會</a> <br />
 <a href="https://www.youtube.com/watch?v=BYPu6kjn8jo" target="_blank">車車世界</a> <br />
 <a href="https://www.youtube.com/watch?v=i-iq4Isn4Cg" target="_blank">戲謔派對</a> <br />
-<a href="https://www.youtube.com/watch?v=XTekN6XUvqA" target="_blank">RRRRRRRRR</a> <br />
-<a href="https://www.youtube.com/watch?v=aHlvmW7TXFk" target="_blank">連士兵</a> <br />
-<a href="https://www.youtube.com/watch?v=cRnJCsrGU0Y" target="_blank">1212</a> <br />
 <a href="https://www.youtube.com/watch?v=cPFhQU0v364" target="_blank">分手發瘋了</a> <br />
+<a href="https://www.youtube.com/watch?v=XTekN6XUvqA" target="_blank">丟了倪 丟了霓</a> <br />
 <a href="https://www.youtube.com/watch?v=ux0lx89C51E" target="_blank">戰力指數飆起來</a> <br />
+<a href="https://www.youtube.com/watch?v=aHlvmW7TXFk" target="_blank">連士兵</a> <br />
+<a href="https://www.youtube.com/watch?v=cRnJCsrGU0Y" target="_blank">精神答數</a> <br />
 <a href="https://www.youtube.com/watch?v=T0rm3hwY8lk" target="_blank">阿倪和9Q玩遊戲</a> <br />
 <a href="https://www.youtube.com/watch?v=MuO9Dliddl8" target="_blank">緣分測試</a> <br />
-<a href="https://www.youtube.com/watch?v=zSf12rwQ5G4" target="_blank">賭博默示錄</a> <br />
-<a href="https://www.youtube.com/watch?v=7juGn-kXFKE" target="_blank">秀才不出門</a> <br />
 <a href="https://www.youtube.com/watch?v=sNDA7kJq3rA" target="_blank">RB測謊</a> <br />
+<a href="https://www.youtube.com/watch?v=7juGn-kXFKE" target="_blank">不想知道</a> <br />
+<a href="https://www.youtube.com/watch?v=zSf12rwQ5G4" target="_blank">賭博默示錄</a> <br />
 <a href="https://www.youtube.com/watch?v=amrKkdY1KQ8" target="_blank">RB爸爸選媳婦</a> <br />
 <a href="https://www.youtube.com/watch?v=3DU_m7Y1j2g" target="_blank">RB call in環節</a> <br />
 <a href="https://www.youtube.com/watch?v=ZGuKpXmq6oE" target="_blank">RB call in. feat. 超負荷</a> <br />
+
