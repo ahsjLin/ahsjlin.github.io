@@ -10,6 +10,7 @@
 
 ### mathematics
 <a href="mathematics/proof/proof.html" target="_blank">proof</a> <br />
+<a href="mathematics/proof/complex_number.html" target="_blank">property of complex number</a> <br />
 
 ### sam1268
 <a href="https://www.youtube.com/watch?v=xwKDL3vBC5U" target="_blank">海上的人</a> <br />
@@ -72,6 +73,7 @@
 <a href="https://www.youtube.com/watch?v=T0rm3hwY8lk" target="_blank">阿倪和9Q玩遊戲</a> <br />
 <a href="https://www.youtube.com/watch?v=MuO9Dliddl8" target="_blank">緣分測試</a> <br />
 <a href="https://www.youtube.com/watch?v=sNDA7kJq3rA" target="_blank">RB測謊</a> <br />
+<a href="https://www.youtube.com/watch?v=SDtPi6kbcww" target="_blank">有點期待</a> <br />
 <a href="https://www.youtube.com/watch?v=7juGn-kXFKE" target="_blank">不想知道</a> <br />
 <a href="https://www.youtube.com/watch?v=zSf12rwQ5G4" target="_blank">賭博默示錄</a> <br />
 <a href="https://www.youtube.com/watch?v=amrKkdY1KQ8" target="_blank">RB爸爸選媳婦</a> <br />

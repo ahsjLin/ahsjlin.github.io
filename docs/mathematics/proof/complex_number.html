@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>
+complex number
+</title>
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+\(a,b\in R\) <br>
+\(z=a+bi\), \(i=\sqrt[]{-1}\) <br>
+Real part \(\Rightarrow\) \(Re(z)=a\) <br>
+Imaginary part \(\Rightarrow\) \(Im(z)=b\) <br>
+\(R\in C\Rightarrow r+0i, r\in R\)
+<hr>
+\(z=a+bi, z\in C\) <br>
+Define conjugate: \(a-bi=\overline{z}\) <br>
+<hr>
+Suppose \(z=a+bi, w=c+di\Rightarrow\overline{z}=a-bi,\overline{w}=c-di\) <br>
+<hr>
+\(\overline{z+w}=\overline{z}+\overline{w}\) <br>
+proof: <br>
+\(z+w=(a+bi)+(c+di)=(a+c)+(b+d)i\)<br>
+\(\Rightarrow\overline{z+w}=(a+c)-(b+d)i\) <br>
+\(=(a-bi)+(c-di)=\overline{z}+\overline{w}.\)
+<hr>
+\(\overline{z\cdot w}=\overline{z}\cdot\overline{w}\) <br>
+proof: <br>
+\(z\cdot w=ac+adi+bci-bd\)<br>
+\(=(ac-bd)+(ad+bc)i\)<br>
+\(\Rightarrow \overline{z\cdot w}=(ac-bd)-(ad+bc)i\)<br>
+\(\overline{z}\cdot\overline{w}=ac-adi-bci-bd\) <br>
+\(=(ac-bd)-(ad+bc)i = \overline{z\cdot w}\)
+<hr>
+\(\overline{z}=z\Leftrightarrow (z\in R) \wedge (z\not\in C)\)<br>
+proof:
+\(a-bi=a+bi\Leftrightarrow b=0\)
+<hr>
+<h2>Absolute value</h2>
+Suppose \(z=a+bi\in C\)<br>
+\(|z|=\sqrt[]{a^2+b^2}\)
+<hr>
+\(z\overline{z}=(a+bi)(a-bi)=a^2+b^2=|z|^2\) <br>
+\(z+\overline{z}=(a+bi)+(a-bi)=2a=2Re(z)\) <br>
+\(\frac{1}{z}=\frac{1}{a+bi}
+=\frac{a-bi}{(a+bi)(a-bi)}
+=\frac{a-bi}{a^2+b^2}=\frac{\overline{z}}{|z|^2}
+\)
+<hr>
+Suppose \(z,w\in C\)
+<hr>
+\(|zw|=|z||w|\) <br>
+proof: <br>
+\(|zw|^2=(zw)(\overline{zw})=(z\overline{z})(w\overline{w})
+=|z|^2|w|^2
+\Rightarrow
+|zw|=|z||w|
+\)
+<hr>
+\(|z+w|\leq |z|+|w|
+\)<br>
+proof: <br>
+\(
+|z+w|^2=(z+w)\overline{(z+w)}
+\)<br>
+\(
+=(z+w)(\overline{z}+\overline{w})
+\)<br>
+\(
+=z\overline{z}+z\overline{w}+w\overline{z}+w\overline{w}
+\)<br>
+\(
+=|z|^2+2(z\overline{w}+(\overline{z\overline{w}}))+|w|^2
+\) <br>
+\(
+=|z|^2+2Re(z\overline{w})+|w|^2
+\)<br>
+\(
+\leq |z|^2 + 2|z\overline{w}|+|w|^2
+\)<br>
+\(
+=|z|^2+2|z||\overline{w}|+|w|^2
+\)<br>
+\(
+=(|z|+|w|)^2
+\) <br>
+\(
+\Rightarrow |z+w| = |z| + |w|
+\)
+<hr>
+<h2>Reference</h2>
+黃子嘉-線性代數
+</body>
+</html>
