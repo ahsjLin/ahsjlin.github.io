@@ -24,6 +24,7 @@
 <a href="https://www.youtube.com/watch?v=YQpd5CwaZXA" target="_blank">偷走</a> <br />
 <a href="https://www.youtube.com/watch?v=-zANQZ6_8rM" target="_blank">我以為</a> <br />
 <a href="https://www.youtube.com/watch?v=rJOAA7zmZ2M" target="_blank">小酒窩</a> <br />
+<a href="https://www.youtube.com/watch?v=e5WNNL13bYU" target="_blank">男孩别哭</a> <br />
 <a href="https://www.youtube.com/watch?v=rbNxlPrBdE8" target="_blank">你聽聽就好</a> <br />
 <a href="https://www.youtube.com/watch?v=lIy7ZQ-c_sg" target="_blank">以後別做朋友</a> <br />
 <a href="https://www.youtube.com/watch?v=zdCNtIpkbI0" target="_blank">我的世界沒有你</a> <br />
@@ -38,6 +39,7 @@
 <a href="https://www.youtube.com/watch?v=xXjNgWPzZVM" target="_blank">(B)與我無關</a> <br />
 <a href="https://www.youtube.com/watch?v=lRnHHYoGa0s" target="_blank">無人之島</a> <br />
 <a href="https://www.youtube.com/watch?v=DUXAYN4itGk" target="_blank">嘉賓</a> <br />
+<a href="https://www.youtube.com/watch?v=3Nug-pYIgg4" target="_blank">那些年</a> <br />
 <a href="https://www.youtube.com/watch?v=ugYnm9n1TgI" target="_blank">丟了你</a> <br />
 <a href="https://www.youtube.com/watch?v=NWsw1Vkum_Y" target="_blank">愛的可能</a> <br />
 <a href="https://www.youtube.com/watch?v=NI_lTsIhhwA" target="_blank">專屬天使</a> <br />
@@ -55,6 +57,7 @@
 ### Overload Rules
 <a href="https://www.youtube.com/watch?v=AdudcVcMOgg" target="_blank">雙ni出擊</a> <br />
 <a href="https://www.youtube.com/watch?v=5tD8lAw8lzQ" target="_blank">69兔</a> <br />
+<a href="https://www.youtube.com/watch?v=5ra98JaE2cI" target="_blank">520</a> <br />
 <a href="https://www.youtube.com/watch?v=4HpO3FYCEGs" target="_blank">測謊啊</a> <br />
 <a href="https://www.youtube.com/watch?v=p3BqSjS1xBw" target="_blank">兄弟女人</a> <br />
 <a href="https://www.youtube.com/watch?v=TvHMG53dAGg" target="_blank">2ㄏ2ㄏ</a> <br />
