@@ -17,6 +17,16 @@
 		input: nums1 = [0], m = 0, nums2 = [1], n = 1<br>
 		output: [1] <br>
 		<hr>
+		<h2>理解</h2>
+		兩陣列是從小排到大，最後得到的陣列(在陣列一中排)也是從小排到大。<br>
+
+		然後從最大的數開始排起，並從陣列一的最後看回來，<br>
+		且陣列一最後面的index是兩陣列的總和。<br>
+		比較大小並寫入陣列一中，陣列一中比較過的數，一定會被重新寫入。<br>
+		如果陣列二還有沒被寫進陣列一的，就依序陣列二index大到小直接寫入陣列一中，剛剛比較停留在陣列一中的index。<br>
+
+
+		<hr>
 		<h2>code(cpp)</h2>
 		<embed type="text/html" src="Merge_Sorted_Array.cpp" width=700 height=300>
 
