@@ -10,7 +10,8 @@ public:
 				doStartCounting = 1;
 				counter++;
 			}
-			else if(int(s[i])==32 && doStartCounting) break;
+			else if(int(s[i])==32 && doStartCounting) 
+				break;
 		}
 		return counter;
 	}
