@@ -1,0 +1,35 @@
+<html>
+
+	<head>
+	<title>Leetcode | length of last word</title>
+	</head>
+
+	<body>
+		Counting the last of word in a string. <br> 
+		<hr>
+		input: "Hello World" <br>
+		output: 5 <br>
+		<hr>
+		input: "   fly me   to   the moon  " <br>
+		output: 4 <br>
+		<hr>
+		input: "luffy is still joyboy" <br>
+		output: 6 <br>
+		<hr>
+		<h2>思路</h2>
+		從字串的最後倒著數，<br>
+		設一個counter去數字，<br>
+		並設一個變數(doStartCounting)確認字串最後是不是空格(ascii為32)，<br>
+		一旦開始數字串(string)裡的字元(char)時， <br>
+		確認空格的變數(doStartCounting)轉為1(True)，
+		再次碰見空白時， <br>
+		就跳出疊代(iteration)(for loop)，<br>
+		並回傳counter。<br>
+		<hr>
+		<h2>code(cpp)</h2>
+		<embed type="text/html" src="length_of_last_word.cpp" width=500 height=500>
+		<hr>
+		<h2>problem link</h2>
+		<a href="https://leetcode.com/problems/length-of-last-word/">leetcode</a>
+	</body>
+</html>
