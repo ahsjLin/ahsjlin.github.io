@@ -12,8 +12,7 @@
 <a href="mathematics/proof/proof.html" target="_blank">proof</a> <br />
 <a href="mathematics/proof/complex_number.html" target="_blank">property of complex number</a> <br />
 
-## LeetCode
-<a href="leetcode.html" target="_blank">Length of Last Word</a> <br />
+## <a href="leetcode.html" target="_blank">LeetCode</a>
 
 ### sam1268
 <a href="https://www.youtube.com/watch?v=xwKDL3vBC5U" target="_blank">海上的人</a> <br />
