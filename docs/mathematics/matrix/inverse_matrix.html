@@ -1,9 +1,39 @@
 <html>
 <head>
 	<title>Inverse Matrix</title>
-
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
-
+<h2>Unique Inverse</h2>
+Suppose \(A\) is \(n\) by \(n\) matrix and \(A\) is nonsingular matrix. <br>
+Its inverse matrix is unique.<br>
+<h3>Proof</h3>
+Suppose \(B\) and \(C\) are both inverse matrix of an \(n\) by \(n\) 
+matrix \(A\) <br>
+let 
+\(
+\begin{cases}
+BA=AB=I \\
+CA=AC=I
+\end{cases}
+\) <br>
+\(
+B=B\cdot I
+=
+B(AC)
+=
+(BA)C
+=
+I\cdot C
+=
+C
+\)<br>
+\(\therefore\)the inverse of \(A\) matrix is unique.
+<hr>
+<h2>Reference</h2>
+黃子嘉-線性代數
 </body>
 </html>
