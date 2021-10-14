@@ -77,7 +77,6 @@
 <a href="https://www.youtube.com/watch?v=CupZPP7abb8" target="_blank">倪有倪的人生</a> <br />
 <a href="https://www.youtube.com/watch?v=c4BzPDwLOU8" target="_blank">放膽去追</a> <br />
 <a href="https://www.youtube.com/watch?v=ux0lx89C51E" target="_blank">戰力指數飆起來</a> <br />
-<a href="https://www.youtube.com/watch?v=OMAlQQSWJHM" target="_blank">RB粉專弄好了</a> <br />
 <a href="https://www.youtube.com/watch?v=FycTfcNe4b8" target="_blank">小霓</a> <br />
 <a href="https://www.youtube.com/watch?v=aHlvmW7TXFk" target="_blank">連士兵</a> <br />
 <a href="https://www.youtube.com/watch?v=cRnJCsrGU0Y" target="_blank">精神答數</a> <br />
@@ -86,6 +85,7 @@
 <a href="https://www.youtube.com/watch?v=sNDA7kJq3rA" target="_blank">RB測謊</a> <br />
 <a href="https://www.youtube.com/watch?v=SDtPi6kbcww" target="_blank">有點期待</a> <br />
 <a href="https://www.youtube.com/watch?v=7juGn-kXFKE" target="_blank">不想知道</a> <br />
+<a href="https://www.youtube.com/watch?v=OMAlQQSWJHM" target="_blank">RB粉專弄好了</a> <br />
 <a href="https://www.youtube.com/watch?v=zSf12rwQ5G4" target="_blank">賭博默示錄</a> <br />
 <a href="https://www.youtube.com/watch?v=amrKkdY1KQ8" target="_blank">RB爸爸選媳婦</a> <br />
 <a href="https://www.youtube.com/watch?v=3DU_m7Y1j2g" target="_blank">RB call in環節</a> <br />
