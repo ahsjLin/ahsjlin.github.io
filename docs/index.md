@@ -93,6 +93,7 @@
 <a href="https://www.youtube.com/watch?v=YhjK6n-EOjY" target="_blank">魚</a> <br />
 <a href="https://www.youtube.com/watch?v=C46SFG6vHHQ" target="_blank">猫</a> <br />
 <a href="https://www.youtube.com/watch?v=wtFWcZGZO5w" target="_blank">疤</a> <br />
+<a href="https://www.youtube.com/watch?v=yhprObGV8CA" target="_blank">鬼</a> <br />
 <a href="https://www.youtube.com/watch?v=GedcwChv85k" target="_blank">半心</a> <br />
 <a href="https://www.youtube.com/watch?v=kiSwS-4nFd0" target="_blank">可是</a> <br />
 <a href="https://www.youtube.com/watch?v=DE4San2d3L4" target="_blank">瓦力</a> <br />
@@ -121,6 +122,7 @@
 <a href="https://www.youtube.com/watch?v=nGF9ANRIYck" target="_blank">甲午戰爭</a> <br />
 <a href="https://www.youtube.com/watch?v=ZrpZB8-VBD0" target="_blank">安平之光</a> <br />
 <a href="https://www.youtube.com/watch?v=6D79CYTxvOM" target="_blank">愛人錯過</a> <br />
+<a href="https://www.youtube.com/watch?v=FIK4InBh6lE" target="_blank">餘生漫漫</a> <br />
 <a href="https://www.youtube.com/watch?v=M1tmYdeh6ZM" target="_blank">你啊你啊</a> <br />
 <a href="https://www.youtube.com/watch?v=C9Nfp4pnXmQ" target="_blank">接不接受</a> <br />
 <a href="https://www.youtube.com/watch?v=X4G2lVpy0aw" target="_blank">赧然的賊</a> <br />
@@ -137,6 +139,7 @@
 <a href="https://www.youtube.com/watch?v=OP4vwOJlhxk" target="_blank">忽然之間</a> <br />
 <a href="https://www.youtube.com/watch?v=1A76BpaOJfY" target="_blank">愛してる</a> <br />
 <a href="https://www.youtube.com/watch?v=vcncUq1Jc2M" target="_blank">斑馬 斑馬</a> <br />
+<a href="https://www.youtube.com/watch?v=JFXby7yfGGw" target="_blank">Control T</a> <br />
 <a href="https://www.youtube.com/watch?v=awNgPEZDBeI" target="_blank">禮拜天情人</a> <br />
 <a href="https://www.youtube.com/watch?v=GzoV8klyGrQ" target="_blank">聰明的寂寞</a> <br />
 <a href="https://www.youtube.com/watch?v=tIxRFojt5GU" target="_blank">戀愛的犀牛</a> <br />
@@ -147,6 +150,7 @@
 <a href="https://www.youtube.com/watch?v=e0eHvsAFZbU" target="_blank">Every Word</a> <br />
 <a href="https://www.youtube.com/watch?v=p6c4TztpxC4" target="_blank">You'll see</a> <br />
 <a href="https://www.youtube.com/watch?v=Xy5YtJE1Eqk" target="_blank">Shine for Me</a> <br />
+<a href="https://www.youtube.com/watch?v=jEojOmwDap4" target="_blank">那女孩對我說</a> <br />
 <a href="https://www.youtube.com/watch?v=zGrYK1VTIjs" target="_blank">我們一樣可惜</a> <br />
 <a href="https://www.youtube.com/watch?v=qEjA6lrEiyA" target="_blank">巴黎的十二點</a> <br />
 <a href="https://www.youtube.com/watch?v=E6ylX9oHQbw" target="_blank">戀愛困難少女</a> <br />
@@ -160,6 +164,7 @@
 <a href="https://www.youtube.com/watch?v=9MMIB61e6sM" target="_blank">我把我的青春給你</a> <br />
 <a href="https://www.youtube.com/watch?v=MIR5SRaQJgQ" target="_blank">好想愛這個世界啊</a> <br />
 <a href="https://www.youtube.com/watch?v=YYQRD6ng7to" target="_blank">可以陪在我身邊嗎</a> <br />
+<a href="https://www.youtube.com/watch?v=1BJ2WLddm50" target="_blank">木吉他民歌西餐廳</a> <br />
 <a href="https://www.youtube.com/watch?v=gWUNEKCJ5DU" target="_blank">絕對佔有 相對自由</a> <br />
 <a href="https://www.youtube.com/watch?v=lWLHG_mcDw4" target="_blank">在這座城市遺失了你</a> <br />
 <a href="https://www.youtube.com/watch?v=sEJKG60a1Zc" target="_blank">成為別人的女朋友了</a> <br />
@@ -172,7 +177,6 @@
 <a href="https://www.youtube.com/watch?v=xEVSuD4lu4s" target="_blank">對不起我做不到答應了你的事</a> <br />
 <a href="https://www.youtube.com/watch?v=UBT0_HEsKaI" target="_blank">你迎面走來 再面無表情地離開</a> <br />
 <a href="https://www.youtube.com/watch?v=rlRSJNHS40s" target="_blank">我沒有用 沒辦法給你想要的生活</a> <br />
-<a href="https://www.youtube.com/watch?v=yhprObGV8CA" target="_blank">鬼</a> <br />
 <a href="https://www.youtube.com/watch?v=Krz6paVJMSk" target="_blank">如常(草東</a> <br />
 <a href="https://www.youtube.com/watch?v=HhU5qOM9aHA" target="_blank">傾雨</a> <br />
 <a href="https://www.youtube.com/watch?v=OZ8UHEFmMtE" target="_blank">晚風</a> <br />
