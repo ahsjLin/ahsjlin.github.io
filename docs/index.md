@@ -11,6 +11,8 @@
 ### mathematics
 <a href="mathematics/proof/proof.html" target="_blank">proof</a> <br />
 <a href="mathematics/proof/complex_number.html" target="_blank">property of complex number</a> <br />
+<a href="mathematics/matrix/matrix.html" target="_blank">property of matrix</a> <br />
+<a href="mathematics/trace/trace.html" target="_blank">property of trace</a> <br />
 
 ### <a href="leetcode.html" target="_blank">LeetCode</a>
 
