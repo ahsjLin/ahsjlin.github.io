@@ -145,6 +145,7 @@
 <a href="https://www.youtube.com/watch?v=7TV5CCzUvbs" target="_blank">記憶停留</a> <br />
 <a href="https://www.youtube.com/watch?v=1BBw4oyOMG0" target="_blank">飛鳥和蟬</a> <br />
 <a href="https://www.youtube.com/watch?v=cxNWXxBoaHg" target="_blank">雲煙成雨</a> <br />
+<a href="https://www.youtube.com/watch?v=6Xu-TGL-_qk" target="_blank">愛在夏天</a> <br />
 <a href="https://www.youtube.com/watch?v=51SOZjKuaaQ" target="_blank">你的行李</a> <br />
 <a href="https://www.youtube.com/watch?v=-hiF_FnyC7A" target="_blank">時空錯位</a> <br />
 <a href="https://www.youtube.com/watch?v=iWenK1ys9U4" target="_blank">15樓窗外</a> <br />
