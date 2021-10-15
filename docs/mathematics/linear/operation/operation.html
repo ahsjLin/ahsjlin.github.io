@@ -1,0 +1,182 @@
+<html>
+<head>
+<title>Elementary operation</title>
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<style>
+td {
+	border:1px solid black;
+}
+</style>
+</head>
+<body>
+
+<!-- Elementary row operation -->
+
+<h2>Elementary row operation</h2>
+Suppose 
+\(
+A\in F^{n\times n}
+\)		
+<ul>
+
+<li>
+<table>
+<tr>
+<td>
+Swap \(i\)th for \(j\)th row in \(A\)<br>
+\(
+R_{ij}A=r_{ij}(I_n)A
+\)
+</td>
+<td>
+<h4>example:</h4>
+\(
+A=
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+\),
+\(
+R_{12}=
+\begin{bmatrix}
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\)<br>
+\(
+A\xrightarrow{\quad R_{12}\quad}
+\begin{bmatrix}
+4 & 5 & 6 \\
+1 & 2 & 3 \\
+7 & 8 & 9
+\end{bmatrix}
+\)
+</td>
+</tr>
+</table>
+</li>
+
+<li>
+<table>
+<tr>
+<td>
+multiple \(i\)th in \(A\).<br>
+\(
+R_i^{(k)}A=r_i^{(k)}(I_n)A, k\neq 0
+\)
+</td>
+<td>
+<h4>example:</h4>
+\(
+A=
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+\),
+\(
+R_2^{(3)}=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 3 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\)<br>
+\(
+A\xrightarrow{\quad R_2^{(3)}\quad}
+\begin{bmatrix}
+1 & 2 & 3 \\
+12 & 15 & 18 \\
+7 & 8 & 9
+\end{bmatrix}
+\)
+</td>
+</tr>
+</table>
+</li>
+
+<li>
+<table>
+<tr>
+<td>
+using multiple k of \(i\)th add to \(j\)th row in \(A\), 
+\( k\in R \).<br>
+\(
+R_{ij}^{(k)}A=r_{ij}^{(k)}(I_n)A
+\)
+</td>
+<td>
+<h4>example:</h4>
+\(
+A=
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+\),
+\(
+R_{12}^{(-4)}
+=
+\begin{bmatrix}
+1 & 0 & 0 \\
+-4 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\)<br>
+\(
+A\xrightarrow{\quad R_{12}^{(-4)}\quad}
+\begin{bmatrix}
+1 & 2 & 3 \\
+4+(-4) & 5+(-8) & 6+(-12) \\
+7 & 8 & 9
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 2 & 3 \\
+0 & -3 & -6 \\
+7 & 8 & 9
+\end{bmatrix}
+\)
+
+</td>
+</tr>
+</table>
+</li>
+
+
+
+</ul>
+<hr>
+<!-- inverse -->
+<h2>Inverse</h2>
+\(
+(R_{ij})^{-1}= R_{ij}
+\)<br>
+\(
+(R_i^{(k)})^{-1}= R_i^{(\frac{1}{k})}
+\)<br>
+\(
+(R_{ij}^{(k)})^{-1}=
+R_{ij}^{(-k)}
+\)
+<hr>
+<h2>Row equivalent</h2>
+Suppose \(A, B\in F^{n\times n}\)<br>
+\(
+R_{i_1}^{(k_1)}R_{i_2j_2}^{(k_2)}\dots A=B
+\)<br>
+\(A\) is row equivalent to \(B\).
+<hr>
+<h2>Reference</h2>
+黃子嘉-線性代數
+</body>
+</html>
