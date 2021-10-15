@@ -1,5 +1,5 @@
 <head>
-<link rel="icon" type="image/png" href="sd-card.png"/>
+<link rel="icon" href="sd-card.png"/>
 </head>
 
 ## C++ 
