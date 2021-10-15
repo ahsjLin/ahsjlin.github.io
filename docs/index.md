@@ -7,7 +7,7 @@
 
 ### <a target="_blank" href="mathematics/math.html">Mathematics</a>
 
-### <a href="leetcode.html" target="_blank">LeetCode</a>
+### <a href="leetcode/leetcode.html" target="_blank">LeetCode</a>
 
 ### sam1268
 <a href="https://www.youtube.com/watch?v=xwKDL3vBC5U" target="_blank">海上的人</a> <br />

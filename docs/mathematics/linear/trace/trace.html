@@ -1,0 +1,124 @@
+<html>
+<head>
+	<title>Trace</title>
+<style>
+td{
+	border:1px solid black;
+}
+</style>
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<h2>Trace</h2>
+Suppose \(A=[a_{ij}]\in F^{n\times n}\)<br>
+Define: <br>
+\(tr(A)=\sum_{i=1}^{n}a_{ii}\)<br>
+Example:<br>
+\(
+A =
+\begin{bmatrix}
+1 & 2 & 3 \\
+7 & 8 & 9 \\
+4 & 5 & 6
+\end{bmatrix}
+,
+tr(A)= 1 + 8 + 6 = 15
+\)
+<hr>
+<h2>Definition</h2>
+Suppose \(A,B\in F^{n\times n},\alpha,\beta\in F\)
+<ul>
+<li>
+\(
+tr(\alpha A \pm\beta B)=
+\alpha tr(A)\pm \beta tr(B)
+\)
+</li>
+<li>
+\(
+tr(A^T) = tr(A)
+\)
+</li>
+<li>
+\(
+tr(A^H)=
+\overline{tr(A)}=
+tr(\overline{A})
+\)
+</li>
+<li>
+\(
+tr(I_n)= n
+\)
+</li>
+</ul>
+<hr>
+<!-- trace theorem and example -->
+<table>
+<tr>
+<td>
+<h2>Theorem</h2>
+Suppose \(A\in F^{m\times n}, B\in F^{n\times m}\)<br>
+\(
+tr(AB) = tr(BA)
+\)<br>
+<h3>Proof:</h3>
+Suppose 
+\(
+C=AB \in F^{m\times m},
+D=BA \in F^{n\times n}
+\)<br>
+\(
+tr(AB)=tr(C)\)<br>
+\(
+=\sum_{i=1}^{m}c_{ii}=
+\sum_{i=1}^{m}\sum_{k=1}^{n}a_{ik}b_{ki}
+\)<br>
+\(
+=\sum_{k=1}^{n}\sum_{i=1}^{m}b_{ki}a_{ik}
+=\sum_{k=1}^{n}d_{kk}=tr(D)=tr(BA)
+\)
+</td>
+<td>
+	<h4>Example</h4>
+	Prove that there do not exist \(n\times n\)
+	matrices \(A\) and \(B\) such that 
+	\(AB-BA=I_n\). 
+	<h4>solution</h4>
+	Using proof by contradiction.<br>
+	Suppose 
+	\(
+	(A,B\in F^{n\times n})
+	\rightarrow
+	(AB-BA=I_n)
+	\)<br>
+	\(
+	tr(AB-BA)=tr(I_n)
+	\) checking this equation whether to be right.
+	<br>
+	\(
+	tr(I_n)= n
+	\)<br>
+	\(
+	tr(AB-BA)= tr(AB)-tr(BA)
+	\)<br>
+	\(\because tr(AB)=tr(BA)\)<br>
+	\(\therefore tr(AB)-tr(BA)=0\)<br>
+	\(
+	\Rightarrow tr(AB-BA)=tr(I_n)
+	\) is contradiction. <br>
+	Therefore, there do not exist \(n\times n\) 
+	matrices \(A\) and \(B\) such that 
+	\(AB-BA=I_n\)
+</td>
+</tr>
+</table>
+<hr>
+<h2>Reference</h2>
+黃子嘉-線性代數
+
+</body>
+</html>
