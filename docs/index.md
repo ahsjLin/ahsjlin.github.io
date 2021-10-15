@@ -237,6 +237,7 @@
 <a href="https://www.youtube.com/watch?v=IGInsosP0Ac" target="_blank">Stand Out Fit In</a> <br />
 <a href="https://www.youtube.com/watch?v=RFwl98N_Kss" target="_blank">我常常有一種感覺</a> <br />
 <a href="https://www.youtube.com/watch?v=NbNPJr_0tqA" target="_blank">我還年輕 我還年輕</a> <br />
+<a href="https://www.youtube.com/watch?v=wReFfJGMjBw" target="_blank">明天又是無聊的一天</a> <br />
 <a href="https://www.youtube.com/watch?v=On5Tdm8LWYs" target="_blank">残酷な天使のテーゼ</a> <br />
 <a href="https://www.youtube.com/watch?v=NCTnAfYeTYE" target="_blank">Just the two of us</a> <br />
 <a href="https://www.youtube.com/watch?v=UX2uQyHaCUk" target="_blank">沒有人在乎你在乎的事</a> <br />
