@@ -1,7 +1,4 @@
-<head>
 <link rel="icon" href="sd-card.png"/>
-</head>
-
 ## C++ 
 <a href="cpp/Mouse_Maze/Mouse_Maze.html" target="_blank">Mouse Maze(exercise)</a>
 
