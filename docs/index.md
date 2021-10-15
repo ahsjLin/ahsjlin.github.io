@@ -9,6 +9,7 @@
 <a href="mathematics/proof/proof.html" target="_blank">proof tool</a> <br />
 <a href="mathematics/proof/complex_number.html" target="_blank">properties of complex number</a> <br />
 <a href="mathematics/matrix/matrix.html" target="_blank">properties of matrix</a> <br />
+<a href="mathematics/matrix/inverse_matrix.html" target="_blank">properties of inverse matrix</a> <br />
 <a href="mathematics/trace/trace.html" target="_blank">properties of trace</a> <br />
 
 ### <a href="leetcode.html" target="_blank">LeetCode</a>
