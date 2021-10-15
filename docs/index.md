@@ -5,7 +5,7 @@
 ### Algorithm
 <a href="cpp/algorithm/selection_sort/selection_sort.html" target="_blank">Selection Sort</a> <br />
 
-### <a target="_blank" href="mathematics/math.html">mathematics</a>
+### <a target="_blank" href="mathematics/math.html">Mathematics</a>
 
 ### <a href="leetcode.html" target="_blank">LeetCode</a>
 
