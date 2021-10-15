@@ -5,13 +5,7 @@
 ### Algorithm
 <a href="cpp/algorithm/selection_sort/selection_sort.html" target="_blank">Selection Sort</a> <br />
 
-### mathematics
-<a href="mathematics/proof/proof.html" target="_blank">proof tool</a> <br />
-<a href="mathematics/proof/complex_number.html" target="_blank">properties of complex number</a> <br />
-<a href="mathematics/matrix/matrix.html" target="_blank">properties of matrix</a> <br />
-<a href="mathematics/matrix/inverse_matrix.html" target="_blank">properties of inverse matrix</a> <br />
-<a href="mathematics/matrix/matrix_polynomial.html" target="_blank">properties of matrix polynomial</a> <br />
-<a href="mathematics/trace/trace.html" target="_blank">properties of trace</a> <br />
+### <a target="_blank" href="mathematics/math.html">mathematics</a>
 
 ### <a href="leetcode.html" target="_blank">LeetCode</a>
 
