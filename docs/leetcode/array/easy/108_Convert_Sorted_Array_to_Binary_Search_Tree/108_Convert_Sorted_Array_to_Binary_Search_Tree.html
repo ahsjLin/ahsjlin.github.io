@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Binary Search Tree</title>
+
+</head>
+<body>
+<h2>Definition</h2>
+Binary Search Tree(BST):<br>
+The value of left node is less than value of root.<br>
+The value of right node is greater than value of root.
+<hr>
+<h2>
+108. Convert Sorted Array to Binary Search Tree
+</h2>
+Given an integer array nums where the elements are sorted in ascending order, <br>
+convert it to a height-balanced binary search tree.<br>
+A height-balanced binary tree is a binary tree in <br>
+which the depth of the two subtrees of every node never<br>
+ differs by more than one.
+<hr>
+input: nums = [-10,-3,0,5,9]<br>
+output: [0, -3, 9, -10, null, 5] or [0,-10,5,null,-3,null,9]<br>
+output as graph:<br>
+<img src="img/btree1.jpg"> or
+<img src="img/btree2.jpg">
+<hr>
+<h2>code(cpp)</h2>
+<embed type="text/html"src="108_Convert_Sorted_Array_to_Binary_Search_Tree.cpp" width="700" height="500">
+<hr>
+<table>
+	<tr>
+		<td>
+<h2>理解</h2>
+用上面左圖理解<br>
+樹裡的值為由上而下由左至右放進陣列裡(陣列裡的順序跟連接的線無關)
+<br>
+從已排序的陣列來建立一個二元樹，<br>
+最後回傳root的指標。<br>
+先寫一個function(createBST)去創建node的空間, <br>
+並給nums的left(l)和right(r)去創建那個子樹的node。<br>
+當left大於right的值時，回傳空指標。<br>
+也就是output: [0,-3,9,-10,null,5]的圖中(並無標示null)。<br>
+-10的左右子節點(node)都是null <br>
+5的左右子節點為null<br>
+-3的右子節點為null <br>
+9的右子節點為null<br>
+當回傳null之後就不會去執行新的recursion<br>
+而是回到剛剛呼叫的地方，繼續執行下去。
+	</td>
+	<td>
+		左圖:<br>
+	<img src="img/btree1.jpg"> 
+	</td>
+</tr>
+</table>
+<table>
+	<tr>
+		<td>
+<h4>順序</h4>
+此code的結果為上面右圖<br>
+調用創建二元樹的function(createBST), <br>
+並傳入已排序好的陣列, 左右範圍為整個陣列(0~4)<br>
+因為是二元平衡樹，root的位置是要找左右範圍裡，<br>
+中間的那個值當root <br>
+找到root的值為0<br>
+建立root的節點(val(root)==0)<br>
+賦予0的左指標指向0的左節點, 此時調用創建節點的function，
+並傳左子樹排列的範圍(0~(m-1))<br>
+找到root為-10, <br>
+賦予-10的左指標指向-10的左節點, 此時調用創建節點的function，<br>
+此時傳入的r為-1, l為0回傳null。<br>
+回到賦予-10左指標的下行繼續執行。
+賦予-10的右指標指向-10的右節點, 此時調用創建節點的function，<br>
+傳入左右範圍，找到節點的值為-3，創建節點，<br>
+賦予-3的左指標指向-3的左節點, 此時調用創建節點的function，<br>
+右範圍小於左範圍，回傳null。<br>
+賦予-3的右指標指向-3的右節點, 此時調用創建節點的function，<br>
+右範圍小於左範圍，回傳null。<br>
+此時-3這個節點回傳他的記憶體位址給-10，<br>
+-10和-3才建立連結，<br>
+-10也完成左右節點的賦予，回傳記憶體位址給0<br>
+0和-10建立連結，<br>
+0的左指標完成，接著執行他的右指標的賦予，<br>
+找到root為5，創建5的節點<br>
+賦予5的左指標指向5的左節點, 此時調用創建節點的function，<br>
+右範圍小於左範圍，回傳null。<br>
+賦予5的右指標指向5的右節點, 此時調用創建節點的function，<br>
+找到root為9，創建9的節點<br>
+賦予9的左指標指向9的左節點, 此時調用創建節點的function，<br>
+右範圍小於左範圍，回傳null。<br>
+賦予9的右指標指向9的右節點, 此時調用創建節點的function，<br>
+右範圍小於左範圍，回傳null。<br>
+回傳9的記憶體位址給5建立連結。<br>
+回傳5的記憶體位址給0建立連結。<br>
+回傳0的記憶體位址到sortedArrayToBST裡調用的地方。
+	</td>
+	<td>
+		右圖:<br>
+	<img src="img/btree2.jpg"> 
+	</td>
+</tr>
+</table>
+
+<hr>
+<h2>problem link</h2>
+<a target="_blank" href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/">leetcode</a>
+<hr>
+<h2>Reference</h2>
+<a target="_blank" href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/">tree graph</a>
+<a target="_blank" href="https://www.youtube.com/watch?v=O5BSAhg4n0M">Hua Hua-youtube</a>
+</body>
+</html>
