@@ -2,6 +2,11 @@
 <head>
 <title>Binary Search Tree</title>
 
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <h2>Definition</h2>
@@ -31,19 +36,21 @@ output as graph:<br>
 	<tr>
 		<td>
 <h2>理解</h2>
-用上面左圖理解<br>
+樹高:\( \lceil \log_2n \rceil \)。<br>
+用上面左圖理解。<br>
 樹裡的值為由上而下由左至右放進陣列裡(陣列裡的順序跟連接的線無關)
 <br>
 從已排序的陣列來建立一個二元樹，<br>
 最後回傳root的指標。<br>
-先寫一個function(createBST)去創建node的空間, <br>
-並給nums的left(l)和right(r)去創建那個子樹的node。<br>
-當left大於right的值時，回傳空指標。<br>
+先寫一個function(createBST)去創建node的空間(記憶體會挪用一個地方給cpu運算), <br>
+並給nums的left(l)和right(r)，如果有找到root的值就創建那個子樹的node。<br>
+當判斷left大於right的值時，回傳空指標到剛剛呼叫的地方，<br>
+並不創建null的node，null就沒有指定一個記憶體位址，也沒有創建node的空間。<br>
 也就是output: [0,-3,9,-10,null,5]的圖中(並無標示null)。<br>
--10的左右子節點(node)都是null <br>
-5的左右子節點為null<br>
--3的右子節點為null <br>
-9的右子節點為null<br>
+-10的左右連結都是null <br>
+5的左右子連結為null<br>
+-3的右子連結為null <br>
+9的右子連結為null<br>
 當回傳null之後就不會去執行新的recursion<br>
 而是回到剛剛呼叫的地方，繼續執行下去。
 	</td>
@@ -56,7 +63,8 @@ output as graph:<br>
 <table>
 	<tr>
 		<td>
-<h4>順序</h4>
+<hr>
+<h3>順序</h3>
 此code的結果為上面右圖<br>
 調用創建二元樹的function(createBST), <br>
 並傳入已排序好的陣列, 左右範圍為整個陣列(0~4)<br>
