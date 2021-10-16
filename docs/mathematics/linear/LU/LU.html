@@ -1,0 +1,288 @@
+<html>
+<head>
+<title>LU</title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+
+<style>
+td{
+	border: 1px solid black;
+}
+</style>
+
+</head>
+<body>
+<h2>LU</h2>
+<!-- LU -->
+\( L \): lower matrix<br>
+\( U \): upper matrix<br>
+\(
+A=LU
+\)
+\(
+\leadsto 
+\) LU-decomposition
+<br>
+\(
+A\in F^{m\times n}
+\)<br>
+\(
+L\in F^{m\times m},
+U\in F^{m\times n}
+\)<br>
+<hr>
+\(
+x\in F^{n\times 1},
+b\in F^{m\times 1}
+\)<br>
+\(
+Ax=b
+\)<br>
+\(
+\Rightarrow 
+LUx=b
+\)
+<hr>
+<!-- LDU -->
+<h2>LDU</h2>
+D: Diagonal matrix<br>
+
+\(
+A\in F^{m\times n}
+\)<br>
+\(
+L\in F^{m\times m},
+D\in F^{m\times m},
+U\in F^{m\times n}
+\)<br>
+<br>
+\(
+A=LU_1=
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & -6 & -6 \\
+-7 & -7 & 9 
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0 & 0 \\
+4 & 1 & 0 \\
+7 & 1/2 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 2 & 3 \\
+0 & -14 & -18 \\
+0 & 0 & 21
+\end{bmatrix}
+\)<br><br>
+\(
+=LDU
+=
+\begin{bmatrix}
+1 & 0 & 0 \\
+4 & 1 & 0 \\
+7 & 1/2 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & -14 & 0 \\
+0 & 0 & 21
+\end{bmatrix}
+\begin{bmatrix}
+1/1 & 2/1 & 3/1 \\
+0 & (-14)/(-14) & (-18)/(-14) \\
+0 & 0 & 21/21
+\end{bmatrix}
+\)<br><br>
+\(
+=
+\begin{bmatrix}
+1 & 0 & 0 \\
+4 & 1 & 0 \\
+7 & 1/2 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & -14 & 0 \\
+0 & 0 & 21
+\end{bmatrix}
+\begin{bmatrix}
+1 & 2 & 3 \\
+0 & 1 & 9/7 \\
+0 & 0 & 1
+\end{bmatrix}
+\)
+<hr>
+<!-- Notice -->
+<h2>Notice</h2>
+\(
+E\in F^{m\times m}
+, A\in F^{m\times n} 
+\)<br>
+\(
+E=R_kR_{k-1}\dots R_1
+\)
+<br>
+\(
+\because R \text{ is inverse.}
+\)<br>
+\(
+\therefore E \text{ is inverse.}
+\)
+<br>
+<br>
+\(
+A\xrightarrow[\quad\text{without permutation of row}\quad]{E}
+U
+\)
+<br><br>
+\(
+EA=U
+\)
+<br>
+\(
+L=E^{-1}
+\)<br>
+\(
+\Rightarrow 
+(R_kR_{k-1}\dots R_1)A=U
+\)<br>
+\(
+A=
+(R_kR_{k-1}\dots R_1)^{-1}U
+=
+R_{1}^{-1}R_{2}^{-1}\dots R_{k}^{-1}U
+\)
+<hr>
+<!-- example -->
+<h2>Example</h2>
+Find an LU-decomposition of 
+\(
+A=
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & -6 & -6 \\
+-7 & -7 & 9 
+\end{bmatrix}.
+\)<br>
+<h3>solution</h3>
+\(
+A\xrightarrow{r_{12}^{(-4)}, r_{13}^{(7)}, r_{23}^{(\frac{1}{2})}}
+\begin{bmatrix}
+1 & 2 & 3 \\
+0 & -14 & -18 \\
+0 & 0 & 21
+\end{bmatrix}
+=U
+\)<br>
+<br>
+\(
+E=
+R_{23}^{(\frac{1}{2})}R_{13}^{(7)}R_{12}^{(-4)}
+\)<br>
+\(
+L=E^{-1}
+\)<br>
+\(
+=(R_{23}^{(\frac{1}{2})}R_{13}^{(7)}R_{12}^{(-4)})^{-1}
+\)<br>
+\(
+=
+(R_{12}^{(-4)})^{-1}
+(R_{13}^{(7)})^{-1}
+(R_{23}^{(\frac{1}{2})})^{-1}
+\)<br>
+\(
+=
+R_{12}^{(4)}
+R_{13}^{(-7)}
+R_{23}^{(-\frac{1}{2})}
+\)<br>
+<br>
+\(
+=
+\begin{bmatrix}
+1 & 0 & 0 \\
+4 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+7 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 1/2 & 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0 & 0 \\
+4 & 1 & 0 \\
+7 & 1/2 & 1
+\end{bmatrix}
+\)<br>
+<br>
+<hr>
+\(
+\ast \ast \ast
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 1/2 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+7 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 \\
+4 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0 & 0 \\
+4 & 1 & 0 \\
+9 & 1/2 & 1
+\end{bmatrix}
+\neq
+\begin{bmatrix}
+1 & 0 & 0 \\
+4 & 1 & 0 \\
+7 & 1/2 & 1
+\end{bmatrix}
+\)
+<hr>
+<!-- application -->
+<h2>Application</h2>
+Using LU-decomposition to solute linear-system equation.<br>
+\(
+Ax=b
+\)<br>
+\(
+\rightarrow 
+LUx=b
+\)<br>
+let
+\(
+Ux=y
+\)<br>
+thus, 
+\(
+Ly=b
+\)<br>
+Step 1: forward substitution solute y
+<br>
+Step 2: back substitution solute x
+<hr>
+<h2>Reference</h2>
+黃子嘉-線性代數
+</body>
+</html>

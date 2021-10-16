@@ -122,6 +122,7 @@
 <a href="https://www.youtube.com/watch?v=t7VXOCxwLDg" target="_blank">關渡口</a> <br />
 <a href="https://www.youtube.com/watch?v=ftfAAINr1zc" target="_blank">擋一根</a> <br />
 <a href="https://www.youtube.com/watch?v=-zQWavER7to" target="_blank">海の声</a> <br />
+<a href="https://www.youtube.com/watch?v=M0BuamHzF7w" target="_blank">青い栞</a> <br />
 <a href="https://www.youtube.com/watch?v=YN8nNsHzDQ8" target="_blank">4:00A.M</a> <br />
 <a href="https://www.youtube.com/watch?v=1kM4-o4c-qY" target="_blank">蒙毅將軍</a> <br />
 <a href="https://www.youtube.com/watch?v=nGF9ANRIYck" target="_blank">甲午戰爭</a> <br />
@@ -150,6 +151,8 @@
 <a href="https://www.youtube.com/watch?v=vcncUq1Jc2M" target="_blank">斑馬 斑馬</a> <br />
 <a href="https://www.youtube.com/watch?v=p0GPJbdKhCw" target="_blank">奇妙能力歌</a> <br />
 <a href="https://www.youtube.com/watch?v=awNgPEZDBeI" target="_blank">禮拜天情人</a> <br />
+<a href="https://www.youtube.com/watch?v=abIRuMGldi8" target="_blank">一番の寶物</a> <br />
+<a href="https://www.youtube.com/watch?v=JAeZpxmDL8U" target="_blank">エウテルペ</a> <br />
 <a href="https://www.youtube.com/watch?v=GzoV8klyGrQ" target="_blank">聰明的寂寞</a> <br />
 <a href="https://www.youtube.com/watch?v=tIxRFojt5GU" target="_blank">戀愛的犀牛</a> <br />
 <a href="https://www.youtube.com/watch?v=cV3Z3usC73M" target="_blank">正想著你呢</a> <br />
@@ -211,7 +214,9 @@
 <a href="https://www.youtube.com/watch?v=ft0ITHgYj04" target="_blank">四不像</a> <br />
 <a href="https://www.youtube.com/watch?v=RQsM2uvXow8" target="_blank">郭源潮</a> <br />
 <a href="https://www.youtube.com/watch?v=HqmpIQ9l-uA" target="_blank">大風吹</a> <br />
+<a href="https://www.youtube.com/watch?v=Ad4CFJxOaAI" target="_blank">夜神月</a> <br />
 <a href="https://www.youtube.com/watch?v=7H52yGup84A" target="_blank">轉圈圈</a> <br />
+<a href="https://www.youtube.com/watch?v=Z92KU3yzVhA" target="_blank">Unravel </a> <br />
 <a href="https://www.youtube.com/watch?v=SnXkhkEvNIM" target="_blank">光るなら</a> <br />
 <a href="https://www.youtube.com/watch?v=-oDRzgmYHms" target="_blank">5:10a.m.</a> <br />
 <a href="https://www.youtube.com/watch?v=10DHUqSVu6I" target="_blank">與浪之間</a> <br />
@@ -229,6 +234,7 @@
 <a href="https://www.youtube.com/watch?v=1HXUL3Fzlqo" target="_blank">深夜兩點十分</a> <br />
 <a href="https://www.youtube.com/watch?v=zYEt24syYww" target="_blank">一如年少模樣</a> <br />
 <a href="https://www.youtube.com/watch?v=5es1og-IIIM" target="_blank">四月是你的謊言</a> <br />
+<a href="https://www.youtube.com/watch?v=qsm0eEQYvH0" target="_blank">空想メソロギヰ</a> <br />
 <a href="https://www.youtube.com/watch?v=CM-6FJlYHI4" target="_blank">Cazzo - ?te 壞特</a> <br />
 <a href="https://www.youtube.com/watch?v=BXsFnVQverk" target="_blank">殺死那個石家庄人</a> <br />
 <a href="https://www.youtube.com/watch?v=7fcQioByD5I" target="_blank">我討厭台北的天氣</a> <br />
@@ -241,6 +247,7 @@
 <a href="https://www.youtube.com/watch?v=NCTnAfYeTYE" target="_blank">Just the two of us</a> <br />
 <a href="https://www.youtube.com/watch?v=UX2uQyHaCUk" target="_blank">沒有人在乎你在乎的事</a> <br />
 <a href="https://www.youtube.com/watch?v=14EjcvhIA7M" target="_blank">如果世界上沒有了孤獨</a> <br />
+<a href="https://www.youtube.com/watch?v=uVyCzCixF9A" target="_blank">それは小さな光のような</a> <br />
 <a href="https://www.youtube.com/watch?v=hkOaSf5aqUA" target="_blank">那些事情是真的有意思嗎</a> <br />
 <a href="https://www.youtube.com/watch?v=FNJG6MsKO0k" target="_blank">他們說我是沒有用的年輕人</a> <br />
 <a href="https://www.youtube.com/watch?v=UKmUMx2-ToQ" target="_blank">美好的事可不可以發生在我身上</a> <br />
