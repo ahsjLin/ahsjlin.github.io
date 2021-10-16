@@ -38,7 +38,7 @@ output: "a"
 time complexity: \( O(n^2) \)<br>
 for \( \rightarrow n \) times<br>
 while \( \rightarrow \frac{n}{2} \) times<br>
-\( n\times (\frac{n}{2}+\frac{n}{2}) = O(n^2)\)<br>
+\( n\times ((\frac{n}{2}+1)+\frac{n}{2}) = O(n^2)\)<br>
 <embed width="700" height="500" src="5_Longest_Palindromic_Substring.cpp">
 <hr>
 <h2>理解</h2>
@@ -51,8 +51,10 @@ for已經固定找n次，<br>
 n\cdot\frac{n(n+1)}{2}
 \)
 ，則時間複雜度會是\( O(n^3) \)。<br>
-用中間的字元去向外找對稱最多會找\( \frac{n}{2} \)次<br>
-因為對稱的字串有奇數跟偶數所以單次for下最多會執行while \( (\frac{n}{2} + \frac{n}{2}) \)次，<br>
+接下來試試用中間的字元去向外找對稱<br>
+因為對稱的字串有奇數跟偶數所以單次for下最多會執行while \( [(\frac{n}{2}+1) + \frac{n}{2}] = (n+1)\)次，<br>
+for固定會執行n次 <br>
+總執行次數為\( n(n+1)\) <br>
 因此，時間複雜度會是\( O(n^2) \)。
 <hr>
 <h2>Reference</h2>
