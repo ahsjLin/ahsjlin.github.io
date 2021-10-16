@@ -44,6 +44,10 @@ output as graph:<br>
 最後回傳root的指標。<br>
 先寫一個function(createBST)去創建node的空間(記憶體會挪用一個地方給cpu運算), <br>
 並給nums的left(l)和right(r)，如果有找到root的值就創建那個子樹的node。<br>
+這裡的左(left)右(right)代表在nums裡的指定範圍去創子樹，<br>
+假設有個陣列[11,12,13,14,15,16,17,18,19]，指定left給0，right給3<br>
+(C++的陣列編號是從0開始數，編號0為11、編號1為12、編號2為13，以此類推)<br>
+就會從11,12,13,14去創建子樹。<br>
 當判斷left大於right的值時，回傳空指標到剛剛呼叫的地方，<br>
 並不創建null的node，null就沒有指定一個記憶體位址，也沒有創建node的空間。<br>
 也就是output: [0,-3,9,-10,null,5]的圖中(並無標示null)。<br>
