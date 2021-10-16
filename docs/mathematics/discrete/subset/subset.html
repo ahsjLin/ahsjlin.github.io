@@ -41,15 +41,19 @@ Sign as \( \emptyset \)
 <hr>
 Suppose 
 \(
-A=\{1,2,3\}, B=\{\}
+A=\{1,2,3\}, B=\{\}=\emptyset
 \)<br>
 \(
-\emptyset\in A, \{\emptyset\}\subseteq A\)<br>
+\emptyset\in A, \emptyset=\{\}\subseteq A\)<br>
 \(
-\{\emptyset\}
+\emptyset=\{\}
 \) is subset of A<br>
 \(
-\{\emptyset\}
+\emptyset\not\in B, \emptyset=\{\}\subseteq B
+\)
+<br>
+\(
+\emptyset=\{\}
 \) is subset of B<br>
 <table>
 <tr>
@@ -60,14 +64,17 @@ Empty set is subset any of set.<br>
 Example:<br>
 \(
 \emptyset\subseteq\emptyset
+\)<br>
+\(
+\{\}\subseteq\{\}
 \)
 </td>
 <td>
 \(
-\emptyset\not\in\emptyset
+\{\}=\emptyset\not\in\emptyset=\{\}
 \)<br>
 \(
-\emptyset\in\{\emptyset\}
+\{\}=\emptyset\in\{\emptyset\}=\{\{\}\}
 \)
 </td>
 </tr>
@@ -87,10 +94,24 @@ A =
 \in A= 
 \{\;\emptyset, \; {\color{blue}\{\emptyset\}}, \;\{\emptyset, \{\emptyset\}\}\;\}
 \)<br>
+<br>
 \(
 \{\; \emptyset,\{\emptyset\}  \;\}
 \subset A=
 \{\;{\color{blue}\emptyset, \; \{\emptyset\}}, \;\{\emptyset, \{\emptyset\}\}\;\}
+\)
+<br><br>
+\(
+\{\; \{\emptyset,\{\emptyset\}\}  \;\}
+\subset A=
+\{\;\emptyset, \; \{\emptyset\}, \;{\color{blue}\{\emptyset, \{\emptyset\}\}}\;\}
+\)
+<br><br>
+
+\(
+\{\; \emptyset,\{\emptyset\},\{\emptyset,\{\emptyset\}\}  \;\}
+\subseteq A=
+\{\;{\color{blue}\emptyset, \; \{\emptyset\}, \;\{\emptyset, \{\emptyset\}\}}\;\}
 \)
 </td>
 </tr>
