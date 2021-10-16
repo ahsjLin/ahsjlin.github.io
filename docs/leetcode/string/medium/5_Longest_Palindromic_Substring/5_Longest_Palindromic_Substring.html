@@ -42,13 +42,18 @@ while \( \rightarrow \frac{n}{2} \) times<br>
 <embed width="700" height="500" src="5_Longest_Palindromic_Substring.cpp">
 <hr>
 <h2>理解</h2>
-for已經固定找n次<br>
-如果暴力破解用當前index下的字元去找接下來所有可能，<br>
-會找\( n^2 \)次<br>
-那time complexity會是\( O(n^3) \)<br>
-那用中間的字元去向外找對稱最多會找\( \frac{n}{2} \)次<br>
-因為對稱的字串有奇數跟偶數所以單次for下最多會執行while \( (\frac{n}{2} + \frac{n}{2}) \)次<br>
-那時間複雜度就會是\( O(n^2) \)。
+假設字串長度為n個字元，<br>
+for已經固定找n次，<br>
+如果暴力破解用當前index下的字元去找接下來所有可能，
+會執行\( \sum_{i=0}^{n-1}(n-i)=\frac{n(n+1)}{2}  \)次，<br>
+執行次數會是
+\(
+n\cdot\frac{n(n+1)}{2}
+\)
+，則時間複雜度會是\( O(n^3) \)。<br>
+用中間的字元去向外找對稱最多會找\( \frac{n}{2} \)次<br>
+因為對稱的字串有奇數跟偶數所以單次for下最多會執行while \( (\frac{n}{2} + \frac{n}{2}) \)次，<br>
+因此，時間複雜度會是\( O(n^2) \)。
 <hr>
 <h2>Reference</h2>
 <a target="_blank" href="https://www.youtube.com/watch?v=XYQecbcd6_c">Neetcode-youtube</a>
