@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Longest Palindromic Substring</title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>Problem</h2>
+Given a string s, return the longest palindromic substring in s.
+<hr>
+input: s = "babad"<br>
+output: "bab" or "aba"
+<hr>
+input: s = "cbbd"
+<br>
+output: "bb"
+<hr>
+input: s = "a"
+<br>
+output: "ac"
+<hr>
+input: s = "a"
+<br>
+output: "a"
+<hr>
+<h2>code(cpp)</h2>
+time complexity: \( O(n^2) \)<br>
+for \( \rightarrow n \) times<br>
+while \( \rightarrow \frac{n}{2} \) times<br>
+\( n\times (\frac{n}{2}+\frac{n}{2}) = O(n^2)\)<br>
+<embed width="700" height="500" src="5_Longest_Palindromic_Substring.cpp">
+<hr>
+<h2>理解</h2>
+for已經固定找n次<br>
+如果暴力破解用當前index下的字元去找接下來所有可能，<br>
+會找\( n^2 \)次<br>
+那time complexity會是\( O(n^3) \)<br>
+那用中間的字元去向外找對稱最多會找\( \frac{n}{2} \)次<br>
+因為對稱的字串有奇數跟偶數所以單次for下最多會執行while \( (\frac{n}{2} + \frac{n}{2}) \)次<br>
+那時間複雜度就會是\( O(n^2) \)。
+<hr>
+<h2>Reference</h2>
+<a target="_blank" href="https://www.youtube.com/watch?v=XYQecbcd6_c">Neetcode-youtube</a>
+<hr>
+<h2>problem link</h2>
+<a target="_blank" href="https://leetcode.com/problems/longest-palindromic-substring/submissions/">leetcode</a>
+</body>
+</html>
