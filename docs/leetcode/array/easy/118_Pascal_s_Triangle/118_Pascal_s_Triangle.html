@@ -27,14 +27,14 @@ async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
 	output: [ [1] ]
 	<hr>
 	<h2>思路</h2>
-給定一個可以放陣列(temp_v)的陣列(rev)，<br>
+給定一個可以放陣列(temp_row)的陣列(rev)，<br>
 也就是rev為整個帕斯卡三角形，<br>
-temp_v為那row的值。 <br>
+temp_row為那row的值。 <br>
 利用vector的resize去給那個row大小和預設都為1，<br>
 最左最右不需計算<br>
 這裡用i代表row，j代表column <br>
 除了最左和最右的其他格需要做計算，<br>
-假設要計算的格為temp_v[i][j]，他的值，<br>
+假設要計算的格為temp_row[i][j]，他的值，<br>
 為上個row且相同column的值 加 上個row且上個column的值<br>
 式子為temp[i][j]=rev[i-1][j]+rev[i-1][j-1]
 	<hr>
