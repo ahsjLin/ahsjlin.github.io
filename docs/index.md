@@ -40,6 +40,7 @@
 <a href="https://www.youtube.com/watch?v=NWsw1Vkum_Y" target="_blank">愛的可能</a> <br />
 <a href="https://www.youtube.com/watch?v=NI_lTsIhhwA" target="_blank">專屬天使</a> <br />
 <a href="https://www.youtube.com/watch?v=HUkquoNR32w" target="_blank">你的情歌</a> <br />
+<a href="https://www.youtube.com/watch?v=m1VzD1A7XDs" target="_blank">海上的人</a> <br />
 <a href="https://www.youtube.com/watch?v=t6ArcdE_MI4" target="_blank">SPOTLIGHT</a> <br />
 <a href="https://www.youtube.com/watch?v=hBeZTX0hZ30" target="_blank">我會很愛妳</a> <br />
 <a href="https://www.youtube.com/watch?v=VwtbQ5CmWtA" target="_blank">阿拉斯加海灣</a> <br />
