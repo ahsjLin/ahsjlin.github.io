@@ -113,20 +113,27 @@ A =
 </table>
 <hr>
 \(
+|A|\rightarrow \text{ cardinality of A.}
+\)<br>
+\(
 \emptyset 
 \not\equiv
 \{\emptyset\}
 \)<br>
 \(
+A
+=
 \emptyset
 =
-\{\} \text{ have 0 element.}
+\{\} \text{ have 0 element}, |A|=0.
 \)<br>
 \(
-\{\emptyset\} \text{ have 1 element.}
+B=
+\{\emptyset\} \text{ have 1 element}, |B|=1.
 \)<br>
 \(
-\{\{\emptyset\}\} \text{ have 1 element.}
+C=
+\{\{\emptyset\}\} \text{ have 1 element}, |C|=1.
 \)
 <hr>
 \(
@@ -149,7 +156,290 @@ A=B \leftrightarrow (A\subseteq B) \wedge (B\subseteq A)
 A\subseteq C
 \)
 <hr>
+<h2>Set Operation</h2>
+Suppose 
+\(
+U \text{ is universal set.}
+\), 
+\(
+A,B\subseteq U
+\)
+<hr>
+<h4>difference</h4>
+\(
+A - B=\{x|(x\in A) \cap (x\not\in B)\}
+\)
+<hr>
+<h4>complement</h4>
+<table>
+<tr>
+<td>
+<h4>relative complement</h4>
+as difference.<br>
+\(
+A^c\cap B
+= B-A\)<br>
+\(
+=B\backslash A
+\)
+</td>
+<td>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Venn0010.svg/270px-Venn0010.svg.png" alt=""/>
+</td>
+</tr>
+<tr>
+<td>
+<h4>absolution complement</h4>
+\(
+A^c=U\backslash A=\overline{A}\)<br>
+\(
+=\{x|(x\not\in A) \cap (x\in U)\} \)<br>
+\(
+=U-A
+\)
+</td>
+<td>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Venn1010.svg/270px-Venn1010.svg.png" alt=""/>
+</td>
+</tr>
+</table>
+<hr>
+<h4>symmetric difference</h4>
+<table>
+<tr>
+<td>
+\(
+\oplus
+\)(oplus)
+, 
+\(
+\Delta
+\)(delta)<br><br>
+
+\(
+A\oplus B
+=A\Delta B
+\)<br>
+\(
+=(A-B)\cup(B-A)
+\)<br>
+\(
+=(A\cup B)-(A\cap B)
+\)
+</td>
+<td>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Venn0110.svg/270px-Venn0110.svg.png" alt=""/><br>
+</td>
+</tr>
+</table>
+<hr>
+<h3>example</h3>
+For 
+\(
+A=
+\{a,\{a\}, \{a,b\},\emptyset\}
+\), determine the following sets.<br>
+<ul style="line-height:150%">
+<li>
+\(
+A-\{a\}
+\)<br>
+Ans.<br>
+\(
+\{{\color{blue}a},\{a\}, \{a,b\},\emptyset\}-\{a\}
+\)<br>
+\(
+=\{\{a\}, \{a,b\},\emptyset\}
+\)
+</li>
+<li>
+\(
+\{a,b,c\}-A
+\)<br>
+\(
+Ans.
+\)<br>
+\(
+\{{\color{blue}a},b,c\}-
+\{a,\{a\}, \{a,b\},\emptyset\}
+\)<br>
+\(
+=\{b,c\}
+\)
+</li>
+<li>
+\(
+(
+A
+\cup
+\{a,b\}
+)
+\cap
+\{\emptyset\}
+\)<br>
+Ans.<br>
+\(
+(\;
+\{{\color{red}a},\{a\}, \{a,b\},\emptyset\}
+\cup
+\{{\color{red}a},{\color{blue}b}\}
+\;)
+\cap
+\{\emptyset\}
+\)<br>
+\(
+=\{a,b,\{a\}, \{a,b\},{\color{blue}\emptyset}\}
+\cap
+\{\emptyset\}
+\)<br>
+\(
+=\{\emptyset\}
+\)
+</li>
+</ul>
+
+<hr>
+<!-- operation properties -->
+<h2>Operation properties</h2>
+\(
+A,B,C\subseteq U
+\)
+<hr>
+<h4>associative laws</h4>
+\(
+A\cup(B\cup C)
+=
+(A\cup B)\cup C
+\)<br>
+\(
+A\cap(B\cap C)
+=
+(A\cap B)\cap C
+\)
+<hr>
+<h4>distributive laws</h4>
+\(
+A\cup(B\cap C)
+=
+(A\cup B)\cap (A\cup C)
+\)
+<br>
+\(
+A\cap(B\cup C)
+=
+(A\cap B)\cup (A\cap C)
+\)
+<hr>
+<h4>identity laws</h4>
+\(
+A\cup\emptyset=A
+\)<br>
+\(
+A\cap U=A
+\)
+<hr>
+<h4>inverse laws</h4>
+\(
+A\cup \overline{A}=U
+\)<br>
+\(
+A\cap\overline{A}=\emptyset
+\)
+<hr>
+<h4>domination laws</h4>
+\(
+A\cup U=U
+\),<br>
+\(
+A\cap\emptyset =\emptyset
+\)
+<hr>
+<h4>absorption laws</h4>
+\(
+A\cup(A\cap B)=A
+\),<br>
+\(
+A\cap(A\cup B)=A
+\)
+<hr>
+<h3>OPlus</h3>
+associative and distributive(interaction) laws<br><br>
+<ul>
+	<li>
+\(
+(A\oplus B)\oplus C= A\oplus(B\oplus C)
+\)<br>
+</li>
+<li>
+\(
+A\cap(B\oplus C)=(A\cap B)\oplus(A\cap C)
+\)
+</li>
+</ul>
+<hr>
+Hint: Using Venn Diagram solute.
+<hr>
+<h2>De Morgan's law</h2>
+<ul>
+<li>
+\(
+\overline{A\cup B}=
+\overline{A}\cap\overline{B}
+\)
+</li>
+<li>
+\(
+\overline{A\cap B}=
+\overline{A}\cup\overline{B}
+\)
+</li>
+</ul>
+<!-- proof de morgan -->
+<h3>proof 
+\(
+\overline{A\cup B}=
+\overline{A}\cap\overline{B}
+\)<br>
+</h3>
+(\( \leftrightarrow  \))<br>
+\(
+\forall x\in U\)<br>
+\(
+x\in\overline{A\cup B}
+\)<br>
+\(
+\leftrightarrow x\not\in (A\cup B)
+\)<br>
+\(
+\leftrightarrow x\not\in A \cap x\not\in B
+\)<br>
+\(
+\leftrightarrow x\in \overline{A}\cap \overline{B}
+\)<br>
+\(
+\therefore 
+\overline{A\cup B}
+=
+\overline{A}\cap\overline{B}
+\)
+<hr>
+<h2>Cardinality</h2>
+Suppose \( A \) is a set.<br>
+Number of no repeated elements in A is cardinality.
+Sign as \( |A| \)
+<br>
+example: <br>
+\( A=\{1,2,\{1,2\}\}, |A|=3 \)<br>
+\( A=\{1,1,2,2,2,\{1,2\} \}, |A|=3\)<br>
+\( A=\{\}=\emptyset, |A|=|\emptyset|=0 \)<br>
+\( A=\{\{\emptyset\}\}, |A|=1 \)<br>
+<footer>
+<hr>
 <h2>Reference</h2>
+<a href="https://en.wikipedia.org/wiki/Venn_diagram" target="_blank">wiki</a>
+<br>
 黃子嘉-離散數學
+</footer>
+<hr>
 </body>
 </html>
