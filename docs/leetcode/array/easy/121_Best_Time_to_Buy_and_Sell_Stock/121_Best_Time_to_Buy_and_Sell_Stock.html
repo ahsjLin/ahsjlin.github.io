@@ -39,13 +39,12 @@ Because max profit is 0. Return 0.
 <hr>
 <h2>思路</h2>
 用一個變數(buyDay)記住哪天買，<br>
-初始buyDay是0代表沒買，<br>
-for loop 是從第二天開始判斷，<br>
+初始buyDay是0代表沒買。<br>
+for loop 是從第二天開始判斷。<br>
 如果股票一直在跌就不買，直到有漲。<br>
 如果有買，就判斷接下來的天數的價格是否有比買的那天便宜，<br>
-有的話就改買那天，<br>
-在有買的條件下，判斷那天價格跟你買的那天價格差是否有
-最高利益(maxPro)。
+有的話就改買那天。<br>
+在有買的條件下，判斷那天價格跟你買的那天價格差是否有最高利益(maxPro)。
 <hr>
 <h4>code(cpp)</h4>
 <embed width="700" height="300" src="121_Best_Time_to_Buy_and_Sell_Stock.cpp" type="">
