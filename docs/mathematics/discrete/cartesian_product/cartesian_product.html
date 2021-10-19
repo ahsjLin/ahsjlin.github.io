@@ -1,19 +1,129 @@
-<html> 
-  <head> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
-    <script> 
-    $(function(){
-      $("#includedContent").load("b.html"); 
-    });
-    </script> 
+<html>
+<head>
+<title></title>
+
 <!-- latex math javascript-->
 <script 
 id="MathJax-script"
 async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
 </script>
-  </head> 
 
-  <body> 
-     <div id="includedContent"></div>
-  </body> 
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>Cartisan Product (ordered pair)</h2>
+\(
+A\times B
+\)
+<h3>Definition</h3>
+\(
+A\times B
+=
+\{
+(a,b)|a\in A, b\in B
+\}
+\)
+<br>
+\(
+(a,b)
+\) is a ordered pair.
+<hr>
+Suppose 
+\(
+a\neq b
+\)<br>
+\(
+(a,b) \neq (b,a)
+\)
+<hr>
+Suppose
+\(
+|A|=m, 
+|B|=n
+\),<br>
+\(
+|A\times B|=mn
+\)
+<br>
+<h4>example</h4>
+\(
+A=\{1,2,3\}
+\),
+\(
+B=\{4,5\}
+\)<br>
+\(
+A\times B=
+\{
+(1,4),(1,5),(2,4),(2,5),(3,4),(3,5)
+\}
+\)<br>
+\(
+|A|=3, |B|=2
+\)<br>
+\(
+|A\times B|=6
+\)
+<hr>
+<h4>Excerise</h4>
+Suppose 
+\(
+A=\{0.1,0.2\}, 
+B=\{0.3\}
+\),<br>
+\(
+\text{Determine }2^B \text{ and } A\times 2^B\text{?}
+\)<br><br>
+<h4>solution</h4>
+\(
+2^B=
+\{\emptyset, \{0.3\}\}
+\)<br>
+\(
+A\times 2^B=
+\)
+\(
+\{\;(0.1,\emptyset),\;(0.1,\{0.3\}),\;(0.2,\emptyset),\;(0.2,\{0.3\})\;\}
+\)
+<hr>
+<h4>Excerise</h4>
+Let \( A \) be the set \( \{1,2,3\} \) and 
+\( B \) be the set \( \{3.14, 2.71\} \).<br>
+How many elements are there in the set 
+\(
+2^{2^A\times 2^B}
+\)?
+<h4>solution</h4>
+ans.
+\(
+|2^{2^A\times 2^B}|
+\)<br>
+\(
+|A|=3, |B|=2
+\)<br>
+\(
+|2^A|=|\mathcal{P}(A)|=2^3,
+|2^B|=|\mathcal{P}(B)|=2^2,
+\)<br>
+\(
+|2^A\times 2^B|=2^3\times 2^2=2^5
+\)
+<br>
+\(
+|2^{2^A\times 2^B}|=|\mathcal{P}(2^A\times 2^B)|
+=
+2^{2^5}
+=2^{32}
+\)
+<footer>
+	<hr>
+	<h2>Reference</h2>
+	黃子嘉-離散數學
+</footer>
+</body>
 </html>
