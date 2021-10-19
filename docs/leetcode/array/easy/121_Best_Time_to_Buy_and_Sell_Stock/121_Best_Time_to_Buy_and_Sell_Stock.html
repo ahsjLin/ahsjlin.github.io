@@ -1,0 +1,64 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>121. Best Time to Buy and Sell Stock</h2>
+<hr>
+<h4>problem</h4>
+You are given an array prices where prices[i] is the price of a given stock on the ith day.<br>
+
+You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.<br>
+
+Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.<br>
+<hr>
+<h3>Shortly</h3>
+Get a stock prices data as array.<br>
+Determine which day to buy then which day to sell.<br>
+Return max profit.
+<hr>
+Input: prices = [7,1,5,3,6,4]<br>
+Output: 5
+<hr>
+Input: prices = [7,6,4,3,1] <br>
+Output: 0 <br>
+Because max profit is 0. Return 0.
+<hr>
+<h2>思路</h2>
+用一個變數(buyDay)記住哪天買，<br>
+初始buyDay是0代表沒買，<br>
+for loop 是從第二天開始判斷，<br>
+如果股票一直在跌就不買，直到有漲。<br>
+如果有買，就判斷接下來的天數的價格是否有比買的那天便宜，<br>
+有的話就改買那天，<br>
+在有買的條件下，判斷那天價格跟你買的那天價格差是否有
+最高利益(maxPro)。
+<hr>
+<h4>code(cpp)</h4>
+<embed width="700" height="300" src="121_Best_Time_to_Buy_and_Sell_Stock.cpp" type="">
+<hr>
+上面爛code不用看了，<br>
+看看別人簡單又明瞭的解釋和code(python) 
+<a href="https://www.youtube.com/watch?v=1pkOgXD63yU" target="_blank">NeetCode-youtube</a><br>
+<br>
+<iframe width="600" height="320" src="https://www.youtube.com/embed/1pkOgXD63yU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<footer>
+<hr>
+<h2>Problem link</h2>
+<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock" target="_blank">leetcode</a>
+</footer>
+</body>
+</html>
