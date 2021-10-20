@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>Prime number</title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>prime number</h2>
+Suppose
+\(
+p\in Z^+, p\geq 2
+\)
+except 1<br>
+Composite number is combine by prime number.
+<hr>
+<h4>Notice</h4>
+<ul>
+<li>
+2 is the even number and the smallest prime number.
+<br>
+Other prime number is odd.
+</li>
+<br>
+<li>
+1 is neither composite nor prime number.
+</li>
+<br>
+<li>
+If \( p \) is factor from n and is a prime number.<br>
+It is a prime number from \( n \).
+</li>
+</ul>
+<hr>
+Suppose \( n\in Z^+ \)
+\( n \) is a composite.<br>
+\( \exists p(p\mid n) \)
+<hr>
+<h2>Guess prime factor</h2>
+Suppose a \( n \) is a composite.<br>
+There have a \( p \leq \sqrt{n}\)
+<h3>Example</h3>
+Suppose \( n=40 \).<br>
+\(
+\sqrt{40}<7
+<!--  -->		 
+\)<br>
+\(
+\text{ Guess prime number } 2,3,5
+\)
+to divde 40.
+<br>
+\(
+\rightarrow 40 = 2^3 \times 5
+\)
+<h3>Example</h3>
+Show that \( 151 \) is a prime number.
+<br>
+Guess less and equal than \( \sqrt{151} \) prime number.<br>
+\( 2,3,5,7,11 \)<br>
+all of guess number cannot divide 151.
+<br>
+\(
+\therefore 151 \text{ is a prime number.}
+\)
+<hr>
+<h3>Number of factor</h3>
+Suppose \( n=p^{e_1}_1p^{e_2}_2\dots p^{e_k}_k \)<br>
+number of factor is \( (e_1+1)(e_2+1)\dots(e_k+1) \)
+<hr>
+<h2>Relatively prime</h2>
+Suppose
+\(
+m,n\in Z
+\)
+<br>
+\(
+\gcd(m,n)=1
+\)
+<hr>
+Suppose 
+\(
+m,n\in Z
+\) and 
+\(
+m=nq+r
+\)<br>
+\(
+q,r\in Z
+\)<br>
+\(
+\rightarrow 
+\gcd(m,n)=\gcd(n,r)
+\leftrightarrow
+\gcd(m,n)=\gcd(m,m \mod n)
+\)
+<hr>
+<footer>
+<h4>Reference</h4>
+黃子嘉-離散數學
+</footer>
+</body>
+</html>
