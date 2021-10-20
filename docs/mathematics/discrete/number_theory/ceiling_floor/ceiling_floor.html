@@ -1,0 +1,343 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>Floor && Ceiling</h2>
+Suppose 
+\(
+x\in R
+\)<br>
+<br>
+<h3>floor</h3>
+\(
+\exists!n\in Z
+\rightarrow 
+\)	
+\(
+n\leq x < n +1
+\), sign as 
+\(
+n =				       
+\lfloor x \rfloor
+\)
+<h3>ceiling</h3>
+\(
+\exists!n\in Z
+\rightarrow 
+\)	
+\(
+x\leq n < x +1
+<!-- -->
+\), sign as 
+\(
+n =				       
+\lceil x \rceil				       
+\)
+<hr>
+\(
+-\lfloor x \rfloor
+=
+\lceil -x \rceil
+\)<br>
+<br>
+\(
+-\lceil x \rceil
+=
+\lfloor -x \rfloor
+\)
+<!-- excerise -->
+<hr>				       
+<h2>Exercise</h2>
+Determine true or false.
+<br>
+\(
+\lfloor 2x \rfloor
+\)
+\(
+=\lfloor x \rfloor+
+\lfloor x+\frac{1}{2} \rfloor
+\)
+<h4>solution</h4>
+Suppose 
+\(
+x=z+r, z\in Z, 0\leq r <1
+\)
+<!-- -->
+<br>
+\(
+(\rightarrow )
+\)
+<br>
+\(
+\lfloor 2x \rfloor
+=\lfloor 2z+2r \rfloor
+=2z+\lfloor 2r \rfloor
+=
+\begin{cases}
+2z \text{, if } r< \frac{1}{2}\\
+<!-- -->			    
+2z+1 \text{, if } r\geq \frac{1}{2}\\
+\end{cases}
+\)
+<br>
+\(
+(\leftarrow)
+\)<br>
+\(
+\lfloor x \rfloor + \lfloor x+\frac{1}{2} \rfloor
+=
+\lfloor z+r \rfloor + \lfloor z+r+\frac{1}{2} \rfloor
+=
+z+z+\lfloor r+\frac{1}{2} \rfloor
+=
+\begin{cases}
+2z \text{, if } r< \frac{1}{2}\\
+<!-- -->			    
+2z+1 \text{, if } r\geq \frac{1}{2}\\
+\end{cases}
+\)
+<br>
+\(
+\therefore
+\lfloor 2x \rfloor
+\)
+\(
+=\lfloor x \rfloor+
+\lfloor x+\frac{1}{2} \rfloor
+\)
+<hr>
+<h2>Theorem</h2>
+Suppose \( x,y\in R \)
+<hr>
+\(
+x-1<\lfloor x \rfloor\leq x
+\)
+<!---->			       
+<ul>
+<li>
+<h4>proof</h4>
+\(
+m =\lfloor x \rfloor
+\)<br>
+\(
+\rightarrow 
+(x-1< m) \wedge (m\leq x)
+<!---->
+\)
+<br>
+\(
+\rightarrow 
+(x-1<\lfloor x \rfloor) \wedge (\lfloor x \rfloor\leq x)
+<!---->
+\)<br>
+\(
+\therefore 
+x-1<\lfloor x \rfloor\leq x
+<!-- -->
+\)
+</li>
+</ul>
+<hr>
+\(
+\lfloor x+n \rfloor=\lfloor x \rfloor +n
+,\forall n\in Z
+\)
+<ul>
+<li>
+<h4>proof</h4>
+Suppose \( m=\lfloor x \rfloor \)<br>
+\(
+m\leq x < m+1
+<!-- -->
+\)<br>
+\(
+\rightarrow 
+m+n\leq x+n < m+1+n
+<!-- -->
+\)<br>
+\(
+\rightarrow 
+\lfloor x+n \rfloor
+=m+n, 
+\forall n\in Z(
+\lfloor x+n \rfloor=
+\lfloor x \rfloor+n 
+)
+\)<br>
+\(
+\therefore 
+\lfloor x+n \rfloor=\lfloor x \rfloor +n
+,\forall n\in Z
+\)
+
+</li>
+</ul>
+<hr>
+\(
+\lfloor x \rfloor+\lfloor y \rfloor
+\leq
+\lfloor x+y \rfloor
+\leq
+\lfloor x \rfloor+\lfloor y \rfloor +1
+\)
+<ul>
+<li>
+<h4>proof</h4>
+Suppose \( m=\lfloor x \rfloor , n=\lfloor y \rfloor\)
+<br>
+\(
+\rightarrow m\leq x < m+1,
+<!--  -->
+n\leq y < n+1
+\)<br>
+\(
+\rightarrow 
+m+n\leq x+y < m+n+2
+<!--  -->			       
+\)<br>
+\(
+\rightarrow 
+m+n\leq \lfloor x+y\rfloor {\color{red}\leq} m+n+1
+\)
+<br>
+\(
+\rightarrow 
+\lfloor x \rfloor+\lfloor y \rfloor\leq \lfloor x+y\rfloor \leq \lfloor x \rfloor+\lfloor y \rfloor+1
+\)
+</li>
+</ul>
+<hr>
+\(
+\lfloor x \rfloor + \lfloor -x \rfloor
+=
+\begin{cases}
+0\text{ ,if } x\in Z\\
+-1\text{ , otherwise}
+\end{cases}
+\)
+<ul>
+<li>
+<h4>proof</h4>
+hint: 
+<ul>
+<li>
+\(
+\lfloor -r \rfloor
+=
+\lfloor -1+r \rfloor
+, r\in R^+ \text{ and } 0< r<1
+<!--  -->
+\)
+</li>
+<li>
+\(
+\lfloor -r \rfloor  =
+\lfloor r \rfloor,
+r=0
+\)<br>
+</li>
+<li>
+\(
+\lfloor r \rfloor
+=
+\lfloor 1-r \rfloor
+=0
+, r\in R^+ \text{ and } 0< r<1
+<!--  -->
+\)
+</li>
+</ul>
+Suppose
+\(
+x = z+r , z\in Z, 0\leq r < 1
+<!--  -->			       
+\)
+<br>
+\(
+\rightarrow 
+\lfloor x \rfloor+\lfloor -x \rfloor
+=
+z+\lfloor -z-r \rfloor
+\)<br>
+\(
+=
+z+\lfloor -z{\color{blue}-1+1}-r \rfloor
+\)<br>
+\(
+=
+z-z-1+\lfloor 1-r \rfloor
+\)<br>
+\(
+=
+-1+\lfloor 1-r \rfloor
+\)<br>
+\(
+\Rightarrow 
+\begin{cases}
+0 \;\;,x\in Z \rightarrow r=0\rightarrow \lfloor 1-r \rfloor=1\\
+-1,x\not\in Z \rightarrow \lfloor 1-r \rfloor r =0\\
+\end{cases}
+\)
+</li>
+</ul>
+<hr>
+<h3>Exercise</h3>
+Suppose \( x\in R, x\geq 0 \),
+<br>
+Show that
+\(
+\lfloor \sqrt{\lfloor x \rfloor}\rfloor
+=
+\lfloor \sqrt{x} \rfloor
+\)
+<h4>solution</h4>
+Suppose
+\( m=\lfloor \sqrt{\lfloor x \rfloor} \rfloor \)
+<br>
+\(
+\rightarrow 
+m\leq \sqrt{\lfloor x \rfloor} < m+1
+<!--  -->				    
+\)<br>
+\(
+\rightarrow 
+m^2\leq \lfloor x \rfloor < (m+1)^2
+<!--  -->				    
+\)
+<br>
+\(
+\rightarrow 
+m^2\leq x < (m+1)^2
+<!--  -->				    
+\)<br>
+\(
+\rightarrow 
+m\leq \sqrt{x} < m+1
+<!--  -->				    
+\)<br>
+\(
+\therefore m=\lfloor \sqrt{x} \rfloor 
+=
+\lfloor \sqrt{\lfloor x \rfloor}\rfloor
+\)
+<footer>
+<hr>
+<h2>Reference</h2>
+黃子嘉-離散數學
+</footer>
+</body>
+</html>
