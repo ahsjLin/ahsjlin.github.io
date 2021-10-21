@@ -9,6 +9,9 @@
 
 ### <a href="leetcode/leetcode.html" target="_blank">LeetCode</a>
 
+### <a href="computer/operating_system/operating.html" target="_blank">Operating System</a>
+
+
 ### sam1268
 <a href="https://www.youtube.com/watch?v=xwKDL3vBC5U" target="_blank">海上的人</a> <br />
 <a href="https://www.youtube.com/watch?v=gj1aPwqEAv4" target="_blank">浪流連</a> <br />
