@@ -266,6 +266,12 @@ Parallel portion is the part that can be improved.
 =
 \frac{\text{Before } ET}{\frac{\text{ET of Parallel portion}}{\text{speedup of Parallel portion}}+\text{unimproved time}}
 \]
+<br>
+For percentage
+\[
+\text{speedup}=
+\frac{\cancelto{1}{\frac{\text{all time}}{\text{all time}}}}{\frac{\text{improved time/all time}}{\text{speedup}}\cdot\cancelto{\frac{\text{unimproved time}}{\text{all time}}}{(1-\frac{\text{unimproved time}}{\text{all time}}})}
+\]
 <h2>example</h2>
 目前一個正考慮中的效能評估程式，在舊的浮點數運算<br>
 硬體執行需100秒，為達到整體speedup為3，改善的部分為原來的
