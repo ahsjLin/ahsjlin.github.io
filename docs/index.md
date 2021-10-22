@@ -11,6 +11,8 @@
 
 ### <a href="computer/operating_system/operating.html" target="_blank">Operating System</a>
 
+### <a href="computer/organization/organization.html" target="_blank">Computer Organization and Design</a>
+
 
 ### sam1268
 <a href="https://www.youtube.com/watch?v=xwKDL3vBC5U" target="_blank">海上的人</a> <br />
