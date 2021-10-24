@@ -12,7 +12,11 @@ async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
 <link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
 <link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
 
-
+<style>
+th{
+	border: 1px solid black;
+}
+</style>
 
 </head>
 <body>
@@ -144,6 +148,152 @@ n: 指令類別數。<br>
 <br>
 \( V: \text{電壓} \)<br>
 功率(\( W \))的消耗正比於(clock rate\( \times \)\( V^2 \))
+<hr>
+<h2>Performance example</h2>
+A certain machine with a 10ns 
+\(
+(10\times 10^{-9})
+\) s 
+clock can perform <br>
+jumps (1 cycle),<br>
+branches (3 cycles), <br>
+arithmetic instructions (2 cycles), <br>
+multiply instructions (5 cycles), <br>
+and memory instructions (4 cycles). <br>
+<br>
+A certain program has <br>
+10% jumps, <br>
+10 branches, <br>
+50% arithmetic, <br>
+10% multiply, <br>
+and 20% memory instructions.<br>
+<br>
+Answer the following question. <br>
+Show your derivation in sufficient detail.
+<ol>
+	<li>
+What is the CPI of this program on this machine?
+	</li>
+	<li>
+If the program executes \( 10^9 \) instructions, 
+what is its execution time?
+	</li>
+	<li>
+A 5-cycle multiply-add instruction is implemented 
+that combines an arithmetic and a multiply instruction.<br>
+50% of the multiples can be tuned into multiply-adds.<br>
+What is the new CPI?
+	</li>
+	<li>
+Following (3) above, if the clock period remains the same,<br>
+what is the program's new execution time.
+	</li>
+</ol>
+<h3>ans</h3>
+<ol style="line-height: 30px;">
+	<li>
+<table>
+	<tr>
+	<th>Type</th>
+	<th>Cycle</th>
+	<th>Instruction Count</th>
+	</tr>
+<tr>
+<td>jump</td>
+<td>1</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>branch</td>
+<td>3</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>ari</td>
+<td>2</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>mul</td>
+<td>5</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>mem</td>
+<td>4</td>
+<td>20%</td>
+</tr>
+</table>
+<br>
+\(
+\text{CPI}_\text{avg}
+=
+1\times 0.1 +
+3\times 0.1 +
+{\color{blue}2\times 0.5} +
+5\times 0.1 +
+4\times 0.2
+=
+2.7
+\)
+	</li>
+<li>
+Execution Time
+=
+\(
+\text{IC}\times \text{CPI}\times \text{Clock Cycle Time}
+\)
+\(
+=
+10^9 \times 2.7 \times (10\times 10^{-9})
+=27
+\)
+</li>
+<li>
+Combines 50% of <b>mul</b> into <b>ari</b>.<br>
+\(
+\Rightarrow \text{halve of }10\% \text{ is } 5\%
+\Rightarrow \text{all instructions reduce } 5\%
+\)
+<br>
+The ari cycle per instruction is 2.<br>
+The mul cycle per instruction is 5.<br>
+\( \therefore \) mul domination cycle.
+\(
+\Rightarrow \text{ari part} = 50\% - 5\% = 45\%
+\)
+<br>
+\(
+\Rightarrow \text{CPI}_\text{new}
+=(
+1\times 0.1 + 
+3\times 0.1 +
+{\color{blue}
+2\times 0.45 +
+5\times 0.05} +
+5\times 0.05 +
+4\times 0.2
+)
+/
+0.95
+=
+2.74
+\)
+</li>
+<li>
+Execution Time
+=IC\( \times  \)
+CPI\( \times  \)
+Clock Cycle Time
+<br>
+\(
+\Rightarrow 
+(10^9\times 0.95)\times 2.74\times (10\times 10^{-9})
+=
+26.03
+\)s
+</li>
+</ol>
 <hr>
 <h2>使用MIPS做為效能評估標準的謬誤</h2>
 非時間的效能評估標準叫做MIPS
