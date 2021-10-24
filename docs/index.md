@@ -13,6 +13,8 @@
 
 ### <a href="computer/organization/organization.html" target="_blank">Computer Organization and Design</a>
 
+### <a href="computer/data_structure/data_structure.html" target="_blank">Data Structure</a>
+
 
 ### sam1268
 <a href="https://www.youtube.com/watch?v=xwKDL3vBC5U" target="_blank">海上的人</a> <br />
