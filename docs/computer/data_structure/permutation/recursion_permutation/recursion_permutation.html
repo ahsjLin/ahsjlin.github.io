@@ -2,6 +2,15 @@
 <head>
 <title>recursive permutation</title>
 
+<!-- code style -->
+<style type="text/css" media="screen">
+#allCode {
+	visibility: hidden;
+	height: 10;
+}
+</style>
+
+
 <!-- latex math javascript-->
 <script 
 id="MathJax-script"
@@ -13,6 +22,20 @@ async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
 <link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
 
 
+
+<script charset="utf-8">
+function hideShow(id){
+	var mode = document.getElementById(id);
+	if(window.getComputedStyle(mode).visibility==="hidden"){
+		document.getElementById(id).style.visibility = "visible";
+		document.getElementById(id).style.height = "700";
+	}
+	else{
+		document.getElementById(id).style.visibility = "hidden";
+		document.getElementById(id).style.height = "10";
+	}
+}
+</script>
 
 </head>
 <body>
@@ -57,8 +80,9 @@ return
 <img src="img/abc.png" alt=""/>
 
 <hr>
-<h4>code(cpp) all</h4>
-<embed width="500" height="700" src="recursion_permutation.cpp" type="">
+<button onclick="hideShow('allCode')">code(cpp)</button>
+<br>
+<embed id="allCode" width="500" height="700" src="recursion_permutation.cpp" type="">
 <hr>
 <footer>
 <h2>Reference</h2>
