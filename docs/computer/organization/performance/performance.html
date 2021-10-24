@@ -152,8 +152,8 @@ n: 指令類別數。<br>
 <h2>Performance example</h2>
 A certain machine with a 10ns 
 \(
-(10\times 10^{-9})
-\) s 
+(10\times 10^{-9}\text{s})
+\) 
 clock can perform <br>
 jumps (1 cycle),<br>
 branches (3 cycles), <br>
@@ -258,7 +258,7 @@ Combines 50% of <b>mul</b> into <b>ari</b>.<br>
 <br>
 The ari cycle per instruction is 2.<br>
 The mul cycle per instruction is 5.<br>
-\( \therefore \) mul domination cycle.
+\( \therefore \) mul dominate clock cycle.
 \(
 \Rightarrow \text{ari part} = 50\% - 5\% = 45\%
 \)
@@ -274,8 +274,10 @@ The mul cycle per instruction is 5.<br>
 5\times 0.05 +
 4\times 0.2
 )
+{\color{red}
 /
 0.95
+}
 =
 2.74
 \)
