@@ -4,7 +4,7 @@
 
 ### <a href="leetcode/leetcode.html" target="_blank">LeetCode</a>
 
-### <a href="computer/algorithm/selection_sort/selection_sort.html" target="_blank">Algorithm</a>
+### <a href="computer/algorithm/algorithm.html" target="_blank">Algorithm</a>
 
 ### <a target="_blank" href="mathematics/math.html">Mathematics</a>
 
