@@ -2,18 +2,18 @@
 ## C++ 
 <a href="cpp/Mouse_Maze/Mouse_Maze.html" target="_blank">Mouse Maze(exercise)</a>
 
-### Algorithm
-<a href="cpp/algorithm/selection_sort/selection_sort.html" target="_blank">Selection Sort</a> <br />
+### <a href="leetcode/leetcode.html" target="_blank">LeetCode</a>
+
+### <a href="computer/algorithm/selection_sort/selection_sort.html" target="_blank">Algorithm</a>
 
 ### <a target="_blank" href="mathematics/math.html">Mathematics</a>
 
-### <a href="leetcode/leetcode.html" target="_blank">LeetCode</a>
+### <a href="computer/data_structure/data_structure.html" target="_blank">Data Structure</a>
 
 ### <a href="computer/operating_system/operating.html" target="_blank">Operating System</a>
 
 ### <a href="computer/organization/organization.html" target="_blank">Computer Organization and Design</a>
 
-### <a href="computer/data_structure/data_structure.html" target="_blank">Data Structure</a>
 
 
 ### sam1268
