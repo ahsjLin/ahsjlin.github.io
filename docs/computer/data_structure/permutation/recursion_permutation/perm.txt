@@ -1,0 +1,70 @@
+// Reference
+// https://stackoverflow.com/questions/7537791/understanding-recursion-to-generate-permutations
+
+digraph x {
+rankdir=LR
+size="16,10"
+
+node [label="(Node 0)\n permutate(\"ABC\", 0, 2)"] n0;
+ node [label="(Node 1)\n permutate(\"ABC\", 1, 2)"] n1;
+  node [label="(Node 2)\n permutate(\"ABC\", 2, 2)"] n2;
+  node [label="(Node 3)\n permutate(\"ACB\", 2, 2)"] n3;
+ node [label="(Node 4)\n permutate(\"BAC\", 1, 2)"] n4;
+  node [label="(Node 5)\n permutate(\"BAC\", 2, 2)"] n5;
+  node [label="(Node 6)\n permutate(\"BCA\", 2, 2)"] n6;
+ node [label="(Node 7)\n permutate(\"CBA\", 1, 2)"] n7;
+  node [label="(Node 8)\n permutate(\"CBA\", 2, 2)"] n8;
+  node [label="(Node 9)\n permutate(\"CAB\", 2, 2)"] n9;
+
+node [label="ABC"]p0;
+node [label="ACB"]p1;
+node [label="BAC"]p2;
+node [label="BCA"]p3;
+node [label="CBA"]p4;
+node [label="CAB"]p5;
+
+n0 -> n1 [label="swap(0, 0)"];
+n0 -> n4 [label="swap(0, 1)"];
+n0 -> n7 [label="swap(0, 2)"];
+
+n1 -> n2 [label="swap(1, 1)"];
+n1 -> n3 [label="swap(1, 2)"];
+
+n4 -> n5 [label="swap(1, 1)"];
+n4 -> n6 [label="swap(1, 2)"];
+
+n7 -> n8 [label="swap(1, 1)"];
+n7 -> n9 [label="swap(1, 2)"];
+
+n2 -> p0[label="perm(list,2,2)\n i==n"];
+n3 -> p1[label="perm(list,2,2)\n i==n"];
+n5 -> p2[label="perm(list,2,2)\n i==n"];
+n6 -> p3[label="perm(list,2,2)\n i==n"];
+n8 -> p4[label="perm(list,2,2)\n i==n"];
+n9 -> p5[label="perm(list,2,2)\n i==n"];
+
+p0 -> n2[label="return"];
+n2 -> n1[label="swap(1,1)"];
+
+p1 -> n3[label="return"];
+n3 -> n1[label="swap(1,2)"];
+
+n1 -> n0[label="swap(0,0)"];
+
+p2 -> n5[label="return"];
+n5 -> n4[label="swap(1,1)"];
+
+p3 -> n6[label="return"];
+n6 -> n4[label="swap(1,2)"];
+
+n4 -> n0[label="swap(0,1)"];
+
+p4 -> n8[label="return"];
+n8 -> n7[label="swap(1,1)"];
+
+p5 -> n9[label="return"];
+n9 -> n7[label="swap(1,2)"];
+
+n7 -> n0[label="swap(0,2)"];
+
+}
