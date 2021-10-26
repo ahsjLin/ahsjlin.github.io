@@ -102,9 +102,11 @@
 ### Music
 <a href="https://www.youtube.com/watch?v=oCTGXSK9hWo" target="_blank">Here we are again</a> <br />
 <a href="https://www.youtube.com/watch?v=YhjK6n-EOjY" target="_blank">魚</a> <br />
+<a href="https://www.youtube.com/watch?v=_2-QF_Afh1I" target="_blank">借</a> <br />
 <a href="https://www.youtube.com/watch?v=C46SFG6vHHQ" target="_blank">猫</a> <br />
 <a href="https://www.youtube.com/watch?v=wtFWcZGZO5w" target="_blank">疤</a> <br />
 <a href="https://www.youtube.com/watch?v=yhprObGV8CA" target="_blank">鬼</a> <br />
+<a href="https://www.youtube.com/watch?v=ogVh1oARGuM" target="_blank">嘉賓</a> <br />
 <a href="https://www.youtube.com/watch?v=GedcwChv85k" target="_blank">半心</a> <br />
 <a href="https://www.youtube.com/watch?v=x0J2rs2Qg-0" target="_blank">不滅</a> <br />
 <a href="https://www.youtube.com/watch?v=kiSwS-4nFd0" target="_blank">可是</a> <br />
@@ -159,6 +161,7 @@
 <a href="https://www.youtube.com/watch?v=1A76BpaOJfY" target="_blank">愛してる</a> <br />
 <a href="https://www.youtube.com/watch?v=JFXby7yfGGw" target="_blank">灰色先生</a> <br />
 <a href="https://www.youtube.com/watch?v=vcncUq1Jc2M" target="_blank">斑馬 斑馬</a> <br />
+<a href="https://www.youtube.com/watch?v=-6Q7-JZu3lU" target="_blank">習慣不習慣</a> <br />
 <a href="https://www.youtube.com/watch?v=p0GPJbdKhCw" target="_blank">奇妙能力歌</a> <br />
 <a href="https://www.youtube.com/watch?v=awNgPEZDBeI" target="_blank">禮拜天情人</a> <br />
 <a href="https://www.youtube.com/watch?v=abIRuMGldi8" target="_blank">一番の寶物</a> <br />
@@ -206,6 +209,7 @@
 <a href="https://www.youtube.com/watch?v=dKatg043PDU" target="_blank">故障</a> <br />
 <a href="https://www.youtube.com/watch?v=OZ8UHEFmMtE" target="_blank">晚風</a> <br />
 <a href="https://www.youtube.com/watch?v=mWtGH9_AKT0" target="_blank">英雄</a> <br />
+<a href="https://www.youtube.com/watch?v=umZNqC5IkC0" target="_blank">錯過</a> <br />
 <a href="https://www.youtube.com/watch?v=UbPKL8gpVsc" target="_blank">偽裝</a> <br />
 <a href="https://www.youtube.com/watch?v=FYNNLjn-CuI" target="_blank">愚者</a> <br />
 <a href="https://www.youtube.com/watch?v=8XKmk7lRmZ0" target="_blank">星星</a> <br />
@@ -231,6 +235,7 @@
 <a href="https://www.youtube.com/watch?v=-oDRzgmYHms" target="_blank">5:10a.m.</a> <br />
 <a href="https://www.youtube.com/watch?v=10DHUqSVu6I" target="_blank">與浪之間</a> <br />
 <a href="https://www.youtube.com/watch?v=3UYOS8Pcsks" target="_blank">降雨機率</a> <br />
+<a href="https://www.youtube.com/watch?v=7T0R9CEpyMI" target="_blank">井底之歌</a> <br />
 <a href="https://www.youtube.com/watch?v=IIkZVARlPBA" target="_blank">默數三秒</a> <br />
 <a href="https://www.youtube.com/watch?v=NhJCYJs0XIA" target="_blank">擱淺的人</a> <br />
 <a href="https://www.youtube.com/watch?v=SzWxGpEjpEE" target="_blank">勇敢的人</a> <br />
