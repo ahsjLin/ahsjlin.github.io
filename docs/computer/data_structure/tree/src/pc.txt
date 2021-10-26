@@ -1,0 +1,19 @@
+digraph demo{
+	forcelabels=true;
+	node [label="(A)\n root 1\n parent 1\n degree=3" ] p1;
+	node [label="(B)\n subtree 1\n child 1\n parent 2\n degree=2" ] p2;
+	node [label="(C)\n subtree 2\n child 2\n parent 3\n degree=3" ] p3;
+	node [label="(D)\n subtree 3\n child 3\n leaf 6\n degree=0" ] l6;
+
+	p1->{p2,p3,l6};
+
+	node [label="(E)\n child 4\n leaf 1\n degree=0" ] l1;
+	node [label="(F)\n child 5\n leaf 2\n degree=0" ] l2;
+
+	node [label="(G)\n child 6\n leaf 3\n degree=0" ] l3;
+	node [label="(H)\n child 7\n leaf 4\n degree=0" ] l4;
+	node [label="(I)\n child 8\n leaf 5\n degree=0" ] l5;
+
+	p2 -> {l1, l2};
+	p3 -> {l3, l4, l5};
+}

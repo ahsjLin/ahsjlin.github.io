@@ -1,0 +1,45 @@
+digraph d{
+rankdir=LR;
+	// level 1
+	node[label="(A)\n tag=0\n data=65\n nextLink=&subtree B" ] a;
+	node[label="(subtree B)\n tag=1\n treeLink=&B\n nextLink=&subtree C" ] sb;
+	node[label="(subtree C)\n tag=1\n treeLink=&C\n nextLink=&D" ] sc;
+
+	// level 2
+	node[label="(B)\n tag=0\n data=66\n nextLink=&E" ] b;
+	node[label="(C)\n tag=0\n data=67\n nextLink=&G" ] c;
+	node[label="(D)\n tag=0\n data=68\n nextLink=Null" ] d;
+
+	// level 3
+	node[label="(E)\n tag=0\n data=69\n nextLink=&F" ] e;
+	node[label="(F)\n tag=0\n data=70\n nextLink=NUll" ] f;
+
+	// level 3
+	node[label="(G)\n tag=0\n data=71\n nextLink=&H" ] g;
+	node[label="(H)\n tag=0\n data=72\n nextLink=&I" ] h;
+	node[label="(I)\n tag=0\n data=73\n nextLink=Null" ] i;
+
+	node[label="Null"] null1;
+	node[label="Null"] null2;
+	node[label="Null"] null3;
+
+	// link
+	a -> sb;
+	sb -> sc;
+	sc -> d;
+	sb -> b;
+
+	b -> e;
+	e -> f;
+
+	sc -> c;
+
+	c -> g;
+	g -> h;
+	h -> i;
+
+	d -> null1;
+	f -> null2;
+	i -> null3;
+
+}

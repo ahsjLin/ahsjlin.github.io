@@ -7,6 +7,12 @@
 id="MathJax-script"
 async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
 </script>
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
 
 
 <link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
@@ -43,6 +49,201 @@ Tree=
 \(
 (R,T_1,T_2,\dots, T_n)
 \)
+<br>
+<br>
+<table>
+<tr>
+<td>
+<h3>parent / father</h3>
+A is parent of {B, C, D}.<br>
+B is parent of {E, F}
+<h3>child / son</h3>
+B, C, and D are child from A.
+<h3>ancestor</h3>
+All root from this node.<br>
+A and B are ancestor from E.
+<h3>descendant</h3>
+Except A from the tree, all nodes are descendant from A.
+<h3>brother / sibling</h3>
+C is brother from B.<br>
+F, G, H, and I are brother from E.
+<h3>leaf</h3>
+Degree is zero.
+<h3>height / depth</h3>
+Example from graph.<br>
+level 1 = A.<br>
+level 2 = {B, C, D}<br>
+level 3 = {E, F, G, H, I}
+<br>
+depth = 3
+</td>
+<td>
+<img src="img/pc.png" alt=""/>
+<br>
+<br>
+<button onclick="graph('pc.txt')">graph</button>
+</td>
+</tr>
+</table>
+<hr>
+<h2>空間利用</h2>
+假設<br>
+node的個數為n<br>
+每一個node建立時，需要k個指標空間。<br>
+一共會創造nk個指標空間。 <br>
+那樹的形狀如果是skewed tree。<br>
+實際有使用的指標空間為(n-1)<br>
+沒使用的指標空間為nk-(n-1)個。<br>
+所以利用以下方法可以避免指標空間的浪費。
+<ol>
+<li>
+generalized list
+</li>
+<li>
+left-child right-sibling
+</li>
+<li>
+binary tree
+</li>
+</ol>
+<hr>
+<h2>Generalized list</h2>
+<table>
+<tr>
+<td>
+<h3>expression</h3>
+Create a tag to determine tree or leaf.
+<br>
+\(
+T=(R,T_1,T_2,\dots,T_n)
+\)
+<br>
+\(
+T_1 = (B,\; E,F)
+\)<br>
+\(
+T_2 = (C,\; G,H)
+\)<br>
+\(
+T_3 = D
+\)<br>
+\(
+\Rightarrow 
+(\;A,\;(B,\;E,F),\;(C,\;G,H),\;D\;)
+\)
+<h3>code(c)</h3>
+<embed width="400" src="src/generalized.c" type="">
+<br>
+解釋<br>
+箭頭為nextLink指向。
+<br>
+\(
+A
+\rightarrow 
+(B,E,F)
+\rightarrow 
+(C,G,H)
+\rightarrow 
+D
+\rightarrow 
+\text{Null}
+\)
+<br>
+\(
+B
+\rightarrow 
+E
+\rightarrow 
+F
+\rightarrow 
+\text{Null}
+\)
+<br>
+\(
+C
+\rightarrow 
+D
+\rightarrow 
+H
+\rightarrow 
+\text{Null}
+\)
+<br>
+tag為true表示連結tree，那node就選treeLink，<br>
+表達式裡指向遇到刮號就選treeLink。<br>
+</td>
+<td>
+Original tree<br>
+<img src="img/pc.png" alt=""/>
+<br>
+<br>
+<button onclick="graph('pc.txt')">graph</button>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+Images of generalized list<br>
+\(
+\Rightarrow 
+(\;A,\;(B,\;E,F),\;(C,\;G,H),\;D\;)
+\)
+<br>
+<img src="img/gl.png" alt=""/>
+<br>
+<button onclick="graph('gl.txt')">graph</button>
+</td>
+</tr>
+</table>
+<hr>
+<h2>Left-child Right-Sibling</h2>
+<table>
+	<tr>
+<td>
+As title.<br>
+<p style="color:red;">Order of son(subtree) is not important.</p>
+<h3>code(c)</h3>
+<embed width="400" src="src/left_child_right_sibling.c" type="">
+</td>
+<td>
+Original tree<br>
+<img src="img/pc.png" alt=""/>
+<br>
+<br>
+<button onclick="graph('pc.txt')">graph</button>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+Left-Child Right-Sibling
+<br>
+<img src="img/lcrs.png" alt=""/>
+<br>
+<button onclick="graph('lcrs.txt')">graph</button>
+</td>
+</tr>
+</table>
+<hr>
+<h2>Binary tree</h2>
+<table>
+<tr>
+<td>
+Order of subtree is not important.<br>
+<p style="color:blue;">Order of subtree of binary tree is important.</p>
+Graph as left-child right-sibling, <br>
+but there is different from left and right tree to assign.<br>
+Left and right tree need to be defined clearly.
+.<br>
+<h3>code(c)</h3>
+<embed width="400" src="src/binary_tree.c" type="">
+</td>
+<td>
+Different binary tree<br>
+<img src="img/binary_tree.png" alt=""/>
+</td>
+</tr>
+</table>
+
+	
 <hr>
 <footer>
 <h2>Reference</h2>
