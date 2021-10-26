@@ -71,6 +71,7 @@
 <a href="https://www.youtube.com/watch?v=TvHMG53dAGg" target="_blank">2ㄏ2ㄏ</a> <br />
 <a href="https://www.youtube.com/watch?v=hneL2XbFQxs" target="_blank">不要4誠</a> <br />
 <a href="https://www.youtube.com/watch?v=HLVYx81aG4o" target="_blank">自言自語</a> <br />
+<a href="https://www.youtube.com/watch?v=0CY2xnIGLb0" target="_blank">8+9時期</a> <br />
 <a href="https://www.youtube.com/watch?v=bnikzM43h3c" target="_blank">市長勉勵</a> <br />
 <a href="https://www.youtube.com/watch?v=rxrVSVRS_Ck" target="_blank">十大藥頭</a> <br />
 <a href="https://www.youtube.com/watch?v=Lc0W60S5vV0" target="_blank">RB生日會</a> <br />

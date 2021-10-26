@@ -1,36 +1,36 @@
 digraph lcrs{
 
-node[label="(A)\n leftChild=&B\n rightSibling=Null"]a;
-node[label="(B)\n leftChild=&E\n rightSibling=&C"]b;
-node[label="(C)\n leftChild=&G\n rightSibling=&B"]c;
-node[label="(D)\n leftChild=Null\n rightSibling=Null"]d;
-node[label="(E)\n leftChild=Null\n rightSibling=&F"]e;
-node[label="(F)\n leftChild=Null\n rightSibling=Null"]f;
-node[label="(G)\n leftChild=Null\n rightSibling=&H"]g;
-node[label="(H)\n leftChild=Null\n rightSibling=&I"]h;
-node[label="(I)\n leftChild=Null\n rightSibling=Null"]i;
+	node[label="(A)\n leftChild=&B\n rightSibling=Null"]a;
+	node[label="(B)\n leftChild=&E\n rightSibling=&C"]b;
+	node[label="(C)\n leftChild=&G\n rightSibling=&B"]c;
+	node[label="(D)\n leftChild=Null\n rightSibling=Null"]d;
+	node[label="(E)\n leftChild=Null\n rightSibling=&F"]e;
+	node[label="(F)\n leftChild=Null\n rightSibling=Null"]f;
+	node[label="(G)\n leftChild=Null\n rightSibling=&H"]g;
+	node[label="(H)\n leftChild=Null\n rightSibling=&I"]h;
+	node[label="(I)\n leftChild=Null\n rightSibling=Null"]i;
 
-// null node
-node[label="Null"]null1;
-node[label="Null"]null2;
-node[label="Null"]null3;
-node[label="Null"]null4;
-node[label="Null"]null5;
-node[label="Null"]null6;
-node[label="Null"]null7;
-node[label="Null"]null8;
-node[label="Null"]null9;
-node[label="Null"]null10;
+	// null node
+	node[label="Null"]null1;
+	node[label="Null"]null2;
+	node[label="Null"]null3;
+	node[label="Null"]null4;
+	node[label="Null"]null5;
+	node[label="Null"]null6;
+	node[label="Null"]null7;
+	node[label="Null"]null8;
+	node[label="Null"]null9;
+	node[label="Null"]null10;
 
-// link
-a->{null1,b};
-b->{e, c};
-c->{d,g};
-d->{null2,null3};
-e->{f,null4};
-f->{null5,null6};
-g->{h,null7};
-h->{i,null8};
-i->{null9,null10};
+	// link
+	a->{null1,b};
+	b->{e, c};
+	c->{d,g};
+	d->{null2,null3};
+	e->{f,null4};
+	f->{null5,null6};
+	g->{h,null7};
+	h->{i,null8};
+	i->{null9,null10};
 
 }
