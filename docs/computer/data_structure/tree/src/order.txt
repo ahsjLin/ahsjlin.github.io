@@ -1,0 +1,12 @@
+graph order_demo{
+	node[label="A"]a;
+	node[label="B"]b;
+	node[label="C"]c;
+	node[label="D"]d;
+	node[label="E"]e;
+	node[label="F"]f;
+	node[label="G"]g;
+	a--{b,c};
+	b--{d,e};
+	e--{f,g};
+}

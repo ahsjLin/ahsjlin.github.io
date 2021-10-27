@@ -1,0 +1,19 @@
+graph formulae{
+	node[label="+"]plus1;
+	node[label="*"]mul1;
+	node[label="/"]div1;
+	node[label="+"]plus2;
+	node[label="C"]c;
+	node[label="A"]a;
+	node[label="B"]b;
+	node[label="-"]sub1;
+	node[label="D"]d;
+	node[label="E"]e;
+	node[label="F"]f;
+
+	plus1--{mul1,div1};
+	mul1--{plus2,c};
+	plus2--{a,b};
+	div1--{sub1,d};
+	sub1--{e,f};
+}

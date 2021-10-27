@@ -168,6 +168,7 @@
 <a href="https://www.youtube.com/watch?v=1A76BpaOJfY" target="_blank">愛してる</a> <br />
 <a href="https://www.youtube.com/watch?v=JFXby7yfGGw" target="_blank">灰色先生</a> <br />
 <a href="https://www.youtube.com/watch?v=vcncUq1Jc2M" target="_blank">斑馬 斑馬</a> <br />
+<a href="https://www.youtube.com/watch?v=FGeYMR8hDF8" target="_blank">安靜的美好</a> <br />
 <a href="https://www.youtube.com/watch?v=-6Q7-JZu3lU" target="_blank">習慣不習慣</a> <br />
 <a href="https://www.youtube.com/watch?v=p0GPJbdKhCw" target="_blank">奇妙能力歌</a> <br />
 <a href="https://www.youtube.com/watch?v=awNgPEZDBeI" target="_blank">禮拜天情人</a> <br />
@@ -252,7 +253,6 @@
 <a href="https://www.youtube.com/watch?v=gjBLu5gBnK0" target="_blank">God knows</a> <br />
 <a href="https://www.youtube.com/watch?v=mt4QPkEsgys" target="_blank">香吉士之歌</a> <br />
 <a href="https://www.youtube.com/watch?v=TY9pg-wBbvQ" target="_blank">梵谷的左耳</a> <br />
-<a href="https://www.youtube.com/watch?v=FGeYMR8hDF8" target="_blank">安靜的美好</a> <br />
 <a href="https://www.youtube.com/watch?v=sAhXkIqo82A" target="_blank">無差別傷害</a> <br />
 <a href="https://www.youtube.com/watch?v=1HXUL3Fzlqo" target="_blank">深夜兩點十分</a> <br />
 <a href="https://www.youtube.com/watch?v=zYEt24syYww" target="_blank">一如年少模樣</a> <br />

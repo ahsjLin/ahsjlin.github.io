@@ -192,6 +192,80 @@ If add a pointer to parent.<br>
 Modify like as:<br>
 <embed width="400" src="src/binary_tree_add_parent.c" type=""><br>
 
+<hr>
+<h2>Order traversal</h2>
+Suppose code:<br>
+<embed width="400" src="src/binary_tree.c" type=""><br>
+<table>
+	<tr>
+<td>
+<ul style="line-height: 150%;">
+	<li>(<b>LVR</b>)inorder traversal / infix notation<br>
+<b>order: </b>DBFEGAC
+	</li>
+	<li>(<b>LRV</b>)postorder traversal / postfix notation<br>
+<b>order: </b>DFGEBCA
+	</li>
+	<li>(<b>VLR</b>)preorder traversal / prefix notation<br>
+<b>order: </b>ABDEFGC
+	</li>
+</ul>
+</td>
+<td>
+<img src="img/order.png" alt=""/><br>
+<br>
+<button onclick="graph('order.txt')">graph</button>
+</td>
+	</tr>
+<tr>
+<td>
+The formulae on binary tree. 
+<br>
+\[
+[(A+B)*C]+[(E-F)/D]
+\]
+</td>
+<td>
+<img src="img/formulae.png" alt=""/><br>
+<br>
+<button onclick="graph('formulae.txt')">graph</button>
+
+</td>
+</tr>
+<tr>
+<td>
+<h2>Inorder / Infix (LVR)</h2>
+<b>Order:</b><br>
+A + B * C + [ (E - F) / D ]
+
+</td>
+<td rowspan="3">
+<embed width="400" height="500" src="src/order_formulae.c" type="">
+</td>
+</tr>
+
+<tr>
+<td>
+<h2>Postorder / postfix (LRV)</h2>
+<b>Order:</b><br>
+A B + C * E F - D / +
+
+</td>
+</tr>
+
+<tr>
+<td>
+<h2>Preorder / prefix (VLR)</h2>
+<b>Order:</b><br>
++ * + A B C / - E F D
+
+</td>
+</tr>
+</table>
+還原技巧:<br>
+括號起來的地方當作一個變數。<br>
+postorder: 遇兩個變數再遇一個操作數就括號起來。<br>
+preorder: 遇一個操作數再遇兩個變數就括號起來。<br>
 
 
 
