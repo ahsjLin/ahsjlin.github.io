@@ -108,6 +108,91 @@ Q.E.D.
 <hr>
 <h2>skew tree && complete binary tree</h2>
 <img src="img/skew_complete.png" alt=""/>
+<br>
+The nodes on level i are up to
+\[
+2^{i-1},i\geq 1
+\]
+<hr>
+The binary tree have k depth.
+The number of nodes are up to
+\[
+2^k-1, k\geq 1
+\]
+<hr>
+On binary tree.<br>
+Suppose number of degree 0 nodes is \( n_0 \), <br>
+number of degree 1 nodes is \( n_1 \), <br>
+number of degree 2 nodes is \( n_2 \), <br>
+number of all nodes is \( n \).<br>
+\[
+n_0 = n_2+1
+\]
+<b>proof</b><br>
+\(
+n=n_0+n_1+n_2
+\)<br>
+Let \( B \) is the number of edges.
+\(
+n=B+1
+\)<br>
+\(
+\rightarrow 
+B = n_1+2n_2
+\)<br>
+\(
+\rightarrow 
+n=n_1+2n_2+1
+\)<br>
+\(
+\rightarrow 
+n_0+n_1+n_2 = n_1+2n_2+1
+\)<br>
+\(
+\therefore
+n_0=n_2+1
+\)
+<hr>
+<h2>Full binary tree</h2>
+Fulled all nodes on binary tree.<br>
+Therefore, number of nodes are \( 2^k-1 , k\geq 0\)
+<hr>
+<h2>depth of complete / full binary tree</h2>
+\[
+\lceil \log_{2}(n+1) \rceil
+\]
+<hr>
+<h2>formal binary tree</h2>
+<b>Internal node</b> is the node of tree and is not the leaf.<br>
+All Internal nodes have two child nodes that named <b>formal binary tree</b>.
+<hr>
+<h2>put binary tree into array</h2>
+Label of node is same as array index(omitted index 0).<br>
+Suppose the node i (\( i\neq 1 \))<br>
+Its label of parent is \( i/2 \). <br>
+<br>
+Suppose the node i.<br>
+Its label of left child is \( 2i \).<br>
+\( 2i>n \rightarrow \not\exists \text{left child}\).
+<br>
+<br>
+Suppose the node i.<br>
+Its label of right child is \( 2i+1 \).<br>
+\( 2i+1>n \rightarrow \not\exists \text{right child}\).<br>
+<br>
+<h2>缺點</h2>
+如果不是完備/完滿二元樹，會造成陣列空間的浪費。<br>
+節點的新增、刪除會搬動大部分的節點，造成cpu的負擔，使用
+link list可以解決這個問題。<br>
+<hr>
+<h2>link list on binary tree</h2>
+<h3>code(c)</h3>
+<embed width="400" src="src/binary_tree.c" type=""><br>
+If add a pointer to parent.<br>
+Modify like as:<br>
+<embed width="400" src="src/binary_tree_add_parent.c" type=""><br>
+
+
 
 
 

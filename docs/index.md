@@ -203,6 +203,7 @@
 <a href="https://www.youtube.com/watch?v=sEJKG60a1Zc" target="_blank">成為別人的女朋友了</a> <br />
 <a href="https://www.youtube.com/watch?v=3Cl_kAngXhI" target="_blank">住在天狼星的那個人</a> <br />
 <a href="https://www.youtube.com/watch?v=sq6r4JQpO7Y" target="_blank">天真世界的叛徒(叛徒版)</a> <br />
+<a href="https://www.youtube.com/watch?v=AisgU9W_FWI" target="_blank">天真世界的叛徒(天真版)</a> <br />
 <a href="https://www.youtube.com/watch?v=vEpkphm9WAk" target="_blank">在這個年代 我們不浪漫</a> <br />
 <a href="https://www.youtube.com/watch?v=i19bvo5Afuw" target="_blank">you can be king again</a> <br />
 <a href="https://www.youtube.com/watch?v=DHMx_B9-zdY" target="_blank">你是我最愚蠢的一次浪漫</a> <br />
