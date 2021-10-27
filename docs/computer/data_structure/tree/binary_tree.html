@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>binary tree</title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>Properties of Binary tree</h2>
+V: vertex<br>
+E: edge<br>
+<br>
+\[
+V=E+1
+\]<br>
+<b>proof</b>
+<br>
+Using induction.<br>
+<ol>
+<li>
+Let V=1,<br>
+Since E=0<br>
+Hence V=E+1
+</li>
+<li>
+Suppose
+\(
+1\leq k\leq n
+\rightarrow 
+V=k, E=k-1
+\) is right.
+</li>
+<li>
+To proof V=k+1 is right.<br>
+E=(k-1)+1=k.<br>
+\(V\) split to 
+\( \{V_0, V_1, V_2,\dots, V_k \}\)<br>
+\( V_0 \) is root.<br>
+\( \{V_1, V_2,\dots,V_k \}\) is set of sum of vertex of subtree of \( V_0 \).<br>
+\(
+E=E_1+E_2+\dots+E_k+k
+\)
+<br>
+The k is number of connecting of \(\{V_1,V_2,\dots,V_k\}\)
+<br>
+<br>
+\(
+V_1 = E_1 +1
+\)<br>
+\(
+V_2 = E_2 +1
+\)<br>
+\(
+\dots
+\)<br>
+\(
+V_k = E_k +1
+\)<br>
+<br>
+\( V_1+ V_2+\dots+V_k \)<br>
+\(
+=
+(E_1+1)+(E_2+1)+\dots+(E_k+1)=E_1+E_2+\dots+E_k+k
+\)<br>
+\(
+\rightarrow 
+V = V_0 +(V_1+V_2+\dots+V_k), \because V_0 \text{ is root}
+\therefore V_0= 1
+\)
+<br>
+\(
+\rightarrow 
+V=(V_1+V_2+\dots+V_k)+1
+\)<br>
+\(
+\rightarrow 
+V=(E_1+E_2+\dots+E_k+k)+1
+\)<br>
+\(
+\rightarrow 
+V=E+1
+\)<br>
+\(
+\because E=k
+\)<br>
+\(
+\therefore V=k+1
+\)<br>
+Q.E.D.
+</li>
+</ol>
+<hr>
+<h2>skew tree && complete binary tree</h2>
+<img src="img/skew_complete.png" alt=""/>
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+徐熊健 - 資料結構與演算法
+</footer>
+</body>
+</html>
