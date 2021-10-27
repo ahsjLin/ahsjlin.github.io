@@ -87,14 +87,20 @@
 <a href="https://www.youtube.com/watch?v=cRnJCsrGU0Y" target="_blank">精神答數</a> <br />
 <a href="https://www.youtube.com/watch?v=T0rm3hwY8lk" target="_blank">阿倪和9Q玩遊戲</a> <br />
 <a href="https://www.youtube.com/watch?v=MuO9Dliddl8" target="_blank">緣分測試</a> <br />
+<a href="https://www.youtube.com/watch?v=s2J3zWK3uSQ" target="_blank">RB那晚真的很難過(認真</a> <br />
 <a href="https://www.youtube.com/watch?v=sNDA7kJq3rA" target="_blank">RB測謊</a> <br />
 <a href="https://www.youtube.com/watch?v=SDtPi6kbcww" target="_blank">有點期待</a> <br />
+<a href="https://www.youtube.com/watch?v=qNCbjd9r_kE" target="_blank">太難過了吧</a> <br />
+<a href="https://www.youtube.com/watch?v=9SYx5fZo5Bs" target="_blank">好啦 RB</a> <br />
 <a href="https://www.youtube.com/watch?v=7juGn-kXFKE" target="_blank">不想知道</a> <br />
+<a href="https://www.youtube.com/watch?v=Rq0ytvvtrdw" target="_blank">全與我無關</a> <br />
+<a href="https://www.youtube.com/watch?v=z1gI4yjHOLU" target="_blank">遠距音樂課</a> <br />
 <a href="https://www.youtube.com/watch?v=OMAlQQSWJHM" target="_blank">RB粉專弄好了</a> <br />
 <a href="https://www.youtube.com/watch?v=zSf12rwQ5G4" target="_blank">賭博默示錄</a> <br />
 <a href="https://www.youtube.com/watch?v=amrKkdY1KQ8" target="_blank">RB爸爸選媳婦</a> <br />
 <a href="https://www.youtube.com/watch?v=3DU_m7Y1j2g" target="_blank">RB call in環節</a> <br />
 <a href="https://www.youtube.com/watch?v=ZGuKpXmq6oE" target="_blank">RB call in. feat. 超負荷</a> <br />
+<a href="https://www.youtube.com/watch?v=Aq-6qGptp2I" target="_blank">千古罪人 超負荷</a> <br />
 
 
 
