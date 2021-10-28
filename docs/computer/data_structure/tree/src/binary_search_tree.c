@@ -14,16 +14,16 @@ struct BTreeNode *root;
  */
 
 /* Recursion version */
-struct BTreeNode* searchBST(struct BTreeNode *node,int wantedValue){
+struct BTreeNode* searchBST_Re(struct BTreeNode *node,int wantedValue){
 	if(node==NULL) return NULL;
 	if(wantValue==node->data) return node;
 	if(wantValue < node->data)
-		return searchBST(node->leftChild, wantedValue);
-	return searchBST(node->rightChild, wantedValue);
+		return searchBST_Re(node->leftChild, wantedValue);
+	return searchBST_Re(node->rightChild, wantedValue);
 }
 
 /* Iteration version */
-struct BTreeNode* searchBST(struct BTreeNode *node,int wantedValue){
+struct BTreeNode* searchBST_It(struct BTreeNode *node,int wantedValue){
 	while(node!=NULL){
 		if(wantedValue == node->data) return node;
 		if(wantedValue < node->data)
