@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>Min-Max heap</title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>應用</h2>
+在time sharing的作業系統中，
+不希望優先權高(執行時間最短的)的process等候過久，<br>
+策略使用SJF(shortest-job-first)，<br>
+利用max-heap每次取出最大優先的process處理。<br>
+min-heap c語言寫法只差在compared condition 不同而已。
+<hr>
+search time complexity:<br>
+\(
+O(n)
+\)
+<hr>
+<h2>Max-Heap</h2>
+<table>
+<tr>
+<td>
+為一完備二元樹(commpele binary tree)，
+任一節點的資料內容不<span style="color:red;">小</span>於子節點的資料內容。
+</td>
+<td>
+<img src="img/max_heap.png" alt=""/>
+<br>
+<button onclick="graph('max_heap.txt')">graph</button>
+</td>
+</tr>
+</table>
+<h2>Min-Heap</h2>
+<table>
+<tr>
+<td>
+為一完備二元樹(commpele binary tree)，
+任一節點的資料內容不<span style="color:red;">大</span>於子節點的資料內容。
+</td>
+<td>
+<img src="img/min_heap.png" alt=""/>
+<br>
+<button onclick="graph('min_heap.txt')">graph</button>
+</td>
+</tr>
+</table>
+<hr>
+<h2>陣列表示binary tree</h2>
+Index 0不使用<br>
+<img src="img/array_BTree.png" alt=""/><br>
+<button onclick="graph('array_BTree.txt')">graph</button>
+<hr>
+<h2>Insert node into heap</h2>
+<h3>
+Max-heap<br>
+code(c)
+</h3>
+<embed width="500" height="450" src="src/max_heap.c" type="">
+
+<hr>
+<h2> Delete max value from max-heap </h2>
+<embed width="550" height="600" src="src/delete_max_heap.c" type="">
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+徐熊健 - 資料結構與演算法
+</footer>
+</body>
+</html>

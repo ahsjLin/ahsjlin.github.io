@@ -1,0 +1,15 @@
+graph max_heap{
+	label="Min-heap";
+
+	node[label="5"]n1;
+	node[label="10"]n2;
+	node[label="8"]n3;
+	node[label="20"]n4;
+	node[label="15"]n5;
+	node[label="9"]n6;
+	node[label="13"]n7;
+
+	n1--{n2,n3};
+	n2--{n4,n5};
+	n3--{n6,n7};
+}

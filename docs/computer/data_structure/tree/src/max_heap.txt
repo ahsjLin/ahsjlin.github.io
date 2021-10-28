@@ -1,0 +1,12 @@
+graph max_heap{
+	label="Max-heap";
+
+	node[label="100"]n1;
+	node[label="90"]n2;
+	node[label="95"]n3;
+	node[label="50"]n4;
+	node[label="40"]n5;
+
+	n1--{n2,n3};
+	n2--{n4,n5};
+}

@@ -1,0 +1,28 @@
+graph array_BTree{
+	node[label="Index 1"] n1;
+	node[label="Index 2"] n2;
+	node[label="Index 3"] n3;
+	node[label="Index 4"] n4;
+	node[label="Index 5"] n5;
+	node[label="Index 6"] n6;
+	node[label="Index 7"] n7;
+	node[label="Index 8"] n8;
+	node[label="Index 9"] n9;
+	node[label="Index 10"] n10;
+	node[label="Index 11"] n11;
+	node[label="Index 12"] n12;
+	node[label="Index 13"] n13;
+	node[label="Index 14"] n14;
+	node[label="Index 15"] n15;
+
+	n1--{n2,n3};
+
+	n2--{n4,n5};
+	n3--{n6,n7};
+
+	n4--{n8,n9};
+	n5--{n10,n11};
+	n6--{n12,n13};
+	n7--{n14,n15};
+
+}

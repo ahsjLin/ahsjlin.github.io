@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Binary search tree</title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>Binary search tree</h2>
+提供整體資料大小關係的維繫，於是對<br>
+search, insert, and delete 的運算，<br>
+有優質的時間表現。
+<hr>
+<h2>Definition</h2>
+<ul>
+<li>
+所有node的資料內容是相異的。
+</li>
+<li>
+左子節點的資料內容比父節點的資料內容小。
+</li>
+<li>
+右子節點的資料內容比父節點的資料內容大。
+</li>
+<li>
+左子樹和右子樹也是binary search tree。
+</li>
+</ul>
+<hr>
+<h2>code(c)</h2>
+<embed width="600" height="600" src="src/binary_search_tree.c" type="">
+<hr>
+<h2>高度平衡二元樹</h2>
+稱為AVL tree<br>
+search time complexity:<br>
+\(
+O(\log n)
+\)
+<hr>
+<h2>Insert BSTree</h2>
+<table>
+<tr>
+<td>
+<embed width="700" height="800" src="src/insert_binary_search_tree.c" type="">
+</td>
+</tr>
+<tr>
+<td>
+<img src="img/insertBST.png" alt=""/>
+<br>
+<br>
+<button onclick="graph('insert_BSTree.txt')">graph</button>
+</td>
+</tr>
+<table>
+<hr>
+<h2>Delete BSTree</h2>
+待
+<hr>
+<footer>
+<h2>Reference</h2>
+徐熊健 - 資料結構與演算法
+</footer>
+</body>
+</html>

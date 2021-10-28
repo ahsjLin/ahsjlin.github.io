@@ -1,0 +1,95 @@
+graph insertBST{
+	subgraph cluster_g1{
+		node[label="20"] n1;
+		node[label="16"] n2;
+		node[label="30"] n3;
+
+		node[shape="none"];
+		node[label="NULL"] n4;
+		node[label="NULL"] n5;
+
+		node[shape="ellipse"];
+		node[label="22"] n6;
+
+		node[shape="none"];
+		node[label="NULL"] n7;
+		node[shape="ellipse"];
+		node[shape="none"];
+		node[label="NULL"] n8;
+		node[label="NULL"] n9;
+		node[shape="ellipse"];
+		n1--{n2,n3};
+		n2--{n4,n5};
+		n3--{n6,n7};
+		n6--{n8,n9};
+
+		label="Before";
+		color=black;
+	}
+	subgraph cluster_g2{
+		node[label="20"] s1;
+		node[label="16"] s2;
+		node[label="30"] s3;
+
+		// insert 6
+		node[style=filled]
+		node[style=filled, label="6"] s4;
+		node[style=""]
+
+		// insert 18
+		node[style=filled]
+		node[label="18"] s5;
+		node[style=""]
+
+		node[label="22"] s6;
+
+		node[shape="none"];
+		node[label="NULL"] s7;
+		node[label="NULL"] s8;
+		node[shape="ellipse"];
+
+		// insert 10
+		node[style=filled]
+		node[label="10"] s9;
+		node[style=""]
+
+		node[shape="none"];
+		node[label="NULL"] s10;
+		node[label="NULL"] s11;
+		node[shape="ellipse"];
+
+		// insert 21
+		node[style=filled]
+		node[label="21"] s12;
+		node[style=""]
+
+		// insert 28
+		node[style=filled]
+		node[label="28"] s13;
+		node[style=""]
+
+		node[shape="none"];
+		node[label="NULL"] s14;
+		node[label="NULL"] s15;
+		node[label="NULL"] s16;
+		node[label="NULL"] s17;
+		node[label="NULL"] s18;
+		node[label="NULL"] s19;
+		node[shape="ellipse"];
+
+		s1--{s2,s3};
+		s2--{s4,s5};
+		s3--{s6,s7};
+		s4--{s8,s9};
+		s5--{s10,s11};
+		s6--{s12,s13};
+
+		s9--{s14,s15};
+		s12--{s16,s17};
+		s13--{s18,s19};
+
+		label="After";
+		color=black;
+	}
+	label="Inserted order: 6, 28, 18, 10, 21"
+}
