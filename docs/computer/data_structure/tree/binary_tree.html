@@ -190,11 +190,13 @@ link list可以解決這個問題。<br>
 <embed width="400" src="src/binary_tree.c" type=""><br>
 If add a pointer to parent.<br>
 Modify like as:<br>
+<h3>code(c)</h3>
 <embed width="400" src="src/binary_tree_add_parent.c" type=""><br>
 
 <hr>
 <h2>Order traversal</h2>
 Suppose code:<br>
+<h3>code(c)</h3>
 <embed width="400" src="src/binary_tree.c" type=""><br>
 <table>
 	<tr>
@@ -240,6 +242,7 @@ A + B * C + [ (E - F) / D ]
 
 </td>
 <td rowspan="3">
+<h3>code(c)</h3>
 <embed width="400" height="500" src="src/order_formulae.c" type="">
 </td>
 </tr>
@@ -266,6 +269,55 @@ A B + C * E F - D / +
 括號起來的地方當作一個變數。<br>
 postorder: 遇兩個變數再遇一個操作數就括號起來。<br>
 preorder: 遇一個操作數再遇兩個變數就括號起來。<br>
+
+
+<hr>
+<h2>Copy function</h2>
+<h3>code(c)</h3>
+<embed width="600" height="400" src="src/BTree_copy.c" type="">
+<hr>
+<h2>Equal function</h2>
+<h3>code(c)</h3>
+<embed width="600" height="400" src="src/BTree_equal.c" type="">
+
+<hr>
+<h2>threaded binary tree</h2>
+針對樹葉節點的空指標可以有效利用。<br>
+使得有些運算能加快(走訪)。<br>
+<img src="img/threaded_btree.png" alt=""/><br>
+<table>
+<tr>
+<td>
+<h3>code(c)</h3>
+<embed width="600" height="600" src="src/threaded_btree.c" type="">
+</td>
+<td>
+<img src="img/threaded_btree_.png" alt=""/><br>
+開頭空白節點的利用<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iWdw1kvp3ow?start=9612" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</td>
+</tr>
+</table>
+一旦threaded binary tree 建立完成，infix order(LVR)的走訪就簡單多了<br>
+順序: 
+G D H B A I E C F<br>
+<br>
+解釋:<br>
+如果右引線為true的話，return 右子樹node的記憶體位址，<br>
+否則(執行 while)會找右子樹的最左樹葉，<br>
+並return 該樹葉的記憶體位址。<br>
+
+<br>
+nextThreadedNode代開頭空白節點return G node的記憶體位址<br>
+nextThreadedNode代G node的記憶體位址 return D node的記憶體位址<br>
+以此類類推。
+<br>
+<h3>
+Infix order(中序走訪)<br>
+code(c):
+</h3>
+<embed width="400" height="200" src="src/threaded_inorder.c" type=""><br>
+<br>
 
 
 
