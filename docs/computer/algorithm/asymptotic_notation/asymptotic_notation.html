@@ -165,6 +165,235 @@ of \( f(n) \).
 </tr>
 </table>
 <hr>
+<h3>set</h3>
+Asymptotic  notation 可以視為是函數的集合:<br>
+Example:<br>
+\(
+O(n^2)=\{3n^2-1, n^2, n, \log n,\dots\}
+\)<br>
+\(
+o(n^3)=\{3n^2-1, n^2, n, \log n,\dots\}
+\)<br>
+\(
+\Omega(n)=\{3n^2-1, n^2, n,\dots\}
+\)<br>
+<br>
+這裡用=代表growth order的關係，而不是
+\( \in \)。
+<br>
+Example:<br>
+\(
+f(n)=3n^2+1
+\)<br>
+\(
+g(n)=n^2
+\)
+<br>
+\(
+f(n)=O(g(n))
+\), 而不是
+\(
+f(n)\in O(g(n))
+\)
+<hr>
+<h2>exercise</h2>
+<ul style="line-height: 150%;">
+<li>
+Give two functions that is in \( O(n^2) \) but not
+in \( o(n^2) \).<br>
+ans.<br>
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+\( 3n^2, n^2 \)<br>
+</li>
+<li>
+Give two functions that is in \( \Omega(n^2) \)
+but not in \( \omega(n^2) \).<br>
+ans. <br>
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+\( 4n^2, 3n^2 \)
+</li>
+<li>
+True or False.<br>
+\( 2^{n+1}=O(2^n) \)<br>
+ans.<br>
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+True. \( 2(2^n)=O(2^n) \)
+</li>
+<li>
+True or False.<br>
+\( 2^{2n}=O(2^n) \)<br>
+ans.<br>
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+False. \( 2^{2n}=(2^2)^n=4^n\neq O(2^n) \)
+</li>
+</ul>
+<br>
+
+<hr>
+<h2>properties</h2>
+\(
+f(n)=O(g(n))
+\cap
+f(n)=\Omega(g(n))
+\Leftrightarrow 
+f(n)=\Theta(g(n))
+\)<br>
+<br>
+<b>proof</b><br>
+<ul>
+<li>
+因為\( f(n)=O(g(n)) \)，所以存在\( c_1,n_1>0 \), 使得
+任意\( n>n_1 \)，\( 0\leq f(n) \leq c_1g(n) \)
+</li>	
+<li>
+因為\( f(n)=\Omega(g(n)) \), 所以存在
+\( c_2,n_2>0 \), 使得任意\( n>n_2 \)，
+\( 0\leq g(n) \leq c_2f(n) \)
+</li>
+<li>
+取\( c_0=\frac{1}{c_2} \)，得
+\( 0\leq c_0g(n)\leq f(n) \)<br>
+取\( n_0=max(n_1,n_2) \)，得
+\( \exists c_0,c_1,n_0>0\forall n>n_0 
+\rightarrow 0\leq c_0g(n)\leq f(n)\leq c_1g(n)
+\)
+</li>
+</ul>
+<hr>
+<ul style="line-height:150%;">
+	<li>
+If 
+\(
+f(n)=O(r(n))
+\;
+\cap
+\;
+g(n)=O(s(n))
+\)<br>
+\(
+\rightarrow 
+
+f(n)+g(n)
+=
+O(r(n)+s(n))
+\)
+<br>
+<br>
+<b>proof</b><br>
+
+Since \( f(n)=O(r(n)) \)
+<br>
+\(
+\rightarrow 
+\exists c_1,n_1 >0
+\)
+such that
+\(
+\forall n\geq n_1
+(0\leq f(n)\leq c_1r(n))
+\)
+<br>
+<br>
+Since \( g(n)=O(s(n) \)<br>
+\(
+\rightarrow 
+\exists c_2,n_2>0
+\)
+such that 
+\(
+\forall n\geq n_1
+(0\leq g(n)\leq c_2s(n))
+\)<br>
+Let
+\(
+c_0=c_1\cdot c_2, n_0=max(n_1,n_2)
+\),<br>
+<br>
+We conclude that <br>
+\(
+0\leq f(n)+g(n) \leq c_0(s(n)+r(n))
+\)<br>
+Q.E.D.
+</li>
+<li>
+If 
+\(
+f(n)=O(r(n))
+\;
+\cap
+\;
+g(n)=O(s(n))
+\)<br>
+\(
+\rightarrow 
+
+f(n)\cdot g(n)
+=
+O(r(n)\cdot s(n))
+\)<br>
+<br>
+<b>proof</b>
+<br>
+Since 
+\(
+f(n)=O(r(n))
+\)<br>
+\(
+\exists c_1, n_1>0
+\)
+such taht 
+\(
+\forall n\geq n_1(0\leq f(n)\leq c_1r(n))
+\)<br>
+<br>
+Since
+\(
+g(n)=O(s(n))
+\)<br>
+\(
+\rightarrow 
+\exists c_2, n_2>0
+\) such that 
+\(
+\forall n\geq n_2
+(0\leq g(n)\leq c_2s(n))
+\)<br>
+<br>
+Let 
+\(
+c_0=c_1\cdot c_2, 
+n_0=max(n_1,n_2)
+\)
+<br>
+We conclude that<br>
+\(
+\forall n>n_0
+(f(n)\cdot g(n)\leq c_0(r(n)\cdot s(n)))
+\)
+<br>
+Q.E.D.
+</li>
+</ul>
+<hr>
+\(
+f(n)=O(g(n))
+\rightarrow 
+f(n)+g(n)=O(g(n))
+\)
+
+<hr>
 <footer>
 <h2>Reference</h2>
 洪捷 - 演算法
