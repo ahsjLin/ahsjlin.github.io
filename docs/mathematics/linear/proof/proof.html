@@ -69,9 +69,28 @@ Therefore, \(n\) is odd. Q.E.D.
 </ul>
 <hr>
 <h2>mathematical induction</h2>
+\(
+P(n):
+\) propositional function
+<br>
+\(
+P(k):
+\) inductive hypothesis
+<br>
+\(
+\forall k\in Z^+
+\)
+<br>
+\(
+[P(1)\wedge\forall(P(k)\rightarrow P(k+1))]
+\rightarrow 
+\forall n P(n).
+\)
+<br>
+<br>
 Suppose \(P(n)\), \(n\in Z^+\) <br>
-Step 1: \(P(1)\) is true. <br>
-Step 2: \(\forall k> 1\), \(P(k)\) is true. <br>
+Step 1(Basis step): \(P(1)\) is true. <br>
+Step 2(Inductive step): \(\forall k> 1\), \(P(k)\) is true. <br>
 Show that \(P(k+1)\) is true. <br>
 Therefore, \(n\in Z^+\), \(P(n)\) is true.
 <hr>
