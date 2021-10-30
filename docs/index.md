@@ -101,6 +101,7 @@
 <a href="https://www.youtube.com/watch?v=3DU_m7Y1j2g" target="_blank">RB call in環節</a> <br />
 <a href="https://www.youtube.com/watch?v=ZGuKpXmq6oE" target="_blank">RB call in. feat. 超負荷</a> <br />
 <a href="https://www.youtube.com/watch?v=Aq-6qGptp2I" target="_blank">千古罪人 超負荷</a> <br />
+<a href="https://www.youtube.com/watch?v=fi_E9VWSVzo" target="_blank">阿倪怎麼在對面啊</a> <br />
 
 
 
