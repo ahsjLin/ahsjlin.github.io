@@ -14,7 +14,7 @@
 
 ### <a href="computer/organization/organization.html" target="_blank">Computer Organization and Design</a>
 
-
+### <a href="dump/dump.html" target="_blank">Dump</a>
 
 ### sam1268
 <a href="https://www.youtube.com/watch?v=xwKDL3vBC5U" target="_blank">海上的人</a> <br />
