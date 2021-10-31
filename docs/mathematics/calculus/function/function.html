@@ -1,0 +1,165 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>domain / range</h2>
+<table>
+<tr>
+<td>
+\(
+\{(x,f(x))\;|\; x\in D\}
+\)
+<br>
+<br>
+\(
+D\xrightarrow{f}E
+\)
+</td>
+<td>
+<img src="img/domain_range.png" alt=""/>
+<br>
+<button onclick="graph('domain_range.txt')">graph</button>
+</td>
+</tr>
+</table>
+<h2>Exercise</h2>
+Find the doamin and the range.<br>
+<ul>
+<li>
+\(
+f(x)=
+\sqrt[]{x+2}
+\)<br>
+<b>ans.</b><br>
+domain:<br>
+\(
+x+2\geq 0
+\)<br>
+\(
+\rightarrow 
+x\geq -2
+\)<br>
+\(
+\rightarrow 
+[-2,\infty)
+\)<br>
+range:<br>
+\(
+f(x)\geq 0
+\)<br>
+\(
+\rightarrow 
+[0,\infty)
+\)
+</li>
+<li>
+\(
+g(x)=
+\frac{1}{x^2-x}
+\)<br>
+<b>ans</b><br>
+domain:<br>
+\(
+x^2-x\neq 0
+\)<br>
+\(
+\rightarrow 
+x(x-1)
+\)<br>
+\(
+x\neq \{0,1\}
+\)<br>
+\(
+\rightarrow 
+(-\infty,0)\cup(0,1)\cup(1,\infty)
+\)<br>
+range:<br>
+\(
+(-\infty, \infty)
+\)
+</li>
+</ul>
+<hr>
+<h2>Piecewise Defined Function</h2>
+<b>Example:</b><br>
+\(
+f(x)
+\begin{cases}
+1-x\;\text{if } x\leq -1 \\	
+x^2\;\text{if } x> -1
+\end{cases}
+\)
+<hr>
+<h2>Symmetry / even function</h2>
+\(
+f(-x)=(-x)^2=x^2=f(x)
+\)
+<h2>odd function</h2>
+\(
+f(-x)=(-x)^3=-x^3=-f(x)
+\)
+<hr>
+<h2>Linear Models</h2>
+\(
+y=f(x)=mx+b
+\)
+<hr>
+<h2>Plynomials</h2>
+\(
+P(x)=
+a_nx^n
++
+a_{n-1}x^{n-1}
++
+a_{n-2}x^{n-2}
++\dots
++a_0x^0
+\)
+<hr>
+<h2>Power function</h2>
+\(
+f(x)=x^a
+\)
+<hr>
+<h2>Rational function</h2>
+\(
+f(x)=\frac{P(x)}{Q(x)}
+\)
+<hr>
+<h2>Algebraic function</h2>
+\(
+f(x)=\sqrt[a]{g(x)}
+\)
+<hr>
+<h2>Trigonometric function</h2>
+example:<br>
+\(
+f(x)=\sin(x)
+\)
+<hr>
+<footer>
+<h2>Reference</h2>
+James Stewart, Saleem Watson, Daniel Clegg - Calculus
+</footer>
+</body>
+</html>

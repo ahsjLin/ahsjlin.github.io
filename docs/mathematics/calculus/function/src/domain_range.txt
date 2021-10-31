@@ -1,0 +1,14 @@
+digraph domain_range{
+	subgraph cluster_domain{
+		node[label="x"] x;
+		node[label="a"] a;
+		label="domain";
+	}
+	subgraph cluster_range{
+		node[label="f(x)"] fx;
+		node[label="f(a)"] fa;
+		label="range";
+	}
+	a->fa;
+	x->fx;
+}
