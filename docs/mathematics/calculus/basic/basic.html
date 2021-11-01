@@ -1,0 +1,197 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+<style type="text/css" media="screen">
+.corner{
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+	border: 1px solid black;
+}
+.corner img {
+	margin: 0px 0px 0px -20px;
+}
+.discontinuity{
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+	border: 1px solid black;
+}
+.discontinuity img {
+	margin: 0px 0px 0px -270px;
+}
+.vertical{
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+	border: 1px solid black;
+}
+.vertical img {
+	margin: 0px 0px 0px -535px;
+}
+</style>
+
+</head>
+<body>
+<h2>basic</h2>
+<hr>
+\(
+f'(a)=
+\)
+\(
+\lim_{h\rightarrow 0}
+\frac{f(a+h)-f(a)}{(a+h)-a}
+=
+\lim_{h\rightarrow 0}
+\frac{f(a+h)-f(a)}{h}
+\)
+<hr>
+\(
+\lim_{\Delta x\rightarrow 0}
+\frac{\Delta y}{\Delta x}
+\)
+\(
+=
+\lim_{x_2\rightarrow x_1}
+\frac{f(x_2)-f(x_1)}{x_2-x_1}
+\)
+<hr>
+<h2>Leibniz notation</h2>
+\(
+f'(a)=
+\)
+\(
+\frac{dy}{dx}
+|_{x=a} 
+\)
+or
+\(
+\frac{dy}{dx}
+]_{x=a} 
+\)
+<hr>
+<h2>fail to be differentiable</h2>
+<ul>
+<li>
+A corner<br>
+<div class="corner">
+<img  src="img/fail_to_diff.png" alt=""/>
+</div>
+</li>
+<li>
+A discontinuity
+<div class="discontinuity">
+<img  src="img/fail_to_diff.png" alt=""/>
+</div>
+</li>
+<li>
+A vertical tangent
+<div class="vertical">
+<img  src="img/fail_to_diff.png" alt=""/>
+</div>
+</li>
+</ul>
+<hr>
+<h2>the product rule</h2>
+\(
+(fg)'=fg'+f'g
+\)
+<hr>
+<h2>the quotient rule</h2>
+\(
+(\frac{f}{g})' =
+\frac{gf'-fg'}{g^2}
+\)
+<hr>
+<h2>the power rule</h2>
+\(
+\frac{d}{dx}(x^n)
+=
+nx^{n-1}
+\)
+<hr>
+<h2>trigonometirc function</h2>
+<table>
+<tr>
+<td>
+\(
+(\sin x )'
+=
+\cos x 
+\)<br>
+\(
+(\cos x )'
+=
+-\sin x 
+\)<br>
+\(
+(\tan x )'
+=
+\sec^2 x 
+\)<br>
+<br>
+\(
+(\cot x )'
+=
+-\csc^2x
+\)<br>
+\(
+(\sec x )'
+=
+\sec x \tan x 
+\)<br>
+\(
+(\csc x )'
+=
+-\csc x \cot x 
+\)
+</td>
+<td>
+hint:
+<br>
+\(
+\tan x = \frac{\sin x}{\cos x}
+\)<br>
+\(
+\sec x = \frac{1}{\cos x}
+\)<br>
+\(
+\csc x = \frac{1}{\sin x}
+\)
+</td>
+</tr>
+</table>
+<hr>
+<h2>the chain rule</h2>
+\(
+\frac{dy}{dx}
+=
+\frac{dy}{du}
+\frac{du}{dx}
+\)
+
+<hr>
+<footer>
+<h2>Reference</h2>
+James Stewart, Saleem Watson, Daniel Clegg - Calculus
+</footer>
+</body>
+</html>
