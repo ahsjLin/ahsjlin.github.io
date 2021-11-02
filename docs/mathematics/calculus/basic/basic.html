@@ -185,9 +185,108 @@ hint:
 \frac{dy}{dx}
 =
 \frac{dy}{du}
-\frac{du}{dx}
+\frac{dy}{dx}
 \)
-
+<br>
+<br>
+\(
+\frac{dy}{dx}
+=
+\frac{dy}{du}\frac{du}{dx}
+\)<br>
+\(
+=
+\frac{dy}{du}
+\frac{du}{dt}
+\frac{dt}{dx}
+\)<br>
+<br>
+<b>example:</b><br>
+\(
+f(x)=\sin(\cos(\tan x))
+\)<br>
+\(
+f'(x)=\cos(\cos(\tan x))\frac{d}{dx}(\cos(\tan x))
+\)<br>
+\(
+=\cos(\cos(\tan x))\cdot (-\sin(\tan x))\frac{d}{dx}(\tan x)
+\)<br>
+\(
+=\cos(\cos(\tan x))\cdot (-\sin(\tan x))\sec^2 x
+\)
+<hr>
+\(
+(f\circ g)'(x)
+\)<br>
+\(
+=f'(g(x))\cdot g'(x)
+\)<br>
+<br>
+***<br>
+\(
+f(x)=f(g(h(r(x))))
+\)<br>
+\(
+f'(x)=f'(g(h(r(x)))) 
+\times g'(h(r(x)))
+\times h'(r(x))
+\times r'(x)
+\)
+<br>
+<br>
+<b>example:</b><br>
+\(
+\frac{d}{dx}\sin^2 x 
+\)<br>
+\(
+\Rightarrow 
+\text{suppose: }
+g(x)=\sin x 
+\)<br>
+\(
+\Rightarrow 
+\frac{d}{dx}(g(x))^2
+\)<br>
+\(
+=2g(x)\cdot g'(x)
+= 2\sin x\cdot \cos x 
+\)
+<br>
+<br>
+<b>example:(chain rule)</b><br>
+\(
+\frac{d}{dx}\sin(x^2)
+\)<br>
+the chain rule:<br>
+\(
+\text{Let }u=x^2, y=\sin(u)
+\)<br>
+\(
+\Rightarrow 
+\frac{dy}{dx}
+=
+\frac{dy}{du}
+\cdot
+\frac{du}{dx}
+\)<br>
+\(
+\Rightarrow 
+\cos(u)
+\cdot
+\frac{du}{dx}
+\)<br>
+\(
+\Rightarrow 
+\cos(x^2)
+\cdot 
+2x
+\)
+<hr>
+<h2>linear approximations</h2>
+\(
+L(x)=
+f(a)+f'(x)(x-a)
+\)
 <hr>
 <footer>
 <h2>Reference</h2>
