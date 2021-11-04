@@ -1,0 +1,313 @@
+<html>
+<head>
+<title>Determinant</title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+The determinant of a square matrix is a single number.<br>
+The determinant is zero when the matrix has no inverse
+(singular).<br>
+sign as 
+\(
+\det(A)
+\) or
+\(
+|A|
+\).(A is a square matrix)
+<hr>
+\(
+det(A^{-1})=\frac{1}{det(A)}
+\)<br><br>
+\( P: \) permutation matrix<br>
+\(
+det(PA)=\pm det(A)
+\)<br>
+\(
+\Rightarrow 
+\det(P)\det(A)=\det(L)\det(U)
+\)
+<br>
+\(
+\Rightarrow 
+\det(A)=\pm\det(U)
+\)
+<br>
+<br>
+<b>example:</b><br>
+\(
+det
+\begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix}
+=
+1
+\),
+\(
+det
+\begin{bmatrix}
+0 & 1 \\
+1 & 0
+\end{bmatrix}
+=
+-1
+\)
+<br>
+<br>
+\(
+\det((PA)^T)=\det((LU)^T)
+\)<br>
+\(
+\rightarrow 
+\det(A^T)\det(P^T)
+=
+\det(U^T)\det(L^T)
+\)
+<hr>
+hint:<br>
+\( P \): permutation matrix
+<br>
+\(
+P^TP=I
+\)<br>
+\(
+P^{-1}=P^T
+\)
+<hr>
+*** \(
+\det(A+B)
+\neq
+\det(A)+\det(B)
+\)
+<hr>
+\(
+\det(AB)=\det(A)\cdot\det(B)
+\)
+<br>
+\(
+\det(A^T)=\det(A)
+\)
+<hr>
+\(
+\begin{vmatrix}
+ta & tb \\
+c & d
+\end{vmatrix}
+=
+t
+\begin{vmatrix}
+a & b \\
+c & d
+\end{vmatrix}
+\)
+<br>
+<b>example:</b><br>
+\(
+\begin{vmatrix}
+4 & 8 & 8 \\
+0 & 1 & 0 \\
+0 & 0 & 1 
+\end{vmatrix}
+=
+4
+\begin{vmatrix}
+1 & 2 & 2 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{vmatrix}
+\)
+<br>
+<br>
+***
+\(
+\det(2A)\neq 2\det(A)
+\)<br>
+\(
+t\in R, A\in F^{m\times n}, m=n
+\)<br>
+\(
+\det(tA)=t^m\det(A)
+\)
+<hr>
+\(
+\begin{vmatrix}
+a+a' & b+b' \\
+c & d
+\end{vmatrix}
+=
+\begin{vmatrix}
+a & b \\
+c & d
+\end{vmatrix}
++
+\begin{vmatrix}
+a' & b' \\
+c & d
+\end{vmatrix}
+\)<br>
+<b>example:</b><br>
+\(
+\begin{vmatrix}
+4 & 8 & 8 \\
+0 & 1 & 0 \\
+0 & 0 & 1 
+\end{vmatrix}
+=
+\begin{vmatrix}
+4 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 
+\end{vmatrix}
++
+\begin{vmatrix}
+0 & 8 & 8 \\
+0 & 1 & 0 \\
+0 & 0 & 1 
+\end{vmatrix}
+
+\)
+<hr>
+<h2>equal rows && zero rows</h2>
+\(
+\det(A)=0
+\)<br>
+<b>example:</b><br>
+\(
+\begin{vmatrix}
+a & b \\
+a & b
+\end{vmatrix}
+=0
+\)
+,
+\(
+\begin{vmatrix}
+0 & 0 \\
+c & d
+\end{vmatrix}
+=0
+\)
+<hr>
+<h2>without permutation, gauss elimination</h2>
+\(
+\det(A)
+\) unchanged<br>
+<b>example:</b><br>
+\(
+\ell \in R
+\)
+<br>
+\(
+\begin{vmatrix}
+a & b \\
+c-a\ell & d-b\ell
+\end{vmatrix}
+=
+\begin{vmatrix}
+a & b \\
+c & d
+\end{vmatrix}
++(-\ell)
+\begin{vmatrix}
+a & b \\
+a & b
+\end{vmatrix}
+=
+\begin{vmatrix}
+a & b \\
+c & d
+\end{vmatrix}
+\)
+<hr>
+<h2>triangular matrix</h2>
+if \( A \) is triangular \( \rightarrow  \)
+product of diagonal entries.<br>
+\(
+\begin{vmatrix}
+a & b \\
+0 & d
+\end{vmatrix}
+=
+ad
+\),
+\(
+\begin{vmatrix}
+a & 0 \\
+c & d
+\end{vmatrix}
+=
+ad
+\)
+<hr>
+\(
+\begin{vmatrix}
+a & b \\
+c & d
+\end{vmatrix}
+=0
+\leftrightarrow 
+\text{singular}
+\)
+<hr>
+\(
+|AB|=|A||B|
+\)<br>
+<br>
+When the \( B \) is 
+\( A^{-1} \), this rule says
+that the determinant of \( A^{-1} \)
+is \( \frac{1}{\det A} \)<br>
+\(
+\det (AA^{-1})= (\det A)(\det A^{-1})
+=\det I
+=1
+\)<br>
+<hr>
+<h2>determinant method</h2>
+<ul>
+<li>
+<b>pivots</b><br>
+The product of the pivots.<br>
+\(
+\det(PA)=\det(LU)
+\)
+gives that
+\(
+\det A =\pm\det U
+\)
+</li>
+<li>
+<b>big formula</b><br>
+
+</li>
+<li>
+<b>cofactors</b>
+</li>
+</ul>
+<img width="70%"src="src/big_formula_1.png" alt=""/><br>
+<img width="70%"src="src/cofactor_1.png" alt=""/><br>
+<hr>
+<footer>
+<h2>Reference</h2>
+Gilbert Strang - Introduction to Linear Algebra
+</footer>
+</body>
+</html>

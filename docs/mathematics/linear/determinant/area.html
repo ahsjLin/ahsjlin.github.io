@@ -1,0 +1,65 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+The corners \( (x_1,y_1) \) 
+and \( (x_2,y_2) \) 
+and \( (x_3, y_3) \)
+of a triangle.<br>
+If \( (x_3,y_3)=(0,0) \)<br>
+The area of the triangle
+\( 
+=
+\frac{1}{2}
+\begin{vmatrix}
+x_1 & y_1 \\
+x_2 & y_2
+\end{vmatrix}
+\)<br>
+otherwise,
+area 
+\(
+=
+\frac{1}{2}
+\begin{vmatrix}
+x_1 & y_1 & 1 \\
+x_2 & y_2 & 1 \\
+x_3 & y_3 & 1 \\
+\end{vmatrix}
+\)
+<hr>
+the area of the parallelogram:<br><br>
+\(
+\begin{vmatrix}
+x_1 & y_1 \\
+x_2 & y_2
+\end{vmatrix}
+\)
+
+<hr>
+<footer>
+<h2>Reference</h2>
+Gilbert Strang - Introduction to Linear Algebra
+</footer>
+</body>
+</html>

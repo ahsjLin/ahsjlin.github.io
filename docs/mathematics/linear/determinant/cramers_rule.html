@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>cramer's rule</title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+Suppose
+\( 
+A= 
+\begin{bmatrix}
+a_{1} & a_{2} & a_{3}
+\end{bmatrix}
+, a_i\in V, i=\{1,2,3\}
+\)
+<br>
+<br>
+<b>Key idea</b> 
+<br>
+\(
+\begin{bmatrix}
+a_{1} & a_{2} & a_{3}
+\end{bmatrix}
+\begin{bmatrix}
+1 & x_1 & 0 \\
+0 & x_2 & 0 \\
+0 & x_3 & 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+a_{1} & b & a_3
+\end{bmatrix}
+=
+B_2
+\)<br>
+<br>
+\(
+\Rightarrow 
+\det(
+\begin{bmatrix}
+a_{1} & a_{2} & a_{3}
+\end{bmatrix}
+\begin{bmatrix}
+1 & x_1 & 0 \\
+0 & x_2 & 0 \\
+0 & x_3 & 1
+\end{bmatrix}
+)
+=
+\det(B_2)
+\)<br>
+<br>
+\(
+\Rightarrow 
+\det(A)
+\det(
+\begin{bmatrix}
+1 & x_1 & 0 \\
+0 & x_2 & 0 \\
+0 & x_3 & 1
+\end{bmatrix}
+)
+=
+\det(B_2)
+\)<br>
+<br>
+\(
+\Rightarrow 
+\det(
+\begin{bmatrix}
+1 & x_1 & 0 \\
+0 & x_2 & 0 \\
+0 & x_3 & 1
+\end{bmatrix}
+)
+=x_2
+=
+\frac{\det(B_2)}{\det(A)}
+\)<br>
+<br>
+以此類推。<br>
+<br>
+\(
+x_1=\frac{\det B_1}{\det A}
+\)<br>
+<br>
+\(
+x_3=\frac{\det B_3}{\det A}
+\)<br>
+
+<hr>
+<footer>
+<h2>Reference</h2>
+Gilbert Strang - Introduction to Linear Algebra
+</footer>
+</body>
+</html>

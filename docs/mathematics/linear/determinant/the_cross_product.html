@@ -1,0 +1,100 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+two vector \( u \) and \( v \)<br>
+<br>
+\(
+u\times v
+=
+\begin{vmatrix}
+i & j & k \\
+u_1 & u_2 & u_3 \\
+v_1 & v_2 & v_3 \\
+\end{vmatrix}
+\) 
+is perpendicular to \( u \) and \( v \).<br>
+<br>
+The cross product \( v\times u \) is \( -(u\times v) \)
+<hr>
+\(
+u\cdot (u\times v)
+=
+v\cdot (u\times v)
+=
+0
+\)
+<hr>
+\(
+u\times u = v\times v = 0
+\)
+<hr>
+\(
+\lVert u\times v\rVert
+=
+\lVert u\rVert
+\lVert v\rVert
+|\sin\theta|
+\)
+<br>
+<br>
+\(
+|u\cdot v|
+=
+\lVert u\rVert
+\lVert v\rVert
+|\cos\theta|
+\)
+<hr>
+<h2>Triple Product</h2>
+\(
+(u\times v)\cdot w
+=
+\begin{vmatrix}
+u_1 & u_2 & u_3 \\
+v_1 & v_2 & v_3 \\
+w_1 & w_2 & w_3 \\
+\end{vmatrix}
+=
+\begin{vmatrix}
+w_1 & w_2 & w_3 \\
+u_1 & u_2 & u_3 \\
+v_1 & v_2 & v_3 \\
+\end{vmatrix}
+=
+\text{Volumn}
+\)
+<br>
+<br>
+If 
+\(
+(u\times v)\cdot w
+=0
+\) that means \( u,v,w \) lies in same plane.
+<hr>
+<footer>
+<h2>Reference</h2>
+Gilbert Strang - Introduction to Linear Algebra
+</footer>
+</body>
+</html>
