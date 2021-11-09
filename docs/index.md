@@ -177,6 +177,7 @@
 <a href="https://www.youtube.com/watch?v=OP4vwOJlhxk" target="_blank">忽然之間</a> <br />
 <a href="https://www.youtube.com/watch?v=1A76BpaOJfY" target="_blank">愛してる</a> <br />
 <a href="https://www.youtube.com/watch?v=JFXby7yfGGw" target="_blank">灰色先生</a> <br />
+<a href="https://www.youtube.com/watch?v=8tuzFSXeKI0" target="_blank">與我無關</a> <br />
 <a href="https://www.youtube.com/watch?v=vcncUq1Jc2M" target="_blank">斑馬 斑馬</a> <br />
 <a href="https://www.youtube.com/watch?v=FGeYMR8hDF8" target="_blank">安靜的美好</a> <br />
 <a href="https://www.youtube.com/watch?v=-6Q7-JZu3lU" target="_blank">習慣不習慣</a> <br />
