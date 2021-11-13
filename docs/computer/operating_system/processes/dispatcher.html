@@ -1,0 +1,94 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>Dispatcher</h2>
+把CPU的控制權授予要執行的process<br>
+<hr>
+功能有
+<ul>
+<li>轉換process data</li>
+<li>轉換到使用者模式</li>
+<li>跳到程式呼叫的的地方, 重新開始執行程式。</li>
+</ul>
+<hr>
+Dispatcher盡可能高速運作，縮短process waiting time,<br>
+降低dispatch latency.
+<hr>
+<h2>Purpose</h2>
+<ul>
+<li>提高單位時間內的process完成數量(Throughput)
+</li>
+<li>將額外工作(overhead)減至最少。</li>
+<li>平衡資源使用</li>
+<li>提高CPU的使用率</li>
+<li>降低process的turnaround time <br>
+Waiting time = Waiting to get memory + Waiting in ready queue<br>
+Execution time = CPU time I/O Doing time. <br>
+Turnaround time = Waiting Time + Execution Time.
+</li>
+<li>降低response time</li>
+<li>避免發生Starvation</li>
+<li>提供優先處理的制度(Priority)</li>
+</ul>
+<li></li>
+<hr>
+<h2>CPU Scheduling Criteria</h2>
+<ul>
+<li>cpu utilization<br>
+盡可能保持忙綠<br>
+期望負載:40%~90%
+</li>
+<li>Throughput<br>
+單位時間內所完成的process數目。
+</li>
+<li>Turnaround Time<br>
+自process進入system 到process完成工作的時間。<br>
+turnaround time 包含1. 等待進入記憶體, 2. 等待進入ready queue
+, 3. 在CPU上執行, 以及進行I/O運作等
+</li>
+<li>Waiting Time<br>
+process在ready queue中的waiting time.
+</li>
+<li>Response time<br>
+從某個process要求delivery直到cpu回應這個process所等待的時間，<br>
+</li>
+</ul>
+summary:<br>
+盡量<br>
+提高cpu利用率<br>
+最大thoughput<br>
+縮小 turnaround time<br>
+縮小 response time<br>
+縮小 waiting time<br>
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+洪逸-作業系統金寶典<br>
+</footer>
+
+</body>
+</html>

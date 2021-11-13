@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Scheduler</title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>Scheduler 種類</h2>
+<ul>
+<li>Long-Term Scheduler
+<ul>
+<li>執行頻率不高</li>
+<li>在batch system 中常用, 但time sharing, real time system 不適用</li>
+</ul>
+<li>Short-Term Scheduler(CPU Scheduling, process scheduling)
+<ul>
+<li>從ready queue中挑出優先權最高的process來獲取cpu的控制權</li>
+<li>Batch System, Time-Sharing System, and Real-Time System皆會使用。</li>
+</ul>
+</li>
+<li>Medium-Term Scheduling:<br>
+當memory空間不足時或某process之 storage time quantum
+超過，則會某個process swap out 到disk，等有memory空間或準備好了才swap in。<br><br>
+<img src="img/medium_term_scheduling.png" alt=""/>
+<br>
+<br>
+
+<br>
+Time-sharing System常使用(RR)<br>
+則Batch, Real-time System中不使用。
+
+</li>
+
+
+</li>
+</ul>
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+洪逸-作業系統金寶典<br>
+Abraham Silberschatz, Greg Gagne, Peter B. Galvin - Operating System Concepts-Wiley<br>
+</footer>
+
+</body>
+</html>

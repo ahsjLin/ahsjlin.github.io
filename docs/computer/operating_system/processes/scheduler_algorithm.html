@@ -1,0 +1,326 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>cpu scheduling algorithm</h2>
+<hr>
+<h2>FCFS(FIFS)(FIFO)</h2>
+First-come First-service / 
+First-In First-service /
+First-In First-out
+<br>
+<br>
+新的process會接在ready queue的rear段，
+當有cpu有空閒時會從ready queue的head拿出process來執行。
+<br>
+缺點:<br>
+<ul>
+<li>
+平均 turnaround time 和 waiting time 較長, 
+並和進入ready queue的順序有關。
+</li>
+<li>
+<a href="https://www.geeksforgeeks.org/convoy-effect-operating-systems/#:~:text=Convoy%20Effect%20is%20phenomenon%20associated,due%20to%20few%20slow%20processes.&text=This%20property%20of%20FCFS%20scheduling%20leads%20to%20the%20situation%20called%20Convoy%20Effect." target="_blank">Convoy Effect</a>
+</li>
+</ul>
+
+<table>
+
+<tr>
+<td>
+</td>
+<td>
+Burst Time
+</td>
+</tr>
+
+
+<tr>
+<td>
+\( P_1 \)
+</td>
+<td>
+24
+</td>
+</tr>
+
+<tr>
+<td>
+\( P_2 \)
+</td>
+<td>
+3
+</td>
+</tr>
+
+<tr>
+<td>
+\( P_3 \)
+</td>
+<td>
+3
+</td>
+</tr>
+
+</table>
+<br>
+如果順序為\( 1\rightarrow 2\rightarrow 3 \)<br>
+avg. waiting time:<br>
+(0+24+27)/3 = 17
+如果順序為\( 3\rightarrow 2\rightarrow 1 \)<br>
+avg. waiting time:<br>
+(6+3+0)/3 = 3
+
+<hr>
+<h2>SJF(Shortest Job First)</h2>
+選擇最小 CPU Burst Time的Process先執行<br>
+為在平均waiting time / turnaround time 有最好的排法(時間少)<br>
+SJF適用於Job Scheduler, 可預測各個Job的Time Limit。<br>
+由於Process 的下一個 CPU Burst Time 較難預測, 
+因此難被利用在 CPU Scheduler。<br>
+<br>
+如果CPU動作相同，則會使用FIFO<br>
+<br>
+SJF在batch process 的 Long-Term工作的排程來說，
+可以使用(Process Time Limit)的方法來評估
+process 運作的時間限制。
+<br>
+就SJF而言<br>
+(burst time愈長, 優先權越低)<br>
+<hr>
+<h2>Priority scheduler</h2>
+會將CPU指定給具有最高優先權的Process，<br>
+若有優先權相等的要使用CPU，則採FCFS。<br>
+(burst time愈長, 優先權越低)<br>
+<table>
+
+
+<tr>
+
+<td>
+</td>
+<td>
+Burst time
+</td>
+<td>
+Priority
+</td>
+
+</tr>
+
+
+
+<tr>
+<td>
+	P1
+</td>
+<td>
+	10
+</td>
+<td>
+	3
+<td>
+</tr>
+
+
+<tr>
+<td>
+	P2
+</td>
+<td>
+	1
+</td>
+<td>
+	1
+<td>
+</tr>
+
+<tr>
+<td>
+	P3
+</td>
+<td>
+	2
+</td>
+<td>
+	3
+<td>
+</tr>
+
+<tr>
+<td>
+	P4
+</td>
+<td>
+	1
+</td>
+<td>
+	4
+<td>
+</tr>
+
+<tr>
+<td>
+	P5
+</td>
+<td>
+	5
+</td>
+<td>
+	2
+<td>
+</tr>
+
+</table>
+<br>
+Scheduler: 
+\(
+P2
+\rightarrow 
+P5
+\rightarrow 
+P1
+\rightarrow 
+P3
+\rightarrow 
+P4
+\)
+<br>
+優先權的設定方式<br>
+<b>內部定義:</b><br>
+使用某些可以測量值來計算process的優先權。<br>
+ex. 時間限制、記憶體的需求、開啟檔案的數量、
+平均I/O動作、平均CPU動作等。<br>
+<br>
+<b>外部定義:</b><br>
+則是作業系統外的因素決定。ex. 主要用途、金費等
+<hr>
+<h2>Priority Scheduling 問題(Starvation)</h2>
+問題是可能會讓較低優先權的process陷入無限期的等待CPU的地步。<br>
+稱為無限停滯(Block)或叫飢餓現象(Starvation)。<br>
+<br>
+<h4>solution: Aging Techique (老化技術)</h4>
+將在os中等候久的process的優先權逐漸提高。
+
+
+
+
+<hr>
+<h2>Round-Robin Scheduling</h2>
+O.S會定義CPU時間配額(Time Quantum)或時間分割(Time Slice)。<br>
+當process使用CPU超過time quantum or time slice時，
+則Timer會產生中斷，讓process 從 running state 回到
+ready state。<br>
+如果process在CPU執行時間小於time slice，則會自動釋放CPU。<br>
+反之，定時器會向os發出中斷，然後執行context switching。
+<br>
+如果 time quantum 過小，會造成context switching負擔過大。<br>
+turnaround time 同樣也取決於time slice配額的大小。<br>
+如果將處理context switch時間加進去，小的time slice需多次context switch，所以平均turnaround time也要增加。
+<hr>
+<h2>Multi-processor scheduler</h2>
+如果每個CPU有獨立的queue，<br>
+可能會造成有CPU忙綠, 有的可能starvation。<br>
+為了避免這種狀況，可以共用一個ready queue，<br>
+所有process都必須先進來這個queue等候，哪個CPU有空閒，<br>
+就安排那個process到空閒的CPU處理。<br>
+為了防止多個CPU選擇同一個process，或CPU選擇到的process遺失了，<br>
+利用master-slave處理器的結構(asymmetric mulitprocessing)， 一個特定的處理器充當cpu排班程式。<br>
+<h4>master processor</h4>
+排班決定、I/O處理以及其他系統的動作都交由一個單一的cpu處理。<br>
+其他cpu只是負責執行user的程式碼。<br>
+這樣只有一個cpu會存取系統中的資料結構，<br>
+減輕資料共用帶來的麻煩。<br>
+但對I/O傾向的process可能會造成cpu上的瓶頸(只有master cpu才能動資料)。
+
+<hr>
+<h2>Real-time system scheduling</h2>
+<h4>hard real-time system</h4>
+必須在一定量的時間內完成task，
+通常要執行的process要到cpu時會附帶描述需要計算的或執行的
+I/O時間量。<br>
+排班程式可能會接受這個process，並準時完成;或拒絕這個process。
+稱為資源預約(resource reservation)。<br>
+此系統必須保證結果的確定性，專為執行某個重要process而設計。<br>
+<h4>Soft real-time system</h4>
+要求重要process優先權高於其他process。<br>
+如果將他加到time-sharing system中，<br>
+可能造成資源分配不公平。產生starvation。<br>
+<br>
+實現softr real-time system需要:
+<ul>
+<li>
+有優先權的排班功能, 
+real-time process必須要有最高優先權，
+且優先權不能隨時間遞減。(這個process不能被aging)
+</li>
+<li>
+response waiting 時間要短。
+</li>
+
+</ul>
+
+
+
+<hr>
+<h2>Thread Management</h2>
+<ul>
+<li>
+Called a lightweight process(LWP), is a basic unit of 
+CPU utilization.
+</li>
+<li>
+It comprises
+<ul>
+	<li>A thread ID</li>
+	<li>Programming counter</li>
+	<li>Register set</li>
+	<li>Stack</li>
+</ul>
+</li>
+<li>
+It shares with other thread belonging to the same process
+<ul>
+<li>Code section</li>
+<li>Data section</li>
+<li>Other os resources such as open files and signals.</li>
+</ul>
+</li>
+<li>If the process has multiple threads of control, it
+can do more than one task at a time.<br>
+<img src="img/single_multi_thread.png" alt=""/>
+</li>
+</ul>
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+洪逸-作業系統金寶典<br>
+Abraham Silberschatz, Greg Gagne, Peter B. Galvin - Operating System Concepts-Wiley<br>
+</footer>
+
+</body>
+</html>

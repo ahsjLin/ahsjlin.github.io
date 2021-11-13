@@ -1,0 +1,72 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+A traditional(or heavyweight) process has a single thread
+of control.<br>
+If a process has multiple threads of control, it can
+perform more than one task at a time.<br>
+<img src="img/single_multiple_thread.png" alt=""/>
+多threads好處是可以同時處理多個任務<br>
+ex. 正在打字時可以同步檢查拼音語法<br>
+ex. 一個web server接受client 請求網頁，
+如果有多個client請求，就可以避免其他client等待過久的情形。
+<hr>
+<h2>User threads and kernel threads</h2>
+User threads are supported above the kernel and
+are managed without kernel suppoet.<br>
+Kernel threads are supported and managed directly by the
+operating system.
+<h3>relationship</h3>
+<ul>
+<li>
+Many-to-One Model<br>
+<img src="img/many2one.png" alt=""/><br>
+</li>
+<li>
+One-to-One Model<br>
+<img src="img/one2one.png" alt=""/>
+</li>
+<li>
+Many-to-Many Model <br>
+<img src="img/many2many.png" alt=""/><br>
+The variation on the many-to-many model still multiplexes many<br>
+user-level threads to a smaller or equal number of kernel<br>
+but also allows a user-level thread to be bound to a<br>
+kernel thread.<br>
+<b>two-level model</b> <br>
+<img src="img/two_level_model.png" alt=""/>
+</li>
+</ul>
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+洪逸-作業系統金寶典<br>
+Abraham Silberschatz, Greg Gagne, Peter B. Galvin - Operating System Concepts-Wiley<br>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Context Switch</title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>Context Switch</h2>
+cpu控制權從一個process到另一個process的過程。<br><br>
+Consume time of context switch取決於硬體機器<br>
+ex.<br>
+記憶體速度, 暫存器數量, 以及特殊指令是否存在。
+<hr>
+<h2>如何降低context-switching負擔</h2>
+<ul>
+<li>Architecture的一些特殊指令</li>
+<li>Multiple Register Sets<br>
+一個process用一個register set, 新的就用另一個，<br>
+當要context switching時, o.s.只要轉換指標就行了。
+<li>針對o.s.的system process提供private set of registers</li>
+<li>建立LWP(Lightweight Process),即Thread,<br>
+來處理Short-Term Job, 這些process有較簡化的PCB及limited context,<br>
+以達到partically context switching的目標。</li>
+
+</li>
+</ul>
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+洪逸-作業系統金寶典<br>
+</footer>
+
+</body>
+</html>
