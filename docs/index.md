@@ -119,6 +119,7 @@
 <a href="https://www.youtube.com/watch?v=_2-QF_Afh1I" target="_blank">借</a> <br />
 <a href="https://www.youtube.com/watch?v=C46SFG6vHHQ" target="_blank">猫</a> <br />
 <a href="https://www.youtube.com/watch?v=wtFWcZGZO5w" target="_blank">疤</a> <br />
+<a href="https://www.youtube.com/watch?v=9atLLuPKBZ8" target="_blank">年</a> <br />
 <a href="https://www.youtube.com/watch?v=yhprObGV8CA" target="_blank">鬼</a> <br />
 <a href="https://www.youtube.com/watch?v=ogVh1oARGuM" target="_blank">嘉賓</a> <br />
 <a href="https://www.youtube.com/watch?v=nVjVpX3gRWk" target="_blank">米兒</a> <br />
@@ -164,6 +165,7 @@
 <a href="https://www.youtube.com/watch?v=C9Nfp4pnXmQ" target="_blank">接不接受</a> <br />
 <a href="https://www.youtube.com/watch?v=X4G2lVpy0aw" target="_blank">赧然的賊</a> <br />
 <a href="https://www.youtube.com/watch?v=7TV5CCzUvbs" target="_blank">記憶停留</a> <br />
+<a href="https://www.youtube.com/watch?v=T4eqDMRnWfc" target="_blank">天外來物</a> <br />
 <a href="https://www.youtube.com/watch?v=1BBw4oyOMG0" target="_blank">飛鳥和蟬</a> <br />
 <a href="https://www.youtube.com/watch?v=cxNWXxBoaHg" target="_blank">雲煙成雨</a> <br />
 <a href="https://www.youtube.com/watch?v=6Xu-TGL-_qk" target="_blank">愛在夏天</a> <br />
@@ -178,6 +180,7 @@
 <a href="https://www.youtube.com/watch?v=1A76BpaOJfY" target="_blank">愛してる</a> <br />
 <a href="https://www.youtube.com/watch?v=JFXby7yfGGw" target="_blank">灰色先生</a> <br />
 <a href="https://www.youtube.com/watch?v=8tuzFSXeKI0" target="_blank">與我無關</a> <br />
+<a href="https://www.youtube.com/watch?v=hQsOL_DSv9w" target="_blank">藍色眼睛</a> <br />
 <a href="https://www.youtube.com/watch?v=vcncUq1Jc2M" target="_blank">斑馬 斑馬</a> <br />
 <a href="https://www.youtube.com/watch?v=FGeYMR8hDF8" target="_blank">安靜的美好</a> <br />
 <a href="https://www.youtube.com/watch?v=-6Q7-JZu3lU" target="_blank">習慣不習慣</a> <br />
@@ -187,6 +190,7 @@
 <a href="https://www.youtube.com/watch?v=JAeZpxmDL8U" target="_blank">エウテルペ</a> <br />
 <a href="https://www.youtube.com/watch?v=GzoV8klyGrQ" target="_blank">聰明的寂寞</a> <br />
 <a href="https://www.youtube.com/watch?v=tIxRFojt5GU" target="_blank">戀愛的犀牛</a> <br />
+<a href="https://www.youtube.com/watch?v=xpLKFFrWb6Q" target="_blank">殘缺的彩虹</a> <br />
 <a href="https://www.youtube.com/watch?v=cV3Z3usC73M" target="_blank">正想著你呢</a> <br />
 <a href="https://www.youtube.com/watch?v=iDfZua4IS4A" target="_blank">接下來如何</a> <br />
 <a href="https://www.youtube.com/watch?v=MrxI-lW7adU" target="_blank">一去不回來</a> <br />
@@ -234,6 +238,7 @@
 <a href="https://www.youtube.com/watch?v=uK4ExmTDxPM" target="_blank">更迭</a> <br />
 <a href="https://www.youtube.com/watch?v=FYNNLjn-CuI" target="_blank">愚者</a> <br />
 <a href="https://www.youtube.com/watch?v=8XKmk7lRmZ0" target="_blank">星星</a> <br />
+<a href="https://www.youtube.com/watch?v=Z7cnN8rMoQU" target="_blank">藍寶</a> <br />
 <a href="https://www.youtube.com/watch?v=SuFfufGloLg" target="_blank">光圈</a> <br />
 <a href="https://www.youtube.com/watch?v=QPY4h-nDIZ8" target="_blank">爛泥</a> <br />
 <a href="https://www.youtube.com/watch?v=ZTtNbQ70m4s" target="_blank">刑者</a> <br />
@@ -262,6 +267,7 @@
 <a href="https://www.youtube.com/watch?v=SzWxGpEjpEE" target="_blank">勇敢的人</a> <br />
 <a href="https://www.youtube.com/watch?v=6q5Syk54i9U" target="_blank">平凡之路</a> <br />
 <a href="https://www.youtube.com/watch?v=6evIBFNwPWI" target="_blank">達拉崩吧</a> <br />
+<a href="https://www.youtube.com/watch?v=AROEc92rFUM" target="_blank">美麗的人</a> <br />
 <a href="https://www.youtube.com/watch?v=gjBLu5gBnK0" target="_blank">God knows</a> <br />
 <a href="https://www.youtube.com/watch?v=mt4QPkEsgys" target="_blank">香吉士之歌</a> <br />
 <a href="https://www.youtube.com/watch?v=TY9pg-wBbvQ" target="_blank">梵谷的左耳</a> <br />
