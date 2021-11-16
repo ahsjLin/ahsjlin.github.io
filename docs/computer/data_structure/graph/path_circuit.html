@@ -1,0 +1,59 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>Path</h2>
+滿足條件, 原點不是終點
+<hr>
+<h2>Circuit(Cycle)</h2>
+滿足條件, 原點等於終點<br>
+<hr>
+<h2>Euler</h2>
+cycle(circuit): 每條路都走過一遍, 原點等於終點。<br>
+path: 每條路都走過一遍，原點不等於終點。<br>
+<h3>如何判斷是不是Euler 迴路/路徑</h3>
+每個點都有他的degree(分支度)，
+每個點需要是偶數的分支度，才能夠形成euler 迴路/路徑。
+<h3>故事</h3>
+<a href="https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg" target="_blank">Konigsberg的七橋問題</a>
+
+
+
+<hr>
+<h2>Hamilton</h2>
+cycle(circuit): 每個點只走過一遍(除了原點和終點),
+因為原點就是終點。<br>
+path: 每個點只走過一遍，且不重複。<br>
+<a href="https://en.wikipedia.org/wiki/Hamiltonian_path" target="_blank">wiki</a>
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>
