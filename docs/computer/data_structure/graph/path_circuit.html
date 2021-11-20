@@ -40,7 +40,7 @@ path: 每條路都走過一遍，原點不等於終點。<br>
 每個點需要是偶數的分支度，才能夠形成euler 迴路/路徑。
 <h3>故事</h3>
 <a href="https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg" target="_blank">Konigsberg的七橋問題</a><br>
-一筆劃問題
+一筆劃問題(all of degree of vertex are even.(circuit))(otherwise, path)
 
 
 <hr>
@@ -50,9 +50,13 @@ cycle(circuit): 每個點只走過一遍(除了原點和終點),
 path: 每個點只走過一遍，且不重複。<br>
 <a href="https://en.wikipedia.org/wiki/Hamiltonian_path" target="_blank">wiki</a>
 <h3>故事</h3>
-<a href="https://sites.google.com/site/jiyinyansuanfa/gong-zuo-nei-rong/lue-xing-tui-xiao-yuan-wen-ti-tsp-cheng-shi-jie-mian-hua" target="_blank">旅行銷售員問題</a>
+五邊形構成的十二面體, 每個點當作一個城市,
+是否能找到一個迴路, 每個城市都走過一遍, 然後回到原來的城市。(也就是原來起點的城市會走兩次)
+<br>
+<a href="https://sites.google.com/site/jiyinyansuanfa/gong-zuo-nei-rong/lue-xing-tui-xiao-yuan-wen-ti-tsp-cheng-shi-jie-mian-hua" target="_blank">旅行銷售員問題(travelling salesman problem)</a>(此問題邊上是有權重的)<br>
+<a href="https://wiki.evilmadscientist.com/TSP_art" target="_blank">TSP art</a>
 <h3>問題</h3>
-Hamilton cycle 目前沒有很好的演算法去判斷 (為NP-complete問題)。
+Hamilton cycle 目前沒有很好的演算法去判斷 (為NP-complete問題)(time complexity 為指數)。
 
 
 
