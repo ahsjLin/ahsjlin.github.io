@@ -42,6 +42,7 @@
 <a href="https://www.youtube.com/watch?v=xXjNgWPzZVM" target="_blank">(B)與我無關</a> <br />
 <a href="https://www.youtube.com/watch?v=lRnHHYoGa0s" target="_blank">無人之島</a> <br />
 <a href="https://www.youtube.com/watch?v=DUXAYN4itGk" target="_blank">嘉賓</a> <br />
+<a href="https://www.youtube.com/watch?v=BfGsW070dgQ" target="_blank">(B)嘉賓</a> <br />
 <a href="https://www.youtube.com/watch?v=3Nug-pYIgg4" target="_blank">那些年</a> <br />
 <a href="https://www.youtube.com/watch?v=ugYnm9n1TgI" target="_blank">丟了你</a> <br />
 <a href="https://www.youtube.com/watch?v=NWsw1Vkum_Y" target="_blank">愛的可能</a> <br />
