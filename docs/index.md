@@ -43,6 +43,7 @@
 <a href="https://www.youtube.com/watch?v=lRnHHYoGa0s" target="_blank">無人之島</a> <br />
 <a href="https://www.youtube.com/watch?v=DUXAYN4itGk" target="_blank">嘉賓</a> <br />
 <a href="https://www.youtube.com/watch?v=BfGsW070dgQ" target="_blank">(B)嘉賓</a> <br />
+<a href="https://www.youtube.com/watch?v=LSyObqY92L8" target="_blank">(B)嘉賓2</a> <br />
 <a href="https://www.youtube.com/watch?v=3Nug-pYIgg4" target="_blank">那些年</a> <br />
 <a href="https://www.youtube.com/watch?v=ugYnm9n1TgI" target="_blank">丟了你</a> <br />
 <a href="https://www.youtube.com/watch?v=NWsw1Vkum_Y" target="_blank">愛的可能</a> <br />
@@ -112,6 +113,7 @@
 <a href="https://www.youtube.com/watch?v=F6hmTnQZ0Ak" target="_blank">沒有再臭</a> <br />
 <a href="https://www.youtube.com/watch?v=5ngr3K3P5uI" target="_blank">有人在C喔 抓到</a> <br />
 <a href="https://www.youtube.com/watch?v=6O3aUys5bec" target="_blank">+++</a> <br />
+<a href="https://www.youtube.com/watch?v=hZE-t4l0D-U" target="_blank">跟老闆出去爽</a> <br />
 
 
 
