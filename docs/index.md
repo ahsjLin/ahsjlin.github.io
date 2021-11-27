@@ -1,6 +1,5 @@
 <link rel="icon" href="sd-card.png"/>
-## C++ 
-<a href="cpp/Mouse_Maze/Mouse_Maze.html" target="_blank">Mouse Maze(exercise)</a>
+### <a href="cpp/note.html" target="_blank">Cpp</a>
 
 ### <a href="leetcode/leetcode.html" target="_blank">LeetCode</a>
 
