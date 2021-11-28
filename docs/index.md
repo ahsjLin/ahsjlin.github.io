@@ -1,5 +1,5 @@
 <link rel="icon" href="sd-card.png"/>
-### <a href="cpp/note.html" target="_blank">Cpp</a>
+### <a href="programming/cpp/note.html" target="_blank">Cpp</a>
 
 ### <a href="leetcode/leetcode.html" target="_blank">LeetCode</a>
 
