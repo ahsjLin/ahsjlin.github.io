@@ -70,6 +70,104 @@ function graph(name){
 <li>
 <a href="src/binomial_theory.png" target="_blank">Binomial theorem</a>
 </li>
+<li>
+<a href="src/pascal_identity_and_triangle.png" target="_blank">pascal identity and triangle</a>
+</li>
+<li>
+<a href="src/other_binomial_identity.png" target="_blank">other Binomial identities</a>
+</li>
+</ul>
+
+<h2>generalize permutation and combination</h2>
+<ul>
+<li>
+permutations with no repetition:
+\(
+P_{r}^{n}
+=
+\frac{n!}{(n-r)!}
+\)
+</li>
+<li>
+combinations with no repetition:
+\(
+C_{r}^{n}
+=
+\frac{n!}{r!(n-r)!}
+\)
+</li>
+<li>
+<a href="src/permutation_repetition.png" target="_blank">permutations with repetition</a>: 
+\(
+n^r
+\)
+</li>
+<li>
+<a href="src/combinations_with_repetition.png" target="_blank">combinations with repetition</a>:
+\(
+\begin{pmatrix}
+n-1+r \\
+r
+\end{pmatrix}
+\)
+</li>
+<li>
+<a href="src/permutation_with_indistinguished_objects.png" target="_blank">permutation with indistinguishable objects</a>:
+</li>
+</ul>
+<h2>distributing objects</h2>
+We count the ways to distribute objects, distinguishable or indistinguishable, into indistinguishable boxes.<br>
+There are no closed formulae to use in these cases.
+<ul>
+<li>
+<a href="src/distributing_objects_into_boxes.png" target="_blank">Distributing distinguishable objects into distinguishable boxes</a>
+= 
+permutation with indistinguishable objects.
+</li>
+
+<li>
+<a href="src/undistinguishable_objects_into_distinguishable_boxes.png" target="_blank">Indistinguishable objects into distinguishable boxes</a>
+as same as combinations with repetition.
+</li>
+
+<li>
+<a href="src/distinguishable_objects_and_indistinguishable_boxes.png" target="_blank">distinguishable objects and indistinguishable boxes</a>	
+- 
+more difficult(no closed formulae).  <br>
+Stirling numbers of the second kind.(boxes cannot be empty.)<br>
+S(n,j): n distinguishable objects into j indistinguishable boxes.<br>
+<br>
+Formula:<br>
+\[
+S(n,j)=
+\frac{1}{j!}\sum_{i=0}^{j-1}(-1)^{i}
+\begin{pmatrix}
+j \\
+i
+\end{pmatrix}
+(j-i)^{n}
+\]
+<br>
+<br>
+Using in n distinguishable objects and k indistinguishable boxes.<br>
+\[
+\sum_{j=1}^{k}
+S(n,j)=
+\sum_{j=1}^{k}
+\frac{1}{j!}\sum_{i=0}^{j-1}(-1)^{i}
+\begin{pmatrix}
+j \\
+i
+\end{pmatrix}
+(j-i)^{n}
+\]
+ex. <br>
+S(4,3)=6.<br>
+S(4,2)=7.<br>
+S(4,1)=1.<br>
+6+7+1=14.<br>
+</li>
+
 </ul>
 
 </head>
