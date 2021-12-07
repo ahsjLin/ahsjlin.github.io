@@ -1,0 +1,63 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>Tips</h2>
+<hr>
+<h4>Class</h4>
+constant specific to class <br>
+code: 
+<pre>
+<code>
+private:
+	// enum sample (Not the point)
+	enum name {"Acer", "Bell", "Cao"};
+
+	// tip start
+	// unscoped
+	enum company {Atype_company=10, Btype_company=20, Ctype_company=30};
+	int Item[(int)Atype_company]; // create 40 bytes (4*10)
+
+	// scoped
+	// type need to setting
+	enum class us_company {Atype_company=30, Btype_comany=40, Ctype_comany=50};
+	int Item[(int)us_company::Btype_comany]; // create 160 bytes (4*40)
+
+
+</code>
+</pre>
+
+
+<hr>
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+Stephen Prata - Cpp Primer Plus.pdf
+</footer>
+
+</body>
+</html>

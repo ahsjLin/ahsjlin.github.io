@@ -43,7 +43,8 @@
 <a href="https://www.youtube.com/watch?v=DUXAYN4itGk" target="_blank">嘉賓</a> <br />
 <a href="https://www.youtube.com/watch?v=BfGsW070dgQ" target="_blank">(B)嘉賓</a> <br />
 <a href="https://www.youtube.com/watch?v=LSyObqY92L8" target="_blank">(B)嘉賓2</a> <br />
-<a href="https://www.youtube.com/watch?v=eiGdd9sMquU" target="_blank">(B)嘉賓 offcial</a> <br />
+<a href="https://www.youtube.com/watch?v=eiGdd9sMquU" target="_blank">(B)嘉賓 offcial(88888 9Q衝擊</a> <br />
+<a href="https://www.youtube.com/watch?v=devX-2N-_k4" target="_blank">9Q發版權砲了</a> <br />
 <a href="https://www.youtube.com/watch?v=3Nug-pYIgg4" target="_blank">那些年</a> <br />
 <a href="https://www.youtube.com/watch?v=ugYnm9n1TgI" target="_blank">丟了你</a> <br />
 <a href="https://www.youtube.com/watch?v=NWsw1Vkum_Y" target="_blank">愛的可能</a> <br />
@@ -58,6 +59,7 @@
 <a href="https://www.youtube.com/watch?v=NWsw1Vkum_Y" target="_blank">你有你的人生 我有我的旅程</a> <br />
 <a href="https://www.youtube.com/watch?v=e2ts-KA1KrY" target="_blank">(B)地球上最浪漫的一首歌</a> <br />
 <a href="https://www.youtube.com/watch?v=Mav4yvrSlHc" target="_blank">(Ni)地球上最浪漫的一首歌</a> <br />
+<a href="https://www.youtube.com/watch?v=r8TgG5Lw3IU" target="_blank">1212專輯</a> <br />
 <a href="https://www.youtube.com/watch?v=14RRZzyTvLY" target="_blank">倪</a> <br />
 <a href="https://www.youtube.com/watch?v=ugYnm9n1TgI&list=PLoV2p1ZCa0dUSLJ1gvjDmKqaCZmQYCco8" target="_blank">倪的小公主</a> <br />
 
@@ -116,6 +118,7 @@
 <a href="https://www.youtube.com/watch?v=hZE-t4l0D-U" target="_blank">跟老闆出去爽</a> <br />
 <a href="https://www.youtube.com/watch?v=aOCi0KdwJC4" target="_blank">偷喝老闆水</a> <br />
 <a href="https://www.youtube.com/watch?v=VQdwWPsGYA4" target="_blank">旅人救世劍</a> <br />
+<a href="https://www.youtube.com/watch?v=2ikySjJEzQw" target="_blank">阿蝶興奮什麼</a> <br />
 
 
 
