@@ -39,7 +39,7 @@
 ### bbbb87
 <a href="https://www.youtube.com/watch?v=XprdTvnqVIg" target="_blank">輸了你贏了世界又如何</a><br >
 <a href="https://www.youtube.com/watch?v=xXjNgWPzZVM" target="_blank">(B)與我無關</a> <br />
-<a href="https://www.youtube.com/watch?v=9e1SXw0E3jc" target="_blank">哭了</a> <br />
+<a href="https://www.youtube.com/watch?v=9e1SXw0E3jc" target="_blank">哭了 R~~~~~~~~~~B</a> <br />
 <a href="https://www.youtube.com/watch?v=lRnHHYoGa0s" target="_blank">無人之島</a> <br />
 <a href="https://www.youtube.com/watch?v=DUXAYN4itGk" target="_blank">嘉賓</a> <br />
 <a href="https://www.youtube.com/watch?v=BfGsW070dgQ" target="_blank">(B)嘉賓</a> <br />
