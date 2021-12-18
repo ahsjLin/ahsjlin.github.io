@@ -50,13 +50,37 @@ private:
 
 <hr>
 
+<h2>cin</h2>
+<pre>
+<code>
+#include <ctype.h>
+char ch;
+// it will fetch all you input 
+// ex. input: asd 
+// output: a
+// output: s
+// output: d
+while(cin >> ch && toupper(ch)!='Q') // also tolower
+{
+	cout << ch << endl;
+}
+
+// fetch first character version
+// keyword: get()				       
+while(cin >> ch && toupper(ch)!='Q') // also tolower
+{
+	cout << ch << endl;
+	while(ch.get()!='\n');				  
+}
+</code>
+</pre>
 
 
 
 <hr>
 <footer>
 <h2>Reference</h2>
-Stephen Prata - Cpp Primer Plus.pdf
+Stephen Prata - Cpp Primer Plus
 </footer>
 
 </body>
