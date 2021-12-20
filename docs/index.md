@@ -122,7 +122,7 @@
 <a href="https://www.youtube.com/watch?v=2ikySjJEzQw" target="_blank">阿蝶興奮什麼</a> <br />
 <a href="https://www.youtube.com/watch?v=Ktu-KAuf1zY" target="_blank">RB這邊衝了啦</a> <br />
 <a href="https://www.youtube.com/watch?v=VGagBUYk31A" target="_blank">RB 我們都懂 真的</a> <br />
-<a href="https://www.youtube.com/watch?v=1kyNV4EG_IQ" target="_blank">半個音樂人</a> <br />
+<a href="https://www.youtube.com/watch?v=1kyNV4EG_IQ" target="_blank">半個音樂人欸 沒懂得珍惜</a> <br />
 
 
 
