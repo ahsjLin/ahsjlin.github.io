@@ -52,7 +52,7 @@
 <a href="https://www.youtube.com/watch?v=BfGsW070dgQ" target="_blank">(B)嘉賓</a> <br />
 <a href="https://www.youtube.com/watch?v=LSyObqY92L8" target="_blank">(B)嘉賓2</a> <br />
 <a href="https://www.youtube.com/watch?v=eiGdd9sMquU" target="_blank">(B)嘉賓 offcial(88888 9Q衝擊</a> <br />
-<a href="https://www.youtube.com/watch?v=devX-2N-_k4" target="_blank">9Q發版權砲了</a> <br />
+<a href="https://www.youtube.com/watch?v=devX-2N-_k4" target="_blank">9Q發版權砲了 (經典MV都要沒了 RRRR</a> <br />
 <a href="https://www.youtube.com/watch?v=3Nug-pYIgg4" target="_blank">那些年</a> <br />
 <a href="https://www.youtube.com/watch?v=ugYnm9n1TgI" target="_blank">丟了你</a> <br />
 <a href="https://www.youtube.com/watch?v=NWsw1Vkum_Y" target="_blank">愛的可能</a> <br />
@@ -78,6 +78,7 @@
 <a href="https://www.youtube.com/watch?v=5tD8lAw8lzQ" target="_blank">69兔</a> <br />
 <a href="https://www.youtube.com/watch?v=5ra98JaE2cI" target="_blank">520</a> <br />
 <a href="https://www.youtube.com/watch?v=4HpO3FYCEGs" target="_blank">測謊啊</a> <br />
+<a href="https://www.youtube.com/watch?v=hkp95-r4Ljc" target="_blank">來啊!測謊啊</a> <br />
 <a href="https://www.youtube.com/watch?v=p3BqSjS1xBw" target="_blank">兄弟女人</a> <br />
 <a href="https://www.youtube.com/watch?v=JYWm_nivDfA" target="_blank">兄弟女人 again</a> <br />
 <a href="https://www.youtube.com/watch?v=e6fVQ3dZb4M" target="_blank">大談台灣女生</a> <br />
@@ -114,7 +115,11 @@
 <a href="https://www.youtube.com/watch?v=amrKkdY1KQ8" target="_blank">RB爸爸選媳婦</a> <br />
 <a href="https://www.youtube.com/watch?v=3DU_m7Y1j2g" target="_blank">RB call in環節</a> <br />
 <a href="https://www.youtube.com/watch?v=ZGuKpXmq6oE" target="_blank">RB call in. feat. 超負荷</a> <br />
+<a href="https://www.youtube.com/watch?v=kZ_wcPYU2Fc" target="_blank">RB call in 瘋人院</a> <br />
+<a href="https://www.youtube.com/watch?v=IAaeccb1CUk" target="_blank">RB call in. 有料士庭</a> <br />
 <a href="https://www.youtube.com/watch?v=Aq-6qGptp2I" target="_blank">千古罪人 超負荷</a> <br />
+<a href="https://www.youtube.com/watch?v=U5s3axHnD14" target="_blank">阿盛就就最挺兄弟</a> <br />
+<a href="https://www.youtube.com/watch?v=XTekN6XUvqA" target="_blank">阿盛沒想到吧 搞到自己啦</a> <br />
 <a href="https://www.youtube.com/watch?v=fi_E9VWSVzo" target="_blank">阿倪怎麼在對面啊</a> <br />
 <a href="https://www.youtube.com/watch?v=JZ2V1OY5-t0" target="_blank">阿尼阿尼</a> <br />
 <a href="https://www.youtube.com/watch?v=Wy8ED_uNTrs" target="_blank">阿尼阿尼520(太難過了啦</a> <br />
