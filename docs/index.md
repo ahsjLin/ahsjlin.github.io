@@ -139,6 +139,7 @@
 <a href="https://www.youtube.com/watch?v=Ktu-KAuf1zY" target="_blank">RB這邊衝了啦</a> <br />
 <a href="https://www.youtube.com/watch?v=VGagBUYk31A" target="_blank">RB 我們都懂 真的</a> <br />
 <a href="https://www.youtube.com/watch?v=1kyNV4EG_IQ" target="_blank">半個音樂人欸 沒懂得珍惜</a> <br />
+<!--
 <a href="https://www.youtube.com/watch?v=EX_I3X8Gca0" target="_blank">阿倪之亂</a> <br />
 <a href="https://www.youtube.com/watch?v=JuGCGNASjlk" target="_blank">白噪音之亂</a> <br />
 <a href="https://www.youtube.com/watch?v=nuhPgRrixwk" target="_blank">歐文之亂</a> <br />
@@ -153,7 +154,8 @@
 <a href="https://www.youtube.com/watch?v=FhchgjGbvmY" target="_blank">夢橙之亂</a> <br />
 <a href="https://www.youtube.com/watch?v=e1US_wrN1Q8" target="_blank">六道仙人</a> <br />
 <a href="https://www.youtube.com/watch?v=qEDw1zY9OBI" target="_blank">無限月讀</a> <br />
-<!--
+
+
 <a href="https://www.youtube.com/watch?v=zx7pcgHtU4I" target="_blank">O我的天</a> <br />
 <a href="https://www.youtube.com/watch?v=k3UCe1pjOIU" target="_blank">我以為</a> <br />
 <a href="https://www.youtube.com/watch?v=XedeOw8O09U" target="_blank">直到世界的盡頭 (feat.世誠 阿法 威傅 楊坤 張杰)</a> <br />
