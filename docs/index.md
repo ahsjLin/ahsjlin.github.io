@@ -30,6 +30,7 @@
 <a href="https://www.youtube.com/watch?v=rbNxlPrBdE8" target="_blank">你聽聽就好</a> <br />
 <a href="https://www.youtube.com/watch?v=lIy7ZQ-c_sg" target="_blank">以後別做朋友</a> <br />
 <a href="https://www.youtube.com/watch?v=zdCNtIpkbI0" target="_blank">我的世界沒有你</a> <br />
+<a href="https://www.youtube.com/watch?v=ogKnph3elaI" target="_blank">愛情你比我想的閣較偉大</a> <br />
 <a href="https://www.youtube.com/watch?v=fheRcrjc1dg" target="_blank">走建國路回家但後座少ㄌ泥</a> <br />
 <a href="https://www.youtube.com/watch?v=HsnTxKrNvyo" target="_blank">死了都要爱</a> <br />
 <a href="https://www.youtube.com/watch?v=W2nVYA0riUM" target="_blank">直到世界盡頭</a> <br />
