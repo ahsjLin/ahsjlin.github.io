@@ -118,6 +118,31 @@ function graph(name){
 </li>
 
 </ul>
+<hr>
+In disk:<br>
+page<br><br>
+In memory:<br>
+page table<br><br>
+special cache:<br>
+(TLB) Translation lookaside Buffer
+<hr>
+If the address do not miss, step by step.
+<br>
+CPU
+\(
+\rightarrow 
+\)
+TLB
+\(
+\rightarrow 
+\)
+Cache
+\(
+\rightarrow 
+\)
+CPU
+
+<hr>
 <h2>Virtual Memory</h2>
 <ul>
 <li>
@@ -156,7 +181,27 @@ function graph(name){
 </li>
 	
 </ul>
+<hr>
+<h2>miss 來源分類</h2>
+<ul>
+<li><b>強迫性失誤(Compulsory misses)</b>:
+此block從未被使用，這種情況是在第一次讀記憶體時會發生，
+因為一定不在cache之中，這也稱為<b>冷開機失誤
+	(cold-start misses)</b>
+</li>
+<li><b>容量性失誤(Capacity misses):</b>
+process執行時，若cache容量不足以包含process所需要
+read的block時，就會發生cache miss。發生原因為block不斷的被替換，需要時又要被重新被擷取。
+</li>
+<li><b>衝突性失誤(Conflict misses)</b>
+也稱為<b>碰撞失誤(collision misses)</b>:
+在direct-mapping和set associative的cache中，
+不同block mapping 到cache的同一個位置中，導致
+cache miss。<br>
+而fully set associative mapping 是不會有Conflict misses發生的。
+</li>
 
+</ul>
 
 <hr>
 <footer>
