@@ -1,0 +1,99 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+
+<h2>Semaphores(信號)</h2>
+在多核CPU下，且critial section占用時間短時，semaphores是很好的algorithm。<br>
+簡易理解:<br>
+會有個global variable(mutex)去決定執行critical section。<br>
+在多個processes在共用一個處理變數的空間(critical section)時，<br>
+寫兩個function，wait和signal，<br>
+傳mutex給wait去決定現在是否可使用critical section(單一資源，多個processes競爭的地方)，<br>
+如果可以就直接執行，<br>
+如果不行，會在wait裡loop(busy waiting)(spinlock)，直到收到signal break。<br>
+signal是正在使用critical section的process要離開時，給mutex設為1(mutex++)。
+<hr>
+普通process執行
+<pre>
+<code>
+...
+wait(mutex);
+
+// critical section
+
+signal(mutex);
+
+// remainder section
+
+</code>
+</pre>
+<hr>
+<pre>
+<code>
+wait(S){
+	while(S<=0); /* busy waiting */
+	S--;		     
+}
+</code>
+</pre>
+<hr>
+<pre>
+<code>
+
+signal(S){
+	S++;		     
+}
+
+
+</code>
+</pre>
+
+<hr>
+Busy waiting 有個問題，就是會消耗CPU的計算時間。
+<hr>
+為了解決busy waiting 問題，<br>
+新增一個semaphore的結構
+<pre>
+<code>
+struct {
+	int value;
+	struct process *list;
+}semaphore;
+</code>
+</pre>
+修改wait和signal。<br>
+在wait裡while改成判斷value是否小於0。如果是，該process加入list裡(使用queue)，<br>
+並且呼叫block()保存現在process status(進入排程系統)，<br>
+這樣用來處理正在waiting的process的CPU就可以拿來做其他事情。<br>
+signal裡加入wakeup()，來恢復process使用狀態。
+
+<hr>
+<footer>
+<h2>Reference</h2>
+洪逸 - 作業系統金寶典<br>
+Abraham Silberschatz, Greg Gagne, Peter B. Galvin -Operating System Concepts
+</footer>
+
+</body>
+</html>
