@@ -226,6 +226,45 @@ d=offset<br>
 利用Segment Table Base Register(上圖)。<br>
 3. 利用TLB(關聯暫存器)來保存。<br>
 
+<hr>
+<h3>belady現象(be lady?</h3>
+使用FIFO的algorithm去置換page時，會發生可以分配頁數增加，反而hit rate會下降的情形。<br>
+ex.<br>
+FIFO algorithm:<br>
+<img src="img/fifo_belady.png" alt=""/><br>
+<h3>說明</h3>
+7找page table裡沒有\(
+\rightarrow 
+\)page fault<br><br>
+0找page table裡沒有\(
+\rightarrow 
+\)page fault<br><br>
+1找page table裡沒有\(
+\rightarrow 
+\)page fault<br><br>
+2找page table裡沒有\(
+\rightarrow 
+\)page fault, 這時7是page table裡最老(最先進入)的，替換掉它。<br><br>
+0有在page table\(
+\rightarrow 
+\)hit<br><br>
+3找page table裡沒有\(
+\rightarrow 
+\)page fault 這時0是在這page table裡最老的資料，所以成為被替換的對象。<br><br>
+以此類推。<br>
+<a href="https://read01.com/zh-tw/G5Lk2m.html#.YdaRRmhBw_4" target="_blank">ref</a><br>
+<hr>
+<h2>Optimal Algorithm(最佳法則)</h2>
+page fault rate最低的演算法，且不會發生belady現象，<br>
+做法是確定要替換的page是未來最久不會用到的，想法簡單，但實作困難，<br>
+因為要知道未來的使用情況，需要統計之前的使用狀況，<br>
+不能知道未來會發生什麼，只能用推估與猜測。(除非運行的page的數量跟順序都已經知道了)
+<hr>
+<h2>Least recently used algorithm(LRU)</h2>
+置換發生page fault時的victim page，選擇最久沒被使用的page當victim, <br>
+因為要知道哪個是最久沒被使用(所有範圍)，需要花費很大的成本，<br>
+所以會採用近似LRU的做法，在之前的page table小範圍內最久沒被使用，
+當victim page。
 <footer>
 <hr>
 <h2>Reference</h2>
