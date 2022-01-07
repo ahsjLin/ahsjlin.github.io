@@ -125,6 +125,7 @@
 <a href="https://www.youtube.com/watch?v=U5s3axHnD14" target="_blank">阿盛就就最挺兄弟</a> <br />
 <a href="https://www.youtube.com/watch?v=XTekN6XUvqA" target="_blank">阿盛沒想到吧 搞到自己啦</a> <br />
 <a href="https://www.youtube.com/watch?v=VcZj3JfvPOA" target="_blank">R~哈 盛</a> <br />
+<a href="https://www.youtube.com/watch?v=gcOlKbO6tSM" target="_blank">R~哈 B</a> <br />
 <a href="https://www.youtube.com/watch?v=AWDwXUGgj48" target="_blank">青木瓜四物飲</a> <br />
 <a href="https://www.youtube.com/watch?v=fi_E9VWSVzo" target="_blank">阿倪怎麼在對面啊</a> <br />
 <a href="https://www.youtube.com/watch?v=JZ2V1OY5-t0" target="_blank">阿尼阿尼</a> <br />
