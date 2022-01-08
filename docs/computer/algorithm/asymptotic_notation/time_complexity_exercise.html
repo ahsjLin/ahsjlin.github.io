@@ -22,39 +22,374 @@ function graph(name){
 
 </head>
 <body>
-<h3>exercise</h3>
+<h2>Question</h2>
 Please derive the corresponding time complexity (Big-Oh) for each of the following five program segments.
-<ol>
-<li>
+<h3>exercise</h3>
 <pre>
 <code>
 k=0;
-  for(i=0;i<N<!---->; i++)
+  for(i=0;i<<!---->N; i++)
     k++;
 </code>
 </pre>
-</li>
-</ol>
 <h3>ans</h3>
 \(
-\sum\limits_{i=0}^{N-1}1 
+\displaystyle\sum_{i=0}^{N-1}1 
 =\overbrace{1+1+\dots+1}^{N\text{ terms}}
 \)<br>
 \( 
 =N=O(N)
 \)
+<hr>
 <h3>exercise</h3>
 <pre>
 <code>
 k=0;
-  for(i=0;i<N<!--  -->;i++)
-    for(j=0;j<N<!--  -->;j++)
+  for(i=0;i<<!--  -->N;i++)
+    for(j=0;j<<!--  -->N;j++)
       k++;
 </code>
 </pre>
 <h3>ans</h3>
-
+\(
+\displaystyle\sum_{i=0}^{N-1}
+\displaystyle\sum_{j=0}^{N-1}
+1
+=\displaystyle\sum_{i=0}^{N-1}(\overbrace{1+1+\dots+1}^{N\text{ terms}})
+=\displaystyle\sum_{i=0}^{N-1}N
+\)<br>
+\(
+=(\overbrace{N+N+\dots+N}^{N\text{ terms}})
+=N\cdot N=N^2=O(N^2)
+\)
 <hr>
+<h3>exercise</h3>
+<pre>
+<code>
+k=0;
+  for(i=0;i<<!---->N;i++)
+    for(j=0;j<<!---->i;j++)
+      k++;
+</code>
+</pre>
+<h3>ans</h3>
+\(
+\displaystyle\sum_{i=0}^{N-1}
+\displaystyle\sum_{j=0}^{i-1}
+1
+=
+\displaystyle\sum_{i=0}^{N-1}
+(\overbrace{1+1+\dots+1}^{i\text{ terms}})
+=
+\displaystyle\sum_{i=0}^{N-1}i
+\)<br>
+\(
+=
+0+1+2+\dots+(N-1)
+\leq
+(\overbrace{(N-1)+(N-1)+\dots+(N-1)}^{N\text{ terms}})
+=N(N-1)
+\)<br>
+\( 
+=N^2-N=O(N^2)
+\)
+<hr>
+<h3>exercise</h3>
+<pre>
+<code>
+k=0;
+  for(i=0;i<<!--  -->N;i++)
+    for(j=0;j<<!--  -->i*i;j++)
+      for(z=0;z<<!--  -->j;z++)
+        k++;
+</code>
+</pre>
+<h3>ans</h3>
+\(
+\displaystyle\sum_{i=0}^{N-1}
+\displaystyle\sum_{j=0}^{i^2-1}
+\displaystyle\sum_{z=0}^{j-1}
+1
+=
+\displaystyle\sum_{i=0}^{N-1}
+\displaystyle\sum_{j=0}^{i^2-1}
+j
+\) <br>
+\(
+\displaystyle\sum_{i=0}^{N-1}
+(\overbrace{0+1+2+\dots+(i^2-1)}^{i^2\text{ terms}})
+\leq
+\displaystyle\sum_{i=0}^{N-1}
+(i^2-1)\times i^2
+\)<br>
+\(
+=
+\{(0^2-1)\cdot 0^2+(1^2-1)\cdot 1^2+\dots+[(N-1)^2-1]\cdot (N-1)^2\}
+\)<br>
+\( 
+\leq
+\{\underbrace{[(N-1)^2-1]\cdot (N-1)^2+[(N-1)^2-1]\cdot (N-1)^2+\dots+[(N-1)^2-1]\cdot (N-1)^2}_{N\text{ terms}}\}
+\)<br>
+\(
+=
+N[(N-1)^2-1]\cdot (N-1)^2
+=O(N^5)
+\)
+<hr>
+<h3>exercise</h3>
+<pre>
+<code>
+k=0;
+  for(i=0;i<<!--  -->N;i++)
+    for(j=0;j<<!--  -->i*i;j++)
+      if(j%i==0)
+        for(z=0;z<<!--  -->j;z++)
+          k++;
+</code>
+</pre>
+<h3>ans</h3>
+先看最內層z的那層，
+計算k的執行次數為<br>
+\(
+\displaystyle\sum_{z=0}^{j-1}1
+=j
+\)次<br> <br>
+討論
+if(j%i==0)
+<br>
+如果要z那層執行的話，
+需要j為i的倍數，<br>
+則j可能為<br>
+\( 0\cdot i,\;1\cdot i,\;2\cdot i,\dots,\;(i-1)\cdot i \)<br>
+意思就是<br>
+\( j=0 \)時，k執行0次，<br>
+\( j=1\cdot i \)時, k執行執行\(1\cdot i\)<br>
+\( j=2\cdot i \)時, k執行執行\(2\cdot i\)<br>
+\( \vdots \)<br>
+\( j=(i-1) \cdot i\)時, k執行執行\((i-1) \cdot i\)<br>
+<br><br>
+就可得到j的for loop那層以下(意思是已經包含if和z那層了)的summation(這是k++的執行次數)為<br>
+\(
+\displaystyle\sum_{h=0}^{i-1}h\cdot i
+\)<br><br>
+接著考慮加上i那層的for loop 為<br>
+\(
+\displaystyle\sum_{i=0}^{N-1}
+\displaystyle\sum_{h=0}^{i-1}h\cdot i
+\)<br><br>
+開始計算Big-Oh<br>
+\(
+\displaystyle\sum_{i=0}^{N-1}
+\displaystyle\sum_{h=0}^{i-1}h\cdot i
+=
+\displaystyle\sum_{i=0}^{N-1}
+[\overbrace{0i+1i+2i\dots+(i-1)i}^{i\text{ terms}}]
+\)<br>
+\(
+\leq
+\displaystyle\sum_{i=0}^{N-1}
+[\overbrace{(i-1)i+(i-1)i+\dots+(i-1)i}^{i\text{ terms}}]
+\)<br>
+\(
+=
+\displaystyle\sum_{i=0}^{N-1}
+[(i-1)i]\cdot i
+=
+\displaystyle\sum_{i=0}^{N-1}
+[(i^3-i^2)]
+\)<br>
+\(
+=
+\overbrace{(0-0)+(1^3-1^2)+(2^3-2^2)+\dots+[(N-1)^3-(N-1)^2]}^{N\text{ terms}}
+\)<br>
+\(
+\leq
+\overbrace{[(N-1)^3-(N-1)^2]+\dots+[(N-1)^3-(N-1)^2]}^{N\text{ terms}}
+\)<br>
+\(
+=
+N[(N-1)^3-(N-1)^2]=O(N^4)
+\)
+<hr>
+<h3>Question</h3>
+Let \( T(n)=\theta(f(n)) \). Derive \( f(n) \) in the simplest formula for \( T(n)=1*n+2(n-1)+\dots+(n-1)*2+n*1 \)
+<h3>ans</h3>
+觀察\( T(n) \)規律，<br>
+得出summation為<br>
+\(
+T(n)=
+\displaystyle\sum_{k=1}^{n}k\cdot(n-k+1)
+\)<br>
+計算Big-Oh:<br>
+\(
+\displaystyle\sum_{k=1}^{n}kn-k^2+k
+\)<br>
+(式子裡的n為常數)<br>
+\(
+=
+n\displaystyle\sum_{k=1}^{n}k
+-
+\displaystyle\sum_{k=1}^{n}k^2
++
+\displaystyle\sum_{k=1}^{n}k
+\)<br>
+\(
+=
+n\cdot\frac{n(n+1)}{2}
+-
+\frac{n(n+1)(2n+1)}{6}
++
+\frac{n(n+1)}{2}
+\)<br>
+\(
+=
+\frac{n^3+n^2}{2}
+-
+\frac{n(n+1)(2n+1)}{6}
++
+\frac{n^2+n}{2}
+\)<br>
+由經驗法則猜測為\( T(n)=\theta(n^3) \)<br>
+討論\( n^3 \)係數是否為零，如果不是零，
+那\( T(n)=\theta(n^3) \)是對的。<br>
+\(
+\rightarrow 
+\frac{n^3}{2}-\frac{2n^3}{6}
+=\frac{n^3}{6}
+\)<br>
+\(
+\therefore 
+T(n)=\theta(n^3)
+\)
+<hr>
+<h2>Question</h2>
+Let \( T(n)=\theta(f(n)) \). Derive \( f(n) \)
+in the simplest formula for 
+\( T(n)=2^0*k+2^1*(k-1)+\dots+2^k*(k-k) \);
+where \( 2^k=n \)
+<h3>ans</h3>
+\(
+2^k=n\)<br>
+\(
+\Rightarrow 
+\lg2k=\lg n
+\)<br>
+\(
+\Rightarrow 
+k=\lg n
+\)<br><br>
+代進T(n)的k: <br>
+\(
+T(n)
+=
+2^0*\lg n
++
+2^1*(\lg n-1)
++
+\dots
++
+2^{\lg n}*(\lg n-\lg n)
+\)<br>
+這似乎很難用最後一項去比大小。<br><br>
+所以另解<br>
+\(
+T(n)
+=
+2^0*\lg n
++
+2^1*(\lg n-1)
++
+\dots
++
+2^{\lg n}*(\lg n-\lg n)
+\)<br>
+\(
+2T(n)
+=
+2^1*\lg n
++
+2^2*(\lg n-1)
++
+\dots
++
+2^{\lg(n)+1}*(\lg n-\lg n)
+\)<br>
+<br>
+兩式相減得
+<br>
+\(
+2T(n)-T(n)
+=
+2^1
++
+2^2
++
+\dots
++
+2^{\lg n}
++
+2^{\lg(n)+1}*(\cancelto{0}{\lg n-\lg n})
+-
+2^0*\lg n
+\)<br>
+\(
+=
+2^1+2^2+\dots+2^{\lg n}
+-2^0\cdot \lg n
+\)
+<table>
+	<tr>
+	<th>
+		Hint
+	</th>
+	</tr>
+	<tr>
+	<td>
+\(
+c\neq1,c\in R,\)<br>
+\(
+a_n=ca_{n-1},\)<br>
+\(
+a_1+a_2+\dots+a_n\)<br>
+\(
+=a_1\frac{c^n-1}{c-1}
+\)
+	</td>
+	</tr>
+<tr>
+<td>
+\(
+a^{\log_{a}^{x}}=x
+\)
+</td>
+</tr>
+</table>
+<br>
+\(
+\Rightarrow 
+2\frac{2^{\lg n}-1}{\cancelto{1}{2-1}}
+-2^0\cdot \lg n
+\)<br>
+\(
+=
+2\cdot(2^{\lg n}-1)
+-\cancelto{1}{2^0}\cdot\lg n
+\)<br>
+\(
+=
+2\cdot(n-1)
+-\lg n
+\)<br>
+\(
+=\theta(n)
+\)
+
+
+
+
+
+
+
 
 
 
