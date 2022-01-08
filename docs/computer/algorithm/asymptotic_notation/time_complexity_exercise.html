@@ -1,0 +1,69 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h3>exercise</h3>
+Please derive the corresponding time complexity (Big-Oh) for each of the following five program segments.
+<ol>
+<li>
+<pre>
+<code>
+k=0;
+  for(i=0;i<N<!---->; i++)
+    k++;
+</code>
+</pre>
+</li>
+</ol>
+<h3>ans</h3>
+\(
+\sum\limits_{i=0}^{N-1}1 
+=\overbrace{1+1+\dots+1}^{N\text{ terms}}
+\)<br>
+\( 
+=N=O(N)
+\)
+<h3>exercise</h3>
+<pre>
+<code>
+k=0;
+  for(i=0;i<N<!--  -->;i++)
+    for(j=0;j<N<!--  -->;j++)
+      k++;
+</code>
+</pre>
+<h3>ans</h3>
+
+<hr>
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>
