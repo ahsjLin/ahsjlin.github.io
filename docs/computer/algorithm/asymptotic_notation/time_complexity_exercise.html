@@ -268,6 +268,12 @@ in the simplest formula for
 \( T(n)=2^0*k+2^1*(k-1)+\dots+2^k*(k-k) \);
 where \( 2^k=n \)
 <h3>ans</h3>
+<table>
+<tr><th>Hint</th></tr>
+<tr><td>\(
+\log_2a=\lg a
+\)</td></tr>
+</table>
 \(
 2^k=n\)<br>
 \(
@@ -282,37 +288,37 @@ k=\lg n
 \(
 T(n)
 =
-2^0*\lg n
+2^0\cdot\lg n
 +
-2^1*(\lg n-1)
+2^1\cdot(\lg n-1)
 +
 \dots
 +
-2^{\lg n}*(\lg n-\lg n)
+2^{\lg n}\cdot(\lg n-\lg n)
 \)<br>
 這似乎很難用最後一項去比大小。<br><br>
 所以另解<br>
 \(
 T(n)
 =
-2^0*\lg n
+2^0\cdot\lg n
 +
-2^1*(\lg n-1)
+2^1\cdot(\lg n-1)
 +
 \dots
 +
-2^{\lg n}*(\lg n-\lg n)
+2^{\lg n}\cdot(\lg n-\lg n)
 \)<br>
 \(
 2T(n)
 =
-2^1*\lg n
+2^1\cdot\lg n
 +
-2^2*(\lg n-1)
+2^2\cdot(\lg n-1)
 +
 \dots
 +
-2^{\lg(n)+1}*(\lg n-\lg n)
+2^{\lg(n)+1}\cdot(\lg n-\lg n)
 \)<br>
 <br>
 兩式相減得
@@ -329,9 +335,9 @@ T(n)
 +
 2^{\lg n}
 +
-2^{\lg(n)+1}*(\cancelto{0}{\lg n-\lg n})
+2^{\lg(n)+1}\cdot(\cancelto{0}{\lg n-\lg n})
 -
-2^0*\lg n
+2^0\cdot\lg n
 \)<br>
 \(
 =
