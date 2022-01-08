@@ -220,7 +220,7 @@ Let \( T(n)=\theta(f(n)) \). Derive \( f(n) \) in the simplest formula for \( T(
 T(n)=
 \displaystyle\sum_{k=1}^{n}k\cdot(n-k+1)
 \)<br>
-計算Big-Oh:<br>
+計算\( \Theta \):<br>
 \(
 \displaystyle\sum_{k=1}^{n}kn-k^2+k
 \)<br>
@@ -249,9 +249,9 @@ n\cdot\frac{n(n+1)}{2}
 +
 \frac{n^2+n}{2}
 \)<br>
-由經驗法則猜測為\( T(n)=\theta(n^3) \)<br>
+由經驗法則猜測為\( T(n)=\Theta(n^3) \)<br>
 討論\( n^3 \)係數是否為零，如果不是零，
-那\( T(n)=\theta(n^3) \)是對的。<br>
+那\( T(n)=\Theta(n^3) \)是對的。<br>
 \(
 \rightarrow 
 \frac{n^3}{2}-\frac{2n^3}{6}
@@ -259,11 +259,11 @@ n\cdot\frac{n(n+1)}{2}
 \)<br>
 \(
 \therefore 
-T(n)=\theta(n^3)
+T(n)=\Theta(n^3)
 \)
 <hr>
 <h2>Question</h2>
-Let \( T(n)=\theta(f(n)) \). Derive \( f(n) \)
+Let \( T(n)=\Theta(f(n)) \). Derive \( f(n) \)
 in the simplest formula for 
 \( T(n)=2^0*k+2^1*(k-1)+\dots+2^k*(k-k) \);
 where \( 2^k=n \)
@@ -381,7 +381,7 @@ a^{\log_{a}^{x}}=x
 -\lg n
 \)<br>
 \(
-=\theta(n)
+=\Theta(n)
 \)
 
 
