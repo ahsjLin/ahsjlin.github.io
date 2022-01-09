@@ -94,6 +94,53 @@ c=2,\;n\geq 2
 T(2)=2T(1)+2=4\leq 2\cdot 2\lg 2
 \) existed.
 
+<hr>
+<h2>Recursion-tree Method(遞迴樹法)</h2>
+母問題分解成多個子問題，然後子問題當成母問題再繼續分解成多個子問題，直到子問題不能再被分解為止。<br>
+<h3>策略</h3>
+<ol>
+	<li>展開recursion relation</li>
+	<li>從母問題分解出來的子問題，那層的子問題的加總，可當作這層的成本花費。</li>
+	<li>每層成本加起來，可得到整顆樹的花費。</li>
+</ol>
+<hr>
+<h3>Question</h3>
+Give asymptotic tight bound for 
+\( T(n)=T(\frac{n}{2})+T(\frac{n}{4})+T(\frac{n}{8})+n \) (assume that \( T(n) \) is constant for sufficiently small \( n \).)
+<h3>ans</h3>
+將\( T(n) \)展開得<br>
+<img src="img/recursion_tree_1.png" alt="ex_1"/> <br>
+再將子問題展開得<br>
+<img src="img/recursion_tree_2.png" alt="ex_2"/> <br>
+(樹的最左邊層數較多，最右邊層數越少。)<br>
+(最右邊直的那排為每層的花費)<br><br>
+則總花費為<br>
+\( T(n)=n+\frac{7}{8}n+\frac{49}{64}n+\dots+\text{ leaf } \)<br>
+當n夠大時，是前面幾項在主導。<br> <br>
+計算Big-Oh<br>
+\(
+\Rightarrow 
+T(n)\leq
+n+\frac{7}{8}n+\frac{49}{64}n+\dots
+=
+\frac{n}{1-\frac{7}{8}}
+=8n
+\)<br>
+\(
+\Rightarrow 
+T(n)=O(n)
+\)<br><br>
+計算Omega<br>
+\( n\leq T(n)=n+\frac{7}{8}n+\frac{49}{64}n+\dots+\text{ leaf } \)<br>
+\(
+\Rightarrow 
+T(n) = \Omega(n)
+\)<br><br>
+\(
+\therefore
+T(n)=\Theta(n)
+\)
+
 
 <hr>
 <footer>
