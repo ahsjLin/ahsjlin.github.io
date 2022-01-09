@@ -35,8 +35,64 @@ F(n)=F(n-1)+F(n-2)
 <li>經驗法則猜結果(asymptotic)</li>
 <li>用mathematic induction找出常數(asymptotic的邊界條件)，來證明此猜測是對的。</li>
 </ol>
-
-
+<hr>
+<h2>Question</h2>
+Determine asymptotic from
+\(
+T(n)=2T(\lfloor \frac{n}{2} \rfloor)+n,
+\;
+T(1)=1
+\)
+<h3>ans</h3>
+Guess
+\(
+T(n)=O(n\lg n)\)<br>
+Let
+\(
+\exists c\in \mathbb{R}
+\rightarrow 
+T(n)\leq cn\lg n
+\)<br> <br>
+<b>Mathematic Induction</b><br>
+Suppose that \( 
+T(\lfloor \frac{n}{2}\rfloor) 
+\leq
+c\lfloor \frac{n}{2} \rfloor
+\lg 
+\lfloor \frac{n}{2} \rfloor
+\)
+existed.<br><br>
+\(
+\Rightarrow 
+T(n)
+\leq
+2\cdot c\lfloor \frac{n}{2} \rfloor
+\lg 
+\lfloor \frac{n}{2} \rfloor
++ n
+\)<br>
+\(
+\leq
+2\cdot c\frac{n}{2}
+\lg 
+\frac{n}{2}
++n
+\)<br>
+\(
+=
+cn(\lg n-\lg 2)+n
+\)<br>
+\(
+=
+cn\lg n - cn\lg 2 +n
+\)<br>
+(這裡已經可以看出式子在n很大時，\( n\lg n \)為主導。)<br>
+when 
+\( 
+c=2,\;n\geq 2
+\rightarrow 
+T(2)=2T(1)+2=4\leq 2\cdot 2\lg 2
+\) existed.
 
 
 <hr>
