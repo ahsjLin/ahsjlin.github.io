@@ -150,7 +150,7 @@ Determine \( \Theta \).<br>
 <img src="img/recursion_tree_ex_2_2.png" alt="ex2_2"/><br>
 從樹的花費可得知\( T(n) \)的總花費，<br>
 為\(
-T(n) = \overbrace{n+n+\dots+\text{ leaf}}^{\text{樹高的層數}}.
+T(n) = \overbrace{n+n+\dots+\text{ leaf}}^{\text{項目個數為最長樹高層數}}.
 \)<br>
 從上圖的樹可知道\( n/3 \)那條分支最先分完，\( 2n/3 \)最後分完，那就可以知道只要有分支分完，那層的花費加總就不會是\( n \)，就可用來比大小，算出\( O \)和\( \Omega \)。<br><br>
 計算Big-Oh:<br>
@@ -191,7 +191,9 @@ n=(\frac{3}{2})^{h}
 \)
 <table>
 	<tr><th>Hint</th></tr>
-	<tr><td>log的底不影響成長速率</td></tr>
+	<tr><td>log之間比較order時，不同的底並不影響，<br>
+			因為可以用換底公式換成一樣的底。
+	</td></tr>
 </table>
 計算Omega:
 找樹高最短的<br>
