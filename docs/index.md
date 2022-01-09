@@ -47,7 +47,7 @@
 ### bbbb87
 <a href="https://www.youtube.com/watch?v=XprdTvnqVIg" target="_blank">輸了你贏了世界又如何</a><br >
 <a href="https://www.youtube.com/watch?v=xXjNgWPzZVM" target="_blank">(B)與我無關</a> <br />
-<a href="https://www.youtube.com/watch?v=9e1SXw0E3jc" target="_blank">哭了 R~~~~~~~~~~B</a> <br />
+<a href="https://www.youtube.com/watch?v=9e1SXw0E3jc" target="_blank">哭了 R~B</a> <br />
 <a href="https://www.youtube.com/watch?v=lRnHHYoGa0s" target="_blank">無人之島</a> <br />
 <a href="https://www.youtube.com/watch?v=DUXAYN4itGk" target="_blank">嘉賓</a> <br />
 <a href="https://www.youtube.com/watch?v=BfGsW070dgQ" target="_blank">(B)嘉賓</a> <br />
@@ -71,7 +71,8 @@
 <a href="https://www.youtube.com/watch?v=r8TgG5Lw3IU" target="_blank">1212專輯</a> <br />
 <a href="https://www.youtube.com/watch?v=14RRZzyTvLY" target="_blank">倪</a> <br />
 <a href="https://www.youtube.com/watch?v=ugYnm9n1TgI&list=PLoV2p1ZCa0dUSLJ1gvjDmKqaCZmQYCco8" target="_blank">倪的小公主</a> <br />
-<a href="https://www.youtube.com/redirect?event=backstage_event&redir_token=QUFFLUhqbkxod0dkWlFxTGdKYkE2YXE2WHg5Ujd3RkZ1UXxBQ3Jtc0trZnBCMXJNeG90SEdNVEZVdjNwVlBDXzVCVEljcldWWFpFVEp0Y2RIMlRSemRkMlk2WXM4VEUyOEpBdFlsRXBzM0dKbmtud3l1QlBkaEx4VTMxWFR6WTV4X0Zmazg4RElITzV0LW5ZRFdkVnRoY1Ezbw&q=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1cr7U1Ymgtx1hudabVhqImEKvVb1ZMmX7%3Fusp%3Dsharing" target="_blank">備份釋出(每次看都很難過欸! R~~~~~~BBBBBBBBBBB</a> <br />
+<a href="https://www.youtube.com/redirect?event=backstage_event&redir_token=QUFFLUhqbkxod0dkWlFxTGdKYkE2YXE2WHg5Ujd3RkZ1UXxBQ3Jtc0trZnBCMXJNeG90SEdNVEZVdjNwVlBDXzVCVEljcldWWFpFVEp0Y2RIMlRSemRkMlk2WXM4VEUyOEpBdFlsRXBzM0dKbmtud3l1QlBkaEx4VTMxWFR6WTV4X0Zmazg4RElITzV0LW5ZRFdkVnRoY1Ezbw&q=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1cr7U1Ymgtx1hudabVhqImEKvVb1ZMmX7%3Fusp%3Dsharing" target="_blank">備份釋出(每次看都很難過欸!RRRRRRRBBBBBBBBBBB</a> <br />
+<a href="https://www.youtube.com/watch?v=bATBdc6erXg" target="_blank">丟了倪(阿倪閹割版</a> <br />
 
 
 ### Overload Rules
