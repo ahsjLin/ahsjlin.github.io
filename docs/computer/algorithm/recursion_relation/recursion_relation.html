@@ -110,6 +110,7 @@ Give asymptotic tight bound for
 <h3>ans</h3>
 將\( T(n) \)展開得<br>
 <img src="img/recursion_tree_1.png" alt="ex_1"/> <br>
+(第一層為n，是\( T(n)=\dots + {\color{blue} n} \))<br>
 再將子問題展開得<br>
 <img src="img/recursion_tree_2.png" alt="ex_2"/> <br>
 (樹的最左邊層數較多，最右邊層數越少。)<br>
@@ -140,6 +141,116 @@ T(n) = \Omega(n)
 \therefore
 T(n)=\Theta(n)
 \)
+<hr>
+<h3>Question</h3>
+Given tight asymptotic bounds for \( T(n)=T(n/3)+T(2n/3)+n \)
+<h3>ans</h3>
+Determine \( \Theta \).<br>
+展開\( T(n) \)為<br>
+<img src="img/recursion_tree_ex_2_2.png" alt="ex2_2"/><br>
+從樹的花費可得知\( T(n) \)的總花費，<br>
+為\(
+T(n) = \overbrace{n+n+\dots+\text{ leaf}}^{\text{樹高的層數}}.
+\)<br>
+從上圖的樹可知道\( n/3 \)那條分支最先分完，\( 2n/3 \)最後分完，那就可以知道只要有分支分完，那層的花費加總就不會是\( n \)，就可用來比大小，算出\( O \)和\( \Omega \)。<br><br>
+計算Big-Oh:<br>
+\(
+T(n)=n+n+\dots+\text{ leaf}
+\leq
+\text{最長樹高}\times n
+\)<br>
+\(
+\Rightarrow 
+n
+\rightarrow 
+\frac{2n}{3}
+\rightarrow 
+\frac{4n}{9}
+\rightarrow 
+\frac{8n}{27}
+\dots
+T(1)
+\)<br>
+這裡有個想法，n每次都乘\( \frac{2}{3} \)直到變成\( T(1)=1\)<br>
+那樹高為，假設為\( h \)<br>
+\(
+n\cdot (\frac{2}{3})^{h}=1
+\)<br>
+\(
+n=(\frac{3}{2})^{h}
+\)<br>
+取log<br>
+\(
+\log_{\frac{3}{2}} n = h\log_{\frac{3}{2}}\frac{3}{2}
+=h
+\)<br>
+\(
+\Rightarrow T(n)
+\leq
+(\log_{\frac{3}{2}} n)\cdot n=O(n\lg n)
+\)
+<table>
+	<tr><th>Hint</th></tr>
+	<tr><td>log的底不影響成長速率</td></tr>
+</table>
+計算Omega:
+找樹高最短的<br>
+\(
+\Rightarrow 
+n\rightarrow 
+\frac{n}{3}\rightarrow 
+\frac{n}{9}\rightarrow 
+\dots
+T(1)
+\)<br>
+假設樹高為h<br>
+則<br>
+\(
+n\cdot(\frac{1}{3})^{h}=1
+\)<br>
+\(
+n=3^h
+\)<br>
+\(
+h=\log_{3}n
+\)<br>
+<br>
+\(
+\Rightarrow 
+n\cdot(\log_3n)\leq T(n)
+\)<br>
+\(
+\Rightarrow 
+T(n)=\Omega(n\lg n)
+\)<br> <br>
+\(
+\therefore T(n)=\Theta(n\lg n)
+\)
+<hr>
+<h2>定理</h2>
+由上面兩題得到一個定理。<br>
+Given positive constants: \( c_1,c_2,\dots,c_k,c' \),<br>
+assume that<br>
+\(
+T(n)\leq T(c_1n)+T(c_1n)+\dots T(c_kn)+c'n.
+\)<br>
+If these constant:<br>
+<ol>
+	<li>
+\(
+c_1+c_2+\dots+c_k&lt 1, \text{ prove }
+T(n)=O(n)
+\)
+	</li>
+	<li>
+\(
+c_1+c_2+\dots+c_k=1, \text{ prove }
+T(n)=O(n\log n)
+\)
+	</li>
+</ol>
+
+
 
 
 <hr>
