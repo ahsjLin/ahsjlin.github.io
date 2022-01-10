@@ -467,6 +467,7 @@ n^c=\lg^k n
 <h3>Question</h3>
 Please resolve the following recurrence relations.
 <hr>
+<h3>exercise</h3>
 \(
 T(n)=8T(\frac{n}{2})+n^2
 \)<br>
@@ -484,6 +485,7 @@ checking \( n^3 / n^2 \geq n^1 \).<br>
 By Master theorem.<br>
 \( T(n) = \Theta(n^3) \)
 <hr>
+<h3>exercise</h3>
 \( T(n)=4T(\frac{n}{2})+n^3 \)<br>
 <h4>ans</h4>
 \(
@@ -549,7 +551,69 @@ c=\frac{1}{2}
 \(
 T(n)=\Theta(n^3)
 \)
-
+<hr>
+<h3>exercise</h3>
+\( 
+T(n)=4T(\frac{n}{2})+n^2\lg n
+\)
+<h3>ans</h3>
+\(
+a=4,\;b=2,\; f(n)=n^2\lg n
+\)<br>
+\(
+n^{\log_ba}
+=
+=n^{2}
+\)<br>
+\(
+k=\log_{\lg n}\frac{n^2\lg n}{n^2}=1
+\)
+<br>
+By Master theorem (2)<br>
+\(
+f(n)=\Theta(n^{\log_ba}\lg^kn)
+\rightarrow 
+\Theta(n^{\log_ba}\lg^{k+1}n)
+\)<br>
+\(
+\Rightarrow 
+f(n)=\Theta(n^2(\lg n)^1)
+\rightarrow 
+\)滿足<br>
+所以<br>
+\(
+T(n)=\Theta(n^2\lg^2n)
+\)
+<hr>
+<h3>exercise</h3>
+\(
+T(n)=2T(\frac{n}{2})+n
+\)
+<h3>ans</h3>
+\(
+a=2,\;b=2,\;f(n)=n
+\)<br>
+\(
+k=\log_{\lg n}\frac{f(n)}{n^{\log_ba}}
+=\log_{\lg n}\frac{n}{n}=0
+\)<br><br>
+By master theorem (2)<br>
+\(
+f(n)=\Theta(n^{\log_ba}\lg^kn)
+\rightarrow 
+T(n)=\Theta(n^{\log_ba}\lg^{k+1}n)
+\)<br><br>
+\(
+f(n)=n=\Theta(n^1\lg^0n)=\Theta(n)
+\)<br>
+\(
+\rightarrow T(n)=\Theta(n\lg n)
+\)
+<hr>
+<h3>exercise</h3>
+\(
+T(n)=3T(\frac{n}{4})+n\lg n, T(1)=1
+\)
 <hr>
 <footer>
 <h2>Reference</h2>
