@@ -375,7 +375,7 @@ proof:<br><br>
 \exists\epsilon\exists c
 (
 \underline{(\epsilon &gt 0)}\wedge\underline{(c &lt 1)}\wedge
-\underline{f(n)=\Theta(n^{\log_b a+\epsilon})} \wedge
+\underline{f(n)=\Omega(n^{\log_b a+\epsilon})} \wedge
 \underline{a\times f(\frac{n}{b})\leq cf(n)}
 \rightarrow 
 \underline{T(n)=\Theta(f(n))}
@@ -613,6 +613,27 @@ f(n)=n=\Theta(n^1\lg^0n)=\Theta(n)
 <h3>exercise</h3>
 \(
 T(n)=3T(\frac{n}{4})+n\lg n, T(1)=1
+\)
+<h3>ans</h3>
+\(
+a=3,\;b=4,\;f(n)=n\lg n, \; n^{\log_{4}3}
+\)<br>
+\(
+f(n)\geq n^{\log_{4}3}=n^{0.\dots }
+\)<br>
+By master theorem<br>
+\(
+f(n)=\Omega(n^{\log_{b}a+\varepsilon})\wedge\varepsilon &gt 0
+\rightarrow 
+T(n)=\Theta(f(n))
+\)<br> <br>
+\(
+f(n)= n\lg n=\Omega(n^{\log_43+\varepsilon})
+\)<br>
+取\( \varepsilon=1-\log_43 \)<br>
+得<br>
+\(
+T(n)=\Theta(f(n))=\Theta(n\lg n)
 \)
 <hr>
 <footer>
