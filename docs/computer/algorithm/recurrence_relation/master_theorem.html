@@ -1,0 +1,82 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>Master-theorem Method(老大定理)</h2>
+\( a\geq 1, b&gt 1, \forall a,b\in R \)<br>
+\( f:f(n) \) (意思\( f(n) \)為一函數<br>
+\( T(n) \geq 0 \rightarrow T(n)=aT(\frac{n}{b})+f(n)\)<br>
+<ol>
+
+<li>
+<!-- \( f(n)&gt n^{\log_ba} \): --> <br>
+\(
+\exists \varepsilon
+(
+\underline{(\varepsilon&gt 0)}\wedge
+\underline{f(n)=O(n^{\log_{b}a-\varepsilon})}
+\rightarrow 
+\underline{T(n)=\Theta(n^{\log_{b} a})}
+)
+\)
+</li>
+<li>
+<!-- 不確定 \( n^{\log_ba}= f(n) :\) --><br>
+\(
+\forall k
+(
+\underline{(k\geq 0)}\wedge
+\underline{f(n)=\Theta(n^{\log_{b} a}\lg^k n)}
+\rightarrow 
+\underline{T(n)=\Theta(n^{\log_b a}\lg^{k+1}n)}
+)
+\)
+</li>
+
+<li>
+<!-- \( n^{\log_ba}&gt f(n) \): --> <br>
+\(
+\exists\epsilon\exists c
+(
+\underline{(\epsilon &gt 0)}\wedge\underline{(c &lt 1)}\wedge
+\underline{f(n)=\Omega(n^{\log_b a+\epsilon})} \wedge
+\underline{a\times f(\frac{n}{b})\leq cf(n)}
+\rightarrow 
+\underline{T(n)=\Theta(f(n))}
+)
+\)
+</li>
+
+</ol>
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>
