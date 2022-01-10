@@ -342,6 +342,148 @@ proof:<br><br>
 \( f:f(n) \) (意思\( f(n) \)為一函數<br>
 \( T(n) \geq 0 \rightarrow T(n)=aT(\frac{n}{b})+f(n)\)<br>
 有三種情況<br>
+<ol>
+
+<li>
+\(
+\exists \varepsilon
+(
+\underline{(\varepsilon&gt 0)}\wedge
+\underline{f(n)=O(n^{\log_{b}a-\varepsilon})}
+\rightarrow 
+\underline{T(n)=\Theta(n^{\log_{b} a})}
+)
+\)
+</li>
+<li>
+\(
+\forall k
+(
+\underline{(k\geq 0)}\wedge
+\underline{f(n)=\Theta(n^{\log_{b} a}\lg^k n)}
+\rightarrow 
+\underline{T(n)=\Theta(n^{\log_b a}\lg^{k+1}n)}
+)
+\)
+</li>
+
+<li>
+\(
+\exists\epsilon\exists c
+(
+\underline{(\epsilon &gt 0)}\wedge\underline{(c &lt 0)}\wedge
+\underline{f(n)=\Theta(n^{\log_b a+\epsilon})} \wedge
+\underline{a\times f(\frac{n}{b})\leq cf(n)}
+\rightarrow 
+\underline{T(n)=\Theta(f(n))}
+)
+\)
+</li>
+
+</ol>
+判斷master theorem使用時機 (其一則可)
+<ol>
+
+<li>
+\( (n^{\log_b a} \)
+\( \;/\; \)
+\( f(n)) \)
+\( \geq \)
+\( n^{\epsilon} \)
+</li>
+
+<li>
+\(
+(
+f(n)\;/\;
+n^{\log_b a}
+)
+\geq
+\lg^k n
+\)
+<table>
+<tr><th>討論\( \lg^k n \)計算</th><th>註解</th></tr>
+<tr><td>
+假設\( f(n)&gt n^{\log_ba} \)<br>
+那就可以用\(  
+(
+f(n)\;/\;
+n^{\log_b a}
+)
+\geq
+\lg^k n
+\) 判斷，接著是判斷\( k \)是否\( \geq 0 \)<br>
+\(
+(
+f(n)\;/\;
+n^{\log_b a}
+)
+=
+n^c,\; c&gt 0
+\) <br>
+\(
+\Rightarrow 
+n^c=\lg^k n
+\)<br>
+取\(
+\log_{\lg n} 
+\)<br>
+\( 
+\Rightarrow 
+\log_{\lg n} n^c
+=
+\log_{\lg n} \lg^k n
+=
+\log_{\lg n} (\lg n)^k
+=k
+\)<br>
+討論\( \lg n \):<br>
+\( n \)是一個很大的數\( \lg \)底數是2，那他的值一定會大於1，如果\( \log \)的底數是分數的話出來的值會是負數，就不符合\( k\geq 0 \)<br> <br>
+改寫為<br>
+\(
+\log_{\lg n} (\frac{f(n)}{n^{\log_b a}})=k\geq 0
+\)<br>
+判斷\( k \)值
+</td>
+<td>
+\( \forall n\forall c \)(\( (n\geq 1) \wedge (c&gt0) \)
+\(
+\rightarrow 
+(n^c &gt 1))
+\)<br><br>
+\(
+\log_{\text{大於1的某數}}\text{大於1的某數}&gt 0
+\)
+</td>
+</tr>
+</table>
+</li>
+
+</ol>
+<hr>
+<h3>Question</h3>
+Please resolve the following recurrence relations.
+<hr>
+\(
+T(n)=8T(\frac{n}{2})+n^2
+\)<br>
+<h4>ans</h4>
+\(
+a=8, b=2, f(n)=n^2
+\)<br>
+\(
+\log_2 8 = 3
+\Rightarrow 
+n^3
+\)<br>
+when \( \epsilon = 1 \),<br>
+checking \( n^3 / n^2 \geq n^1 \).<br>
+By Master theorem.<br>
+\( T(n) = \Theta(n^3) \)
+<hr>
+\( T(n)=4T(\frac{n}{2})+n^3 \)<br>
+<h4>ans</h4>
+
 <hr>
 <footer>
 <h2>Reference</h2>
