@@ -345,6 +345,7 @@ proof:<br><br>
 <ol>
 
 <li>
+\( f(n)&gt n^{\log_ba} \): <br>
 \(
 \exists \varepsilon
 (
@@ -356,6 +357,7 @@ proof:<br><br>
 \)
 </li>
 <li>
+<!-- 不確定 \( n^{\log_ba}= f(n) :\) --><br>
 \(
 \forall k
 (
@@ -368,6 +370,7 @@ proof:<br><br>
 </li>
 
 <li>
+\( n^{\log_ba}&gt f(n) \): <br>
 \(
 \exists\epsilon\exists c
 (
@@ -483,6 +486,69 @@ By Master theorem.<br>
 <hr>
 \( T(n)=4T(\frac{n}{2})+n^3 \)<br>
 <h4>ans</h4>
+\(
+a=4,\; b=2\; f(n) = n^3
+\)<br>
+\(
+n^{\log_ba}= n^{2}
+\)<br>
+\(
+f(n)&gt n^{\log_ba}
+\)<br><br>
+checking<br>
+\(
+\log_{\lg n}\frac{f(n)}{n^{\log_ba}}\geq 0\rightarrow 
+\)ok, 符合\( k\geq 0 \)<br>
+取
+\(
+k=
+\log_{\lg n}n
+\)<br>
+By master theorem (3)<br>
+<table>
+	<tr><th>Hint</th></tr>
+<tr><td>
+找到\( \varepsilon&gt 0 \)和\( c&lt 1 \)使得滿足
+\(
+f(n)=\Omega(n^{\log_ba+\varepsilon})
+\cap
+af(\frac{n}{b})\leq cf(n)
+\)<br>
+則\( T(n)=\Theta(f(n)) \)
+</td></tr>
+</table>
+<br>
+\(
+f(n)=
+\Omega(n^{\log_24+\varepsilon})
+\cap
+4f(\frac{n}{2})\leq cf(n)
+\)<br>
+代\( f(n)=n^3 \)<br>
+\(
+\Rightarrow 
+n^3=
+\Omega(n^{\log_24+\varepsilon})
+\cap
+4(\frac{n}{2})^3\leq cn^3
+\)<br>
+\(
+\Rightarrow 
+n^3=
+\Omega(n^{2+\varepsilon})
+\cap
+4(\frac{n^3}{8})\leq cn^3
+\)<br>
+取
+\(
+\varepsilon=1,
+\;
+c=\frac{1}{2}
+\)<br>
+得<br>
+\(
+T(n)=\Theta(n^3)
+\)
 
 <hr>
 <footer>
