@@ -251,10 +251,97 @@ T(n)=O(n\log n)
 \)
 	</li>
 </ol>
+因為是呼叫自身函數，所以存在一個倍數關係。假設這個關係為r<br>
+令 \( r=c_1+c_2+\dots+c_k \),且\( T(n)=T(c_1n)+T(c_2n)+\dots +T(c_kn)+c'n \)<br>
+展開recursion-tree為<br>
+<img src="img/recursion_tree_proof.png" alt="recursion_tree_proof"/><br>
+<ol>
+<li>
+若\( r=c_1+c_2+\dots +c_k &lt 1 \)<br>
+則<br>
+\( T(n)=T(c_1n)+T(c_2n)+\dots +c'n \)<br>
+\( T(c_1n)=T(c_1c_1n)+T(c_2c_1n)+\dots +T(c_kc_1n)+{\color{red}c_1c'n} \)<br>
+\( T(c_2n)=T(c_1c_2n)+T(c_2c_2n)+\dots +T(c_kc_2n)+{\color{red}c_2c'n} \)<br>
+\( \vdots \)<br>
+\( T(c_kn)=T(c_1c_kn)+T(c_2c_kn)+\dots +T(c_kc_kn)+{\color{red}c_kc'n} \)<br>
+\( \rightarrow c_1c'n+c_2c'n+\dots c_kc'n = rc'n \) (這個為\( c'n \)下一層的花費)<br><br>
+最後都展開後<br>
+\( T(n)=\text{ leaf } + \text{ leaf } +\dots +r^2c'n+rc'n+c'n\)<br>
+整理式子(倒過來寫<br>
+\( T(n)= c'n+rc'n+r^2c'n+\dots +\text{ leaf } + \text{ leaf }\)<br>
+這是有限項的式子，如果無限加正數一定會比這個大(就算一直加的數是接近無限小的正數)。<br>
+所以得到<br>
+<table>
+<tr><th>Hint</th></tr>
+<tr><td>\( 0&lt c&lt 1, a_n=ca_{n-1} \rightarrow \displaystyle\sum_{i=1}^{\infty}a_i=\frac{a_1}{1-c}  \)</td></tr>
+</table>
+<br>
+
+\( T(n)\leq c'n+rc'n+r^2c'n+ \dots =\frac{c'n}{1-r}\)<br>
+\( \therefore T(n)=O(n) \)<br> <br>
+計算Omega:<br>
+如果樹只有一層，很明顯為<br>
+\( an\leq T(n),\; a\in R \)<br>
+\( \therefore T(n)=\Omega(n) \)<br> <br>
+\( \because  T(n)=\Omega(n)\cap T(n)=O(n)\)<br>
+\( \therefore T(n)=\Theta(n) \)
 
 
+   
+</li>
+<li>
+若\( r=c_1+c_2+\dots +c_k=1 \)<br>
+\( T(n)=c'n+c'n+\dots +c'n =\text{樹高}\cdot c'n\)<br>
+樹高\( =\Theta(\log n) \)<br>
+\( 
+T(n)=(\log n)\cdot c'n=\Theta(n\log n)
+\)
+<table>
+<tr><th>樹高證明</th></tr>
+<tr><td>
+proof:<br><br>
+計算樹高Big-Oh:<br>
+最長子樹的倍數關係為t<br>
+則<br>
+\( n\rightarrow tn\rightarrow t^2n\rightarrow \dots \rightarrow 1 \)<br>
+\( n\cdot t^{\text{樹高}}=1 \)<br>
+\( n=(\frac{1}{t})^{\text{樹高}} \)<br>
+\( \log n = \log_{\frac{1}{t}}(\frac{1}{t})^{\text{樹高}}  \)<br>
+\( \text{樹高}=\log_{\frac{1}{t}} n \)<br>
+\( \therefore \text{樹高}=O(\log n) \)<br><br>
+計算樹高Omega:<br>
+計算最短子樹，其倍數關係為s<br>
+則<br>
+\( n\rightarrow sn\rightarrow s^2n\rightarrow \dots \rightarrow 1 \)<br>
+\( n\cdot s^{\text{樹高}}=1 \)<br>
+\( n=(\frac{1}{s})^{\text{樹高}} \)<br>
+\( \log n = \log_{\frac{1}{s}}(\frac{1}{s})^{\text{樹高}}  \)<br>
+\( \text{樹高}=\log_{\frac{1}{s}} n \)<br>
+\( \therefore \text{樹高}=\Omega(\log n) \)<br><br><br>
+\( \log \)的底數可由換底公式變成一樣的，然後原來的底數會變成係數，在比較時間複雜度時，並不會考慮係數，因為n夠大，係數不能構成式子的主導權，主導權在最高次方的變數身上。
+<br>
+\( \because  
+\text{樹高}=O(\log n)
+\cap
+\text{樹高}=\Omega(\log n)
+\)<br>
+\( 
+\therefore
+\text{樹高}=\Theta(\log n)
+\)
 
+</td></tr>
+</table>
+<br>
 
+</li>
+</ol>
+<hr>
+<h2>Master-theorem Method(老大定理)</h2>
+\( a\geq 1, b&gt 1, \forall a,b\in R \)<br>
+\( f:f(n) \) (意思\( f(n) \)為一函數<br>
+\( T(n) \geq 0 \rightarrow T(n)=aT(\frac{n}{b})+f(n)\)<br>
+有三種情況<br>
 <hr>
 <footer>
 <h2>Reference</h2>
