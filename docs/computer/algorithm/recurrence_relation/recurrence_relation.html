@@ -636,6 +636,69 @@ f(n)= n\lg n=\Omega(n^{\log_43+\varepsilon})
 T(n)=\Theta(f(n))=\Theta(n\lg n)
 \)
 <hr>
+<h3>exercise</h3>
+\(
+T(n)=7T(\frac{n}{2})+n^3
+\)
+<h3>ans</h3>
+\(
+a=7,\;b=2,\;f(n)=n^3,\;n^{\log_ba}=n^{\log_27}
+\)<br>
+\(
+f(n)=n^3&gt n^{\log_27}
+\)<br>
+\(
+n^3=f(n)=\Omega(n^{\log_27+\varepsilon})
+\)<br>
+取\( 
+\varepsilon=3-\log_27
+\Rightarrow 
+\varepsilon&gt 0
+\)<br>
+\(
+af(\frac{n}{b})=7f(\frac{n}{2})\leq cf(n)
+\)<br>
+\(
+\Rightarrow 
+7\cdot \frac{n^3}{8}\leq cn^3
+\Rightarrow 
+c=\frac{7}{8}
+\Rightarrow 
+c&lt 1
+\)<br>
+By Master Theorem<br>
+\(
+T(n)=\Theta(f(n))=\Theta(n^3)
+\)
+<hr>
+<h3>exercise</h3>
+\(
+T(n)=3T(\frac{n}{2})+n^2\log n
+\)<br>
+<h3>ans</h3>
+\(
+a=3,\; b=2,\; f(n)=n^2\log n,\; n^{\log_ba}=n^{\log_23}=n^{1.\dots }
+\)<br>
+\(
+n^2\log n= f(n) &gt n^{\log_23}
+\)<br>
+\(
+3T(\frac{n}{2})\leq cf(n)
+\)<br>
+\(
+\Rightarrow 
+3(\frac{n^2}{4}\log\frac{n}{2})
+\leq
+cn^2\log n
+\), 取\( c = \frac{3}{4} \Rightarrow c&lt 1\)<br>
+\(
+n^2\log n = f(n)=\Omega(n^{\log_23+\varepsilon})
+\), 取 \( \varepsilon=2-\log_23 \Rightarrow \varepsilon &gt 0 \)<br>
+By Master Theorem<br>
+\(
+T(n)=\Theta(f(n))=\Theta(n^2\log n)
+\)
+<hr>
 <footer>
 <h2>Reference</h2>
 洪捷 - 演算法

@@ -15,6 +15,8 @@
 
 ### <a href="dump/dump.html" target="_blank">Dump</a>
 
+### <a href="test/test.html" target="_blank">Test</a>
+
 ### sam1268
 <a href="https://www.youtube.com/watch?v=xwKDL3vBC5U" target="_blank">海上的人</a> <br />
 <a href="https://www.youtube.com/watch?v=gj1aPwqEAv4" target="_blank">浪流連</a> <br />
