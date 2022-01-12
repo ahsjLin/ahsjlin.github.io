@@ -419,6 +419,7 @@ L_{ij}=
 </tr>
 </table> <br>
 <h3>說明:</h3>
+<p id="index_manual">上方按鈕操作表格。</p>
 <p id="index1_note">
 看第一個row的a對上第一個column的a，有match到，所以左上角那格數值+1(左上角那個為0)=0+1=1, 箭頭往左上。
 </p>
@@ -507,8 +508,8 @@ L_{ij}=
 </p>
 <p id="index26_note">
 找到最右下角最大數值為3，也就是最長共同子序列長度為3。<br>
-要找到序列，就從最右下開始回推，以陣列index的形式來說明，排除預設的0，這裡是5X5的矩陣，A字串為1到5，B字串也為1到5，舉例表格最右下角編號為[5][5]。<br>
-開始回推，[5][5]箭頭向左，到[5][4]箭頭向左上，這格標記起來，因為他們有共同的元素，接著順著箭頭到[4][3],箭頭向上，到[3][3]，箭頭左上，標記，到[2][2]箭頭向左，到[2][1]，箭頭向上，[1][1]箭頭向左上，標記，最後可得最長共同子序列長度為3，內容為acc(當然箭頭選擇上面左邊的不一樣，內容也會不一樣，這裡內容可能為acb)。
+要找到序列，就從最右下開始回推，以陣列index的形式來說明，排除預設的0，這裡是\( 5\times 5 \)的矩陣，A字串為1到5，B字串也為1到5，舉例表格最右下角編號為[5][5]。<br>
+開始回推，[5][5]箭頭向左，到[5][4]箭頭向左上，這格標記起來，因為他們有共同的元素，接著順著箭頭到[4][3],箭頭向上，到[3][3]，箭頭左上，標記，到[2][2]箭頭向左，到[2][1]，箭頭向上，[1][1]箭頭向左上，標記，最後可得最長共同子序列長度為3，內容為acc(當然箭頭選擇上面左邊的不一樣，內容也會不一樣，這LCS內容可能為acb)。
 </p>
 
 <!-- javascript -->
@@ -528,6 +529,7 @@ for(let i=1;i<=26;i++){
 }
 
 function step(index=index_number){
+	document.getElementById('index_manual').style.display= "none";
 	/* finish */
 	if(index_number>=26){
 		for(let i=0;i<lcs_path.length;i++){
@@ -569,6 +571,7 @@ function prev(){
 	{
 		pre_index=1;
 		index_number=1;
+		document.getElementById('index_manual').style.display= "block";
 	}
 	else
 	{
@@ -594,6 +597,7 @@ function reset_index(){
 			document.getElementById(index_hide).style.display= "none";
 		document.getElementById(index_note_hide).style.display= "none";
 	}
+	document.getElementById('index_manual').style.display= "block";
 	index_number = 1;
 }
 	
