@@ -233,6 +233,7 @@ L_{ij}=
 <!-- step 1 -->
 開始填表<br>
 <button onclick="step()">Step-by-step</button>
+<button onclick="prev()">Previous</button>
 <button onclick="all_index()">All</button>
 <button onclick="reset_index()">Reset</button>
 <br>
@@ -561,6 +562,21 @@ function step(index=index_number){
 	}
 	index_number++;
 }
+function prev(){
+	pre_index = index_number-2;
+	reset_index();
+	if(pre_index<1)
+	{
+		pre_index=1;
+		index_number=1;
+	}
+	else
+	{
+		for(let i=1;i<=pre_index;i++){
+			step();
+		}
+	}
+}
 
 function all_index(){
 	index_number = 1;
@@ -578,6 +594,7 @@ function reset_index(){
 			document.getElementById(index_hide).style.display= "none";
 		document.getElementById(index_note_hide).style.display= "none";
 	}
+	index_number = 1;
 }
 	
 </script>
