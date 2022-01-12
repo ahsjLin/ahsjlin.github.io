@@ -1,0 +1,594 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+<style>
+td{
+	text-align: center
+}
+</style>
+
+
+</head>
+<body>
+<h2>LCS (Longest Common Subsquence)</h2>
+<ul>
+
+<li>
+Let \( A=a_1a_2\dots a_m \) and \( B=b_1b_2\dots b_n \).
+</li>
+
+<li>
+Let \( L_{ij} \) denote the length of the longest common subsequence of \( A \) and \( B \).<br>
+<br> \( \forall i(1\leq i\leq m), \forall j(1\leq j\leq n) \)<br>
+\( L_{00}=L_{i_0}=L_{0_j}=O \)
+</li>
+
+<li>
+\(
+L_{ij}=
+\begin{cases}
+	L_{i-1,j-1}+1\text{, if }a_i=b_j\\
+	\text{max}\{L_{i-1,j}, L_{i,j-1}\text{, if } a_i\neq b_j\}
+\end{cases}
+\)
+</li>
+
+</ul>
+如果值有一樣，那格要填的格子分數由左上角那格數值+1，並利用箭頭紀錄是由左上角來的,<br>
+否則選上面或左邊格子數值最大的來填入，並用箭頭紀錄來源。<br><br>
+最後在表格找最大的數值，由它開始往前推，找有左上箭頭的起始值，即為LCS的內容<br>
+<br>
+<table>
+<tr><th colspan="2">箭頭說明</th></tr>
+<tr><td>3 (終點)</td><td></td></tr>
+<tr><td></td><td>\( \nwarrow \)4 (起點)</td></tr>
+</table>
+
+<hr>
+<h2>Exercise</h2>
+有兩字串A=abcbc和B=aaccb，找這兩字串的LCS。<br>
+\( \varepsilon = \emptyset \)
+<table style="width: 300px;table-layout:fixed;">
+<tr>
+<th>A\B</th>
+<td>\( \varepsilon \)</td>
+<td>a</td>
+<td>a</td>
+<td>c</td>
+<td>c</td>
+<td>b</td>
+
+</tr>
+
+<!-- row 0 -->
+<tr>
+<td>\( \varepsilon \)</td>
+<!-- column 0 -->
+<td>
+	0
+</td>
+<!-- column 1 -->
+<td>
+	0
+</td>
+<!-- column 2 -->
+<td>
+	0
+</td>
+<!-- column 3 -->
+<td>
+	0
+</td>
+<!-- column 4 -->
+<td>
+	0
+</td>
+<!-- column 5 -->
+<td>
+	0
+</td>
+</tr>
+<!-- row 1 -->
+<tr>
+<td>a</td>
+<!-- column 0 -->
+<td>
+	0
+</td>
+<!-- column 1 -->
+<td>
+</td>
+<!-- column 2 -->
+<td>
+</td>
+<!-- column 3 -->
+<td>
+</td>
+<!-- column 4 -->
+<td>
+</td>
+<!-- column 5 -->
+<td>
+</td>
+</tr>
+<!-- row 2 -->
+<tr>
+<td>b</td>
+<!-- column 0 -->
+<td>
+	0
+</td>
+<!-- column 1 -->
+<td>
+</td>
+<!-- column 2 -->
+<td>
+</td>
+<!-- column 3 -->
+<td>
+</td>
+<!-- column 4 -->
+<td>
+</td>
+<!-- column 5 -->
+<td>
+</td>
+</tr>
+<!-- row 3 -->
+<tr>
+<td>c</td>
+<!-- column 0 -->
+<td>
+	0
+</td>
+<!-- column 1 -->
+<td>
+</td>
+<!-- column 2 -->
+<td>
+</td>
+<!-- column 3 -->
+<td>
+</td>
+<!-- column 4 -->
+<td>
+</td>
+<!-- column 5 -->
+<td>
+</td>
+</tr>
+<!-- row 4 -->
+<tr>
+<td>b</td>
+<!-- column 0 -->
+<td>
+	0
+</td>
+<!-- column 1 -->
+<td>
+</td>
+<!-- column 2 -->
+<td>
+</td>
+<!-- column 3 -->
+<td>
+</td>
+<!-- column 4 -->
+<td>
+</td>
+<!-- column 5 -->
+<td>
+</td>
+</tr>
+<!-- row 5 -->
+<tr>
+<td>c</td>
+<!-- column 0 -->
+<td>
+	0
+</td>
+<!-- column 1 -->
+<td>
+</td>
+<!-- column 2 -->
+<td>
+</td>
+<!-- column 3 -->
+<td>
+</td>
+<!-- column 4 -->
+<td>
+</td>
+<!-- column 5 -->
+<td>
+</td>
+</tr>
+</table> <br>
+
+
+<hr>
+有\( \varepsilon \)的row和column當作是第0個row和第0個column。<br>
+(台譯: row為列, column為行。)<br>
+(其他譯: row為行, column為列。)<br>
+所以使用英文來解釋，row是橫的(左右)，column是直的(上下)。<br>
+<hr>
+<!-- test -->
+<!-- step 1 -->
+開始填表<br>
+<button onclick="step()">Step-by-step</button>
+<button onclick="all_index()">All</button>
+<button onclick="reset_index()">Reset</button>
+<br>
+<table style="width: 300px;table-layout:fixed;">
+<tr>
+<th>A\B</th>
+<td>\( \varepsilon \)</td>
+<td>a</td>
+<td>a</td>
+<td>c</td>
+<td>c</td>
+<td>b</td>
+
+</tr>
+
+<!-- row 0 -->
+<tr>
+<td>\( \varepsilon \)</td>
+<!-- column 0 -->
+<td>
+	0
+</td>
+<!-- column 1 -->
+<td>
+	0
+</td>
+<!-- column 2 -->
+<td>
+	0
+</td>
+<!-- column 3 -->
+<td>
+	0
+</td>
+<!-- column 4 -->
+<td>
+	0
+</td>
+<!-- column 5 -->
+<td>
+	0
+</td>
+</tr>
+<!-- row 1 -->
+<tr>
+<td>a</td>
+<!-- column 0 -->
+<td>
+	0
+</td>
+<!-- column 1 -->
+<td id="index1">
+	\( \nwarrow \)1
+</td>
+<!-- column 2 -->
+<td id="index2">
+	\( \nwarrow \)1
+</td>
+<!-- column 3 -->
+<td id="index3">
+	\( \leftarrow \)1
+</td>
+<!-- column 4 -->
+<td id="index4">
+	\( \leftarrow \)1
+</td>
+<!-- column 5 -->
+<td id="index5">
+	\( \leftarrow \)1
+</td>
+</tr>
+<!-- row 2 -->
+<tr>
+<td>b</td>
+<!-- column 0 -->
+<td>
+	0
+</td>
+<!-- column 1 -->
+<td id="index6">
+	\( \uparrow \)1
+</td>
+<!-- column 2 -->
+<td id="index7">
+	\( \leftarrow \)1
+</td>
+<!-- column 3 -->
+<td id="index8">
+	\( \leftarrow \)1
+</td>
+<!-- column 4 -->
+<td id="index9">
+	\( \leftarrow \)1
+</td>
+<!-- column 5 -->
+<td id="index10">
+	\( \nwarrow \)2
+</td>
+</tr>
+<!-- row 3 -->
+<tr>
+<td>c</td>
+<!-- column 0 -->
+<td>
+	0
+</td>
+<!-- column 1 -->
+<td id="index11">
+	\( \uparrow \)1
+</td>
+<!-- column 2 -->
+<td id="index12">
+	\( \leftarrow \)1
+</td>
+<!-- column 3 -->
+<td id="index13">
+	\( \nwarrow \)2
+</td>
+<!-- column 4 -->
+<td id="index14">
+	\( \nwarrow \)2
+</td>
+<!-- column 5 -->
+<td id="index15">
+	\( \leftarrow \)2
+</td>
+</tr>
+<!-- row 4 -->
+<tr>
+<td>b</td>
+<!-- column 0 -->
+<td>
+	0
+</td>
+<!-- column 1 -->
+<td id="index16">
+	\( \uparrow \)1
+</td>
+<!-- column 2 -->
+<td id="index17">
+	\( \leftarrow \)1
+</td>
+<!-- column 3 -->
+<td id="index18">
+	\( \uparrow \)2
+</td>
+<!-- column 4 -->
+<td id="index19">
+	\( \leftarrow \)2
+</td>
+<!-- column 5 -->
+<td id="index20">
+	\( \nwarrow \)3
+</td>
+</tr>
+<!-- row 5 -->
+<tr>
+<td>c</td>
+<!-- column 0 -->
+<td>
+	0
+</td>
+<!-- column 1 -->
+<td id="index21">
+	\( \uparrow \)1
+</td>
+<!-- column 2 -->
+<td id="index22">
+	\( \leftarrow \)1
+</td>
+<!-- column 3 -->
+<td id="index23">
+	\( \nwarrow \)2
+</td>
+<!-- column 4 -->
+<td id="index24">
+	\( \nwarrow \)3
+</td>
+<!-- column 5 -->
+<td id="index25">
+	\( \leftarrow \)3
+</td>
+</tr>
+</table> <br>
+<h3>說明:</h3>
+<p id="index1_note">
+看第一個row的a對上第一個column的a，有match到，所以左上角那格數值+1(左上角那個為0)=0+1=1, 箭頭往左上。
+</p>
+<p id="index2_note">
+看第一個row的a對上第二個column的a，有match到，所以左上角那格數值+1(有match到是基於第二個column的a，這跟第一個column的a沒有關係喔!), 箭頭往左上。
+</p>
+<p id="index3_note">
+第一個row的a對上第三個column的c，沒有match到，所以看上面左邊的數值哪個較大就選它，箭頭也選那邊，這裡選左邊那個。<br>
+注意!! 如果上面左邊數值一樣，都可以選，不會影響最長長度，只會影響最後序列內容是什麼排列，這也就意味著序列不唯一。
+</p>
+<p id="index4_note">
+第一個row的a對上第四個column的c，沒有match到，上面左邊選較大的值，箭頭向左。<br>
+</p>
+<p id="index5_note">
+第一個row的a對上第五個column的b，沒有match到，上面左邊選較大的值，箭頭向左。<br>
+</p>
+<p id="index6_note">
+第二個row的b對上第一個column的a，沒有match到，上面左邊選較大的值，箭頭向上。<br>
+</p>
+<p id="index7_note">
+注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
+第二個row的b對上第二個column的a，沒有match到，上面左邊選較大的值，數值都一樣大，都可以選，這裡箭頭選向左。<br>
+</p>
+<p id="index8_note">
+注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
+第二個row的b對上第三個column的c，沒有match到，上面左邊選較大的值，數值都一樣大，都可以選，這裡箭頭選向左。<br>
+</p>
+<p id="index9_note">
+注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
+第二個row的b對上第四個column的c，沒有match到，上面左邊選較大的值，數值都一樣大，都可以選，這裡箭頭選向左。<br>
+</p>
+<p id="index10_note">
+第二個row的b對上第五個column的b，有match到, 左上那格+1=2,箭頭向左上。<br>
+</p>
+<p id="index11_note">
+第三個row的c對上第一個column的a，沒有match到，上面左邊選較大的值，箭頭向上。<br>
+</p>
+<p id="index12_note">
+注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
+第三個row的c對上第二個column的a，沒有match到，上面左邊選較大的值，箭頭向左。<br>
+</p>
+<p id="index13_note">
+第三個row的c對上第三個column的c，有match到, 左上那格+1=2,箭頭向左上。<br>
+</p>
+<p id="index14_note">
+第三個row的c對上第四個column的c，有match到, 左上那格+1=2(這是基於ab和aa有1個長度的共同子序列基礎下，再加上B現在這個c和A現在這個c有match到才+1的),箭頭向左上。<br>
+</p>
+<p id="index15_note">
+注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
+第三個row的c對上第五個column的b，沒有match到，上面左邊選較大的值，數值都一樣大，都可以選，這裡箭頭選向左。<br>
+</p>
+<p id="index16_note">
+第四個row的b對上第一個column的a，沒有match到，上面左邊選較大的值，箭頭向上。<br>
+</p>
+<p id="index17_note">
+注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
+第四個row的b對上第二個column的a，沒有match到，上面左邊選較大的值，箭頭向左。<br>
+</p>
+<p id="index18_note">
+注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
+第四個row的b對上第三個column的c，沒有match到，上面左邊選較大的值，箭頭向上。<br>
+</p>
+<p id="index19_note">
+注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
+第四個row的b對上第四個column的c，沒有match到，上面左邊選較大的值，箭頭向左。<br>
+</p>
+<p id="index20_note">
+第四個row的b對上第五個column的b，有match到, 左上那格+1=3,箭頭向左上。<br>
+</p>
+<p id="index21_note">
+第五個row的c對上第一個column的a，沒有match到，上面左邊選較大的值，箭頭向上。<br>
+</p>
+<p id="index22_note">
+注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
+第五個row的c對上第二個column的a，沒有match到，上面左邊選較大的值，箭頭向左。<br>
+</p>
+<p id="index23_note">
+第三個row的c對上第三個column的c，有match到, 左上那格+1=2,箭頭向左上。<br>
+</p>
+<p id="index24_note">
+第五個row的c對上第四個column的c，有match到, 左上那格+1=3(這是基於abcb和aacc有2個長度的共同子序列基礎下，再加上B現在這個c和A現在這個c有match到才+1的),箭頭向左上。<br>
+</p>
+<p id="index25_note">
+注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
+第五個row的c對上第五個column的b，沒有match到，上面左邊選較大的值，數值都一樣大，都可以選，這裡箭頭選向左。<br>
+</p>
+<p id="index26_note">
+找到最右下角最大數值為3，也就是最長共同子序列長度為3。<br>
+要找到序列，就從最右下開始回推，以陣列index的形式來說明，排除預設的0，這裡是5X5的矩陣，A字串為0到4，B字串也為0到4，舉例表格最右下角編號為[4][4]。<br>
+開始回推，[4][4]箭頭向左，到[4][3]箭頭向左上，這格標記起來，因為他們有共同的元素，接著順著箭頭到[3][2],箭頭向上，到[2][2]，箭頭左上，標記，到[1][1]箭頭向左，到[1][0]，箭頭向上，[0][0]箭頭向左上，標記，最後可得最長共同子序列長度為3，內容為acc(當然箭頭選擇上面左邊的不一樣，內容也會不一樣，這裡內容可能為acb)。
+</p>
+
+<!-- javascript -->
+<script charset="utf-8">
+<!-- variable -->
+var index_number = 1;
+let lcs_path = [25,24,18,13,7,6,1];
+let lcs_content = [24,13,1];
+
+<!-- hide content -->
+for(let i=1;i<=26;i++){
+	const index_hide = "index"+i;
+	const index_note_hide = "index"+i+"_note";
+	if(i!=26)
+		document.getElementById(index_hide).style.display= "none";
+	document.getElementById(index_note_hide).style.display= "none";
+}
+
+function step(index=index_number){
+	/* finish */
+	if(index_number>=26){
+		for(let i=0;i<lcs_path.length;i++){
+			const index_name = "index"+lcs_path[i]
+			document.getElementById(index_name).style.backgroundColor = "green";
+			document.getElementById("index25_note").style.display= "none";
+			document.getElementById("index26_note").style.display= "block";
+		}
+		for(let i=0;i<lcs_content.length;i++){
+			const index_name = "index"+lcs_content[i]
+			document.getElementById(index_name).style.backgroundColor = "red";
+		}
+		index_number = 26;
+		return
+
+	}
+
+	const index_str = "index"+index;
+	const index_str_note = "index"+index+"_note";
+
+	document.getElementById(index_str_note).style.display= "block";
+	document.getElementById(index_str).style.display= "table-cell";
+	document.getElementById(index_str).style.backgroundColor = "red";
+
+	var pre_index = index_number-1;
+	if(pre_index>0){
+		const pre_index_id = "index"+pre_index;
+		var pre_note = pre_index;
+		const pre_index_id_note = "index"+pre_note+"_note";
+		document.getElementById(pre_index_id).style.backgroundColor = "gray";
+		document.getElementById(pre_index_id_note).style.display= "none";
+	}
+	index_number++;
+}
+
+function all_index(){
+	index_number = 1;
+	for(let i=1;i<=26;i++){
+		step();
+	}
+}
+	
+function reset_index(){
+	index_number = 1;
+	for(let i=1;i<=26;i++){
+		const index_hide = "index"+i;
+		const index_note_hide = "index"+i+"_note";
+		if(i!=26)
+			document.getElementById(index_hide).style.display= "none";
+		document.getElementById(index_note_hide).style.display= "none";
+	}
+}
+	
+</script>
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+徐熊健 - 資料結構與演算法
+</footer>
+
+</body>
+</html>
