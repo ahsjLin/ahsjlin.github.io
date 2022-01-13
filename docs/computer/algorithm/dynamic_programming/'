@@ -561,7 +561,7 @@ Old string(B): POLYNOMIAL<br>
 	<tr>
 	<td>E</td>
 	<!-- column 0 -->
-	<td id="default_row1">\( \uparrow  \)1</td>
+	<td id="default_row1" style="backgroud-color: green;">\( \uparrow  \)1</td>
 	<!-- column 1 -->
 	<td id="index1">\( \nwarrow 1 \)</td>
 	<!--column 2 -->
@@ -861,47 +861,15 @@ Old string(B): POLYNOMIAL<br>
 	let path = [calIJ(11,10), calIJ(10,9), calIJ(9,8), calIJ(8,7), calIJ(8,6), calIJ(7,5), calIJ(6,4), calIJ(5,3), calIJ(4,2), calIJ(3,1)];
 	let default_path = [2,1];
 
-	let no_change = [
-'index'+calIJ(11,10),
-'index'+calIJ(10,9),
-'index'+calIJ(9,8),
-'index'+calIJ(7,5),
-'index'+calIJ(4,2),
-'index'+calIJ(3,1),
-	];
-let ins = [
-'default_row1',
-'default_row2'
-];
-let mod =[
-'index'+calIJ(5,3),
-'index'+calIJ(6,4),
-'index'+calIJ(8,6),
-];
-let del =[
-'index'+calIJ(8,7),
-];
-
-	for(let i=0;i<path.length; i++) {
+	for(let i=0;i<=path.length; i++) {
 		const index_name = "index"+path[i];
-		document.getElementById(index_name).style.backgroundColor = "gray";
+		document.getElementById(index_name).style.backgroundColor = "green";
 	}
+	alert("d");
 
-	<!-- no change -->
-	for(let i=0; i<no_change.length;i++){
-		document.getElementById(no_change[i]).style.backgroundColor = "gray";
-	}
-	<!-- insert -->
-	for(let i=0; i<ins.length;i++){
-		document.getElementById(ins[i]).style.backgroundColor = "blue";
-	}
-	<!-- modify -->
-	for(let i=0; i<mod.length;i++){
-		document.getElementById(mod[i]).style.backgroundColor = "yellow";
-	}
-	<!-- deletion -->
-	for(let i=0; i<del.length;i++){
-		document.getElementById(del[i]).style.backgroundColor = "green";
+	for(let i=0; i<default_path.length;i++){
+		const index_name = "default_row"+default_path[i];
+		document.getElementById(index_name).style.backgroundColor = "green";
 	}
 
 
@@ -909,8 +877,6 @@ function calIJ(i,j){
 	return (i-1)*10+j
 }
 </script>
-<br>
-(有顏色的地方是回推的路徑，灰色是沒有修改的地方，藍色是新資料插入舊資料前面，黃色是覆蓋成新資料，綠色是刪除那格舊資料。)
 <br>
 由表格可得知the shortest edit distance為6。<br>
 回推內容為<br>
