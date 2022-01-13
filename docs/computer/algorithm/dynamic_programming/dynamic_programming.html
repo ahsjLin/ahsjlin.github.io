@@ -22,13 +22,29 @@ function graph(name){
 
 </head>
 <body>
+<h2>Dynamic Programming</h2>
+使用recurrsion來計算，固然方便，但缺點就是計算費時，因為recurrsion不會記憶之前算過的答案，一樣的輸入值會重新計算，造成cpu忙碌，需計算龐大數值，不適合使用。<br>
+這時動態規劃(Dynamic Programming)就可以解決recurrsion效率低下的問題， 利用空間換取時間，把問題切成最小的子問題創建表格，供紀錄計算結果，再比對出最佳的解答填到表格，另一小問題得出最佳解答填到表格，再最佳解和最佳解合併成大一點問題再找最佳解答填到表格，直到合併到問題本身，由表格就可查到所要的資訊。
+<hr>
 <h2>longest common subsquence</h2>
+<a href="LCS_Longest_Common_Subsquence.html" target="_blank">Definition</a><br>
+簡易說明:<br>
+找出兩者資料之間，內容的相對位置有相同的地方，且長度最長的結果。<br><br>
 最長共同子序列的長度可能有長度相同，序列內容不同的情況。<br>
-<a href="LCS_Longest_Common_Subsquence.html" target="_blank">Example:</a><br>
 有兩序列abcbc和aaccb，它們最長共同子序列長度為3，但可能為acc或者acb。<br>
 <hr>
 <h2>Edit distance</h2>
-<a href="Edit_distance.html" target="_blank">Edit distance</a>
+<a href="Edit_distance.html" target="_blank">Definition</a><br>
+簡易說明:<br>
+找出最短不同的地方的的總長度或修改最少的方式的次數。<br>
+重點就是: 新增(insertion), 刪除(deletion), and 修改(modify)<br>
+這三類的加權，可由應用方式不同加以修改。<br>
+<hr>
+<h2>應用</h2>
+收集來的資料，像是圖片、影像、聲音或DNA序列，會把這些資料轉換成一串數字儲存起來。<br>
+比對資料時，在機器看來，只要加一點人類無法輕易辨識的雜訊、少了一點特徵、一個像素或一個數字不一樣，整個資料就當成是新的。<br>
+所以最長共同子字串和最短Edit distance的演算法就成為了生物資訊極為重要的學問，經由比對得出最相關的資料，也就是相似越多或不相關的越少，即為可能所求答案。<br>
+經由回推，也可以得出差異，用來更新檔案等應用。
 
 
 
