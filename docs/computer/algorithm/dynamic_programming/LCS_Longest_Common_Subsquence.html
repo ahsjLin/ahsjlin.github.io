@@ -421,88 +421,113 @@ L_{ij}=
 <h3>說明:</h3>
 <p id="index_manual">上方按鈕操作表格。</p>
 <p id="index1_note">
+(A拿自己第一個a和B拿自己第一個a比對)<br>
 看第一個row的a對上第一個column的a，有match到，所以左上角那格數值+1(左上角那個為0)=0+1=1, 箭頭往左上。
 </p>
 <p id="index2_note">
+(A拿自己第一個a和B拿自己aa比對)<br>
 看第一個row的a對上第二個column的a，有match到，所以左上角那格數值+1(有match到是基於第二個column的a，這跟第一個column的a沒有關係喔!), 箭頭往左上。
 </p>
 <p id="index3_note">
+(A拿自己第一個a和B拿自己aac比對)<br>
 第一個row的a對上第三個column的c，沒有match到，所以看上面左邊的數值哪個較大就選它，箭頭也選那邊，這裡選左邊那個。<br>
 注意!! 如果上面左邊數值一樣，都可以選，不會影響最長長度，只會影響最後序列內容是什麼排列，這也就意味著序列不唯一。
 </p>
 <p id="index4_note">
+(A拿自己第一個a和B拿自己aacc比對)<br>
 第一個row的a對上第四個column的c，沒有match到，上面左邊選較大的值，箭頭向左。<br>
 </p>
 <p id="index5_note">
+(A拿自己第一個a和B拿自己aaccb比對)<br>
 第一個row的a對上第五個column的b，沒有match到，上面左邊選較大的值，箭頭向左。<br>
 </p>
 <p id="index6_note">
+(A拿自己ab和B拿自己a比對)<br>
 第二個row的b對上第一個column的a，沒有match到，上面左邊選較大的值，箭頭向上。<br>
 </p>
 <p id="index7_note">
+(A拿自己ab和B拿自己aa比對)<br>
 注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
 第二個row的b對上第二個column的a，沒有match到，上面左邊選較大的值，數值都一樣大，都可以選，這裡箭頭選向左。<br>
 </p>
 <p id="index8_note">
+(A拿自己ab和B拿自己aac比對)<br>
 注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
 第二個row的b對上第三個column的c，沒有match到，上面左邊選較大的值，數值都一樣大，都可以選，這裡箭頭選向左。<br>
 </p>
 <p id="index9_note">
+(A拿自己ab和B拿自己aacc比對)<br>
 注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
 第二個row的b對上第四個column的c，沒有match到，上面左邊選較大的值，數值都一樣大，都可以選，這裡箭頭選向左。<br>
 </p>
 <p id="index10_note">
+(A拿自己ab和B拿自己aaccb比對)<br>
 第二個row的b對上第五個column的b，有match到, 左上那格+1=2,箭頭向左上。<br>
 </p>
 <p id="index11_note">
+(A拿自己abc和B拿自己a比對)<br>
 第三個row的c對上第一個column的a，沒有match到，上面左邊選較大的值，箭頭向上。<br>
 </p>
 <p id="index12_note">
+(A拿自己abc和B拿自己aa比對)<br>
 注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
 第三個row的c對上第二個column的a，沒有match到，上面左邊選較大的值，箭頭向左。<br>
 </p>
 <p id="index13_note">
+(A拿自己abc和B拿自己aac比對)<br>
 第三個row的c對上第三個column的c，有match到, 左上那格+1=2,箭頭向左上。<br>
 </p>
 <p id="index14_note">
+(A拿自己abc和B拿自己aacc比對)<br>
 第三個row的c對上第四個column的c，有match到, 左上那格+1=2(這是基於ab和aa有1個長度的共同子序列基礎下，再加上B現在這個c和A現在這個c有match到才+1的),箭頭向左上。<br>
 </p>
 <p id="index15_note">
+(A拿自己abc和B拿自己aaccb比對)<br>
 注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
 第三個row的c對上第五個column的b，沒有match到，上面左邊選較大的值，數值都一樣大，都可以選，這裡箭頭選向左。<br>
 </p>
 <p id="index16_note">
+(A拿自己abcb和B拿自己a比對)<br>
 第四個row的b對上第一個column的a，沒有match到，上面左邊選較大的值，箭頭向上。<br>
 </p>
 <p id="index17_note">
+(A拿自己abcb和B拿自己aa比對)<br>
 注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
 第四個row的b對上第二個column的a，沒有match到，上面左邊選較大的值，箭頭向左。<br>
 </p>
 <p id="index18_note">
+(A拿自己abcb和B拿自己aac比對)<br>
 注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
 第四個row的b對上第三個column的c，沒有match到，上面左邊選較大的值，箭頭向上。<br>
 </p>
 <p id="index19_note">
+(A拿自己abcb和B拿自己aacc比對)<br>
 注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
 第四個row的b對上第四個column的c，沒有match到，上面左邊選較大的值，箭頭向左。<br>
 </p>
 <p id="index20_note">
+(A拿自己abcb和B拿自己aaccb比對)<br>
 第四個row的b對上第五個column的b，有match到, 左上那格+1=3,箭頭向左上。<br>
 </p>
 <p id="index21_note">
+(A拿自己abcbc和B拿自己a比對)<br>
 第五個row的c對上第一個column的a，沒有match到，上面左邊選較大的值，箭頭向上。<br>
 </p>
 <p id="index22_note">
+(A拿自己abcbc和B拿自己aa比對)<br>
 注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
 第五個row的c對上第二個column的a，沒有match到，上面左邊選較大的值，箭頭向左。<br>
 </p>
 <p id="index23_note">
+(A拿自己abcbc和B拿自己aac比對)<br>
 第三個row的c對上第三個column的c，有match到, 左上那格+1=2,箭頭向左上。<br>
 </p>
 <p id="index24_note">
+(A拿自己abcbc和B拿自己aacc比對)<br>
 第五個row的c對上第四個column的c，有match到, 左上那格+1=3(這是基於abcb和aacc有2個長度的共同子序列基礎下，再加上B現在這個c和A現在這個c有match到才+1的),箭頭向左上。<br>
 </p>
 <p id="index25_note">
+(A拿自己abcbc和B拿自己aaccb比對)<br>
 注意! 這裡有一樣的值做選擇，箭頭方向會影響序列排列，並不會影響最長的結果。<br>
 第五個row的c對上第五個column的b，沒有match到，上面左邊選較大的值，數值都一樣大，都可以選，這裡箭頭選向左。<br>
 </p>
