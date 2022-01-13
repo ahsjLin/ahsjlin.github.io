@@ -1,0 +1,491 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+<!-- table css -->
+<style type="text/css" media="screen">
+table.condition{
+	width: 200px;text-align: center;
+}
+table.condition tr{
+	height: 50px
+}
+table.edit_distance {
+	text-align: center;
+	table-layout: fixed;
+}
+table.edit_distance td{
+	width: 50px;
+	height: 30px;
+}
+</style>
+
+
+</head>
+<body>
+<h2>Edit distance</h2>
+<ol>
+	<li>
+	Let \( X=x_1x_2\dots x_m \)
+	and \( Y=y_1y_2\dots y_n \)
+	</li>
+	<li>
+	Let \( E_{ij} \)
+	denote the edit distance between
+	\( A \)(new) and \( B \)(old)
+	, \( 1\leq i\leq m \)
+	, \( 1\leq i\leq n \)。
+	</li>
+	<li>
+	Oberve \( x_i \) and \( y_j \)
+	after alignment:<br>
+	<br>
+<table style="border: 1px solid white;align:center;">
+		
+<tr>
+<td>
+<table class="condition">
+	<tr>
+	<th>Insertion<br>\( E_{ij}=E_{i-1,j}+1 \)</th>
+	</tr>
+	<tr style="height: 50px;"><td> \( x_i \)</td></tr>
+	<tr><td>-</td></tr>
+</table>
+</td>
+<td>
+<table class="condition">
+	<tr>
+	<th>Deletion<br>\( E_{ij}=E_{i,j-1}+1 \)</th>
+	</tr>
+	<tr><td>-</td></tr>
+	<tr><td>\( y_j \)</td></tr>
+</table>
+</td>
+<td>
+<table class="condition">
+	<tr>
+	<th>Difference<br>\( E_{ij}=E_{i-1,j-1}+diff(i,j) \)</th>
+	</tr>
+	<tr><td> \( x_i \)</td></tr>
+	<tr><td>\( y_j \)</td></tr>
+</table>
+</td>
+</tr>
+</table>
+
+	</li>
+</ol>
+<br>
+\[
+E_{00}=0
+\]
+\[ 
+\{
+E_{0j}=j\;|\;\text{for }1\leq j\leq n\}
+\]
+\[  \{E_{i0}=i
+\;|\; \text{for }1\leq i\leq m \}
+\]
+
+\[
+\{\;
+E_{ij}=
+min\{
+\underline{E_{i-1,j}+1},\;
+\underline{E_{i,j-1}+1},\;
+\underline{E_{i-1,j-1}+diff(i,j)},
+\}
+\;
+|\;\text{for }1\leq i\leq n, 1\leq j\leq m
+\;
+\}
+\]
+\[
+diff(i,j)
+=
+\begin{cases}
+0 \text{, if }x_i=y_j\\
+1 \text{, if }x_i\neq y_j\\
+\end{cases}
+\]
+
+<hr>
+<h2>Example</h2>
+New string(A): EXPONENTIAL<br>
+Old string(B): POLYNOMIAL<br>
+\( \varepsilon=\emptyset\)<br>
+這裡給\( diff() \)加權為<br>
+\( x_i=y_j \rightarrow  diff(i,j)=0 \)<br>
+\( x_i\neq y_j \rightarrow  diff(i,j)=1 \)<br>
+<br>
+
+<table class="edit_distance">
+	<tr>
+	<td>A\B</td>
+	<!-- column 0 -->
+	<td>\( \varepsilon \)</td>
+	<!-- column 1 -->
+	<td>P</td>
+	<!-- column 2 -->
+	<td>O</td>
+	<!-- column 3 -->
+	<td>L</td>
+	<!-- column 4 -->
+	<td>Y</td>
+	<!-- column 5 -->
+	<td>N</td>
+	<!-- column 6 -->
+	<td>O</td>
+	<!-- column 7 -->
+	<td>M</td>
+	<!-- column 8 -->
+	<td>I</td>
+	<!-- column 9 -->
+	<td>A</td>
+	<!-- column 10 -->
+	<td>L</td>
+	</tr>
+	<!-- row 0 -->
+	<tr>
+	<td>\( \varepsilon \)</td>
+	<!-- column 0 -->
+	<td></td>
+	<!-- column 1 -->
+	<td></td>
+	<!--column 2 -->
+	<td></td>
+	<!--column 3 -->
+	<td></td>
+	<!--column 4 -->
+	<td></td>
+	<!--column 5 -->
+	<td></td>
+	<!--column 6 -->
+	<td></td>
+	<!--column 7 -->
+	<td></td>
+	<!--column 8 -->
+	<td></td>
+	<!--column 9 -->
+	<td></td>
+	<!--column 10 -->
+	<td></td>
+	</tr>
+
+	<!-- row 1 -->
+	<tr>
+	<td>E</td>
+	<!-- column 0 -->
+	<td></td>
+	<!-- column 1 -->
+	<td></td>
+	<!--column 2 -->
+	<td></td>
+	<!--column 3 -->
+	<td></td>
+	<!--column 4 -->
+	<td></td>
+	<!--column 5 -->
+	<td></td>
+	<!--column 6 -->
+	<td></td>
+	<!--column 7 -->
+	<td></td>
+	<!--column 8 -->
+	<td></td>
+	<!--column 9 -->
+	<td></td>
+	<!--column 10 -->
+	<td></td>
+	</tr>
+
+	<!-- row 2 -->
+	<tr>
+	<td>X</td>
+	<!-- column 0 -->
+	<td></td>
+	<!-- column 1 -->
+	<td></td>
+	<!--column 2 -->
+	<td></td>
+	<!--column 3 -->
+	<td></td>
+	<!--column 4 -->
+	<td></td>
+	<!--column 5 -->
+	<td></td>
+	<!--column 6 -->
+	<td></td>
+	<!--column 7 -->
+	<td></td>
+	<!--column 8 -->
+	<td></td>
+	<!--column 9 -->
+	<td></td>
+	<!--column 10 -->
+	<td></td>
+	</tr>
+	<!-- row 3 -->
+	<tr>
+	<td>P</td>
+	<!-- column 0 -->
+	<td></td>
+	<!-- column 1 -->
+	<td></td>
+	<!--column 2 -->
+	<td></td>
+	<!--column 3 -->
+	<td></td>
+	<!--column 4 -->
+	<td></td>
+	<!--column 5 -->
+	<td></td>
+	<!--column 6 -->
+	<td></td>
+	<!--column 7 -->
+	<td></td>
+	<!--column 8 -->
+	<td></td>
+	<!--column 9 -->
+	<td></td>
+	<!--column 10 -->
+	<td></td>
+	</tr>
+	<!-- row 4 -->
+	<tr>
+	<td>O</td>
+	<!-- column 0 -->
+	<td></td>
+	<!-- column 1 -->
+	<td></td>
+	<!--column 2 -->
+	<td></td>
+	<!--column 3 -->
+	<td></td>
+	<!--column 4 -->
+	<td></td>
+	<!--column 5 -->
+	<td></td>
+	<!--column 6 -->
+	<td></td>
+	<!--column 7 -->
+	<td></td>
+	<!--column 8 -->
+	<td></td>
+	<!--column 9 -->
+	<td></td>
+	<!--column 10 -->
+	<td></td>
+	</tr>
+	<!-- row 5 -->
+	<tr>
+	<td>N</td>
+	<!-- column 0 -->
+	<td></td>
+	<!-- column 1 -->
+	<td></td>
+	<!--column 2 -->
+	<td></td>
+	<!--column 3 -->
+	<td></td>
+	<!--column 4 -->
+	<td></td>
+	<!--column 5 -->
+	<td></td>
+	<!--column 6 -->
+	<td></td>
+	<!--column 7 -->
+	<td></td>
+	<!--column 8 -->
+	<td></td>
+	<!--column 9 -->
+	<td></td>
+	<!--column 10 -->
+	<td></td>
+	</tr>
+	<!-- row 6 -->
+	<tr>
+	<td>E</td>
+	<!-- column 0 -->
+	<td></td>
+	<!-- column 1 -->
+	<td></td>
+	<!--column 2 -->
+	<td></td>
+	<!--column 3 -->
+	<td></td>
+	<!--column 4 -->
+	<td></td>
+	<!--column 5 -->
+	<td></td>
+	<!--column 6 -->
+	<td></td>
+	<!--column 7 -->
+	<td></td>
+	<!--column 8 -->
+	<td></td>
+	<!--column 9 -->
+	<td></td>
+	<!--column 10 -->
+	<td></td>
+	</tr>
+	<!-- row 7 -->
+	<tr>
+	<td>N</td>
+	<!-- column 0 -->
+	<td></td>
+	<!-- column 1 -->
+	<td></td>
+	<!--column 2 -->
+	<td></td>
+	<!--column 3 -->
+	<td></td>
+	<!--column 4 -->
+	<td></td>
+	<!--column 5 -->
+	<td></td>
+	<!--column 6 -->
+	<td></td>
+	<!--column 7 -->
+	<td></td>
+	<!--column 8 -->
+	<td></td>
+	<!--column 9 -->
+	<td></td>
+	<!--column 10 -->
+	<td></td>
+	</tr>
+	<!-- row 8 -->
+	<tr>
+	<td>T</td>
+	<!-- column 0 -->
+	<td></td>
+	<!-- column 1 -->
+	<td></td>
+	<!--column 2 -->
+	<td></td>
+	<!--column 3 -->
+	<td></td>
+	<!--column 4 -->
+	<td></td>
+	<!--column 5 -->
+	<td></td>
+	<!--column 6 -->
+	<td></td>
+	<!--column 7 -->
+	<td></td>
+	<!--column 8 -->
+	<td></td>
+	<!--column 9 -->
+	<td></td>
+	<!--column 10 -->
+	<td></td>
+	</tr>
+	<!-- row 9 -->
+	<tr>
+	<td>I</td>
+	<!-- column 0 -->
+	<td></td>
+	<!-- column 1 -->
+	<td></td>
+	<!--column 2 -->
+	<td></td>
+	<!--column 3 -->
+	<td></td>
+	<!--column 4 -->
+	<td></td>
+	<!--column 5 -->
+	<td></td>
+	<!--column 6 -->
+	<td></td>
+	<!--column 7 -->
+	<td></td>
+	<!--column 8 -->
+	<td></td>
+	<!--column 9 -->
+	<td></td>
+	<!--column 10 -->
+	<td></td>
+	</tr>
+	<!-- row 10 -->
+	<tr>
+	<td>A</td>
+	<!-- column 0 -->
+	<td></td>
+	<!-- column 1 -->
+	<td></td>
+	<!--column 2 -->
+	<td></td>
+	<!--column 3 -->
+	<td></td>
+	<!--column 4 -->
+	<td></td>
+	<!--column 5 -->
+	<td></td>
+	<!--column 6 -->
+	<td></td>
+	<!--column 7 -->
+	<td></td>
+	<!--column 8 -->
+	<td></td>
+	<!--column 9 -->
+	<td></td>
+	<!--column 10 -->
+	<td></td>
+	</tr>
+	<!-- row 11 -->
+	<tr>
+	<td>L</td>
+	<!-- column 0 -->
+	<td></td>
+	<!-- column 1 -->
+	<td></td>
+	<!--column 2 -->
+	<td></td>
+	<!--column 3 -->
+	<td></td>
+	<!--column 4 -->
+	<td></td>
+	<!--column 5 -->
+	<td></td>
+	<!--column 6 -->
+	<td></td>
+	<!--column 7 -->
+	<td></td>
+	<!--column 8 -->
+	<td></td>
+	<!--column 9 -->
+	<td></td>
+	<!--column 10 -->
+	<td></td>
+	</tr>
+
+
+</table>
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+徐熊健 - 資料結構與演算法
+</footer>
+
+</body>
+</html>
