@@ -1,0 +1,362 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+<!-- table css -->
+<style type="text/css" media="screen">
+table.make_change {
+	height: 220px;
+	width: 550px;
+	text-align: center;
+	table-layout: fixed;
+}
+</style>
+
+</head>
+<body>
+<h2>Question</h2>
+某國家發行的貨幣面額有\( \{ a_1,a_2,\dots ,a_k \} \)，且\( a_1&lt a_2 &lt \dots &lt a_k \)，試問現在有n元，換最少張數的方法為何?<br>
+<h3>ans</h3>
+利用greedy algorithm(貪婪演算法)，可能不能換成最少的張數。<br>
+<table>
+<tr><th>Greedy algorithm</th></tr>
+<tr><td>
+簡易說明:<br>
+每次拿最佳、最多、優先權最高的解決方式來當最佳解，<br>
+優點是考慮不須太多，判斷速度快， <br>
+但衍生出來的問題，可能會會因為順序問題，造成浪費，最後整體不是最佳解的情況發生。
+</td></tr>
+</table>
+舉例來說:<br>
+現在有面額\( 1, 5, 12, 25 \)的鈔票，提款機裡有29元，那提款機使用greedy algorithm吐錢，會先給25元1張，然後給1元4張，最後拿到5張紙鈔。<br>
+但這不是最佳解，<br>
+最佳的方式是12元2張、5元1張，這樣只要拿3張。<br><br>
+
+那要如何知道最少張數的解呢?<br>
+利用動態規劃，可以從表格上找到最少張數的解法。<br>
+<hr>
+因為動態需要把問題切到最小來解決，<br>
+由上面舉例來說，<br>
+要把29元分成0元,1元, 2元,...,28元,29元的情況，<br>
+0元沒有可以換，所以為0張，因為1~4元都只能用1換，<br><br>
+
+直接跳到5元開始討論，<br>
+現在可以用1元或5元換，如果用一個1元換，就會剩4元，<br>
+這時就可以查表，4元的時候用最少的張數為何，查到是4張1元，<br>
+這時表格就可以填5張(5張1元)，<br>
+那如果是用一個5元換，那會剩0元，這時查表0元時的最佳解為0張，所以填1(1張5元)，<br>
+接著再看5元時，最少張數的是誰，所以最佳解為1張5元，<br><br>
+
+接著再討論6元的情況，<br>
+也是一樣討論假如是拿一張1元或一張5元的情況，<br>
+討論拿一張1元，剩5元，查表在5元時最佳解為1(1張5元)，<br>
+這時就可填表為2(1張1元+1張5元)，<br>
+討論拿一張5元，剩1元，查表在1元時最佳解為1(1張1元)，<br>
+這時就可填表為2(1張5元+1張1元)。<br> <br>
+
+以此類推到討論29元的情況。
+
+<hr>
+<h2>公式</h2>
+$n you have.<br>
+Discuss all possible sequence:
+\[
+\{i\;|\;0\leq i\leq n\}
+\]
+Denomination squence:
+\[
+\{ v_j\;|\;1\leq j\leq k \}
+\]
+\[
+v_1&lt v_2&lt\dots &lt v_k
+\]
+The best solution(the number of counting is the least):
+\[
+M_i
+=
+\begin{cases}
+0 \text{, if }i=0\\
+1 \text{, if }i=1\\
+Min(\{M_{i-v_j}+1\;|\;\text{for }1\leq j\leq k\;\})\text{, if }i\geq v_j\\
+\infty \text{, if } i&lt v_j
+\end{cases}
+
+\]
+\( i \)代表現在討論的錢為多少<br>
+\( v_j \)為幣值，
+\( v_1 \)為第一個幣值，
+\( v_2 \)為第二個幣值\( \dots \) <br>
+\( M_i \)為現在討論i元時，最少的用量張數。<br>
+\( M_{i-v_j} \)為現在討論i元時，如果用幣值\( v_j \)換的話，\( M_{i-v_j} \)就為之前計算過的最少用量張數。<br>
+無限大代表不能夠用這幣值換。
+
+<hr>
+<h3>題目</h3>
+換小數目的錢來表格說明，假設銀行有8元，錢面額有1,4,6元，用greedy algorithm，會給一張6元，兩張1元，並不是我們所期望的最少張數。<br>
+利用Dynamic Programming來查表，找出最少張數的解法。<br><br>
+<h3>表格說明</h3>
+V: 用什麼幣值來換(拿一張那個幣值的錢後，討論剩下錢幣的最佳解)。<br>
+D: 討論現在有多少錢。<br>
+這裡多加一些參數去記錄使用哪個幣值的張數，因為只有總張數，回推不容易。<br>
+這裡用v代表幣值\( v=\{ 1,4,6 \} \)，<br>
+\( a_v \)代表幣值張數。<br>
+\( a_t \)代表使用總張數<br>
+用黃色代表在這個錢換最少張的最佳解，綠色代表另最佳解。<br><br>
+
+<table class="make_change" id="make_change">
+<!-- row 0 -->
+<tr id="index_row0">
+<td id="label_name">V\D</td>
+<td id="money0">0</td>
+<td id="money1">1</td>
+<td id="money2">2</td>
+<td id="money3">3</td>
+<td id="money4">4</td>
+<td id="money5">5</td>
+<td id="money6">6</td>
+<td id="money7">7</td>
+<td id="money8">8</td>
+</tr>
+<!-- row 1 -->
+<tr id="index_row1">
+<td id="denomination1">1</td>
+<!-- col 1 -->
+<td id="index1">
+\( 0 \)
+</td>
+<!-- col 2 -->
+<td id="index2">
+\( a_1=1,\)<br>
+\(a_4=0,\)<br>
+\(a_6=0, \)<br><br>
+
+\( a_t=1 \)
+</td>
+<!-- col 3 -->
+<td id="index3">
+\(a_1=2,\)<br>
+\(a_4=0,\)<br>
+\(a_6=0, \)<br><br>
+
+\(a_t=2 \)
+</td>
+<!-- col 4 -->
+<td id="index4">
+\(a_1=3,\)<br>
+\(a_4=0,\)<br>
+\(a_6=0, \)<br><br>
+
+\(a_t=3 \)
+</td>
+</td>
+<!-- col 5 -->
+<td id="index5">
+\(a_1=4,\)<br>
+\(a_4=0,\)<br>
+\(a_6=0, \)<br><br>
+
+\(a_t=4 \)
+</td>
+<!-- col 6 -->
+<td id="index6">
+\(a_1=1,\)<br>
+\(a_4=1,\)<br>
+\(a_6=0, \)<br><br>
+
+\(a_t=2 \)
+</td>
+<!-- col 7 -->
+<td id="index7">
+\(a_1=2,\)<br>
+\(a_4=1,\)<br>
+\(a_6=0, \)<br><br>
+
+\(a_t=3 \)
+</td>
+<!-- col 8 -->
+<td id="index8">
+\(a_1=1,\)<br>
+\(a_4=0,\)<br>
+\(a_6=1, \)<br><br>
+
+\(a_t=2 \)
+</td>
+<!-- col 9 -->
+<td id="index9">
+\(a_1=2,\)<br>
+\(a_4=0,\)<br>
+\(a_6=1, \)<br><br>
+
+\(a_t=3 \)
+</td>
+</tr>
+<!-- row 2 -->
+<tr id="index_row2">
+<td id="denomination4">4</td>
+<!-- col 1 -->
+<td id="index10">0</td>
+<!-- col 2 -->
+<td id="index11">-</td>
+<!-- col 3 -->
+<td id="index12">-</td>
+<!-- col 4 -->
+<td id="index13">-</td>
+<!-- col 5 -->
+<td id="index14">
+\(a_1=0,\)<br>
+\(a_4=1,\)<br>
+\(a_6=0, \)<br><br>
+
+\(a_t=1 \)
+</td>
+<!-- col 6 -->
+<td id="index15">
+\(a_1=1,\)<br>
+\(a_4=1,\)<br>
+\(a_6=0, \)<br><br>
+
+\(a_t=2 \)
+</td>
+<!-- col 7 -->
+<td id="index16">
+\(a_1=2,\)<br>
+\(a_4=1,\)<br>
+\(a_6=0, \)<br><br>
+
+\(a_t=3 \)
+</td>
+<!-- col 8 -->
+<td id="index17">
+\(a_1=3,\)<br>
+\(a_4=1,\)<br>
+\(a_6=0, \)<br><br>
+
+\(a_t=4 \)
+</td>
+<!-- col 9 -->
+<td id="index18">
+\(a_1=0,\)<br>
+\(a_4=2,\)<br>
+\(a_6=0, \)<br><br>
+
+\(a_t=2 \)
+</td>
+</tr>
+<!-- row 3 -->
+<tr id="index_row3">
+<td id="denomination6">6</td>
+<!-- col 1 -->
+<td id="index19">0</td>
+<!-- col 2 -->
+<td id="index20">-</td>
+<!-- col 3 -->
+<td id="index21">-</td>
+<!-- col 4 -->
+<td id="index22">-</td>
+<!-- col 5 -->
+<td id="index23">-</td>
+<!-- col 6 -->
+<td id="index24">-</td>
+<!-- col 7 -->
+<td id="index25">
+\(a_1=0,\)<br>
+\(a_4=0,\)<br>
+\(a_6=1, \)<br><br>
+
+\(a_t=1 \)
+</td>
+<!-- col 8 -->
+<td id="index26">
+\(a_1=1,\)<br>
+\(a_4=0,\)<br>
+\(a_6=1, \)<br><br>
+
+\(a_t=2 \)
+</td>
+<!-- col 9 -->
+<td id="index27">
+\(a_1=2,\)<br>
+\(a_4=0,\)<br>
+\(a_6=1, \)<br><br>
+
+\(a_t=3 \)
+</td>
+</tr>
+</table>
+<h3>說明</h3>
+在programming的時候，可以多加一些參數去紀錄討論過程和結果，以便後續回推使用。 <br><br>
+
+從2元開始討論，<br>
+如果拿一張1元，會剩下1元，查表在1元時最佳解為1張，所以+1，為2張。<br>
+4元不能換，6元不能換。所以最佳解為2張。<br><br>
+
+討論3元，跟2元時一樣，以此類推到後面，<br><br>
+
+現在在討論8元，<br>
+如果拿一張1元，會剩下7元，查表在7元時最佳解為2張，所以會需要3張才能湊滿8元。<br>
+如果拿一張4元，會剩下4元，查表在4元時最佳解為1張，所以會需要2張才能湊滿8元。<br>
+如果拿一張6元，會剩下2元，查表在2元時最佳解為2張，所以會需要3張才能湊滿8元。<br>
+最後得出在8元時，最少張數為2張。
+
+<!-- table javascript -->
+<script charset="utf-8">
+let best_solv = [
+cal_index(1,0),
+cal_index(1,1),
+cal_index(1,2),
+cal_index(1,3),
+cal_index(2,4),
+cal_index(1,5),
+cal_index(3,6),
+cal_index(1,7),
+cal_index(2,8)
+];
+let other_best_solv =[
+cal_index(2,0),
+cal_index(3,0),
+cal_index(2,5)
+];
+for(let i=0;i<best_solv.length;i++){
+	const indexName = 'index'+best_solv[i];
+	document.getElementById(indexName).style.backgroundColor = "yellow";
+}
+for(let i=0;i<other_best_solv.length;i++){
+	const indexName = 'index'+other_best_solv[i];
+	document.getElementById(indexName).style.backgroundColor = "green";
+}
+function cal_index(i,j){
+	return (i-1)*9+j+1;
+}
+</script>
+
+
+
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+洪捷 - 演算法
+</footer>
+
+</body>
+</html>
