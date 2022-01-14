@@ -1,0 +1,94 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>Knapsack Problem</h2>
+<hr>
+<h3>Fractional Knapsack Problem</h3>
+使用的是Greedy Algorithm，每次拿單位重量價值最高的物品直到背包負重上限為止。<br>
+假設背包上限負重8kg，現在有三樣物品a, b, c，物品不能重複拿(意思a,b,c各只有一個)，個別重量為\( (w_1,w_2,w_3)=(6, 5, 3) \)，個別價值為\( (v_1,v_2,v_3)=(8, 6, 3) \)，物品是可以分割的(意思a可分割成小塊的a_i...)，請問要怎麼拿法才能有最高獲利?<br><br>
+首先物品是可分割的，那每次可以拿單位重量的物品，然後只拿剩下單位重量最高的，直到拿滿負重為止。<br>
+開始計算:<br>
+這裡單位重量由kg為基準，那可以拿8個單位重量。<br>
+個別單位重量價值\( V_i, i=a,b,c \)<br>
+\(
+V_a = \frac{8}{6}=1.333\dots 
+\)<br>
+\(
+V_b = \frac{6}{5}=1.2
+\)<br>
+\(
+V_c = \frac{3}{3}=1
+\)<br>
+則優先拿的順序為\( a\rightarrow b\rightarrow c \)
+，<br>
+先拿a的6個單位重量，剩2個單位重量可負載，<br>
+接著拿b的2個單位重量，<br>
+計算價值即為最高獲利。<br>
+\(
+V_a\cdot 6 + V_b\cdot 2
+=
+8 + 2.4= 10.4
+\)
+<hr>
+<h3>0/1 Knapsack Problem</h3>
+0/1意思是那個物品全拿或全不拿，<br>
+和上面可分割物品一樣要比對單位重量的價值，背包也有負重限制，物品不能夠重複拿，和可分割不同就是不能分割，要拿這個物品就一整個拿。<br>
+在不能分割的條件下，greedy algorithm就不能使用了。<br><br>
+舉例:<br>
+背包負重5kg，有物品a,b,c，其重量對應為(1,2,3), 其價值對應為(60, 100, 120)。<br>
+計算單位重量為:\( V_i,\; i=\{a,b,c\} \)<br>
+\(
+V_a = \frac{60}{1} =60
+\)<br>
+\(
+V_b = \frac{100}{2}=50
+\)<br>
+\(
+V_c = \frac{120}{3}=40
+\)<br>
+價值排序為<br>
+\(
+a&gt b&gt c
+\)<br>
+如果用greedy algorith，<br>
+會先拿a，剩5-1=4kg，<br>
+再拿b，剩4-2=2kg<br>
+剩2kg不足夠負重c<br>
+所以最後拿了a、b，總價值為\( 60+100=160 \)<br>
+<br>
+但最佳的拿法是b, c，總價值為\( 100+120=220 \)
+
+
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+洪捷 - 演算法
+</footer>
+
+</body>
+</html>
