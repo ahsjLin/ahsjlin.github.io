@@ -629,12 +629,35 @@ function reset_index(){
 	
 </script>
 
+<hr>
+<h2>Longest Incresing subsequence</h2>
+假設有一組\( a_3a_2a_4a_8a_1\dots a_k \)要找最長遞增子序列，<br>
+那就將\( a_3a_2a_4a_8a_1\dots a_k \)整理成\( a_1a_2\dots a_k \)，其中\( a_1&lt a_2&lt\dots &lt a_k\)<br>
+由\( a_3a_2a_4a_8a_1\dots a_k \)和\( a_1a_2\dots a_k \)兩序列做LCS，即可得出LIS。
 
+<hr>
+<h2>Longest Incresing substring</h2>
+Def:<br>
+Two squences \( X=&lt x_1,x_2,\dots ,x_n &gt \text{ and } Y =&lt y_1,y_2,\dots ,y_m &gt\).<br><br>
+
+\(
+c[i,j]=
+\begin{cases}
+0		&\text{,if }x_i\neq y_i \text{ or }i=0\text{ or }j=0\\
+1+c[i-1,j-1]	&\text{,if }x_i=y_i
+\end{cases}
+\)
+<br>
+解釋<br>
+\(
+c[i,j]
+\)為在\( X \)拿\( x_i \)時，比對\( Y \)在\( y_j \)那格(cell)的結果。
 
 <hr>
 <footer>
 <h2>Reference</h2>
-徐熊健 - 資料結構與演算法
+徐熊健 - 資料結構與演算法<br>
+洪捷 - 演算法
 </footer>
 
 </body>
