@@ -18,6 +18,15 @@ function graph(name){
 <link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
 <link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
 
+<!-- table css -->
+<style type="text/css" media="screen">
+table#knapsack{
+	width: 600px;
+	height: 200px;
+	text-align:center;
+	table-layout:fixed;
+}
+</style>
 
 
 </head>
@@ -79,11 +88,371 @@ a&gt b&gt c
 <br>
 但最佳的拿法是b, c，總價值為\( 100+120=220 \)<br>
 <br>
-<h3>表格</h3>
-<table>
-	
-</table>
+<hr>
+<h2>公式</h2>
+\( T[i,k] \)為目前可以負重多少\( k \)，並且可以拿物品\( 1 \)到物品\( i \)的情況下，獲利最高。<br><br>
+假設有n種物品，背包負重最多W，不能重複拿，則<br>
+\(
+\{\;
+i \;|\; 1\leq i\leq n
+\;\}
+, 
+\)
+\(
+\{\;
+k \;|\; 1\leq k\leq W
+\;\}
+\)<br><br>
+物品的拿法是有序性的，有n個物品，給其編號第一個為\( I_1 \)、第二個為\( I_2 \)、\( \dots  \)、第n個為\( I_n \)。<br>
+\( w_i \)為\( I_i \)所需要的負重，\( v_i \)為\( I_i \)的整個價值。<br><br>
+一開始沒有任何東西可以拿(這裡沒有東西給他一個\( I_0 \)代替)，所以獲利都為0，可以負重0時，獲利也為0。<br>
+先討論可以從\( I_0 \)拿到\( I_1 \)的條件下，可以負重1時，最高獲利是多少，可以負重2時，最高獲利是多少，可以負重3時，最高獲利是多少，\(\dots\)，可以負重W時，最高獲利是多少，逐一填入表格。<br>
+討論可以從\( I_0 \)拿到\( I_2 \)的條件下，可以負重1時，最高獲利是多少，可以負重2時，最高獲利是多少，可以負重3時，最高獲利是多少，\(\dots\)，可以負重W時，最高獲利是多少，逐一填入表格。<br>
+\(
+\vdots
+\)
+討論可以從\( I_0 \)拿到\( I_n \)的條件下，可以負重1時，最高獲利是多少，可以負重2時，最高獲利是多少，可以負重3時，最高獲利是多少，\(\dots\)，可以負重W時，最高獲利是多少，逐一填入表格。<br>
+歸納出公式為
+<br>
+\[
+T[i,k]=
+\begin{cases}
+0		&	\text{,if } i=0, k=0  \\
+T[i-1,k]	&	\text{,if } w_i&gt k \\
+Max(\underline{v_i+T[i-1,k-w_i]},\;\underline{T[i-1,k]})	&	\text{,if } w_i\leq k
+\end{cases}
+\]
+\( T[i-1,k] \)解釋:<br>
+排除當下可以拿\( I_i \)的條件下，直接查上一個從\( I_0 \)拿到\( I_{i-1} \)條件下，一樣可以負重\( k \)的獲利。<br> <br>
+\(Max(\underline{v_i+T[i-1,k-w_i]},\;\underline{T[i-1,k]})  \)
+解釋:<br>
+\( Max() \)裡有兩項，兩項都為獲利，挑最大的那個。<br>
+\( v_i+T[i-1,k-w_i] \)指現在\( I_i \)的價值+(排除\( I_i \)，然後剩下\( k-w_i \)的負重下的獲利)。<br>
 
+
+<hr>
+<h3>表格</h3>
+\(
+\{ I_0=\emptyset,\;I_1=a,\; I_2=b,\;I_3=c \}
+\)<br>
+\( I_i \)為當下如果拿這個物品的討論<br>
+\( k \)為現在可以負重多少<br>
+經公式由左至右, 由上到下填表<br>
+灰色部分為預設值。<br>
+白色框內說明: 上面為現在背包內放了什麼,下面為背包內總價值。
+
+<!-- knapsack table -->
+<table id="knapsack">
+
+<!-- row -1 -->
+<tr id="" style="background-color:gray;">
+
+<td id="" style="width: 120px;">
+\( \{ I_i \;|\; 0\leq i\leq 3\} \)
+</td>
+
+
+<td id="">
+\(
+I_i
+\)\
+\(
+k
+\)
+</td>
+
+
+<td id="">
+	0
+</td>
+
+
+<td id="">
+	1
+</td>
+
+
+<td id="">
+	2
+</td>
+
+
+<td id="">
+	3
+</td>
+
+
+<td id="">
+	4
+</td>
+
+
+<td id="">
+	5
+</td>
+
+</tr>	
+
+
+<!-- row 0 -->
+<tr id="">
+
+<td id="" style="background-color:gray;">
+\( \{ \} \)
+</td>
+
+
+<td id="" style="background-color:gray;">
+\(
+I_0
+\)
+</td>
+
+
+<td id="">
+	0
+</td>
+
+
+<td id="">
+	0
+</td>
+
+
+<td id="">
+	0
+</td>
+
+
+<td id="">
+	0
+</td>
+
+
+<td id="">
+	0
+</td>
+
+
+<td id="">
+	0
+</td>
+
+</tr>	
+
+
+<!-- row 1 -->
+<tr id="">
+
+<td id="" style="background-color:gray;">
+\( \{ a \} \)
+</td>
+
+
+<td id="" style="background-color:gray;">
+\( I_1 \)
+</td>
+
+
+<td id="">
+	0
+</td>
+
+
+<td id="">
+\(
+\{ a \}
+\)<br>
+\(
+60
+\)
+</td>
+
+
+<td id="">
+\(
+\{ a \}
+\)<br>
+\(
+60
+\)
+</td>
+
+
+<td id="">
+\(
+\{ a \}
+\)<br>
+\(
+60
+\)
+</td>
+
+
+<td id="">
+\(
+\{ a \}
+\)<br>
+\(
+60
+\)
+</td>
+
+
+<td id="">
+\(
+\{ a \}
+\)<br>
+\(
+60
+\)
+</td>
+
+</tr>	
+
+
+<!-- row 2 -->
+<tr id="">
+
+<td id="" style="background-color:gray;">
+\( \{ a,b \} \)
+</td>
+
+
+<td id="" style="background-color:gray;">
+	\( I_2 \)
+</td>
+
+
+<td id="">
+	0
+</td>
+
+
+<td id="">
+\(
+\{ a \}
+\)<br>
+\(
+60
+\)
+</td>
+
+
+<td id="">
+\(
+\{ b \}
+\)<br>
+\(
+100
+\)
+</td>
+
+
+<td id="">
+\(
+\{ a,b \}
+\)<br>
+\(
+160
+\)
+</td>
+
+
+<td id="">
+\(
+\{ a,b \}
+\)<br>
+\(
+160
+\)
+</td>
+
+
+<td id="">
+\(
+\{ a,b \}
+\)<br>
+\(
+160
+\)
+</td>
+
+</tr>	
+
+
+<!-- row 3 -->
+<tr id="">
+
+<td id="" style="background-color:gray;">
+\( \{ a,b,c \} \)
+</td>
+
+
+<td id="" style="background-color:gray;">
+\( I_3 \)
+</td>
+
+
+<td id="">
+	0
+</td>
+
+
+<td id="">
+\(
+\{ a \}
+\)<br>
+\(
+60
+\)
+</td>
+
+
+<td id="">
+\(
+\{ b \}
+\)<br>
+\(
+100
+\)
+</td>
+
+
+<td id="">
+\(
+\{ a,b \}
+\)<br>
+\(
+160
+\)
+</td>
+
+
+<td id="">
+\(
+\{ a,c \}
+\)<br>
+\(
+180
+\)
+</td>
+
+
+<td id="">
+\(
+\{ b,c \}
+\)<br>
+\(
+220
+\)
+</td>
+
+</tr>	
+
+
+</table>
+最後在最右下角的格子可以得知，拿b,c可以到最高價值。
 
 
 
