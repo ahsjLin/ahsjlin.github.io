@@ -76,6 +76,16 @@ What if?<br>
 <h3>Knapsack problem(背包問題)</h3>
 不考慮背包空間，但考慮<span style="color:red">負重問題</span>，物品之間的重量不相等，其價值為單位重量的價值來區分，有分兩種討論，一是物品是可分割的，二是物品是不可分割來討論。<br>
 <a href="knapsack_problem.html" target="_blank">More discussion</a>
+<h3>Matrix-Chain Multiplication Problem</h3>
+假設有三個矩陣A,B,C要乘法，\( A:10\times 100 \), \( B:100\times 5 \), \( C: 5\times 50 \)，乘法的的結果要是\( ABC \)。<br>
+有兩種算法可以得到答案<br>
+一為\( A(BC) \)，二為\( (AB)C \)。<br>
+如果用\( A(BC) \)計算，需要算\( (10\times 100\times 50)+(100\times 5\times 50)=75000 \)個乘法。<br>
+則使用\( (AB)C) \)計算，需要算\( (10\times 100\times 5)+(10\times 5\times 50)=7500 \)個乘法。<br>
+差異到十倍，所以計算出最小的乘法方式，是提升計算效能重要指標。<br>
+但要找出最小的乘法量的方法有\( (n-1)!  \)種中找尋，因matrix-chain multiplication有最佳結構解，所以使用動態規劃可以有效的找到最小乘法量的答案。
+<br>
+<a href="./Matrix_chain_Multiplication_problem.html" target="_blank">Function and example</a>
 
 <hr>
 <footer>

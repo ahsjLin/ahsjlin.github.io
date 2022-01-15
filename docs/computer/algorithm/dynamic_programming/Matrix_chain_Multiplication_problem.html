@@ -1,0 +1,477 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+<style type="text/css" media="screen">
+table#least_mul{
+	width: 500px;
+	height: 300px;
+	text-align: center;
+	table-layout: fixed;
+}
+</style>
+
+
+</head>
+<body>
+<h2>Matrix-Chain Multiplication Problem</h2>
+假設有n個矩陣相乘，矩陣相乘是有順序性的，不能夠使用交換律(commutative property)，但是使用結合律(associative property)並不影響相乘的結果。<br>
+結合律的方式有\( (n-1)! \)種表示矩陣相乘的方式，不同的結合方式，中間的計算矩陣內乘法的次數會有所不同，乘法數量差異極大，所以需要找出最小的乘法量的順序，才能事半功倍。 <br><br>
+
+如果使用暴力破解，找出最小乘法量的結合律表示，需要 \( \Omega(\frac{4^n}{n^{\frac{3}{2}}})=\Omega(2^n) \)的Time Complexity，是指數的倍增方式，如果有100個矩陣要相乘，那最糟糕要找\( 2^{100} \)次，才能找到最小乘法量的結果，那不必找最小乘法量，直接對這100個矩陣相乘，時間可能都比較快。<br><br>
+
+Matrix-chain具有最佳結構。<br>
+<table>
+<tr><th>
+最佳結構描述:<br>
+</th></tr>	
+<tr>
+<td>
+<b>Def:</b><br>
+\( A_{i\dots j}
+=
+A_iA_{i+1}\dots A_j
+\)<br>
+其中有個\( k, i\leq k &lt j \)，可將
+\(
+A_{i\dots j}
+\)拆成
+\(
+A_{i\dots k}\times A_{k+1\dots j}
+\)<br>
+這樣就可以討論\( k \)在多少的時候，會有最小乘法量<br>
+這樣原本<br>
+\(
+A_iA_{i+1}\dots A_{j}
+\)<br>
+\(
+=
+A_{i\dots k}\times A_{k+1\dots j}
+\)<br>
+也就為結合律表示<br>
+\(
+(A_iA_{i+1}\dots A_{k})
+\times 
+(A_{k+1}\dots A_{j})
+\)<br>
+</td>
+</tr>
+</table>
+<br>
+因有最佳結構，使用Dynamic programming來查出最小乘法量，效率較高。<br>
+<hr>
+<h2>公式</h2>
+<b>Def:</b>
+<br>
+\(
+A_i\in F^{p_{i-1}\times p_i}
+\)
+<br>
+\(
+\Rightarrow 
+A_i:p_{i-1}\times p_i
+\)
+<br>
+Let \( m[i,j] \) is the least number of multiplication.<br>
+\[
+m[i,j]=
+\begin{cases}
+0	&\text{, if }i=j\\
+Min_{i\leq k&lt j}\{m[i,k]+m[k+1,j]+p_{i-1}\cdot p_k\cdot p_j\}	&\text{, if } i&lt j\\
+\infty	&\text{, if }i&gtj\\
+\end{cases}
+\]<br>
+解釋:<br> <br>
+\(
+A_i:p_{i-1}\times p_i
+\)為第i個矩陣，有\( p_{i-1} \)個rows，有\( p_{i} \)個columns<br>
+舉例\( A_3\in F^{4\times 3} \)，即\( p_2=4,\;p_3=3 \)。
+<br>
+<br>
+\(
+Min_{i\leq k&lt j}\{m[i,k]+m[k+1,j]+p_{i-1}\cdot p_k\cdot p_j\}
+\)
+為一集合裡找最小的值，集合的產生是由\( i\text{到}(j-1) \)的所有可能產生，每種可能由\( k \)來代表。<br><br>
+\( Min \)裡有三個項目<br>
+\( m[i,k] \)為\( A_i \)到\( A_k \)的最小乘法量。<br>
+\( m[k+1,j] \)為\( A_{k+1} \)到\( A_j \)的最小乘法量。<br>
+\( p_{i-1}\cdot p_k\cdot p_j \)為\( A_{i\dots k} \)和\( A_{(k+1)\dots j} \)的乘法量。<br><br>
+無限大視為不可能，因為矩陣不能夠有交換律。
+
+
+<hr>
+<h2>舉例及填表</h2>
+What is the least number of multiplications to compute matrix \( ABCDE \)?
+<table>
+<tr><th>Matrix</th><th>Dimensions</th></tr>
+<tr><td>A</td><td>\( 2\times 4 \)</td></tr>
+<tr><td>B</td><td>\( 4\times 3 \)</td></tr>
+<tr><td>C</td><td>\( 3\times 2 \)</td></tr>
+<tr><td>D</td><td>\( 2\times 5 \)</td></tr>
+<tr><td>E</td><td>\( 5\times 1 \)</td></tr>
+</table>
+矩陣順序是\( ABCDE \)，為了方便計算，第一個matrix用\( A_1 \)代替
+，第二個matrix用\( A_2 \)代替，以此類推，為\( A_1A_2A_3A_4A_5 \)。<br>
+\(
+p_0=2
+\)<br>
+\(
+p_1=4
+\)<br>
+\(
+p_2=3
+\)<br>
+\(
+p_3=2
+\)<br>
+\(
+p_4=5
+\)<br>
+\(
+p_5=1
+\)
+<h3>開始填表</h3>
+可以多加一個變數去紀錄怎樣的結合律是最小的乘法量，這裡用變數k表示。<br>
+記在表格內上方，下方為最小乘法量的數目。
+<table id="least_mul">
+<!-- row 0 -->
+<tr>
+
+<!-- col 0 -->
+<td>
+m i\j
+</td>
+
+<!-- col 1 -->
+<td>
+\( A_1 \)
+</td>
+
+<!-- col 2 -->
+<td>
+\( A_2 \)
+</td>
+
+<!-- col 3 -->
+<td>
+\( A_3 \)
+</td>
+
+<!-- col 4 -->
+<td>
+\( A_4 \)
+</td>
+
+<!-- col 5 -->
+<td>
+\( A_5 \)
+</td>
+
+</tr>
+
+<!-- row 1 -->
+<tr>
+
+<!-- col 0 -->
+<td>
+\( A_1 \)
+</td>
+
+<!-- col 1 -->
+<td>
+	\( 0 \)
+</td>
+
+<!-- col 2 -->
+<td>
+\( 
+k=1
+\)<br>
+\(
+24
+\)
+</td>
+
+<!-- col 3 -->
+<td>
+\( 
+k=2
+\)<br>
+\(
+36
+\)
+</td>
+
+<!-- col 4 -->
+<td>
+\( 
+k=3
+\)<br>
+\(
+56
+\)
+</td>
+
+<!-- col 5 -->
+<td>
+\( 
+k=1
+\)<br>
+\(
+36
+\)
+</td>
+
+</tr>
+<!-- row 2 -->
+<tr>
+
+<!-- col 0 -->
+<td>
+\( A_2 \)
+</td>
+
+<!-- col 1 -->
+<td>
+	-
+</td>
+
+<!-- col 2 -->
+<td>
+	0
+</td>
+
+<!-- col 3 -->
+<td>
+\( 
+k=2
+\)<br>
+\(
+24
+\)
+</td>
+
+<!-- col 4 -->
+<td>
+\( 
+k=3
+\)<br>
+\(
+64
+\)
+</td>
+
+<!-- col 5 -->
+<td>
+\( 
+k=2
+\)<br>
+\(
+28
+\)
+</td>
+
+</tr>
+<!-- row 3 -->
+<tr>
+
+<!-- col 0 -->
+<td>
+\( A_3 \)
+</td>
+
+<!-- col 1 -->
+<td>
+	-
+</td>
+
+<!-- col 2 -->
+<td>
+	-
+</td>
+
+<!-- col 3 -->
+<td>
+	0
+</td>
+
+<!-- col 4 -->
+<td>
+\( 
+k=3
+\)<br>
+\(
+30
+\)
+</td>
+
+<!-- col 5 -->
+<td>
+\( 
+k=3
+\)<br>
+\(
+16
+\)
+</td>
+
+</tr>
+<!-- row 4 -->
+<tr>
+
+<!-- col 0 -->
+<td>
+	\( A_4 \)
+</td>
+
+<!-- col 1 -->
+<td>
+	-
+</td>
+
+<!-- col 2 -->
+<td>
+	-
+</td>
+
+<!-- col 3 -->
+<td>
+	-
+</td>
+
+<!-- col 4 -->
+<td>
+	0
+</td>
+
+<!-- col 5 -->
+<td>
+\( 
+k=4
+\)<br>
+\(
+10
+\)
+</td>
+
+</tr>
+<!-- row 5 -->
+<tr>
+
+<!-- col 0 -->
+<td>
+	\( A_5 \)
+</td>
+
+<!-- col 1 -->
+<td>
+	-
+</td>
+
+<!-- col 2 -->
+<td>
+	-
+</td>
+
+<!-- col 3 -->
+<td>
+	-
+</td>
+
+<!-- col 4 -->
+<td>
+	-
+</td>
+
+<!-- col 5 -->
+<td>
+	0
+</td>
+
+</tr>
+</table>
+填表順序為 由左上到右下、由左至右。<br>
+最後最右上角的值，即為\( ABCDE \)的最小乘法量\( =36 \)<br>
+拿其中\( m[2,5]=28 \)來說明<br>
+在得出\( m[2,5] \)的可能set為\( \{ 28,42,84 \} \)，其中最小為28所以\( m[2,5]=28 \)。<br><br>
+
+計算過程<br>
+公式裡的\( k \)為\( i\leq k&lt j \)那\( m[2,5] \)的\( k \)就在\( 2\leq k&lt 5 \)中，<br><br>
+討論k=2<br>
+\(
+m[2,2]+m[2+1,5]+p_{2-1}p_2p_5
+= 0 + 16 +4\cdot 3\cdot 1=28
+\)<br><br>
+討論k=3<br>
+\(
+m[2,3]+m[3+1,5]+p_{2-1}p_3p_5
+= 24 + 10 +4\cdot 2\cdot 1=42
+\)<br><br>
+討論k=4<br>
+\(
+m[2,4]+m[4+1,5]+p_{2-1}p_4p_5
+= 64 + 0 +4\cdot 5\cdot 1=84
+\)<br>
+<br>
+最後得出在\( k=2 \)時，有最小乘法量為\( 28 \)。<br>
+<br>
+
+<h3>推導括號的表示</h3>
+看\( m[1,5] \)的\( k \)值為\( 1 \)，
+即\( (A_1)(A_{2\dots 5}) \)。<br>
+\( A_1 \)已經不能分成其他矩陣相乘，再討論\( A_{2\dots 5} \)的掛號方式。<br><br>
+看\( m[2,5] \)的\( k \)值為\( 2 \)，
+即\( (A_1)((A_2)(A_{3\dots 5})) \)。<br>
+\( A_2 \)已經不能分成其他矩陣相乘，再討論\( A_{3\dots 5} \)的掛號方式。<br><br>
+看\( m[3,5] \)的\( k \)值為\( 3 \)，
+即\( (A_1)((A_2)((A_3)(A_{4\dots 5}))) \)。<br>
+\( A_3 \)已經不能分成其他矩陣相乘，再討論\( A_{4\dots 5} \)的掛號方式。<br><br>
+看\( m[4,5] \)的\( k \)值為\( 4 \)，
+即\( (A_1)((A_2)((A_3)((A_{4})(A_{5})))) \)。<br>
+\( A_4 \)和\( A_5 \)已經不能分成其他矩陣相乘完成推導。<br>
+<br>
+代回\( A_1=A \)、 \( A_2=B \)、\( A_3=C \)、\( A_4=D \)、\( A_5=E \)，為
+\(
+(A(B(C(DE))))
+\)即為最小乘法量的括號表示法。
+
+
+
+
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+洪捷 - 演算法<br>
+<h3>Youtube</h3> 
+<a href="https://www.youtube.com/watch?v=GMzVeWpyTN0" target="_blank">
+CSBreakdown - Matrix Chain Multiplication - Dynamic Programming
+</a><br>
+
+<a href="https://www.youtube.com/watch?v=prx1psByp7U" target="_blank">
+Abdul Bari - 4.3 Matrix Chain Multiplication - Dynamic Programming
+</a><br>
+
+</footer>
+
+</body>
+</html>
