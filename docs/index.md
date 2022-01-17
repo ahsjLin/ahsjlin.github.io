@@ -162,6 +162,7 @@
 <a href="https://www.youtube.com/watch?v=e1US_wrN1Q8" target="_blank">六道仙人</a> <br />
 <a href="https://www.youtube.com/watch?v=qEDw1zY9OBI" target="_blank">無限月讀</a> <br />
 <a href="https://www.youtube.com/watch?v=Z4RL6cDksF4" target="_blank">RB 這裡放膽去追</a> <br />
+<a href="https://www.youtube.com/watch?v=6OthXoYxKUs" target="_blank">細節拉滿</a> <br />
 
 
 <!--
