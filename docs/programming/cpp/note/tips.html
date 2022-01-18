@@ -74,6 +74,35 @@ while(cin >> ch && toupper(ch)!='Q') // also tolower
 }
 </code>
 </pre>
+<hr>
+<h2>for and while</h2>
+<b>while version</b>
+<pre>
+<code>
+void printList(){
+	struct node * p= first;
+	String list = "";
+
+	while(p!=NULL){
+		list += IntToStr(p->data)+"->";
+		p = p->next;
+	}
+}
+</code>
+</pre>
+<b>for version</b><br>
+Attention! Semicolon (;) !!!<br>
+Don't forget it.
+<pre>
+<code>
+for(
+	p=first;
+	p;
+	list += IntToStr(p->data)+"->",
+	p=p->next
+);
+</code>
+</pre>
 
 
 
