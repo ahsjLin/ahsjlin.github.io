@@ -176,7 +176,7 @@
 -->
 
 
-## Hello World~
+## Hello World
 <a href="https://www.youtube.com/watch?v=S4AD_-WyVgY" target="_blank">太便宜了啦~</a> <br />
 <a href="https://www.youtube.com/watch?v=y7zlm7Oje0k" target="_blank">敲的那下也太好笑了吧</a> <br />
 <a href="https://www.youtube.com/watch?v=_ADClc5UM_U" target="_blank">這個直接電死</a> <br />
