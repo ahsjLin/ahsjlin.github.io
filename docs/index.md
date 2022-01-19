@@ -176,8 +176,25 @@
 -->
 
 
+## Hello World~
+<a href="https://www.youtube.com/watch?v=S4AD_-WyVgY" target="_blank">太便宜了啦~</a> <br />
+<a href="https://www.youtube.com/watch?v=y7zlm7Oje0k" target="_blank">敲的那下也太好笑了吧</a> <br />
+<a href="https://www.youtube.com/watch?v=_ADClc5UM_U" target="_blank">這個直接電死</a> <br />
+<a href="https://www.youtube.com/watch?v=YwhDbfi2IZk" target="_blank">中和區牛頓</a> <br />
+<a href="https://www.youtube.com/watch?v=blZG1T83RWA" target="_blank">量子糾纏</a> <br />
+<a href="https://www.youtube.com/watch?v=GRxy91lGnic" target="_blank">佛洛伊德</a> <br />
+<a href="https://www.youtube.com/watch?v=RXIvXBrvbfg" target="_blank">現在是誰上傳的阿</a> <br />
+<a href="https://www.youtube.com/watch?v=RtSbhq1oG1k" target="_blank">妳怎麼知道對方是Gay</a> <br />
+<a href="https://www.youtube.com/watch?v=tuz3Du0lvNM" target="_blank">My wife is watching.</a> <br />
+<a href="https://www.youtube.com/watch?v=nps1qfwJaUI" target="_blank">kiss cam~</a> <br />
+<a href="https://www.youtube.com/watch?v=RZG76x8aJxU" target="_blank">I got the number~</a> <br />
+<a href="https://www.youtube.com/watch?v=VSY_PK2Iy84" target="_blank">GI派對</a> <br />
+<a href="https://www.youtube.com/watch?v=uwfdFCP3KYM" target="_blank">希望我30歲的時候不是巫師</a> <br />
+<a href="https://www.youtube.com/watch?v=Cxqca4RQd_M" target="_blank">If Google Was A Guy</a> <br />
+<a href="https://www.youtube.com/watch?v=FUDlsSkrRAc" target="_blank">監獄線人</a> <br />
 
-
+### Animal
+<a href="https://www.youtube.com/watch?v=n2OEHlkCXio" target="_blank">不要玩麻雀</a> <br />
 
 ### Music
 <a href="https://www.youtube.com/watch?v=oCTGXSK9hWo" target="_blank">Here we are again</a> <br />
