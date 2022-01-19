@@ -63,16 +63,49 @@ What if?<br>
 重點就是: 新增(insertion), 刪除(deletion), and 修改(modify)<br>
 這三類的加權，可由應用方式不同加以修改。<br>
 <hr>
+<h2>Reduce difficulty</h2>
+<p>
+\(
+\text{LIS (Longest Increasing Subsquence)}
+\rightarrow 
+\text{LCS (Longest Common Subsquence)}
+\rightarrow 
+\text{Edit Distance}
+\)<br>
+</p>
+<p>
+<b>轉換過程:</b><br>
+<ol>
+
+<li>
+有個序列S，需求LIS(最長遞增的元素)，將這個問題轉換成LCS問題，作法為:<br>
+LCS是將兩序列做最長相對位置的相同元素，所以假設\( A=S \)， \( B=S^* \)(這裡\( S^* \)為將S裡元素從小排到大的序列)\( \rightarrow \text{LIS}(S) = \text{LCS}(A,B)\)。<br>
+</li>
+<li>
+將LCS問題轉換成Edit Distance問題:<br>
+一樣上面A,B兩序列不變，這裡給X=A, Y=B，懲罰加權為Insertion=1, Deletion=1, Substitution=\( \infty \)，這樣兩序列一定不會去做Substitution。
+\[
+|\text{ED}(X,Y)| = |A|+|B|+2\cdot |\text{LCS}(A,B)|
+\]
+</li>
+<li>
+	設\( f: \text{LIS}(S)\rightarrow \text{LCS}(A,B) \)， \( g: |\text{ED}(X,Y)| = |A|+|B|+2\cdot |\text{LCS}(A,B)| \)，則\( h: \text{LIS}\rightarrow \text{ED} \)，\( h=f\circ g=f(g) \)為唯一函數，所以LIS問題是可以降為Edit Distance問題的。
+</li>
+
+</ol>
+</p>
+<hr>
 <h2>LCS和Edit distance應用</h2>
 收集來的資料，像是圖片、影像、聲音或DNA序列，會把這些資料轉換成一串數字儲存起來。<br>
 比對資料時，在機器看來，只要加一點人類無法輕易辨識的雜訊、少了一點特徵、一個像素或一個數字不一樣，整個資料就當成是新的。<br>
 所以最長共同子字串和最短Edit distance的演算法就成為了生物資訊極為重要的學問，經由比對得出最相關的資料，也就是相似越多或不相關的越少，即為<span style="color: red">可能</span>所求答案。<br>
 經由回推，也可以得出差異，用來更新檔案等應用。
 <hr>
+<hr>
 <h2>使用DP解決的問題</h2>
 <h3>Make Change (換零錢問題)</h3>
 目的是換到到最少個數/張數的錢。<br>
-<a href="make_change.html" target="_blank">Function & Example</a>
+<a href="make_change.html" target="_blank">Example</a>
 <h3>Knapsack problem(背包問題)</h3>
 不考慮背包空間，但考慮<span style="color:red">負重問題</span>，物品之間的重量不相等，其價值為單位重量的價值來區分，有分兩種討論，一是物品是可分割的，二是物品是不可分割來討論。<br>
 <a href="knapsack_problem.html" target="_blank">More discussion</a>
@@ -85,7 +118,7 @@ What if?<br>
 差異到十倍，所以計算出最小的乘法方式，是提升計算效能重要指標。<br>
 但要找出最小的乘法量的方法有\( (n-1)!  \)種中找尋，因matrix-chain multiplication有最佳結構解，所以使用動態規劃可以有效的找到最小乘法量的答案。
 <br>
-<a href="./Matrix_chain_Multiplication_problem.html" target="_blank">Function and example</a>
+<a href="./Matrix_chain_Multiplication_problem.html" target="_blank">more...</a>
 
 <hr>
 <footer>
