@@ -36,8 +36,17 @@ function graph(name){
 cycle(circuit): 每條路都走過一遍, 原點等於終點。<br>
 path: 每條路都走過一遍，原點不等於終點。<br>
 <h3>如何判斷是不是Euler 迴路/路徑</h3>
+\( V \)為所有點的集合，\( E \)為所有邊的集合。
+<p>
+假設為無向簡單/多重圖。<br>
 每個點都有他的degree(分支度)，
-每個點需要是偶數的分支度，才能夠形成euler 迴路/路徑。
+每個點需要是偶數的分支度，且為連通圖，才能夠形成euler 迴路(circuit)。<br>
+點degree含0個或2個奇數其他點的degree為偶數，且為連通圖，euler路徑(path/trail)。
+</p>
+<p>
+假設為有向簡單/多重圖。<br>
+每個點inner degree = outer degree，這裡用\( id(v) = od(v),\; v\in V \)代表，且為強連通圖，才能夠形成euler 迴路(circuit)。<br>
+</p>
 <h3>故事</h3>
 <a href="https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg" target="_blank">Konigsberg的七橋問題</a><br>
 一筆劃問題(all of degree of vertex are even.(circuit))(otherwise, path)
