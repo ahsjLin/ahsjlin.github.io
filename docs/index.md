@@ -75,6 +75,7 @@
 <a href="https://www.youtube.com/redirect?event=backstage_event&redir_token=QUFFLUhqbkxod0dkWlFxTGdKYkE2YXE2WHg5Ujd3RkZ1UXxBQ3Jtc0trZnBCMXJNeG90SEdNVEZVdjNwVlBDXzVCVEljcldWWFpFVEp0Y2RIMlRSemRkMlk2WXM4VEUyOEpBdFlsRXBzM0dKbmtud3l1QlBkaEx4VTMxWFR6WTV4X0Zmazg4RElITzV0LW5ZRFdkVnRoY1Ezbw&q=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1cr7U1Ymgtx1hudabVhqImEKvVb1ZMmX7%3Fusp%3Dsharing" target="_blank">備份釋出(每次看都很難過欸!RRRRRRRBBBBBBBBBBB</a> <br />
 <a href="https://www.youtube.com/watch?v=bATBdc6erXg" target="_blank">丟了倪(阿倪閹割版</a> <br />
 <a href="https://www.youtube.com/watch?v=JXPWjR82L8Y" target="_blank">丟了倪(K7</a> <br />
+<a href="https://www.youtube.com/watch?v=mD9_PcIM0js" target="_blank">嘲笑自己傻得可以~</a> <br />
 
 
 ### Overload Rules
@@ -192,6 +193,7 @@
 <a href="https://www.youtube.com/watch?v=tuz3Du0lvNM" target="_blank">My wife is watching.</a> <br />
 <a href="https://www.youtube.com/watch?v=nps1qfwJaUI" target="_blank">kiss cam~</a> <br />
 <a href="https://www.youtube.com/watch?v=RZG76x8aJxU" target="_blank">I got the number~</a> <br />
+<a href="https://www.youtube.com/watch?v=pb_1CBsyIiQ" target="_blank">Very difficult</a> <br />
 <a href="https://www.youtube.com/watch?v=VSY_PK2Iy84" target="_blank">GI派對</a> <br />
 <a href="https://www.youtube.com/watch?v=uwfdFCP3KYM" target="_blank">希望我30歲的時候不會收到巫師學院的入學通知書</a> <br />
 <a href="https://www.youtube.com/watch?v=Cxqca4RQd_M" target="_blank">If Google Was A Guy</a> <br />
