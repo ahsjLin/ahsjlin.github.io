@@ -1,0 +1,37 @@
+/*
+ * Input: 
+ * Output: 30
+ */
+#include <iostream>
+using namespace std;
+
+class Global{
+private:
+	static int number;
+public:
+	Global(){};
+	static void setter(int a){
+		number =a;
+	}
+	static int getter(){return number;}
+
+};
+
+int Global::number;
+
+int main(){
+	Global *a = new Global;
+	Global *b = new Global;
+	Global *c = new Global;
+	a->setter(10);
+	b->setter(20);
+	b->setter(30);
+	delete b,c;
+	std::cout << a->getter() << std::endl;
+	/* if put "static int number" in "public:",
+	 * it can use "cout << Global::number << endl;" directly
+	 */
+	
+
+	return 0;
+}
