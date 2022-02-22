@@ -15,7 +15,7 @@
 
 ### <a href="dump/dump.html" target="_blank">Dump</a>
 
-
+<!--
 ### sam1268
 <a href="https://www.youtube.com/watch?v=xwKDL3vBC5U" target="_blank">海上的人</a> <br />
 <a href="https://www.youtube.com/watch?v=gj1aPwqEAv4" target="_blank">浪流連</a> <br />
@@ -37,14 +37,12 @@
 <a href="https://www.youtube.com/watch?v=W2nVYA0riUM" target="_blank">直到世界盡頭</a> <br />
 <a href="https://www.youtube.com/watch?v=u6NoW94yeTs" target="_blank">Eyes nose</a> <br />
 <a href="https://www.youtube.com/watch?v=wCM28TwP4rs" target="_blank">煎熬</a> <br />
-<!--
 <a href="https://www.youtube.com/watch?v=EFxCeiFKkFk" target="_blank">Why You Gonna Lie</a> <br />
 <a href="https://www.youtube.com/watch?v=zmeqiGWpaSU" target="_blank">Forever Love</a> <br />
 -->
 
 
-
-
+<!--
 ### bbbb87
 <a href="https://www.youtube.com/watch?v=XprdTvnqVIg" target="_blank">輸了你贏了世界又如何</a><br >
 <a href="https://www.youtube.com/watch?v=xXjNgWPzZVM" target="_blank">(B)與我無關</a> <br />
@@ -76,8 +74,9 @@
 <a href="https://www.youtube.com/watch?v=bATBdc6erXg" target="_blank">丟了倪(阿倪閹割版</a> <br />
 <a href="https://www.youtube.com/watch?v=JXPWjR82L8Y" target="_blank">丟了倪(K7</a> <br />
 <a href="https://www.youtube.com/watch?v=mD9_PcIM0js" target="_blank">嘲笑自己傻得可以~</a> <br />
+-->
 
-
+<!--
 ### Overload Rules
 <a href="https://www.youtube.com/watch?v=AdudcVcMOgg" target="_blank">雙ni出擊</a> <br />
 <a href="https://www.youtube.com/watch?v=W3oWUHt2TPY" target="_blank">蹦米</a> <br />
@@ -170,7 +169,7 @@
 <a href="https://www.youtube.com/watch?v=_FlTzixCz28" target="_blank">說得好</a> <br />
 <a href="https://www.youtube.com/watch?v=GIS9XiFiOw0" target="_blank">頂級熟女</a> <br />
 <a href="https://www.youtube.com/watch?v=CUA4s_Kam6g" target="_blank">項鍊超大</a> <br />
-
+-->
 
 <!--
 <a href="https://www.youtube.com/watch?v=zx7pcgHtU4I" target="_blank">O我的天</a> <br />
