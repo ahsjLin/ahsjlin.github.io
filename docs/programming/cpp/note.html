@@ -36,6 +36,14 @@ function graph(name){
 盡量不要使用global variable，原因:維護困難、可能撞名，可以用創建一個class Global來代替，裡頭設setNumber(然後裏頭的變數要用static)和getNumber的函式，這樣只要調用一次class Global就能使用static的變數了，不用的時候，再destry class即可。<br>
 <a href="note/code/global_variable_with_class.txt" target="_blank">Sample code</a>
 <hr>
+conio.h 函式庫(Unix, Linux 沒有包含這個函式庫)<br>
+裏頭的getch()不需要緩衝區，可以直接從鍵盤讀取輸入的字元。<br>
+<hr>
+<h2>typedef筆記</h2>
+用typedef來定義struct的example:<br>
+<a href="note/code/typedef_struct_example.txt" target="_blank">Using "struct" by "typedef"</a>
+
+<hr>
 <h2>Header</h2>
 <a href="note/pdf/header.html" target="_blank">標頭(header)</a>
 <hr>

@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+typedef struct vertex{
+	struct vertex* leftchild;
+	int data;
+	struct vertex* rightchild;
+} node;
+
+int main(){
+	return 0;
+}
+
