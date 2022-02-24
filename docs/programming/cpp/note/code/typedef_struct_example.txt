@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 typedef struct vertex{
 	struct vertex* leftchild;
@@ -8,6 +7,16 @@ typedef struct vertex{
 } node;
 
 int main(){
+	node test_node;
+	test_node.data = 10;
+	std::cout << test_node.data << std::endl;
+
+	// Pointer version
+	// allocate size then delete it
+	node *test_node_2 = new node;
+	test_node_2->data = 20;
+	std::cout << test_node_2->data << std::endl;
+	delete test_node_2;
+
 	return 0;
 }
-
