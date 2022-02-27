@@ -1,0 +1,237 @@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@ Usepackage @@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\documentclass{beamer}
+
+% setting margin
+%\usepackage[a4paper,left=0.5in,right=0.5in]{geometry}
+% color package
+\usepackage{xcolor}
+% tablur combine
+\usepackage{multirow}
+
+%--------------------
+%-- define comment --
+%--------------------
+%\long\def\/*#1*/{}
+%__ define comment __
+%____________________
+
+%------------------
+%-- math package --
+%------------------
+\usepackage{amssymb,amsmath,stmaryrd} 
+%------------------
+\usepackage{mathtools}
+%Reference: 
+%http://texdoc.net/texmf-dist/doc/latex/mathtools/mathtools.pdf
+%__ math package __
+%__________________
+
+
+%------------------------------------
+%-- insert {} to multiple folders ---
+%------------------------------------
+\usepackage{graphicx}
+\graphicspath{{./images/},{./image/}} 
+%__ insert {} to multiple folders ___
+%____________________________________
+
+
+%------------------
+%-- use chinese ---
+%------------------
+\usepackage{CJKutf8}
+%__ use chinese ___
+%__________________
+
+%----------------------
+%-- use draw package --
+%----------------------
+\usepackage{tikz}
+%__ use draw package __
+%______________________
+
+
+%----------
+%-- url ---
+%----------
+\usepackage{hyperref}
+% sample
+% \url{http://...}
+% \href{http://...}{text hyperlink}
+%__ url ___
+%__________
+
+%----------------
+%-- underline ---
+%----------------
+\usepackage{soul}
+% using with
+% ul{...}
+%__ underline ___
+%________________
+
+%----------------------
+%-- background color --
+%----------------------
+\usepackage{lipsum}
+\usepackage[most]{tcolorbox}
+\definecolor{bg}{RGB}{255,249,227}
+\definecolor{block_green}{RGB}{203,247,235}
+%__ background color __
+%______________________
+
+%----------
+%-- code --
+%----------
+\usepackage{listings}
+%__ code __
+%__________
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@@@@@@ Enumerate command @@@@@@@@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\makeatletter
+\newcommand\setItemnumber[1]{\setcounter{enum\romannumeral\@enumdepth}{\numexpr#1-1\relax}}
+\makeatother
+
+% command
+%\setItemnumber{5}
+%============== Enumerate command ===============
+%================================================
+
+%--------------------
+% -- Merge pdf ------
+\usepackage{pdfpages}
+
+%\includepdf[pages=-]{paper1}
+
+%--------------------
+%--------------------
+
+%----------------------------------------   multiple columns
+\usepackage{multicol}
+
+% begin{multicols}{2}
+%
+% end{multicols}
+%---------------------
+%------------------------------------------------------------
+%
+%               multiple divide add substract 
+%
+%------------------------------------------------------------
+% add multiple
+\usepackage{xlop}
+
+% \opmul{384}{56}
+% \opadd{1234}{567}
+
+% divide
+\usepackage{polynom}
+
+% \input{longdiv}
+% \longdiv{12345}{13}
+%
+%______________ multiple divide add substract _______________
+%____________________________________________________________
+
+%========= Usepackage =========
+%==============================
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@ Document @@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\title{\textbf{}}
+\author{\textbf{sjLin}}
+%\date{}
+%------------
+%-- Start ---
+%------------
+\begin{document}
+
+{\fontfamily{lmss}\selectfont
+% bsmi
+\begin{CJK*}{UTF8}{bkai}
+
+%\maketitle
+
+%__ Start ___
+%____________
+
+
+
+
+\begin{frame}
+\frametitle{Euclidean Algorithm}
+歐幾里德演算法又稱輾轉相除法，即
+\[
+\begin{cases}
+	\gcd(n,0)=0, \;\text{if } n>0 \\
+	\gcd(m,n)=\gcd(n,m\mod n), \text{if } m>n
+\end{cases}
+\]
+假設$m\geq n$，令$r_0=m,r_1=n$，不斷地利用毆幾里德演算法
+\begin{align*}
+	&r_0=q_1r_1+r_2,\; &0\leq r_2<r_1\\
+	&r_1=q_1r_2+r_3,\; &0\leq r_3<r_2\\
+	&\vdots\\	
+	&r_{n-2}=q_{n-1}r_{n-1}+r_n,\; &0\leq r_n<r_{n-1}\\
+	      &r_{n-1}=q_nr_n&
+\end{align*}
+\end{frame}
+
+\begin{frame}
+\frametitle{}
+則$\gcd(m,n)=\gcd(r_0,r_1)=\gcd(r_1,r_2)=\dots=\gcd(r_{n-2},r_{n-1})=\gcd(r_{n-1},r_n)=\gcd(r_n,0)=r_n$
+\end{frame}
+\begin{frame}
+\frametitle{例題}
+\framesubtitle{94 中山資工}
+題目:\\
+Find all of the possible solutions of $250x+111y=7$, where both $x$ and $y$ are integers.\\[10pt]
+Ans.
+\begin{align*}
+250&=2\times 111 +28\\
+111&=3\times 28 + 27\\
+28 &= 1\times 27 + 1
+\end{align*}
+從最後一個式子代回去。
+\begin{align*}
+1 &= 28 - 27\\
+1 &= 28 - (111-3\times 28)\\
+\text{整理}\\
+1 &= (-1)\times111+4\times 28
+\end{align*}
+	
+\end{frame}
+\begin{frame}
+\begin{align*}
+	1 &= (-1)\times111+4\times (250-2\times 111)\\
+	  &\text{整理}\\
+	1 &= (-9)\times111+4\times 250\\
+	  &\text{寫成通式(小的為負，大的為正)}\\	
+	1 &= (-9+250k)\times111+(4-111k)\times 250,\;\forall k\in\mathbb{Z}\\
+	  &\text{左右同乘}7\\
+	7 &= 7(-9+250k)\times111+7(4-111k)\times 250,\;\forall k\in\mathbb{Z}
+\end{align*}
+所以$x=7(4-111k),\; y=7(-9+250k)$, $\forall k\in\mathbb{Z}$
+	
+\end{frame}
+
+
+
+
+
+%------------
+%-- Finish --
+%------------
+\end{CJK*}
+}
+\end{document}
+%__ Finish __
+%____________
+
+%========= Document =========
+%============================

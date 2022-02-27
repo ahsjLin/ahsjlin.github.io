@@ -1,0 +1,202 @@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@ Usepackage @@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\documentclass{article}
+% round numbers with space
+\usepackage{numprint}
+% key word
+% \nplpadding[characters]{digits}
+% \numprint{1234}
+
+
+% setting margin
+\usepackage[a4paper,left=0.5in,right=0.5in]{geometry}
+% color package
+\usepackage{xcolor}
+% tablur combine
+\usepackage{multirow}
+
+%--------------------
+%-- define comment --
+%--------------------
+%\long\def\/*#1*/{}
+%__ define comment __
+%____________________
+
+%------------------
+%-- math package --
+%------------------
+\usepackage{amssymb,amsmath,stmaryrd} 
+%------------------
+\usepackage{mathtools}
+%Reference: 
+%http://texdoc.net/texmf-dist/doc/latex/mathtools/mathtools.pdf
+%__ math package __
+%__________________
+
+
+%------------------------------------
+%-- insert {} to multiple folders ---
+%------------------------------------
+\usepackage{graphicx}
+\graphicspath{{./images/}, {./image/}} 
+%__ insert {} to multiple folders ___
+%____________________________________
+
+
+%------------------
+%-- use chinese ---
+%------------------
+\usepackage{CJKutf8}
+%__ use chinese ___
+%__________________
+
+%----------------------
+%-- use draw package --
+%----------------------
+\usepackage{tikz}
+%__ use draw package __
+%______________________
+
+
+%----------
+%-- url ---
+%----------
+\usepackage{hyperref}
+% sample
+% \url{http://...}
+% \href{http://...}{text hyperlink}
+%__ url ___
+%__________
+
+%----------
+%-- code --
+%----------
+\usepackage{listings}
+%__ code __
+%__________
+
+%----------------
+%-- underline ---
+%----------------
+\usepackage{soul}
+% using with
+% ul{...}
+%__ underline ___
+%________________
+
+
+%----------------------
+%-- background color --
+%----------------------
+\usepackage{lipsum}
+\usepackage[most]{tcolorbox}
+\definecolor{bg}{RGB}{255,249,227}
+\definecolor{block_green}{RGB}{203,247,235}
+%__ background color __
+%______________________
+
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@@@@@@ Enumerate command @@@@@@@@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\makeatletter
+\newcommand\setItemnumber[1]{\setcounter{enum\romannumeral\@enumdepth}{\numexpr#1-1\relax}}
+\makeatother
+
+% command
+%\setItemnumber{5}
+%============== Enumerate command ===============
+%================================================
+
+%--------------------
+% -- Merge pdf ------
+\usepackage{pdfpages}
+
+%\includepdf[pages=-]{paper1}
+
+%--------------------
+%--------------------
+
+%----------------------------------------   multiple columns
+\usepackage{multicol}
+
+% begin{multicols}{2}
+%
+% end{multicols}
+%---------------------
+
+%------------------------------------------------------------
+%
+%               multiple divide add substract 
+%
+%------------------------------------------------------------
+% add multiple
+\usepackage{xlop}
+
+% \opmul{384}{56}
+% \opadd{1234}{567}
+
+% divide
+\usepackage{polynom}
+
+% \input{longdiv}
+% \longdiv{12345}{13}
+%
+%______________ multiple divide add substract _______________
+%____________________________________________________________
+
+
+%========= Usepackage =========
+%==============================
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@ Document @@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%------------
+%-- Start ---
+%------------
+\title{因數和互質}
+\author{\textbf{sjLin}}
+%\date{}
+\begin{document}
+{\fontfamily{lmss}\selectfont
+% bsmi
+\begin{CJK*}{UTF8}{bkai}
+\maketitle
+\noindent
+%__ Start ___
+%____________
+
+\section*{最大公因數 - 定義}
+假設$m,n\in\mathbb{Z},\; m,n\neq 0$,
+則$g|m$且$g|n$的最大整數稱為$m,n$的最大公因數(greatest common divisor)，記作$g=\gcd(m,n)$，有時簡記為$g=(m,n)$\\	
+\rule{\textwidth}{0.5pt}
+\section*{互質 - 定義}
+假設$m,n\in \mathbb{Z}$, 若$\gcd(m,n)=1$,
+則稱$m$與$n$互質(relatively prime).
+\vspace{0.5cm}
+\subsection*{定理}
+$\divideontimes$輾轉相除法(Euclidean algorithm)會使用到。\\
+假設$m,n\in \mathbb{Z}$且$m=an+b$，其中$a,b\in \mathbb{Z}$, 則$\gcd(m,n)=\gcd(n,b)$.
+\[
+	\gcd(m,n)
+	=
+	\gcd(n,m \mod n )
+\]
+
+
+
+
+
+%------------
+%-- Finish --
+%------------
+\end{CJK*}
+}
+\end{document}
+%__ Finish __
+%____________
+
+%========= Document =========
+%============================
