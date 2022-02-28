@@ -1,0 +1,282 @@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@ Usepackage @@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\documentclass{article}
+% round numbers with space
+\usepackage{numprint}
+% key word
+% \nplpadding[characters]{digits}
+% \numprint{1234}
+
+
+% setting margin
+\usepackage[a4paper,left=0.5in,right=0.5in]{geometry}
+% color package
+\usepackage{xcolor}
+% tablur combine
+\usepackage{multirow}
+
+%--------------------
+%-- define comment --
+%--------------------
+%\long\def\/*#1*/{}
+%__ define comment __
+%____________________
+
+%------------------
+%-- math package --
+%------------------
+\usepackage{amssymb,amsmath,stmaryrd} 
+%------------------
+\usepackage{mathtools}
+%Reference: 
+%http://texdoc.net/texmf-dist/doc/latex/mathtools/mathtools.pdf
+%__ math package __
+%__________________
+
+
+%------------------------------------
+%-- insert {} to multiple folders ---
+%------------------------------------
+\usepackage{graphicx}
+\graphicspath{{./images/}, {./image/}} 
+%__ insert {} to multiple folders ___
+%____________________________________
+
+
+%------------------
+%-- use chinese ---
+%------------------
+\usepackage{CJKutf8}
+%__ use chinese ___
+%__________________
+
+%----------------------
+%-- use draw package --
+%----------------------
+\usepackage{tikz}
+%__ use draw package __
+%______________________
+
+
+%----------
+%-- url ---
+%----------
+\usepackage{hyperref}
+% sample
+% \url{http://...}
+% \href{http://...}{text hyperlink}
+%__ url ___
+%__________
+
+%----------
+%-- code --
+%----------
+\usepackage{listings}
+%__ code __
+%__________
+
+%----------------
+%-- underline ---
+%----------------
+\usepackage{soul}
+% using with
+% ul{...}
+%__ underline ___
+%________________
+
+
+%----------------------
+%-- background color --
+%----------------------
+\usepackage{lipsum}
+\usepackage[most]{tcolorbox}
+\definecolor{bg}{RGB}{255,249,227}
+\definecolor{block_green}{RGB}{203,247,235}
+%__ background color __
+%______________________
+
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@@@@@@ Enumerate command @@@@@@@@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\makeatletter
+\newcommand\setItemnumber[1]{\setcounter{enum\romannumeral\@enumdepth}{\numexpr#1-1\relax}}
+\makeatother
+
+% command
+%\setItemnumber{5}
+%============== Enumerate command ===============
+%================================================
+
+%--------------------
+% -- Merge pdf ------
+\usepackage{pdfpages}
+
+%\includepdf[pages=-]{paper1}
+
+%--------------------
+%--------------------
+
+%----------------------------------------   multiple columns
+\usepackage{multicol}
+
+% begin{multicols}{2}
+%
+% end{multicols}
+%---------------------
+
+%------------------------------------------------------------
+%
+%               multiple divide add substract 
+%
+%------------------------------------------------------------
+% add multiple
+\usepackage{xlop}
+
+% \opmul{384}{56}
+% \opadd{1234}{567}
+
+% divide
+\usepackage{polynom}
+
+% \input{longdiv}
+% \longdiv{12345}{13}
+%
+%______________ multiple divide add substract _______________
+%____________________________________________________________
+
+
+%========= Usepackage =========
+%==============================
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@ Document @@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%------------
+%-- Start ---
+%------------
+\title{Multiplicative Inverse\\(模數乘法反元素)\\}
+\author{\textbf{sjLin}}
+%\date{}
+\begin{document}
+{\fontfamily{lmss}\selectfont
+% bsmi
+\begin{CJK*}{UTF8}{bkai}
+\maketitle
+\noindent
+%__ Start ___
+%____________
+假設$a\in \mathbb{Z},\; n\in \mathbb{Z}^+$，
+$ax\equiv 1\pmod {n} $，則稱$x$為$a$在$\mod n$下的multiplicative inverse，而這個$x$有無限個，符合最小正整數$x$，稱為$a$在$\mod n$下的最小乘法反元素(least multiplicative inverse)，這最小乘法反元素記作$a^{-1}\pmod {n} $。
+\begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt]
+\section*{定理}
+假設$a\in\mathbb{Z},\;n\in\mathbb{Z}^+$，若$\gcd(a,n)=1$, 則$a$在$\mod n$的乘法反元素存在。
+\section*{證明}
+因為$\gcd(a,n)=1$，所以$a,n$互質，使得$\exists s,t\in\mathbb{Z}$，則$as+nt=1$$\Rightarrow as+nt\equiv 1\pmod {n} $。因為$nt\equiv0\pmod {n} $，所以$as\equiv1\pmod {n} $。\\
+因此$s$為$a$在$\pmod {n} $下的乘法反元素。
+\end{tcolorbox}
+\section*{例題-92 台大資工}
+Find the inverse of $4$ modulo $7$.
+\subsection*{Ans.}
+$\exists s,t\in Z$，使得$4s+7t=1$。\\
+由Eulidean Algorithm得知，\\	
+$
+7=1\cdot 4+3\\
+4=1\cdot 3+1
+$\\
+$
+\Rightarrow 
+1=4-1\cdot 3\\
+1=4-1(7-1\cdot 4)
+$\\
+整理\\
+$
+1=(-1)\cdot 7+2\cdot 4
+$
+\\
+$\Rightarrow 1=(-1-4k)\cdot 7+(2+7k)\cdot 4,\;\forall k\in\mathbb{Z}$\\
+因此，$2+7k,\forall k\in\mathbb{Z}$為$4$在$\pmod {7} $下的乘法反元素。
+\section*{例題-98政大資料}
+Find the least positive integer $x$ satisfying he congruence:
+\[
+	531x\equiv1\pmod {1769} 
+\]
+\subsection*{Ans.}
+由Eulidean Algorithm得知，\\
+$
+1769=3\cdot 531+176\\
+531=3\cdot 176+3\\
+176=58\cdot 3+2\\
+3=1\cdot 2+1
+$\\
+$
+\Rightarrow 
+1=3-2\\
+=3-(176-58\cdot 3)\\
+=3-176+58\cdot 3\\
+=(-1)\cdot 176+59\cdot 3\\
+=(-1)\cdot 176+59\cdot 531-177\cdot 176\\
+=(-178)\cdot 176+59\cdot 53\\
+=(-178)\cdot (1769-3\cdot 531)+59\cdot 531\\
+=(-178)\cdot 1769+593\cdot 531
+$\\
+$\therefore 531^{-1}$在$\pmod {1769} $下的最小乘法反元素為593。\\
+\rule{\textwidth}{0.5pt}
+\begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt]
+\section*{推廣}
+乘法反元素可以推廣到解一般的方程式$ax\equiv b\pmod {n} $
+\end{tcolorbox}
+\section*{例題-98清大資工}
+Solve the linear congruence $7x\equiv 13\pmod {19} $
+to find all the integer solutions $x$.
+\subsection*{Ans.}
+因為$\gcd(7,19)=1$，所以有整數解$(s,t)$，使得$7s+19t=1$，由Eulidean Algorithm得知，\\
+$
+19=2\cdot 7+5\\
+7=1\cdot 5+2\\
+5=2\cdot 2+1
+$\\
+$\Rightarrow 
+1=5-2\cdot 2\\
+=5-2(7-5)\\
+=3\cdot 5+(-2)\cdot 7\\
+=3(19-2\cdot 7)+(-2)\cdot 7\\
+=3\cdot 19+(-8)\cdot 7
+$\\
+左右同乘$13$，即計算$7x\equiv13\pmod {19} $\\
+$\Rightarrow 13=39\cdot 19+(-104)\cdot 7$\\
+通式$13=(39-7k)\cdot 19+(-104+19k)\cdot 7,\;\forall k\in\mathbb{Z}$\\
+$\Rightarrow -104\equiv 10\pmod {19} $\\
+$\therefore 10+19k,\;\forall k\in\mathbb{Z}$為$x$的所有可能解。
+\begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt]
+\section*{引理}
+假設$a\in\mathbb{Z}$且$p$為一質數，則$a$為$a$在$\pmod {p} $下的乘法反元素$\leftrightarrow a\equiv \pm1\pmod {p} $
+\subsection*{證明}
+($\rightarrow $)\\
+因為$a$為$a$在$\pmod {p} $下的乘法反元素，\\
+$\Rightarrow a^2\equiv1\pmod {p} $\\
+$p|(a^2-1)$\\
+$p|(a-1)(a+1)$\\
+所以$p|(a-1)$或$p|(a+1)$\\
+因為同餘的兩數相減的值，會被$\mod$ 的值整除\\
+所以$a\equiv -1\pmod {p} $或$a\equiv 1\pmod {p} $\\
+($\leftarrow$)\\
+因為$a\equiv\pm1\pmod {p} $，所以$a^2\equiv1\pmod {p} $\\
+因此，$a$為$a$在$\pmod {p} $下的乘法反元素。
+\end{tcolorbox}
+
+
+
+
+%------------
+%-- Finish --
+%------------
+\end{CJK*}
+}
+\end{document}
+%__ Finish __
+%____________
+
+%========= Document =========
+%============================
