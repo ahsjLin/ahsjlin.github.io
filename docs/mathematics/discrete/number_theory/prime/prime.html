@@ -116,6 +116,125 @@ q,r\in Z
 \gcd(m,n)=\gcd(m,m \mod n)
 \)
 <hr>
+<h2>Diophantine 方程式</h2>
+假設\(
+a,b,c\in \mathbb{Z}^+
+\)，則\(
+ax+by=c
+\)有整數解\(
+(x=x_0\wedge y=y_0)
+\leftrightarrow
+\gcd(a,b)|c
+\)。
+<hr>
+<h2>題目</h2>
+<h3>證明代數基本定理的唯一性</h3>
+<b>Ans.(利用矛盾法)</b><br>
+假設\(
+n\geq 2
+\)為一個正整數，若\(
+n
+\)，有兩種質因數乘積的寫法:<br>
+ex.<br>
+\(
+n=p_1p_2\dots p_s
+,\;
+n=q_1q_2\dots q_t
+\)
+<br>
+其中\(
+p_1\leq p_2\leq p_3\leq\dots \leq p_s,\;
+q_1\leq q_2\leq q_3\leq\dots \leq q_t,\;
+\)<br>
+\(
+\Rightarrow 
+n=p_1p_2\dots p_s
+=q_1q_2\dots q_t
+\)<br>
+則\(
+\{\displaystyle\frac{q_1q_2\dots q_t}{p_i}|i=1,2,\dots,s\}
+\)內的所有元素應皆為整數，但寫成兩種質因數乘積，必有不能整除的值，而產生矛盾。<br>
+\(
+\therefore
+\)
+整數\(
+n
+\)
+只能寫成一種質因數乘積。
+<hr>
+<h2>題目-93 中央資管</h2>
+<h3>證明\(
+\sqrt{2}\)
+為無理數
+</h3>
+<b>Ans.(利用矛盾法)</b><br>
+<table>
+<th>Hint</th>
+<tr>
+	<td>無理數是無法寫成任意兩整數的分數形式</td>
+</tr>
+</table>
+假設\(
+\sqrt{2}
+\)為有理數，\(
+\exists m,n \in \mathbb{Z}^+
+\), \(
+\sqrt{2}=\frac{m}{n}
+\)且\(
+\gcd(m,n)=1
+\)<br>
+\(
+\Rightarrow 
+(\sqrt{2})^2
+=
+(\frac{m}{n})^2
+\)<br>
+\(
+\Rightarrow 
+2=\frac{m^2}{n^2}
+\)<br>
+\(
+\Rightarrow 
+2n^2=m^2
+\)<br>
+\(
+m^2
+\)是可以被\(
+2
+\)整除的<br>
+
+\(
+\Rightarrow 
+2|m^2
+\)<br>
+因為\( 2 \)為質數，\( m^2 \)的質因數乘積裏頭一定有二的指數個2，這樣\( m^2 \)開根號後得出的\( m \)會是整數，所以\( m \)也可以被\( 2 \)整除<br>
+\(
+\Rightarrow 
+2|m
+\)<br>
+將\( m \)寫成兩數相乘\(
+\Rightarrow 
+m=2k,\exists k\in Z^+
+\)<br>
+代回\( 2n^2=m^2 \)<br>
+\(
+2n^2=(2k)^2=4k^2
+\)<br>
+\(
+\Rightarrow 
+n^2=2k^2
+\)<br>
+同理
+\(
+n^2
+\)是可以被2整除<br>
+\(
+\Rightarrow 
+2|n^2
+\)，因2為\( n^2 \)且條件是n為整數，\( n^2 \)有兩個2以上，則\( 2|n \)。<br>
+這樣已知\( 2|m \)和\( 2|n \)，\( m \)和\( n \)的公因數有2，與\( \gcd(m,n)=1 \)相互矛盾。<br>
+所以\( \sqrt{2} \)為無理數。
+<hr>
 <footer>
 <h4>Reference</h4>
 黃子嘉-離散數學
