@@ -238,6 +238,80 @@ n^2
 <h2>Multiplicative Inverse(乘法反元素)</h2>
 <a href="pdf/multiplicative_inverse.html" target="_blank">乘法反元素</a>
 <hr>
+<h2 id="wilson_theorem">Wilson定理(Wilson's theorem)</h2>
+Suppose \(
+p
+\)
+is a prime.Then
+\[
+(p-1)!\equiv-1\pmod{p}
+\]
+<h3 style="color:red;">證明</h3>
+<img src="img/temp/wilson_theorem.png" alt=""/><br>
+補充<br>
+<img src="img/temp/1_3.png" alt=""/><br>
+這樣假設
+\(
+n\in\mathbb{Z}^+
+\)，若\(
+(n-1)!\equiv-1\pmod{n}
+\)，則\(
+n
+\)為質數。<br>
+證明:<br>
+利用反證法，假設\( n \)為組合數，則\( 
+(n-1)!\not\equiv-1\pmod{n}
+\)，
+因為\( n \)為組合數，那有一個質數\( p \)，使得\( p|n \)，這樣在\((n-1)!\)展開的乘積裡會有\( p \)這個值，那\( (n-1)!\equiv0\pmod{n} \)，也就\(
+(n-1)!\not\equiv-1\pmod{n}
+\)成立。<br>
+因此，
+\(
+n\in\mathbb{Z}^+
+\)，若\(
+(n-1)!\equiv-1\pmod{n}
+\)，則\(
+n
+\)為質數。<br><br>
+可用來檢測這個值是否為質數，如果不符合此定理，這個值就不是質數。<br>
+<hr>
+<h2>引理</h2>
+假設
+\(
+a,b,c,n\in\mathbb{Z}
+\)，若\(
+\gcd(n,c)=1
+\)，則\[
+a\equiv b\pmod{n}
+\Leftrightarrow
+ac\equiv bc\pmod{n}
+\]
+<h3>證明</h3>
+(\( \Rightarrow  \))<br>
+因為\( a\equiv b\pmod{n} \)，所以\( n|(a-b) \)成立，那\( (a-b) \)乘上一個與\( n \)互質的數，得\( n|(a-b)c \)還是成立。<br>
+\( n|(a-b)c=n|(ac-bc) \)，因此\( ac\equiv bc\pmod{n} \)。
+<br><br>
+(\( \Leftarrow  \))<br>
+因為\( ac\equiv bc\pmod{n} \)，所以\( n|(ac-bc) =n|c(a-b)\)，又因為\( c \)與\( n \)互質，所以\( n|(a-b) \)成立，因此\( a\equiv b\pmod{n} \)。
+<br>
+<br>
+左右式推導成立，所以\( a\equiv b\pmod{n}\Leftrightarrow ac\equiv bc \pmod{n}\)。
+
+<hr>
+<h2>Euler \( \phi \)-函數</h2>
+<h3>定義</h3>
+假設\( m\in\mathbb{Z}^+ \)，定義Euler \( \phi \)-函數(Euler's \( \phi \)-function) \( \phi(n) \)為\( \{1,2,\dots,n-1\} \)中與\( n \)互質的元素個數，函數\( \phi(n) \)也稱為Euler's totient function。
+<h3>例題</h3>
+\( \phi(7)=6 \)<br>
+\( \phi(8)=\phi(10)=\phi(12)=4 \)<br>
+\( \phi(4)=\phi(6)=2 \)
+<h3>互質個數-排容原理</h3>
+<a href="../../counting/img/inclusion_exclusion_euler_s_phi_function.png" target="_blank">排列組合-手寫</a>
+<br>
+假設\( n=p_{1}^{e_1}p_{2}^{e_2}\dots p_{k}^{e_k} \)
+為\( n \)的質因數分解，則\( \phi(n)=n\displaystyle\Pi_{j=1}^k(1-\frac{1}{p_j}) \)<br>
+
+<hr>
 <footer>
 <h4>Reference</h4>
 黃子嘉-離散數學
