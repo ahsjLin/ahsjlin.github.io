@@ -1,0 +1,484 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<!-- Chapter 1 Introduction -->
+<h2>Chapter 1 - Introduction</h2>
+<table>
+<tr>
+<th>Question 1-1</th>
+</tr>
+	<tr>
+		<td>
+<p>
+How are network computers different from traditional personal computers? Describe some usage scenarious in which it is advantageous to use network computers.
+</p>
+
+		</td>
+	</tr>
+
+<tr>
+<th>
+Answer
+</th>
+</tr>
+<tr>
+<td>
+<p>
+A network computer relies on centralized computer for most of its services. It can therefore have a minimal operating system to manage its resources. A personal computer on the other hand has to be capable of providing all of the required functionality in a stand-alone manner without relying on a centralized manner. Scenarios where administrative costs are high and where sharing leads to more efficient use of resources are precisely those settings where network computers are preferred.
+</p>
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<th>Question 1-2</th>
+</tr>
+<tr>
+<td>
+What network configuration would best suit the following environments?
+<ol>
+<li>A dormitory floor</li>
+<li>A university campus</li>
+<li>A state</li>
+<li>A nation</li>
+</ol>
+</td>
+</tr>
+<tr><th>Answer</th></tr>
+<tr>
+<td>
+<ol>
+<li>A dormitory floor - LAN</li>
+<li>A university campus - LAN</li>
+<li>A state - WAN</li>
+<li>A nation - WAN</li>
+</ol>
+</td>
+</tr>
+</table>
+<table>
+<tr><th>Question 1-3</th></tr>
+<tr>
+<td>
+Give two reasons why caches are useful. What problems do they solve? What problems do they cause? If a cache can be made as large as the device for which it is caching(for instance, a cache as large as a disk), why not make it that large and eliminate the device?
+</td>
+</tr>
+<tr><th>Answer</th></tr>
+<tr>
+<td>
+Caches are useful when two or more components need to exchange data and the components perform transfers at differing speeds. Caches solve the transfer problem by providing a buffer of intermediate speed between the components. If the fast device finds the data it needs in the cache, it need not wait for the slower device. The data in the cache must be kept consistent with the data in the components. If a component has a data value change, and the datum is also in the cache, the cache must also be updated. This is especially a problem on multiprocessor systems where more than one process may be accessing a datum. A component may be eliminated by an equal-sized cache, but only if: (a). the cache and the component have equivalent state-saving capacity (that is, if the component retains its data when electricity is removed, the cache must retain data as well), and (b). the cache is affordable, because faster storage tends to be more expensive.
+</td>
+</tr>
+</table>
+<table>
+<tr><th>Question 1-4</th></tr>
+<tr>
+<td>
+Under what circumstances would a user be better off using a time-sharing system rather than a PC or a single-user workstation?
+</td>
+</tr>
+<tr><th>Answer</th></tr>
+<tr>
+<td>
+When there are few other users, the task is large, and the hardware is fast, time-sharing makes sense. The full power of the system can be brought to bear on the user's problem. The problem can be solved faster than on a personal computer. Another case occurs when lots of other users need resources at the same time.
+</td>
+</tr>
+</table>
+<table>
+<tr><th>Question 1-5</th></tr>
+<tr>
+<td>
+List the four steps that are necessary to run a program on a completely dedicated machine - a computer that is running only that program.
+</td>
+</tr>
+<tr>
+<th>Answer</th>
+</tr>
+<tr>
+<td>
+<ol>
+<li>Reserve machine time.</li>
+<li>Manually load program into memory</li>
+<li>Load starting address and begin execution.</li>
+<li>Monitor and control execution of program from console.</li>
+</ol>
+</td>
+</tr>
+</table>
+
+<table>
+<tr><th>Question 1-6</th></tr>
+<tr>
+<td>
+How does the distinction between kernel mode and user mode function as a rudimentary form of protection (security) system?
+</td>
+</tr>
+<tr> <th>Answer</th> </tr>
+<tr>
+<td>
+The distinction between kernel mode and user mode provides a rudimentary form of protection in the following manner. Certain instructions could be executed only when the CPU is in kernel mode. Similarly, hardware devices could be accessed only when the program is executing in kernel mode. Control over when interrupts could be enabled or disabled is also possible only when the CPU is in kernel mode. Consequently, the CPU has very limited capability when executing in user mode, thereby enforcing protection of critical resources.
+</td>
+</tr>
+</table>
+
+<table>
+<tr><th>Question 1-7</th></tr>
+<tr>
+<td>
+In a multiprogramming and time-sharing environment, several users share the system simultaneously. This situation can result in various security problems.
+<ol>
+	<li>What are two such problems?</li>
+	<li>Can we ensure the same degree of security in a time-shared machine as in a dedicated machine? Explain your answer.</li>
+</ol>
+</td>
+</tr>
+<tr><th>Answer</th></tr>
+<tr>
+<td>
+<ol>
+	<li>
+	<ol>
+		<li>Stealing or copying one's programs or data.</li>
+		<li>Using system resources(CPU, memory,disk space, peripherals)without proper accounting.</li>
+	</ol></li>
+	<li>Probably not, since any protection scheme devised by humans can inevitably be broken by a human, and the more complex the scheme, the more difficult it is to feel confident of its correct implementation.</li>
+</ol>
+</td>
+</tr>
+</table>
+<table>
+<tr><th>Question 1-8</th></tr>
+<tr><td>
+Describe a mechanism for enforcing memory protection in order to prevent a program from modifying the memory associated with other programs.
+	</td></tr>
+<tr><th>Answer</th></tr>
+<tr><td>
+The processor could keep track of what locations are associated with each process and limit access to locations that are outside of a program's extent. Information regarding the extent of a program's memory could be maintained by using base and limits registers and by performing a check for every memory access.
+</td></tr>
+</table>
+<table>
+<tr><th>Question 1-9</th></tr>
+<tr><td>
+What are the tradoffs inherent in handheld computers?
+</td></tr>
+<tr> <th>Answer</th> </tr>
+<tr>
+<td>
+Handheld computers are much smaller than traditional desktop PCs. This reults in smaller memory, smaller screens, and slower processing capabilities than a standard desktop PC. Because of these limitations, most handhelds currently can perform only basic tasks such as calendars, email, and simple word processing. However, due to their small size, they are quite portable and, when they are equipped with wireless access, can provide remote access to electronic mail and the world wide web.
+</td>
+</tr>
+</table>
+<table>
+<tr><th>Question 1-10</th></tr>
+<tr>
+<td>
+Distinguish between the client-server and peer-to-peer models of distributed systems.
+</td>
+</tr>
+<tr> <th>Answer</th> </tr>
+<tr>
+<td>
+The client-server model firmly distingushes the roles of the client and server. Under this model, the client requests services that are provided by the server. The peer-to-peer model doesn't have such strict roles. In fact, all nodes in the system are considered peers and thus may act as either clients or servers - or both. A node may request a service from another peer, or the node may in fact provide such a service to other peers in the system.
+</td>
+</tr>
+</table>
+<table>
+<tr><th>Question 1-11</th></tr>
+<tr><td>Some computer systems do not provide a privileged mode of operation in hardware. Is it possible to construct a secure operating system for these computer systems? Give arguments both that it is and that it is not possible.</td></tr>
+<tr><th>Answer</th></tr>
+<tr>
+<td>
+An operating system for a machine of this type would need to remain in control (or monitor mode) at all times. This could be accomplished by two methods:
+<ol>
+	<li>Software interpretation of all user programs(like some BASIC, Jave, and LISP systems, for example). The software interpreter would provide, in software, what the hardware does not provide.</li>
+	<li>Require that all programs be written in high-level languages so that all object code is compiler-produced. The compiler would generate (either in-line or by function calls) the protection checks that the hardware is missing.</li>
+</ol>
+</td>
+</tr>
+</table>
+<table>
+<tr><th>Question 1-12</th></tr>
+<tr>
+<td>
+What are the main differences between operating systems for mainframe computers and personal computers?
+</td>
+</tr>
+<tr> <th>Answer(?)</th> </tr>
+<tr>
+<td>
+Generally, operating systems for batch systems have simpler requirements than for personal computers. Batch systems do not have to be concerned with interacting with a user as much as a personal computer. As a result, an operating system for a PC must be concerned with response time for an interactive user. Batch systems do not have such requirements. A pure batch system also may have not to handle time sharing, whereas an operating system must switch rapidly between different jobs.
+</td>
+</tr>
+</table>
+
+<table>
+<tr><th>Question 1-13</th></tr>
+<tr>
+<td>
+Which of the following instructions should be privileged?
+<ol>
+	<li>Set value of timer.</li>
+	<li>Read the clock.</li>
+	<li>Clear memory</li>
+	<li>Issue a trap instruction.</li>
+	<li>Turn off interrupts.</li>
+	<li>Modify entries in device-status table.</li>
+	<li>Switch from user to kernel mode.</li>
+	<li>Access I/O device.</li>
+</ol>
+</td>
+</tr>
+<tr><th>Answer</th></tr>
+<tr><td>
+The following operations need to be pribileged:
+
+<ol>
+
+	<li>Set value of timer.</li>
+	<li>Clear memory</li>
+	<li>Turn off interrupts.</li>
+	<li>Modify entries in device-status table.</li>
+	<li>Access I/O device.</li>
+</ol>
+
+</td></tr>
+</table>
+<table>
+<tr><th>Question 1-14</th></tr>
+<tr>
+<td>
+Discuss, with examples, how the problem of maintaining coherence of cached data manifects itself in the following processing environments:
+<ol>
+	<li>Single-processor systems</li>
+	<li>Multiprocessor systems</li>
+	<li>Distributed systems</li>
+</ol>
+</td>
+</tr>
+<tr><th>Answer</th></tr>
+<tr><td>
+In single-processor systems, the memory needs to be updated when a processor issues updates to cached values. These updates can be performed immediately or in a lazy manner. In a multiprocessor system, differnet processors might be caching the same memory location in its local caches. When updates are made, the other cached locations need to be invalidated or updated. In distributed systems, consistency of cached memory values is not an issue. However, consistency problems might arise when a client caches file data.
+</td></tr>
+</table>
+<table>
+<tr><th>Question 1-15</th></tr>
+<tr><td>
+Identify several advantages and several disadvantages of open-source operating systems. Include the types of people who would find each aspect to be an advantage or a disadvantage.
+</td></tr>
+<tr><th>Answer</th></tr>
+<tr><td>
+Open source operating systems have the advantages of having many people working on them, many people debugging them, ease of access and distribution, and rapid update cycles. Further, for students and programmers there is certainly an advantage to being able to view and modify the source code. Typically open source operating systems are free for some forms of use, usually just requiring payment for support services. Commercial operating system companies usually do not like the competition that open source operating systems bring because these features are difficult to compete against. Some open source operating systems do not offer paid support programs. Some companies avoid open source projects becuase they need paid support, so that they have some entity to hold accountable if there is a problem or they need help fixing an issue. Finally, some complain that a lack of discipline in the coding of open source operating systems means that backward-compatiblity is lacking making upgrades difficult, and that the frequent release cycle exacerbates these issues by forcing users to upgrade frequently.		
+</td></tr>
+</table>
+<table>
+<tr><th>Question 1-16</th></tr>
+<tr><td>
+How do clustered systems diff from multiprocessor systems? What is required for two machines belonging to a cluster to cooperate to provide a highly available service?
+</td></tr>
+<tr><th>Answer</th></tr>
+<tr><td>
+Clustered systems are typically constructed by combining multiple computers into a single system to perform a computational task distributed across the cluster. Multiprocessor systems on the other hand could be a single physical entity comprising of multiple CPUs. A clustered system is less tightly coupled than a multiprocessor system. Clustered systems communicate using messages, while processors in a multiprocessor system could communicate using shared memory.<br>
+<br>
+In order for two machines to provide a highly available service, the state on the two machines should be replicated and should be consistently updated. When one of the machines fails, the other could then takeover the functionality of the failed machine.
+</td></tr>
+</table>
+<table>
+<tr><th>Question 1-17</th></tr>
+<tr><td>
+What is the main difficulty that a programmer must overcome in writing an operating system for a real-time environment?		
+</td></tr>
+<tr><th>Answer</th></tr>
+<tr><td>
+The main difficulty is keeping the operating system within the fixed time constraints of a real-time system. If the system does not complete a task in a certain time frame, it may cause a breakdown of the entire system it is running. Therefore when writing an operating system for a real-time system, the writer must be sure that his scheduling schemes don't allow repsonse time to exceed the time constraint.		
+</td></tr>
+</table>
+<table>
+<tr><th>Question 1-18</th></tr>
+<tr><td>
+Direct memory access is used for high-speed I/O devices in order to avoid increasing the CPU's execution load.
+<ol>
+	<li>How does the CPU interface with the device to coordinate the transfer?</li>
+	<li>How does the CPU know when the memory operations are complete?</li>
+	<li>The CPU is allowed to execute other programs while the DMA controller is transferring data. Does this process interfere with the execution of the user programs? If so, describe what forms of interference are cased.</li>
+</ol>
+</td></tr>
+<tr><th>Answer</th></tr>
+<tr><td>
+The CPU can initiate a DMA operation by writing values into special registers that can be independently accessed by the device. The device initiates the corresponding operation once it receives a command from the CPU. When the device is finished with its operation, it interrupts the CPU to indicate the completion of the operation.<br>
+<br>
+Both the device and the CPU can be accessing memory simultaneously. The memory controller provides access to the memory bus in a fair manner to these two entities. A CPU might therefore be unable to issue memory operations at peak speeds since it has to compete with the device in order to obtain access to the memory bus.
+</td></tr>
+</table>
+<table>
+<tr><th>Question 1-19</th></tr>
+<tr><td>
+Identify which of the functionalities listed below need to be supported by the operating system for (a). handheld devices and (b). real-time systems.
+<ul>
+	<li>Batch programming</li>
+	<li>Virtual memory</li>
+	<li>Time sharing</li>
+</ul>
+</td></tr>
+<tr><th>Answer</th></tr>
+<tr><td>
+For real-time systems, the operating system needs to support virtual memory and time sharing in a fair manner. For handheld systems, the operating system needs to provide virtual memory, but does not need to provide time-sharing. Batch programming is not necessary in both settings.
+</td></tr>
+</table>
+<table>
+<tr><th>Question 1-20</th></tr>
+<tr><td>
+Some CPUs provide for more than two modes of operation. What are two possible uses of these multiple modes?
+</td></tr>
+<tr><th>Answer</th></tr>
+<tr><td>
+Although most systems only distinguish between user and kernel modes, some CPUs have supported multiple modes. Multiple modes could be used to provide a finer-grained security policy. For example, rather than distinguishing between just user and kernel mode, you could distinguish between different types of user mode. Perhaps users belonging to the same group could execute each other's code. The machine would go into a specified mode when one of these users was running code. When the machine was in this mode, a member of the group could run code belonging to anyone else in the group.<br>
+<br>
+Another possibility would be to provide different distinctions within kernel code. For example, a specific mode could allow USB device drivers to run. This would mean that USB devices could be serviced without having to switch to kernel mode, thereby essentially allowing USB device drivers to run in a quasi-user(準用戶??)/kernel mode.
+</td></tr>
+</table>
+
+<table>
+<tr><th>Question 1-21</th></tr>
+<tr>
+<td>
+Define the essential properties of the following types of operating systems:
+<ol>
+	<li>Batch</li>
+	<li>Interactive</li>
+	<li>Time sharing</li>
+	<li>Real time</li>
+	<li>Network</li>
+	<!-- <li>Parallel</li> -->
+	<li>Distributed</li>
+	<li>Clustered</li>
+	<li>Handheld</li>
+</ol>
+</td>
+</tr>
+<tr><th>Answer</th></tr>
+<tr>
+<td>
+<b>Batch:</b> Jobs with similar needs are batched together and run through the computer as a group by an operator or automatic job sequencer. Performance is increased by attempting to keep CPU and I/O devices busy at all times through buffering, off-line operation, spooling, and multiprogramming. Batch is good for executing large jobs that need little interaction; they can be submitted and picked up later.<br>
+<b>Interactive:</b> This system is composed of many short transactions where the results of the next transaction may be unpredictable. Response time needs to be short (seconds) since the user submits and waits for the result.<br>
+<b>Time sharing:</b> This system uses CPU scheduling and multiprogramming to provide economical interactive use of a system. The CPU switches rapidly from one user to another. Instead of having a job defined by spooled card images, each program reads its next control card from the terminal and output is normally printed immediately to the screen.<br>
+<b>Real time:</b> Often used in a dedicated application, this system reads information from sensors and must respond within a fixed amount of time to ensure correct performance.<br>
+<b>Network:</b> Provides operating system features across a network such as file sharing.<br>
+<b>(Not in the Question)SMP:</b> Used in systems where there are multiple CPUs each running the same copy of the operating system. Communication takes place across the system bus.<br>
+<b>Distributed:</b> This system distributes computation among several physical processors. The processors do not share memory or a clock. Instead, each processor has its own local memory. They communicate with each other through various communication lines, such as a high-speed bus or local area network.<br>
+<b>Clustered:</b> A clustered system combines multiple computers into a single system to perform computational tasks distributed across the cluster.<br>
+<b>Handheld:</b> A small computer system that performs simple tasks such as calendars, email, and web browsing. Handheld systems differ from traditional desktop systems with smaller memory and display screens and slower processors.
+</td>
+</tr>
+</table>
+<table>
+<tr><th>Question 1-22</th></tr>
+<tr>
+<td>
+Describe the differences between symmetric and asymmetric multiprocessing. What are three advantages and one disadvantage of multiprocessor systems?
+</td>
+</tr>
+<tr><th>Answer</th></tr>
+<tr>
+<td>
+Symmetric multiprocessing treats all processors as equals, and I/O can be processed on any CPU. Asymmetric multiprocessing has one master CPU and the remainder CPUs are slaves. The master distributes tasks among the slaves, and I/O is usually done by the master only. Multiprocessors can save money by not duplicating power supplies, housings, and peripherals. They can execute programs more quickly and can have increased reliability. They are also more complex in both hardware and software than uniprocessor systems.
+</td>
+</tr>
+</table>
+<table>
+<tr><th>Question 1-23</th></tr>
+<tr>
+<td>
+The issue of resource utilization shows up in different forms in different types of operating systems. List what resources must be managed carefully in the following settings:
+<ol>
+	<li>Mainframe or minicomputer system</li>
+	<li>Workstations connected to servers</li>
+	<li>Handheld computers</li>
+</ol>
+</td>
+</tr>
+<tr><th>Answer</th></tr>
+<tr>
+<td>
+<ol>
+	<li><b>Mainframes:</b>memory and CPU resources, storage, network bandwidth</li>
+	<li><b>Workstations:</b>memory and CPU resources</li>
+	<li><b>Handheld computers:</b>power consumption, memory resources</li>
+</ol>
+</td>
+</tr>
+</table>
+<table>
+<tr><th>Question 1-24</th></tr>
+<tr>
+<td>
+What is the purpose of interrupts? What are the differences between a trap and an interrupt? Can traps be generated intentionally by a user program? If so, for what purpose?
+</td>
+</tr>
+<tr><th>Answer</th></tr>
+<tr>
+<td>
+An interrupt is a hardware-generated change of flow within the system. An interrupt handler is summoned to deal with the cause of the interrupt; control is then returned to the interrupted context and instruction. A trap is a software-generated interrupt. An interrupt can be used to signal the completion of an I/O to obviate the need for device polling. A trap can be used to call operating system routines or to catch arithmetic errors.
+</td>
+</tr>
+</table>
+<table>
+<tr><th>Question 1-25</th></tr>
+<tr>
+<td>
+<img src="img/fig_1_6_symmetric_multiprocessing_architecture.png" alt="fig_1_6_symmetric_multiprocessing_architecture.png"/><br>
+Consider an SMP system similar to what is shown in Figure 1.6. Illustrate with an example how data residing in memory could in fact have two different values in each of the local caches.
+</td>
+</tr>
+<tr><th>Answer</th></tr>
+<tr>
+<td>
+Say processor 1 read data A with value 5 from main memory into its local cache. Similarly, processor 2 reads data A into its local cache as well. Processor 1 then updates A to 10. However, since "A" resides in processor 1's local cache, the update only occurs there and not in the local cache for processor 2.
+</td>
+</tr>
+</table>
+<table>
+<tr><th>Question 1-26</th></tr>
+<tr>
+<td>
+Consider a computing cluster consisting of two nodes running a database. Describe two ways in which the cluster software can manage access to the data on the disk. Discuss the benefits and disadvantages of each.
+</td>
+</tr>
+<tr><th>Answer</th></tr>
+<tr>
+<td>
+Consider the following two alternatives:<b>asymmetric clustering</b> and <b>parallel clustering</b>. With asymmetric clustering, one host runs the database application with the other host simply monitoring it. If the server fails, the monitoring host becomes the active server. This is appropriate for providing redundancy. However, it does not utilize the potential processing power of both hosts. With parallel clustering, the database application can run in parallel on both hosts. The difficulty in implementing parallel clusters is providing some form of distributed locking mechanism for files on the shared disk.
+</td>
+</tr>
+</table>
+
+<hr>
+<footer>
+<h2>Reference</h2>
+Abraham Silberschatz, Greg Gagne, Peter B. Galvin -Operating System Concepts
+</footer>
+
+</body>
+</html>
