@@ -1,7 +1,8 @@
 <link rel="icon" href="sd-card.png"/>
 ### <a href="one_more_time.html" target="_blank">在一次(再</a>
-
+<!--
 ### <a href="programming/c/c.html" target="_blank">C</a>
+-->
 
 ### <a href="programming/cpp/note.html" target="_blank">Cpp</a>
 
