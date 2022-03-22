@@ -219,12 +219,14 @@
 <a href="https://www.youtube.com/watch?v=wtFWcZGZO5w" target="_blank">疤</a> <br />
 <a href="https://www.youtube.com/watch?v=9atLLuPKBZ8" target="_blank">年</a> <br />
 <a href="https://www.youtube.com/watch?v=yhprObGV8CA" target="_blank">鬼</a> <br />
+<a href="https://www.youtube.com/watch?v=c9ojHGZDqZw" target="_blank">醜</a> <br />
 <a href="https://www.youtube.com/watch?v=ogVh1oARGuM" target="_blank">嘉賓</a> <br />
 <a href="https://www.youtube.com/watch?v=nVjVpX3gRWk" target="_blank">米兒</a> <br />
 <a href="https://www.youtube.com/watch?v=wObwg3Fj08k" target="_blank">菲菲</a> <br />
 <a href="https://www.youtube.com/watch?v=GedcwChv85k" target="_blank">半心</a> <br />
 <a href="https://www.youtube.com/watch?v=x0J2rs2Qg-0" target="_blank">不滅</a> <br />
 <a href="https://www.youtube.com/watch?v=kiSwS-4nFd0" target="_blank">可是</a> <br />
+<a href="https://www.youtube.com/watch?v=I_SLgMIxF-s" target="_blank">形容</a> <br />
 <a href="https://www.youtube.com/watch?v=vxucCfcMFCk" target="_blank">唯一</a> <br />
 <a href="https://www.youtube.com/watch?v=DE4San2d3L4" target="_blank">瓦力</a> <br />
 <a href="https://www.youtube.com/watch?v=mA63cwyEGdk" target="_blank">遇到</a> <br />
@@ -236,12 +238,17 @@
 <a href="https://www.youtube.com/watch?v=4bSeT_9gmJs" target="_blank">安九</a> <br />
 <a href="https://www.youtube.com/watch?v=UF2dBuJo9z0" target="_blank">裡面</a> <br />
 <a href="https://www.youtube.com/watch?v=QWN8ZnqElq4" target="_blank">無眠</a> <br />
+<a href="https://www.youtube.com/watch?v=xrooMGuRhgY" target="_blank">白羊</a> <br />
 <a href="https://www.youtube.com/watch?v=peEAo2J7SuU" target="_blank">拼圖</a> <br />
 <a href="https://www.youtube.com/watch?v=PdX3Fu0dkWI" target="_blank">大海</a> <br />
 <a href="https://www.youtube.com/watch?v=TSnhluY4SWw" target="_blank">山海</a> <br />
 <a href="https://www.youtube.com/watch?v=_Y3JpKNVvcc" target="_blank">煙花</a> <br />
+<a href="https://www.youtube.com/watch?v=M6gcoDN9jBc" target="_blank">逆夢</a> <br />
 <a href="https://www.youtube.com/watch?v=oAUmNEUJlJ0" target="_blank">囂張</a> <br />
+<a href="https://www.youtube.com/watch?v=k1YQE3YeMyw" target="_blank">心悶</a> <br />
+<a href="https://www.youtube.com/watch?v=S4JLJVVjevI" target="_blank">捲菸</a> <br />
 <a href="https://www.youtube.com/watch?v=W1FYJ8nqQZQ" target="_blank">鯊魚</a> <br />
+<a href="https://www.youtube.com/watch?v=sgDqHSQRJFg" target="_blank">365节</a> <br />
 <a href="https://www.youtube.com/watch?v=137QoB4tQfc" target="_blank">他媽的</a> <br />
 <a href="https://www.youtube.com/watch?v=pM9zZinLvkA" target="_blank">惡作劇</a> <br />
 <a href="https://www.youtube.com/watch?v=qEx_jCzEjHI" target="_blank">說愛你</a> <br />
@@ -250,6 +257,10 @@
 <a href="https://www.youtube.com/watch?v=1cj1BApoYF0" target="_blank">南山南</a> <br />
 <a href="https://www.youtube.com/watch?v=t7VXOCxwLDg" target="_blank">關渡口</a> <br />
 <a href="https://www.youtube.com/watch?v=ftfAAINr1zc" target="_blank">擋一根</a> <br />
+<a href="https://www.youtube.com/watch?v=h2VO3TXoXWw" target="_blank">從前說</a> <br />
+<a href="https://www.youtube.com/watch?v=xbDZW21mczQ" target="_blank">那種人</a> <br />
+<a href="https://www.youtube.com/watch?v=5M_gj4zrVPs" target="_blank">他不懂</a> <br />
+<a href="https://www.youtube.com/watch?v=x-SVAkOGfNY" target="_blank">都是你</a> <br />
 <a href="https://www.youtube.com/watch?v=-zQWavER7to" target="_blank">海の声</a> <br />
 <a href="https://www.youtube.com/watch?v=M0BuamHzF7w" target="_blank">青い栞</a> <br />
 <a href="https://www.youtube.com/watch?v=YN8nNsHzDQ8" target="_blank">4:00A.M</a> <br />
@@ -257,6 +268,7 @@
 <a href="https://www.youtube.com/watch?v=nGF9ANRIYck" target="_blank">甲午戰爭</a> <br />
 <a href="https://www.youtube.com/watch?v=ZrpZB8-VBD0" target="_blank">安平之光</a> <br />
 <a href="https://www.youtube.com/watch?v=6D79CYTxvOM" target="_blank">愛人錯過</a> <br />
+<a href="https://www.youtube.com/watch?v=DVUAd1OTflE" target="_blank">若無其事</a> <br />
 <a href="https://www.youtube.com/watch?v=e5WNNL13bYU" target="_blank">男孩别哭</a> <br />
 <a href="https://www.youtube.com/watch?v=dCcjL2X7jho" target="_blank">四季予你</a> <br />
 <a href="https://www.youtube.com/watch?v=FIK4InBh6lE" target="_blank">餘生漫漫</a> <br />
@@ -279,8 +291,12 @@
 <a href="https://www.youtube.com/watch?v=1A76BpaOJfY" target="_blank">愛してる</a> <br />
 <a href="https://www.youtube.com/watch?v=JFXby7yfGGw" target="_blank">灰色先生</a> <br />
 <a href="https://www.youtube.com/watch?v=8tuzFSXeKI0" target="_blank">與我無關</a> <br />
+<a href="https://www.youtube.com/watch?v=JbkUCkbPKUI" target="_blank">巴黎德州</a> <br />
 <a href="https://www.youtube.com/watch?v=hQsOL_DSv9w" target="_blank">藍色眼睛</a> <br />
+<a href="https://www.youtube.com/watch?v=nOb4PCJCtxs" target="_blank">曼徹斯特</a> <br />
 <a href="https://www.youtube.com/watch?v=vcncUq1Jc2M" target="_blank">斑馬 斑馬</a> <br />
+<a href="https://www.youtube.com/watch?v=sjxii2GXn9Y" target="_blank">這樣 那樣</a> <br />
+<a href="https://www.youtube.com/watch?v=cvnEqZIRgFk" target="_blank">靠近一點點</a> <br />
 <a href="https://www.youtube.com/watch?v=FGeYMR8hDF8" target="_blank">安靜的美好</a> <br />
 <a href="https://www.youtube.com/watch?v=-6Q7-JZu3lU" target="_blank">習慣不習慣</a> <br />
 <a href="https://www.youtube.com/watch?v=p0GPJbdKhCw" target="_blank">奇妙能力歌</a> <br />
@@ -291,32 +307,43 @@
 <a href="https://www.youtube.com/watch?v=tIxRFojt5GU" target="_blank">戀愛的犀牛</a> <br />
 <a href="https://www.youtube.com/watch?v=xpLKFFrWb6Q" target="_blank">殘缺的彩虹</a> <br />
 <a href="https://www.youtube.com/watch?v=cV3Z3usC73M" target="_blank">正想著你呢</a> <br />
+<a href="https://www.youtube.com/watch?v=JGK5Z0h33NA" target="_blank">無你的故事</a> <br />
+<a href="https://www.youtube.com/watch?v=y3bg-9I50uI" target="_blank">我會記得妳</a> <br />
 <a href="https://www.youtube.com/watch?v=iDfZua4IS4A" target="_blank">接下來如何</a> <br />
 <a href="https://www.youtube.com/watch?v=MrxI-lW7adU" target="_blank">一去不回來</a> <br />
+<a href="https://www.youtube.com/watch?v=tv95k0zqnaA" target="_blank">旅行的意義</a> <br />
+<a href="https://www.youtube.com/watch?v=GgZaIqusssA" target="_blank">多雨的城市</a> <br />
 <a href="https://www.youtube.com/watch?v=ATblV50Odx8" target="_blank">紅色高跟鞋</a> <br />
 <a href="https://www.youtube.com/watch?v=e0eHvsAFZbU" target="_blank">Every Word</a> <br />
 <a href="https://www.youtube.com/watch?v=p6c4TztpxC4" target="_blank">You'll see</a> <br />
 <a href="https://www.youtube.com/watch?v=Xy5YtJE1Eqk" target="_blank">Shine for Me</a> <br />
 <a href="https://www.youtube.com/watch?v=UmIkVEYqDzQ" target="_blank">Here With Me</a> <br />
 <a href="https://www.youtube.com/watch?v=jEojOmwDap4" target="_blank">那女孩對我說</a> <br />
+<a href="https://www.youtube.com/watch?v=6MVSTArnJ_k" target="_blank">你要跟我走嗎</a> <br />
+<a href="https://www.youtube.com/watch?v=2gs9X_kybXQ" target="_blank">無關拯救的事</a> <br />
 <a href="https://www.youtube.com/watch?v=zGrYK1VTIjs" target="_blank">我們一樣可惜</a> <br />
+<a href="https://www.youtube.com/watch?v=odNYK272RtQ" target="_blank">愛的飛行日記</a> <br />
 <a href="https://www.youtube.com/watch?v=qEjA6lrEiyA" target="_blank">巴黎的十二點</a> <br />
 <a href="https://www.youtube.com/watch?v=E6ylX9oHQbw" target="_blank">戀愛困難少女</a> <br />
 <a href="https://www.youtube.com/watch?v=tdN7domIZfc" target="_blank">不完美練習題</a> <br />
+<a href="https://www.youtube.com/watch?v=mXeKYmS8p38" target="_blank">再陪我抽根菸</a> <br />
 <a href="https://www.youtube.com/watch?v=5Of9Rh4BxVo" target="_blank">恋をしたのは</a> <br />
 <a href="https://www.youtube.com/watch?v=BRToibo1tfw" target="_blank">Still Into You</a> <br />
 <a href="https://www.youtube.com/watch?v=y_oFumwbj3k" target="_blank">飛機場的10:30</a> <br />
 <a href="https://www.youtube.com/watch?v=G67MUh_ljkY" target="_blank">城市的浪漫運作</a> <br />
+<a href="https://www.youtube.com/watch?v=fl1Wbd-ldMQ" target="_blank">終究還是因為愛</a> <br />
 <a href="https://www.youtube.com/watch?v=eZ8K3JQ9Ks4" target="_blank">下次遇見再相愛</a> <br />
 <a href="https://www.youtube.com/watch?v=Q0Nn4TUXH5Y" target="_blank">留給你的我從未</a> <br />
 <a href="https://www.youtube.com/watch?v=uBuXRomV5E4" target="_blank">我不是你的快樂</a> <br />
 <a href="https://www.youtube.com/watch?v=9MMIB61e6sM" target="_blank">我把我的青春給你</a> <br />
 <a href="https://www.youtube.com/watch?v=MIR5SRaQJgQ" target="_blank">好想愛這個世界啊</a> <br />
+<a href="https://www.youtube.com/watch?v=7M2TxIYXxoM" target="_blank">害羞男孩戀愛日記</a> <br />
 <a href="https://www.youtube.com/watch?v=YYQRD6ng7to" target="_blank">可以陪在我身邊嗎</a> <br />
 <a href="https://www.youtube.com/watch?v=1BJ2WLddm50" target="_blank">木吉他民歌西餐廳</a> <br />
 <a href="https://www.youtube.com/watch?v=gWUNEKCJ5DU" target="_blank">絕對佔有 相對自由</a> <br />
 <a href="https://www.youtube.com/watch?v=lWLHG_mcDw4" target="_blank">在這座城市遺失了你</a> <br />
 <a href="https://www.youtube.com/watch?v=sEJKG60a1Zc" target="_blank">成為別人的女朋友了</a> <br />
+<a href="https://www.youtube.com/watch?v=FuDdstaZXdw" target="_blank">我的故事都是关于你</a> <br />
 <a href="https://www.youtube.com/watch?v=3Cl_kAngXhI" target="_blank">住在天狼星的那個人</a> <br />
 <a href="https://www.youtube.com/watch?v=sq6r4JQpO7Y" target="_blank">天真世界的叛徒(叛徒版)</a> <br />
 <a href="https://www.youtube.com/watch?v=AisgU9W_FWI" target="_blank">天真世界的叛徒(天真版)</a> <br />
@@ -325,22 +352,27 @@
 <a href="https://www.youtube.com/watch?v=DHMx_B9-zdY" target="_blank">你是我最愚蠢的一次浪漫</a> <br />
 <a href="https://www.youtube.com/watch?v=32LE4J4w6vU" target="_blank">杜斯妥耶夫斯基也不能的夜晚</a> <br />
 <a href="https://www.youtube.com/watch?v=xEVSuD4lu4s" target="_blank">對不起我做不到答應了你的事</a> <br />
+<a href="https://www.youtube.com/watch?v=c0VidrNYJm4" target="_blank">你能不能成為我的簡單的浪漫</a> <br />
 <a href="https://www.youtube.com/watch?v=UBT0_HEsKaI" target="_blank">你迎面走來 再面無表情地離開</a> <br />
 <a href="https://www.youtube.com/watch?v=rlRSJNHS40s" target="_blank">我沒有用 沒辦法給你想要的生活</a> <br />
 <a href="https://www.youtube.com/watch?v=v-7ygGWkU8A" target="_blank">yet</a> <br />
 <a href="https://www.youtube.com/watch?v=Krz6paVJMSk" target="_blank">如常(草東</a> <br />
 <a href="https://www.youtube.com/watch?v=dKatg043PDU" target="_blank">故障</a> <br />
 <a href="https://www.youtube.com/watch?v=OZ8UHEFmMtE" target="_blank">晚風</a> <br />
+<a href="https://www.youtube.com/watch?v=g88C1SsQUP8" target="_blank">好好</a> <br />
 <a href="https://www.youtube.com/watch?v=mWtGH9_AKT0" target="_blank">英雄</a> <br />
 <a href="https://www.youtube.com/watch?v=umZNqC5IkC0" target="_blank">錯過</a> <br />
 <a href="https://www.youtube.com/watch?v=UbPKL8gpVsc" target="_blank">偽裝</a> <br />
+<a href="https://www.youtube.com/watch?v=qBRi-vC0HPg" target="_blank">華生</a> <br />
 <a href="https://www.youtube.com/watch?v=uK4ExmTDxPM" target="_blank">更迭</a> <br />
 <a href="https://www.youtube.com/watch?v=FYNNLjn-CuI" target="_blank">愚者</a> <br />
+<a href="https://www.youtube.com/watch?v=xTX8Uy1JjaM" target="_blank">餘燼</a> <br />
 <a href="https://www.youtube.com/watch?v=8XKmk7lRmZ0" target="_blank">星星</a> <br />
 <a href="https://www.youtube.com/watch?v=Z7cnN8rMoQU" target="_blank">藍寶</a> <br />
 <a href="https://www.youtube.com/watch?v=SuFfufGloLg" target="_blank">光圈</a> <br />
 <a href="https://www.youtube.com/watch?v=QPY4h-nDIZ8" target="_blank">爛泥</a> <br />
 <a href="https://www.youtube.com/watch?v=ZTtNbQ70m4s" target="_blank">刑者</a> <br />
+<a href="https://www.youtube.com/watch?v=YXcuZilZjPw" target="_blank">文明</a> <br />
 <a href="https://www.youtube.com/watch?v=mAB0DoSgKGg" target="_blank">頂樓</a> <br />
 <a href="https://www.youtube.com/watch?v=oS1MtYEdtZY" target="_blank">25歲</a> <br />
 <a href="https://www.youtube.com/watch?v=j60ClcNYWu4" target="_blank">Zero</a> <br />
@@ -353,9 +385,13 @@
 <a href="https://www.youtube.com/watch?v=ft0ITHgYj04" target="_blank">四不像</a> <br />
 <a href="https://www.youtube.com/watch?v=RQsM2uvXow8" target="_blank">郭源潮</a> <br />
 <a href="https://www.youtube.com/watch?v=HqmpIQ9l-uA" target="_blank">大風吹</a> <br />
+<a href="https://www.youtube.com/watch?v=6kMSaIn1lw0" target="_blank">打雷了</a> <br />
 <a href="https://www.youtube.com/watch?v=Ad4CFJxOaAI" target="_blank">夜神月</a> <br />
 <a href="https://www.youtube.com/watch?v=7H52yGup84A" target="_blank">轉圈圈</a> <br />
-<a href="https://www.youtube.com/watch?v=Z92KU3yzVhA" target="_blank">Unravel </a> <br />
+<a href="https://www.youtube.com/watch?v=xSbeUixi22o" target="_blank">搖啊搖</a> <br />
+<a href="https://www.youtube.com/watch?v=k5Vls5GEf1Y" target="_blank">放個假</a> <br />
+<a href="https://www.youtube.com/watch?v=fnZF8nLGlug" target="_blank">Hellow</a> <br />
+<a href="https://www.youtube.com/watch?v=Z92KU3yzVhA" target="_blank">Unravel</a> <br />
 <a href="https://www.youtube.com/watch?v=SnXkhkEvNIM" target="_blank">光るなら</a> <br />
 <a href="https://www.youtube.com/watch?v=-oDRzgmYHms" target="_blank">5:10a.m.</a> <br />
 <a href="https://www.youtube.com/watch?v=10DHUqSVu6I" target="_blank">與浪之間</a> <br />
@@ -367,12 +403,21 @@
 <a href="https://www.youtube.com/watch?v=6q5Syk54i9U" target="_blank">平凡之路</a> <br />
 <a href="https://www.youtube.com/watch?v=6evIBFNwPWI" target="_blank">達拉崩吧</a> <br />
 <a href="https://www.youtube.com/watch?v=AROEc92rFUM" target="_blank">美麗的人</a> <br />
+<a href="https://www.youtube.com/watch?v=C1kwwMb4qB4" target="_blank">後會有期</a> <br />
 <a href="https://www.youtube.com/watch?v=gjBLu5gBnK0" target="_blank">God knows</a> <br />
+<a href="https://www.youtube.com/watch?v=8L1iRRbBdWA" target="_blank">tricolore</a> <br />
 <a href="https://www.youtube.com/watch?v=mt4QPkEsgys" target="_blank">香吉士之歌</a> <br />
+<a href="https://www.youtube.com/watch?v=7M4Sf5syyo4" target="_blank">成年不成熟</a> <br />
 <a href="https://www.youtube.com/watch?v=TY9pg-wBbvQ" target="_blank">梵谷的左耳</a> <br />
 <a href="https://www.youtube.com/watch?v=sAhXkIqo82A" target="_blank">無差別傷害</a> <br />
+<a href="https://www.youtube.com/watch?v=gmLSWPCQ7Y0" target="_blank">把音量轉小</a> <br />
 <a href="https://www.youtube.com/watch?v=1HXUL3Fzlqo" target="_blank">深夜兩點十分</a> <br />
 <a href="https://www.youtube.com/watch?v=zYEt24syYww" target="_blank">一如年少模樣</a> <br />
+<a href="https://www.youtube.com/watch?v=RUOYaJgwzL8" target="_blank">指向你的線索</a> <br />
+<a href="https://www.youtube.com/watch?v=m405naLWNuQ" target="_blank">啊不就好棒棒</a> <br />
+<a href="https://www.youtube.com/watch?v=A220EgRg878" target="_blank">SWAG Wu Jiao</a> <br />
+<a href="https://www.youtube.com/watch?v=kIcF2yfmGuQ" target="_blank">流浪狗與爛主人</a> <br />
+<a href="https://www.youtube.com/watch?v=ZD8mI6CQiRA" target="_blank">被貼上標籤的人</a> <br />
 <a href="https://www.youtube.com/watch?v=5es1og-IIIM" target="_blank">四月是你的謊言</a> <br />
 <a href="https://www.youtube.com/watch?v=qsm0eEQYvH0" target="_blank">空想メソロギヰ</a> <br />
 <a href="https://www.youtube.com/watch?v=CM-6FJlYHI4" target="_blank">Cazzo - ?te 壞特</a> <br />
@@ -381,6 +426,7 @@
 <a href="https://www.youtube.com/watch?v=VVN9wnTa-GQ" target="_blank">鑰匙掉了誰來救我</a> <br />
 <a href="https://www.youtube.com/watch?v=IGInsosP0Ac" target="_blank">Stand Out Fit In</a> <br />
 <a href="https://www.youtube.com/watch?v=RFwl98N_Kss" target="_blank">我常常有一種感覺</a> <br />
+<a href="https://www.youtube.com/watch?v=PDcCnfNg6Tc" target="_blank">如果我們都是繁星</a> <br />
 <a href="https://www.youtube.com/watch?v=NbNPJr_0tqA" target="_blank">我還年輕 我還年輕</a> <br />
 <a href="https://www.youtube.com/watch?v=wReFfJGMjBw" target="_blank">明天又是無聊的一天</a> <br />
 <a href="https://www.youtube.com/watch?v=On5Tdm8LWYs" target="_blank">残酷な天使のテーゼ</a> <br />
@@ -392,3 +438,4 @@
 <a href="https://www.youtube.com/watch?v=hkOaSf5aqUA" target="_blank">那些事情是真的有意思嗎</a> <br />
 <a href="https://www.youtube.com/watch?v=FNJG6MsKO0k" target="_blank">他們說我是沒有用的年輕人</a> <br />
 <a href="https://www.youtube.com/watch?v=UKmUMx2-ToQ" target="_blank">美好的事可不可以發生在我身上</a> <br />
+<a href="https://www.youtube.com/watch?v=U9OQAySv184" target="_blank">Toss A Coin To Your Witcher</a> <br />
