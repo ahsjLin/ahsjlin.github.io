@@ -9,3 +9,8 @@
 *.log
 *.out
 *.synctex*
+
+*.snm
+*.gz
+*.toc
+*.nav
