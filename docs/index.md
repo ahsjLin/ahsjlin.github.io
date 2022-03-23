@@ -20,7 +20,7 @@
 
 ### <a href="language/eng.html" target="_blank">English</a>
 
-### <a href="previous_exam/previous_exam.html" target="_blank">Past Exam</a>
+### <a href="previous_exam/frame.html" target="_blank">Past Exam</a>
 
 ### <a href="dump/dump.html" target="_blank">Dump</a>
 
