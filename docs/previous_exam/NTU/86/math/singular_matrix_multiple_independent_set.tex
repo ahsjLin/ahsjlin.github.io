@@ -1,0 +1,204 @@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@ Usepackage @@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\documentclass{article}
+% round numbers with space
+\usepackage{numprint}
+% key word
+% \nplpadding[characters]{digits}
+% \numprint{1234}
+
+
+% setting margin
+\usepackage[a4paper,left=0.5in,right=0.5in]{geometry}
+% color package
+\usepackage{xcolor}
+% tablur combine
+\usepackage{multirow}
+
+%--------------------
+%-- define comment --
+%--------------------
+%\long\def\/*#1*/{}
+%__ define comment __
+%____________________
+
+%------------------
+%-- math package --
+%------------------
+\usepackage{amssymb,amsmath,stmaryrd} 
+%------------------
+\usepackage{mathtools}
+%Reference: 
+%http://texdoc.net/texmf-dist/doc/latex/mathtools/mathtools.pdf
+%__ math package __
+%__________________
+
+
+%------------------------------------
+%-- insert {} to multiple folders ---
+%------------------------------------
+\usepackage{graphicx}
+\graphicspath{{./images/}, {./image/}} 
+%__ insert {} to multiple folders ___
+%____________________________________
+
+
+%------------------
+%-- use chinese ---
+%------------------
+\usepackage{CJKutf8}
+%__ use chinese ___
+%__________________
+
+%----------------------
+%-- use draw package --
+%----------------------
+\usepackage{tikz}
+%__ use draw package __
+%______________________
+
+
+%----------
+%-- url ---
+%----------
+\usepackage{hyperref}
+% sample
+% \url{http://...}
+% \href{http://...}{text hyperlink}
+%__ url ___
+%__________
+
+%----------
+%-- code --
+%----------
+\usepackage{listings}
+%ref:
+%https://www.itread01.com/content/1541828344.html
+\lstset{
+backgroundcolor=\color{white},% background color -> gray
+rulesepcolor= \color{gray}, % shadow color
+stringstyle=\color{purple}, % string color
+breaklines=true,  % wrap code
+numbers=left, % set row number on left
+numberstyle= \small,% row number size
+keywordstyle= \color{blue},% keyword color
+commentstyle=\color{gray}, % comment color
+frame=shadowbox% block code by line
+}
+
+%__ code __
+%__________
+
+%----------------
+%-- underline ---
+%----------------
+\usepackage{soul}
+% using with
+% ul{...}
+%__ underline ___
+%________________
+
+
+%----------------------
+%-- background color --
+%----------------------
+\usepackage{lipsum}
+\usepackage[most]{tcolorbox}
+\definecolor{bg}{RGB}{255,249,227}
+\definecolor{block_green}{RGB}{203,247,235}
+%__ background color __
+%______________________
+
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@@@@@@ Enumerate command @@@@@@@@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\makeatletter
+\newcommand\setItemnumber[1]{\setcounter{enum\romannumeral\@enumdepth}{\numexpr#1-1\relax}}
+\makeatother
+
+% command
+%\setItemnumber{5}
+%============== Enumerate command ===============
+%================================================
+
+%--------------------
+% -- Merge pdf ------
+\usepackage{pdfpages}
+
+%\includepdf[pages=-]{paper1}
+
+%--------------------
+%--------------------
+
+%----------------------------------------   multiple columns
+\usepackage{multicol}
+
+% begin{multicols}{2}
+%
+% end{multicols}
+%---------------------
+
+%------------------------------------------------------------
+%
+%               multiple divide add substract 
+%
+%------------------------------------------------------------
+% add multiple
+\usepackage{xlop}
+
+% \opmul{384}{56}
+% \opadd{1234}{567}
+
+% divide
+\usepackage{polynom}
+
+% \input{longdiv}
+% \longdiv{12345}{13}
+%
+%______________ multiple divide add substract _______________
+%____________________________________________________________
+
+
+%========= Usepackage =========
+%==============================
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@ Document @@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%------------
+%-- Start ---
+%------------
+\title{任何矩陣乘上線性獨立集\\
+是否還是線性獨立集\\
+86 台大資工}
+\author{\textbf{sjLin}}
+%\date{}
+\begin{document}
+% bsmi
+\begin{CJK*}{UTF8}{bkai}
+{\fontfamily{lmss}\selectfont
+\maketitle
+\noindent
+% here
+%__ Start ___
+%____________
+題目:\\
+\includegraphics[width=\textwidth]{./images/determine_independent_set.png}\\
+解:\\
+題目說$W$為線性獨立集，$A$為方陣，$A$乘上$W$內的所有向量，得出來的集合還是線性獨立集。\\
+假設有一線性獨立集$\{v_1,v_2,\dots,v_n\}$，獨立的條件是符合n個純量積,$\alpha_1,\alpha_2,\dots,\alpha_n$相加得$\alpha_1v_1+\alpha_2v_2+\dots+\alpha_nv_n=0$，且只有唯一解$\alpha_1=\alpha_2=\dots=\alpha_n=0$。\\
+題目沒有說$A$為可逆矩陣，所以$A$可能是不可逆的，那乘上$W$的向量，得出新的向量集，假設這個向量集為$N$，那就會發生裡頭的某一向量可以被其他向量產生出來。那$N$就不是線性獨立集了。
+
+%------------
+%-- Finish --
+%------------
+} % for fontfamily
+\end{CJK*}
+\end{document}
+%__ Finish __
+%____________
+
+%========= Document =========
+%============================

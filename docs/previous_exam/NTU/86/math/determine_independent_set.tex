@@ -1,0 +1,204 @@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@ Usepackage @@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\documentclass{article}
+% round numbers with space
+\usepackage{numprint}
+% key word
+% \nplpadding[characters]{digits}
+% \numprint{1234}
+
+
+% setting margin
+\usepackage[a4paper,left=0.5in,right=0.5in]{geometry}
+% color package
+\usepackage{xcolor}
+% tablur combine
+\usepackage{multirow}
+
+%--------------------
+%-- define comment --
+%--------------------
+%\long\def\/*#1*/{}
+%__ define comment __
+%____________________
+
+%------------------
+%-- math package --
+%------------------
+\usepackage{amssymb,amsmath,stmaryrd} 
+%------------------
+\usepackage{mathtools}
+%Reference: 
+%http://texdoc.net/texmf-dist/doc/latex/mathtools/mathtools.pdf
+%__ math package __
+%__________________
+
+
+%------------------------------------
+%-- insert {} to multiple folders ---
+%------------------------------------
+\usepackage{graphicx}
+\graphicspath{{./images/}, {./image/}} 
+%__ insert {} to multiple folders ___
+%____________________________________
+
+
+%------------------
+%-- use chinese ---
+%------------------
+\usepackage{CJKutf8}
+%__ use chinese ___
+%__________________
+
+%----------------------
+%-- use draw package --
+%----------------------
+\usepackage{tikz}
+%__ use draw package __
+%______________________
+
+
+%----------
+%-- url ---
+%----------
+\usepackage{hyperref}
+% sample
+% \url{http://...}
+% \href{http://...}{text hyperlink}
+%__ url ___
+%__________
+
+%----------
+%-- code --
+%----------
+\usepackage{listings}
+%ref:
+%https://www.itread01.com/content/1541828344.html
+\lstset{
+backgroundcolor=\color{white},% background color -> gray
+rulesepcolor= \color{gray}, % shadow color
+stringstyle=\color{purple}, % string color
+breaklines=true,  % wrap code
+numbers=left, % set row number on left
+numberstyle= \small,% row number size
+keywordstyle= \color{blue},% keyword color
+commentstyle=\color{gray}, % comment color
+frame=shadowbox% block code by line
+}
+
+%__ code __
+%__________
+
+%----------------
+%-- underline ---
+%----------------
+\usepackage{soul}
+% using with
+% ul{...}
+%__ underline ___
+%________________
+
+
+%----------------------
+%-- background color --
+%----------------------
+\usepackage{lipsum}
+\usepackage[most]{tcolorbox}
+\definecolor{bg}{RGB}{255,249,227}
+\definecolor{block_green}{RGB}{203,247,235}
+%__ background color __
+%______________________
+
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@@@@@@ Enumerate command @@@@@@@@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\makeatletter
+\newcommand\setItemnumber[1]{\setcounter{enum\romannumeral\@enumdepth}{\numexpr#1-1\relax}}
+\makeatother
+
+% command
+%\setItemnumber{5}
+%============== Enumerate command ===============
+%================================================
+
+%--------------------
+% -- Merge pdf ------
+\usepackage{pdfpages}
+
+%\includepdf[pages=-]{paper1}
+
+%--------------------
+%--------------------
+
+%----------------------------------------   multiple columns
+\usepackage{multicol}
+
+% begin{multicols}{2}
+%
+% end{multicols}
+%---------------------
+
+%------------------------------------------------------------
+%
+%               multiple divide add substract 
+%
+%------------------------------------------------------------
+% add multiple
+\usepackage{xlop}
+
+% \opmul{384}{56}
+% \opadd{1234}{567}
+
+% divide
+\usepackage{polynom}
+
+% \input{longdiv}
+% \longdiv{12345}{13}
+%
+%______________ multiple divide add substract _______________
+%____________________________________________________________
+
+
+%========= Usepackage =========
+%==============================
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@ Document @@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%------------
+%-- Start ---
+%------------
+\title{判斷線性獨立集\\86 台大資工}
+\author{\textbf{sjLin}}
+%\date{}
+\begin{document}
+% bsmi
+\begin{CJK*}{UTF8}{bkai}
+{\fontfamily{lmss}\selectfont
+\maketitle
+\noindent
+% here
+%__ Start ___
+%____________
+題目\\
+\includegraphics[width=\textwidth]{./images/determine_independent_set_2.png}\\
+解:\\
+題目說$\{Av_1,Av_2,\dots,Av_k\}$為線性獨立集，\\
+則純在k個純量都為0視為唯一解\\
+$\Rightarrow \alpha_1Av_1+\alpha_2Av_2+\dots+\alpha_kAv_k=0, \alpha_1=\alpha_2=\dots=\alpha_k=0$\\
+$\Rightarrow (\alpha_1A)v_1+(\alpha_2A)v_2+\dots+(\alpha_kA)v_k=0$\\
+$\Rightarrow 0\cdot v_1+0\cdot v_2+\dots+0\cdot v_k=0$\\
+所以$\{v_1,v_2,\dots, v_k\}$為線性獨立集。
+%------------
+%-- Finish --
+%------------
+} % for fontfamily
+\end{CJK*}
+\end{document}
+%__ Finish __
+%____________
+
+%========= Document =========
+%============================

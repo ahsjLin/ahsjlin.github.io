@@ -1,0 +1,53 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>線性獨立(independent), 相依(dependent)</h2>
+線性獨立集裡的所有向量不能被其他向量組合出來(倍數或倍數加起來)。
+<br>
+線性相依集裡，可能會有獨立的向量，不能被其他向量產生出來。<br>
+ex.<br>
+\(
+S=\{(1,0), (0,2), (0,1)\}
+\)<br>
+則\(
+(1,0)
+\)不能被\(
+(0,2),(0,1)
+\)組合出來。(題外, \( S \)可生成\( R^2 \)，但\( S \)不是線性獨立集。)<br>
+線性獨立集沒有零向量，所以不能span出向量空間。
+
+
+
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>

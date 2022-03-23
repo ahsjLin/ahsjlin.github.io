@@ -1,0 +1,223 @@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@ Usepackage @@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\documentclass{article}
+% round numbers with space
+\usepackage{numprint}
+% key word
+% \nplpadding[characters]{digits}
+% \numprint{1234}
+
+
+% setting margin
+\usepackage[a4paper,left=0.5in,right=0.5in]{geometry}
+% color package
+\usepackage{xcolor}
+% tablur combine
+\usepackage{multirow}
+
+%--------------------
+%-- define comment --
+%--------------------
+%\long\def\/*#1*/{}
+%__ define comment __
+%____________________
+
+%------------------
+%-- math package --
+%------------------
+\usepackage{amssymb,amsmath,stmaryrd} 
+%------------------
+\usepackage{mathtools}
+%Reference: 
+%http://texdoc.net/texmf-dist/doc/latex/mathtools/mathtools.pdf
+%__ math package __
+%__________________
+
+
+%------------------------------------
+%-- insert {} to multiple folders ---
+%------------------------------------
+\usepackage{graphicx}
+\graphicspath{{./images/}, {./image/}} 
+%__ insert {} to multiple folders ___
+%____________________________________
+
+
+%------------------
+%-- use chinese ---
+%------------------
+\usepackage{CJKutf8}
+%__ use chinese ___
+%__________________
+
+%----------------------
+%-- use draw package --
+%----------------------
+\usepackage{tikz}
+%__ use draw package __
+%______________________
+
+
+%----------
+%-- url ---
+%----------
+\usepackage{hyperref}
+% sample
+% \url{http://...}
+% \href{http://...}{text hyperlink}
+%__ url ___
+%__________
+
+%----------
+%-- code --
+%----------
+\usepackage{listings}
+%ref:
+%https://www.itread01.com/content/1541828344.html
+\lstset{
+backgroundcolor=\color{white},% background color -> gray
+rulesepcolor= \color{gray}, % shadow color
+stringstyle=\color{purple}, % string color
+breaklines=true,  % wrap code
+numbers=left, % set row number on left
+numberstyle= \small,% row number size
+keywordstyle= \color{blue},% keyword color
+commentstyle=\color{gray}, % comment color
+frame=shadowbox% block code by line
+}
+
+%__ code __
+%__________
+
+%----------------
+%-- underline ---
+%----------------
+\usepackage{soul}
+% using with
+% ul{...}
+%__ underline ___
+%________________
+
+
+%----------------------
+%-- background color --
+%----------------------
+\usepackage{lipsum}
+\usepackage[most]{tcolorbox}
+\definecolor{bg}{RGB}{255,249,227}
+\definecolor{block_green}{RGB}{203,247,235}
+%__ background color __
+%______________________
+
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@@@@@@ Enumerate command @@@@@@@@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\makeatletter
+\newcommand\setItemnumber[1]{\setcounter{enum\romannumeral\@enumdepth}{\numexpr#1-1\relax}}
+\makeatother
+
+% command
+%\setItemnumber{5}
+%============== Enumerate command ===============
+%================================================
+
+%--------------------
+% -- Merge pdf ------
+\usepackage{pdfpages}
+
+%\includepdf[pages=-]{paper1}
+
+%--------------------
+%--------------------
+
+%----------------------------------------   multiple columns
+\usepackage{multicol}
+
+% begin{multicols}{2}
+%
+% end{multicols}
+%---------------------
+
+%------------------------------------------------------------
+%
+%               multiple divide add substract 
+%
+%------------------------------------------------------------
+% add multiple
+\usepackage{xlop}
+
+% \opmul{384}{56}
+% \opadd{1234}{567}
+
+% divide
+\usepackage{polynom}
+
+% \input{longdiv}
+% \longdiv{12345}{13}
+%
+%______________ multiple divide add substract _______________
+%____________________________________________________________
+
+
+%========= Usepackage =========
+%==============================
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@ Document @@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%------------
+%-- Start ---
+%------------
+\title{判斷向量空間\\84 台大}
+\author{\textbf{sjLin}}
+%\date{}
+\begin{document}
+% bsmi
+\begin{CJK*}{UTF8}{bkai}
+{\fontfamily{lmss}\selectfont
+\maketitle
+\noindent
+% here %__ Start ___
+%____________
+題目\\	
+\includegraphics[scale=1]{./images/determine_vector_space.png}
+\\
+解:
+\begin{itemize}
+	\item 向量空間$V$必包含零向量。 
+	\item $\exists v\in V, v+(-v)=0$
+	\item 純量加法分配性: $\forall\alpha,\beta\in \mathbb{F}, v\in \mathbb{V}, (\alpha+\beta)v=\alpha v+\beta v$
+\end{itemize}
+取$c_1=1, c_2=-1,(a_1,a_2)=(b_1,b_2) $\\	
+$
+c_1(a_1,a_2)+c_2(a_1,a_2)
+$\\
+$
+= 1\cdot(a_1,a_2)+(-1)\cdot(a_1,a_2)
+$\\
+由條件判斷兩個純量不為0, 視為純量為1\\
+$
+= (a_1,a_2)+(a_1,a_2)
+$\\	
+$
+=(a_1+a_1, a_2+a_2)=2(a_1,a_2)
+$\\
+但純量加法分配性就不成立了\\
+$\Rightarrow 1\cdot(a_1,a_2)+(-1)\cdot(b_1,b_2)$\\
+$=(1+(-1))(a_1,a_2)=0(a_1,a_2)$\\
+純量為0, 由判斷條件答案為\\
+$0(a_1,a_2)=0$\\
+與$2(a_1,a_2)$產生矛盾。\\
+因此，所以$V$不為Vector Space.
+%-- Finish --
+%------------
+} % for fontfamily
+\end{CJK*}
+\end{document}
+%__ Finish __
+%____________
+
+%========= Document =========
+%============================
