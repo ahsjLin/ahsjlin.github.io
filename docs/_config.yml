@@ -1,9 +1,9 @@
-theme: jekyll-theme-architect
-title: sjay
-description: such as NP-Complete
-language: zh
 output:
   html_document:
     includes:
       in_header: header.html
       after_body: after.html
+theme: jekyll-theme-architect
+title: sjay
+description: such as NP-Complete
+language: zh
