@@ -35,10 +35,10 @@ function graph(name){
 var x = setInterval(function(){
     var show = document.getElementById("type_effect");
 
-    if(show.innerHTML=="&nbsp;▌") {
-        show.innerHTML = "▌&nbsp;";
+    if(show.style.color=="black") {
+        show.style.color = "white";
     } else {
-        show.innerHTML = "&nbsp;▌";
+        show.style.color = "black";
     }
 },500);
 </script>
@@ -46,7 +46,7 @@ var x = setInterval(function(){
 <body>
 <div id="cover" style="white-space: nowrap;overflow:">
 <span style="color: MediumSeaGreen;">sjLin@ProgNote</span>:<span style="color: MediumSlateBlue;">~ $</span> 
-	<span id="type_effect">&nbsp;▌</span>
+	<span id="type_effect" style="color: black;">▌</span>
 </span>
 </div>
 
