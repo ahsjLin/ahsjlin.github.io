@@ -7,3 +7,4 @@ output:
     includes:
       in_header: header.html
       after_body: after.html
+<link rel="icon" type="image/png" href="https://ahsjlin.github.io/bot.png">
