@@ -1,4 +1,3 @@
----
 ### <a href="one_more_time.html" target="_blank">Watch Later</a>
 
 ### <a href="programming/frame_programming.html" target="_blank">Programming</a>
@@ -436,6 +435,3 @@
 <a href="https://www.youtube.com/watch?v=UKmUMx2-ToQ" target="_blank">美好的事可不可以發生在我身上</a> <br />
 <a href="https://www.youtube.com/watch?v=U9OQAySv184" target="_blank">Toss A Coin To Your Witcher</a> <br />
 
-header:
-  image: ./bot.png
----
