@@ -20,7 +20,7 @@ function graph(name){
 
 
 <style>
-    #cover{
+#cover {
     margin: 0;
     position: absolute;
     top: 50%;
@@ -28,13 +28,27 @@ function graph(name){
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-</style>
 
+</style>
+<script>
+// set timer for type effect
+var x = setInterval(function(){
+    var show = document.getElementById("type_effect");
+
+    if(show.innerHTML=="&nbsp;▌") {
+        show.innerHTML = "▌&nbsp;";
+    } else {
+        show.innerHTML = "&nbsp;▌";
+    }
+},500);
+</script>
 </head>
 <body>
-<p id="cover">
-sjLin@progggggg:~ $ ▌
-</p>
+<div id="cover" style="white-space: nowrap;overflow:">
+<span style="color: MediumSeaGreen;">sjLin@ProgNote</span>:<span style="color: MediumSlateBlue;">~ $</span> 
+	<span id="type_effect">&nbsp;▌</span>
+</span>
+</div>
 
 
 
