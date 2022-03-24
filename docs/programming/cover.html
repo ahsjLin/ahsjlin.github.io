@@ -30,24 +30,26 @@ function graph(name){
 }
 
 </style>
-<script>
-// set timer for type effect
-var x = setInterval(function(){
-    var show = document.getElementById("type_effect");
 
-    if(show.style.color=="black") {
-        show.style.color = "white";
-    } else {
-        show.style.color = "black";
-    }
-},500);
+<script>
+function init() {
+    var x = setInterval(function(){
+        var show = document.getElementById("type_effect");
+    
+        if(show.style.color=="black") {
+            show.style.color = "white";
+        } else {
+            show.style.color = "black";
+        }
+    },500);
+}
+init();
 </script>
 </head>
 <body>
-<div id="cover" style="white-space: nowrap;overflow:">
+<div id="cover" style="white-space: nowrap;">
 <span style="color: MediumSeaGreen;">sjLin@ProgNote</span>:<span style="color: MediumSlateBlue;">~ $</span> 
 	<span id="type_effect" style="color: black;">▌</span>
-</span>
 </div>
 
 
