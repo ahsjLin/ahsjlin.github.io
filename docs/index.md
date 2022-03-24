@@ -1,4 +1,4 @@
-<link rel="shortcut icon" type="image/png" href="./bot.png"/>
+<link rel="shortcut icon" type="image/png" href="./docs/bot.png"/>
 ### <a href="one_more_time.html" target="_blank">Watch Later</a>
 
 ### <a href="programming/frame_programming.html" target="_blank">Programming</a>
