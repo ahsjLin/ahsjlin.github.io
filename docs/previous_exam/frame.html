@@ -10,8 +10,53 @@
 	<link rel="preload" href="NCU/NCU.html" as="document">
 	<link rel="preload" href="NTHU/NTHU.html" as="document">
 	<link rel="preload" href="NTU/NTU.html" as="document">
+
+<style>
+#button_block {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+#zoomIn {
+    width: 50;
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    z-index: 99;
+    opacity: 0.5;
+}
+#zoomIn:hover {
+    opacity: 1;
+}
+#zoomOut{
+    width: 50;
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    z-index: 99;
+    opacity: 0.5;
+}
+#zoomOut:hover {
+    opacity: 1;
+}
+</style>
+
+<script>
+function zoomIn() {
+}
+function zoomOut() {
+
+}
+</script>
+
 </head>
 <body style="margin: 0; padding: 0;">
+<div id="button_block">
+<button type="button" id="zoomIn" onClick="zoomIn();">+</button>
+<button type="button" id="zoomOut" onClick="zoomOut();">-</button>
+</div>
+
 	<div width="100%" style="white-space: nowrap;">
 		<iframe class="frame" src="./previous_exam.html" name="school" width="20%" height="20%" > </iframe>
 		<iframe src="" name="year"  width="20%" height="20%"> </iframe>

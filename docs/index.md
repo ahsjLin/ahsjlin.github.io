@@ -1,3 +1,4 @@
+<link rel="icon" href="./bot.png"/>
 ### <a href="one_more_time.html" target="_blank">Watch Later</a>
 
 ### <a href="programming/frame_programming.html" target="_blank">Programming</a>
