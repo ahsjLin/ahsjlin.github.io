@@ -142,8 +142,8 @@ diff(i,j)
 
 <hr>
 <h2>Example</h2>
-New string(A): EXPONENTIAL<br>
-Old string(B): POLYNOMIAL<br>
+Old string(A): EXPONENTIAL<br>
+New string(B): POLYNOMIAL<br>
 \( \varepsilon=\emptyset\)<br>
 這裡給\( diff() \)加權為<br>
 \( x_i=y_j \rightarrow  diff(i,j)=0 \)<br>
@@ -919,7 +919,7 @@ function calIJ(i,j){
 }
 </script>
 <br>
-(有顏色的地方是最佳解的回推的路徑，灰色是沒有修改的地方，藍色是新資料插入舊資料前面，黃色是覆蓋成新資料，綠色是刪除那格舊資料。)
+(有顏色的地方是最佳解的回推的路徑，灰色是沒有修改的地方，<span style="color: blue;">藍色為刪除舊資料</span>，<span style="color: gold">黃色是覆蓋成新資料</span>，<span style="color: lightgreen">綠色是在舊資料後插入</span>。)
 <br>
 (箭頭向上為新insert舊，箭頭向左為delete舊，箭頭向左上則要判斷比對資料相不相同，不相同才要修改。)
 <br>
@@ -932,15 +932,15 @@ S為Substitution<br> <br>
 
 <tr class="check_result">
 
-<td>I</td>
-<td>I</td>
-<td> </td>
-<td> </td>
-<td>S</td>
-<td>S</td>
-<td> </td>
-<td>S</td>
 <td>D</td>
+<td>D</td>
+<td> </td>
+<td> </td>
+<td>S</td>
+<td>S</td>
+<td> </td>
+<td>S</td>
+<td>I</td>
 <td> </td>
 <td> </td>
 <td> </td>
@@ -983,16 +983,16 @@ S為Substitution<br> <br>
 
 </table>
 說明:<br>
-EXPONENTIAL是新的資料。<br>
-POLYNOMIAL為舊的資料。<br>
+EXPONENTIAL是舊的資料。<br>
+POLYNOMIAL為新的資料。<br>
 最短的改法為:<br>
 在舊的資料上<br>
-插入E<br>
-插入X<br>
-修改L為N<br>
-修改Y為E<br>
-修改O為T<br>
-刪除M。<br>
+刪除E<br>
+刪除X<br>
+修改N為L<br>
+修改E為Y<br>
+修改T為O<br>
+插入M。<br>
 這樣只要修改6次即可。<br>
 
 
