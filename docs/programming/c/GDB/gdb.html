@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>gdb novice</title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+</head>
+<body>
+測試作業系統: ubuntu server 20.04.4<br>
+<hr>
+<h2>clear screen</h2>
+指令: shell clear
+<hr>
+<h2>break point 測試</h2>
+<ol>
+	<li>寫一個C的小程序, minimal.c<br>
+	<embed src="./code/test.html" type="">
+	</li>
+	<li>用gcc編譯minimal.c成可執行檔minimal<br>
+		指令: gcc -g minimal.c -o minimal<br>
+		這裡多加-g參數在產生minimal時，會生成一些debug的訊息。
+	</li>
+	<li>然後利用gdb來跑剛剛生成的minimal的執行檔<br>
+	指令: gdb minimal
+	</li>
+	<li>
+		這裡下中斷點在main的地方。<br>
+		<img src="img/break_point.png" alt=""/><br>
+		指令: break main<br>
+		<img src="img/bp2.png" alt=""/>
+	</li>
+	<li>接著開始跑程式<br>
+		指令: run
+	</li>
+	<li>試著把變數i的值印出來。<br>
+	<img src="img/bp3.png" alt=""/><br>
+	還是可以把i印出來，但是值是不對的。
+	</li>
+	<li>可以用next一行一行跑<br>
+		<img src="./img/bp4.png" alt=""/>
+	</li>
+</ol>
+<hr>
+<h2>x命令檢查內存</h2>
+指令: help x <br>
+可以看x的說明<br>
+這裡的x是指可以從某個特定的內存位址開始印出來。<br>
+假設我們用上面i的位置開始看4個十六進位的byte, 看4個byte的原因是i是整數類型是由4個byte組成, 參數寫法:4xb<br>
+指令: x/4xb &amp;i<br>
+(記得要執行到i, 這裡i的內容為0, i有可能為亂碼, 畢竟清資料需要花時間，沒用到的地方也不會特別去清。)<br>
+<img src="./img/x_command.png" alt=""/><br>
+這裡印出來的值是從低的位址開始印出來，所以i的十六進位值寫成習慣的寫法為<br>
+00000539<br>
+十進位: 1337<br>
+<img src="./img/clc_hex_dei.png" alt=""/>
+
+<hr>
+<h2>檢查類型的指令 ptype</h2>
+可以用來看變數, 函數的類型<br>
+ex.<br>
+指令: ptype i<br>
+type = int<br><br>
+指令: ptype &amp;i<br>
+type = int *<br><br>
+指令: ptype main<br>
+type = int (void)
+
+
+
+
+
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>
