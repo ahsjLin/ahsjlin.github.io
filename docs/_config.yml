@@ -33,7 +33,8 @@ github_username:  ahsjLin
 # Build settings
 theme: jekyll-theme-architect
   #plugins:
-  #- jekyll-feed
+    #- jekyll-feed
+    #- jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
