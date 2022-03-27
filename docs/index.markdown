@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-[test](./_posts/test.html)
+<!--
+[test](./test.html)
+-->
 
 ### <a href="one_more_time.html" target="_blank">Watch Later</a>
 
