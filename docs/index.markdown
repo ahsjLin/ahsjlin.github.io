@@ -1,4 +1,7 @@
-<link rel="icon" href="./bot.png"/>
+---
+layout: default
+---
+
 ### <a href="one_more_time.html" target="_blank">Watch Later</a>
 
 ### <a href="programming/frame_programming.html" target="_blank">Programming</a>
@@ -207,7 +210,7 @@
 ### Animal
 <a href="https://www.youtube.com/watch?v=n2OEHlkCXio" target="_blank">不要玩麻雀</a> <br />
 
-### Music
+### Music <img width="5%" height="5%" src="./assets/images/listen.ico" alt="img_music" />
 <a href="https://www.youtube.com/watch?v=oCTGXSK9hWo" target="_blank">Here we are again</a> <br />
 <a href="https://www.youtube.com/watch?v=YhjK6n-EOjY" target="_blank">魚</a> <br />
 <a href="https://www.youtube.com/watch?v=_2-QF_Afh1I" target="_blank">借</a> <br />
@@ -435,4 +438,3 @@
 <a href="https://www.youtube.com/watch?v=FNJG6MsKO0k" target="_blank">他們說我是沒有用的年輕人</a> <br />
 <a href="https://www.youtube.com/watch?v=UKmUMx2-ToQ" target="_blank">美好的事可不可以發生在我身上</a> <br />
 <a href="https://www.youtube.com/watch?v=U9OQAySv184" target="_blank">Toss A Coin To Your Witcher</a> <br />
-
