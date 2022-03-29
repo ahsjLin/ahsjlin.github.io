@@ -36,6 +36,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=2VsrZDGvuYs" target="_blank">洋蔥</a> <br />
 <a href="https://www.youtube.com/watch?v=YQpd5CwaZXA" target="_blank">偷走</a> <br />
 <a href="https://www.youtube.com/watch?v=-zANQZ6_8rM" target="_blank">我以為</a> <br />
+<a href="https://www.youtube.com/watch?v=6Bf-zwTPJD4" target="_blank">丟了霓</a> <br />
 <a href="https://www.youtube.com/watch?v=rJOAA7zmZ2M" target="_blank">小酒窩</a> <br />
 <a href="https://www.youtube.com/watch?v=rbNxlPrBdE8" target="_blank">你聽聽就好</a> <br />
 <a href="https://www.youtube.com/watch?v=lIy7ZQ-c_sg" target="_blank">以後別做朋友</a> <br />
