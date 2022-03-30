@@ -18,8 +18,9 @@ layout: default
 ### <a href="computer/operating_system/operating.html" target="_blank">Operating System</a>
 
 ### <a href="computer/organization/organization.html" target="_blank">Computer Organization and Design</a>
-
+<!--
 ### <a href="language/eng.html" target="_blank">English</a>
+-->
 
 ### <a href="previous_exam/frame.html" target="_blank">Past Exam</a>
 
