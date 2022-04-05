@@ -19,7 +19,7 @@ function graph(name){
 <link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
 
 <style type="text/css" media="screen">
-table#least_mul{
+table#least_mul, table#least_mul_par{
 	width: 500px;
 	height: 300px;
 	text-align: center;
@@ -147,6 +147,12 @@ p_4=5
 p_5=1
 \)
 <h3>開始填表</h3>
+有兩個表格
+<ol>
+	<li>最小乘法量</li>
+	<li>需要掛號 ')' 到<span style="color: #0805AF;">哪個matrix的後面</span></li>
+</ol>
+<br>
 可以多加一個變數去紀錄怎樣的結合律是最小的乘法量，這裡用變數k表示。<br>
 記在表格內上方，下方為最小乘法量的數目。<br>
 <a href="pdf/Matrix_chain_Multiplication.html" target="_blank">手算</a>
@@ -406,10 +412,10 @@ k=4
 </td>
 
 </tr>
-</table>
+</table><br>
 填表順序為 由<span style="color: blue;">左上到右下</span>、由左至右。<br>
 最後最右上角的值，即為\( ABCDE \)的最小乘法量\( =36 \)<br>
-拿其中\( m[2,5]=28 \)來說明<br>
+拿其中\( m[2,5]=28 \)來說明(即\( A_2A_3A_4A_5 \))<br>
 在得出\( m[2,5] \)的可能set為\( \{ 28,42,84 \} \)，其中最小為28所以\( m[2,5]=28 \)。<br><br>
 
 計算過程<br>
@@ -430,20 +436,187 @@ m[2,4]+m[4+1,5]+p_{2-1}p_4p_5
 = 64 + 0 +4\cdot 5\cdot 1=84
 \)<br>
 <br>
-最後得出在\( k=2 \)時，有最小乘法量為\( 28 \)。<br>
+最後得出在\( k=2 \)時( 也就是\( (A_2)(A_3A_4A_5) \) )，有最小乘法量為\( 28 \)。<br>
 <br>
 
+還原掛號的表格:(注意index不一樣, 列index 1~4, 行index 2~5)<br>
+<table id="least_mul_par">
+<!-- row 0 -->
+<tr>
+
+<!-- col 0 -->
+<td>
+	k
+</td>
+
+<!-- col 1 -->
+<td>
+\( 2 \)
+</td>
+
+<!-- col 2 -->
+<td>
+\( 3 \)
+</td>
+
+<!-- col 3 -->
+<td>
+\( 4 \)
+</td>
+
+<!-- col 4 -->
+<td>
+\( 5 \)
+</td>
+
+
+</tr>
+
+<!-- row 1 -->
+<tr>
+
+<!-- col 0 -->
+<td>
+\( 1 \)
+</td>
+
+<!-- col 1 -->
+<td>
+	\( 1 \)
+</td>
+
+<!-- col 2 -->
+<td>
+\(
+2
+\)
+</td>
+
+<!-- col 3 -->
+<td>
+\(
+3
+\)
+</td>
+
+<!-- col 4 -->
+<td>
+\(
+1
+\)
+</td>
+
+</tr>
+<!-- row 2 -->
+<tr>
+
+<!-- col 0 -->
+<td>
+\( 2 \)
+</td>
+
+<!-- col 1 -->
+<td>
+	-
+</td>
+
+<!-- col 2 -->
+<td>
+	2
+</td>
+
+<!-- col 3 -->
+<td>
+\(
+3
+\)
+</td>
+
+<!-- col 4 -->
+<td>
+\(
+2
+\)
+</td>
+
+
+</tr>
+<!-- row 3 -->
+<tr>
+
+<!-- col 0 -->
+<td>
+\( 3 \)
+</td>
+
+<!-- col 1 -->
+<td>
+	-
+</td>
+
+<!-- col 2 -->
+<td>
+	-
+</td>
+
+<!-- col 3 -->
+<td>
+	3
+</td>
+
+<!-- col 4 -->
+<td>
+\(
+3
+\)
+</td>
+
+
+</tr>
+<!-- row 4 -->
+<tr>
+
+<!-- col 0 -->
+<td>
+	\( 4 \)
+</td>
+
+<!-- col 1 -->
+<td>
+	-
+</td>
+
+<!-- col 2 -->
+<td>
+	-
+</td>
+
+<!-- col 3 -->
+<td>
+	-
+</td>
+
+<!-- col 4 -->
+<td>
+	4
+</td>
+
+
+</tr>
+</table>
+
+ex. \( k[i,j]=\alpha \;\)指的是\( A_iA_{i+1}\dots A_\alpha\dots A_j \)在\( A_\alpha \)後括起來, 像是\( (A_i\dots A_\alpha)(A_{\alpha+1}\dots\dots A_j) \)
 <h3>推導括號的表示</h3>
-看\( m[1,5] \)的\( k \)值為\( 1 \)，
+看\( k[1,5] \)的\( k \)值為\( 1 \)，
 即\( (A_1)(A_{2\dots 5}) \)。<br>
 \( A_1 \)已經不能分成其他矩陣相乘，再討論\( A_{2\dots 5} \)的括號方式。<br><br>
-看\( m[2,5] \)的\( k \)值為\( 2 \)，
+看\( k[2,5] \)的\( k \)值為\( 2 \)，
 即\( (A_1)((A_2)(A_{3\dots 5})) \)。<br>
 \( A_2 \)已經不能分成其他矩陣相乘，再討論\( A_{3\dots 5} \)的括號方式。<br><br>
-看\( m[3,5] \)的\( k \)值為\( 3 \)，
+看\( k[3,5] \)的\( k \)值為\( 3 \)，
 即\( (A_1)((A_2)((A_3)(A_{4\dots 5}))) \)。<br>
 \( A_3 \)已經不能分成其他矩陣相乘，再討論\( A_{4\dots 5} \)的括號方式。<br><br>
-看\( m[4,5] \)的\( k \)值為\( 4 \)，
+看\( k[4,5] \)的\( k \)值為\( 4 \)，
 即\( (A_1)((A_2)((A_3)((A_{4})(A_{5})))) \)。<br>
 \( A_4 \)和\( A_5 \)已經不能分成其他矩陣相乘完成推導。<br>
 <br>
