@@ -23,6 +23,8 @@ layout: default
 
 ### <a href="previous_exam/frame.html" target="_blank">Past Exam</a>
 
+### <a href="diary/diary.html" target="_blank">Diary</a>
+
 ### <a href="dump/dump.html" target="_blank">Dump</a>
 
 ### sam1268
@@ -39,6 +41,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=6Bf-zwTPJD4" target="_blank">丟了霓</a> <br />
 <a href="https://www.youtube.com/watch?v=rJOAA7zmZ2M" target="_blank">小酒窩</a> <br />
 <a href="https://www.youtube.com/watch?v=rbNxlPrBdE8" target="_blank">你聽聽就好</a> <br />
+<a href="https://www.youtube.com/watch?v=Vzc5kXyB0T8" target="_blank">專屬天使</a> <br />
 <a href="https://www.youtube.com/watch?v=lIy7ZQ-c_sg" target="_blank">以後別做朋友</a> <br />
 <a href="https://www.youtube.com/watch?v=zdCNtIpkbI0" target="_blank">我的世界沒有你</a> <br />
 <a href="https://www.youtube.com/watch?v=ogKnph3elaI" target="_blank">愛情你比我想的閣較偉大</a> <br />
@@ -179,8 +182,9 @@ layout: default
 <a href="https://www.youtube.com/watch?v=GpnDy1JSpQs" target="_blank">新男友</a> <br />
 <a href="https://www.youtube.com/watch?v=DBZ42NjVZmA" target="_blank">我一個人坐就好</a> <br />
 <a href="https://www.youtube.com/watch?v=XX-jaCGXA4c" target="_blank">雙螢幕</a> <br />
-<a href="https://www.youtube.com/watch?v=XxRmrWZ3hnU" target="_blank">RB太沒禮貌吧! 人家在看阿盛台欸(手語</a> <br />
 <a href="https://www.youtube.com/watch?v=DVdgzofzjuE" target="_blank">不要學阿倪講話</a> <br />
+<a href="https://www.youtube.com/watch?v=4v27qWBFVxc" target="_blank">大哥圖奇回歸</a> <br />
+<a href="https://www.youtube.com/watch?v=XxRmrWZ3hnU" target="_blank">RB太沒禮貌吧! 人家在看阿盛台欸(手語</a> <br />
 <a href="https://www.youtube.com/watch?v=9E5W-EVXRWA" target="_blank">負荷老弟</a> <br />
 
 <!--
