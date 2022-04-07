@@ -1,0 +1,74 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>注意</h2>
+記錄剛好被解決的問題, 但不一定是對的。
+<hr>
+<h2>ubuntu wifi設定</h2>
+在安裝ubuntu時,可以手動輸入wifi名稱在ssid, 然後輸入密碼。<br />
+安裝完後如果發現沒辦法搜尋其他wifi時,<br />
+到
+<pre>
+<code>
+/etc/netplan/
+</code>
+</pre>
+底下可以找到副檔名.yaml, 對應的名稱會是wifi和網線的設定,<br />
+sudo開啟有wifi檔名的設定檔, 然後井字號註解掉
+<pre>
+<code>
+#dhcp4: true
+#dhcp6: true
+</code>
+</pre>
+可以新增
+<pre>
+<code>
+addresses: ["192.168.1.101/24"]
+</code>
+</pre>
+固定IP(101可以設定1~255, 101前的1是看連接的路由器是多少, 不一定是1.)
+<br />
+改好後在command line上輸入
+<pre>
+<code>
+sudo netplan --debug apply
+</code>
+</pre>
+如果開機會卡在尋找網路的話, 可以把剛剛找的那些.yaml都開起來, 然後把dhcp*都註解掉<br />
+這時<span style="color: red;">不要輸入</span>
+<pre>
+<code>
+sudo netplan --debug apply
+</code>
+</pre>
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>

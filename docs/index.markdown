@@ -180,6 +180,8 @@ layout: default
 <a href="https://www.youtube.com/watch?v=DBZ42NjVZmA" target="_blank">我一個人坐就好</a> <br />
 <a href="https://www.youtube.com/watch?v=XX-jaCGXA4c" target="_blank">雙螢幕</a> <br />
 <a href="https://www.youtube.com/watch?v=XxRmrWZ3hnU" target="_blank">RB太沒禮貌吧! 人家在看阿盛台欸(手語</a> <br />
+<a href="https://www.youtube.com/watch?v=DVdgzofzjuE" target="_blank">不要學阿倪講話</a> <br />
+<a href="https://www.youtube.com/watch?v=9E5W-EVXRWA" target="_blank">負荷老弟</a> <br />
 
 <!--
 <a href="https://www.youtube.com/watch?v=zx7pcgHtU4I" target="_blank">O我的天</a> <br />
