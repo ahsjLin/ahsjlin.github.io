@@ -34,6 +34,7 @@ function graph(name){
 /etc/netplan/
 </code>
 </pre>
+注意： 所有更改的檔案都要先備份！<br />
 底下可以找到副檔名.yaml, 對應的名稱會是wifi和網線的設定,<br />
 sudo開啟有wifi檔名的設定檔, 然後井字號註解掉
 <pre>
@@ -63,6 +64,20 @@ sudo netplan --debug apply
 sudo netplan --debug apply
 </code>
 </pre>
+<br />
+<br />
+按電源鍵可能會讓wifi 選項直接消失<br />
+<ul>
+
+<li>
+先把問題恢復到找wifi很久的樣子(還原成原本的樣子)
+</li>
+
+<li>依上述再做一次</li>
+
+<li>reboot試試</li>
+
+</ul>
 
 <hr>
 <footer>
