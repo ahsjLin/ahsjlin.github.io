@@ -1,6 +1,11 @@
+# vim
 *.un~
 *~
 *.swp
+
+# temp
+~*.*
+
 
 # latex
 *.aux

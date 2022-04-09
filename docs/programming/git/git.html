@@ -22,6 +22,31 @@ function graph(name){
 
 </head>
 <body>
+<h2>基本設定</h2>
+全域設定(雙引號不要少打)
+<pre>
+<code>
+git config --global user.name "your name"
+git config --global user.email "yourEmail@email.com"
+</code>
+</pre>
+現在上傳到github上不能用帳號密碼上傳，要用帳號和token(去Developer settings那產生token)，<br />
+如果不想每次上傳都要打帳號和token，可以在上傳一次之後，再打上<br />
+<pre>
+<code>
+git config --global credential.helper store
+</code>
+</pre>
+可以儲存帳號和token。<br /> <br />
+如果想要在單個repository上傳的人不同，就輸入
+<pre>
+<code>
+git config --local user.name "your name"
+git config --local user.email "yourEmail@email.com"
+</code>
+</pre>
+
+<hr>
 <h2>Git gui</h2>
 How to run the gui mode of git in ubuntu?
 <pre>
@@ -29,14 +54,158 @@ How to run the gui mode of git in ubuntu?
 git citool
 </code>
 </pre>
+<hr>
+<h2>基本git指令</h2>
+<h3>一次加入全部更新的資料</h3>
+<pre>
+<code>
+git add .
+</code>
+</pre>
+或
+<pre>
+<code>
+git add *
+</code>
+</pre>
+<h3>拿掉加入的資料</h3>
+<pre>
+<code>
+git reset filename.extension
+</code>
+</pre>
+<hr>
+<h3>查看push歷史記錄</h3>
+git log
+<h3>查看現在branch的push位置</h3>
+用完後會回到那次push的樣子(id五碼就行了)<br/>
+git checkout commit_id
+<h3>在現在的位置開新的branch</h3>
+git checkout -b new_branch_name
+<hr>
+<h3>強制重置push位置</h3>
+git log <br />
+git reset --hard "5 digits commit id"
+<hr>
+<h3>換branch</h3>
+git switch branchName
+<h3>刪除branch</h3>
+git branch -d branchName
+<h3>merge branch</h3>
+確認現在的branch（有星號的）<br />
+git checkout<br />
+其他branch的內容加到現在的branch裏面, 但兩個branch不會消失<br />
+git merge other_branch
+<hr>
+<h3>fetch和pull差異</h3>
+pull用法比fetch簡單，pull簡單來說是fetch和merge的組合。<br />
+fetch會下載github(或其他放code的地方)上最新更改的內容，但不會更改現在local的資料，這樣可以確保不會因爲merge造成相同資料損壞的風險。<br />
+<a href="https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch" target="_blank">stackoverflow - What is the difference between 'git pull' and 'git fetch'?</a>
+<hr>
+<h3>remote</h3>
+連接online code repository：<br />
+git remote add remoteName https://gitRepository...<br />
+remoteName是自己命名的，後面網址是連接code repository的地方。<br /><br />
+推送時的指令:<br />
+git push -u remoteName branchName<br />
+一般預設remoteName是origin，branchName是master。<br />
+即 git push<br />
+等於 git push -u origin master<br />
+沒有特別branch的話clone回來的repository可以直接用git push。<br /><br />
+push help說明: -u, -f 參數
+<pre>
+       -u, --set-upstream
+           For every branch that is up to date or successfully pushed, add
+           upstream (tracking) reference, used by argument-less git-pull(1)
+           and other commands. For more information, see branch."name".merge
+           in git-config(1).
 
+       -f, --force
+           Usually, the command refuses to update a remote ref that is not an
+           ancestor of the local ref used to overwrite it. Also, when
+           --force-with-lease option is used, the command refuses to update a
+           remote ref whose current value does not match what is expected.
 
+           This flag disables these checks, and can cause the remote
+           repository to lose commits; use it with care.
+
+           Note that --force applies to all the refs that are pushed, hence
+           using it with push.default set to matching or with multiple push
+           destinations configured with remote.*.push may overwrite refs other
+           than the current branch (including local refs that are strictly
+           behind their remote counterpart). To force a push to only one
+           branch, use a + in front of the refspec to push (e.g git push
+           origin +master to force a push to the master branch). See the
+           <refspec>...  section above for details.
+</pre>
+<hr>
+<h2>查看log</h2>
+可以看所有的commit
+<pre>
+<code>
+git shortlog
+</code>
+</pre>
+參數: -n 依那個人上傳commit次數排列
+<pre>
+<code>
+git shortlog -n
+</code
+</pre>
+參數: -e 依那個人上傳的email排列
+<pre>
+<code>
+git shortlog -e
+</code
+</pre>
+參數: -s 那個人上傳總數
+<pre>
+<code>
+git shortlog -s
+</code
+</pre>
+<hr>
+<h2>git log 參數</h2>
+--skip 跳過最新幾個log
+<br />
+假設不要顯示最近10個commit的歷史記錄
+<pre>
+<code>
+git log --skip=10
+</code>
+</pre>
+<br />
+<h3>Filter logs with date range</h3>
+參數可以是指定的日期之後 或 指定日期之前 或 一個範圍<br />
+假設想要知道2022-01-01到2022-04-01的log<br />
+<pre>
+<code>
+git log --since=2022-01-01 --until=2022-04-01
+</code>
+</pre>
+<br />
+<h3>關鍵字尋找log關鍵字</h3>
+大小寫有區別<br />
+假設要查有關Merge的關鍵字
+<pre>
+<code>
+git log --grep="Merge"
+</code>
+</pre>
+<hr>
+<h3>git clean</h3>
+clean 常需要 -f or --force 來強制刪除<br />
+-d 刪除沒有被track的檔案和資料夾<br />
+-n or --dry-run 不會刪除資料， 但會顯示哪些會被刪除。<br />
+-q or --quiet 如果刪除成功，不會顯示出來，除了有錯誤訊息。<br />
+-e&ltpattern&gt or --exclude=&ltpattern&gt 刪除有關鍵字的檔案。
 
 
 <hr>
 <footer>
 <h2>Reference</h2>
-
+Ravishankar Somasundaram -Git Version control for everyone.<br />
+<a href="https://ithelp.ithome.com.tw/articles/10132804" target="_blank">ITHelp(這篇是在說明在local建立repository而不是在remote github之類的repository)</a>
 </footer>
 
 </body>
