@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Exported from Notepad++</title>
+<style type="text/css">
+span {
+	font-family: 'Courier New';
+	font-size: 10pt;
+	color: #000000;
+}
+.sc0 {
+}
+.sc1 {
+	color: #008000;
+}
+.sc2 {
+	color: #008000;
+}
+.sc4 {
+	color: #FF8000;
+}
+.sc5 {
+	font-weight: bold;
+	color: #0000FF;
+}
+.sc6 {
+	color: #808080;
+}
+.sc9 {
+	color: #804000;
+}
+.sc10 {
+	font-weight: bold;
+	color: #000080;
+}
+.sc11 {
+}
+.sc16 {
+	color: #8000FF;
+}
+</style>
+</head>
+<body>
+<div style="float: left; white-space: pre; line-height: 1; background: #FFFFFF; "><span class="sc9">#include &lt;stdio.h&gt;
+#define SIZE 20
+</span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">main</span><span class="sc10">(</span><span class="sc16">void</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc2">// create a space for str with char type
+</span><span class="sc0">    </span><span class="sc16">char</span><span class="sc0"> </span><span class="sc11">str</span><span class="sc10">[</span><span class="sc11">SIZE</span><span class="sc10">];</span><span class="sc0">
+
+    </span><span class="sc2">// convert integer to string
+</span><span class="sc0">    </span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">i</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">123</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc11">snprintf</span><span class="sc10">(</span><span class="sc11">str</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">SIZE</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"%d"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">i</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">puts</span><span class="sc10">(</span><span class="sc11">str</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc2">// output: 123
+</span><span class="sc0">
+    </span><span class="sc2">// convert float to string
+</span><span class="sc0">    </span><span class="sc16">float</span><span class="sc0"> </span><span class="sc11">f</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">456.890</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc11">snprintf</span><span class="sc10">(</span><span class="sc11">str</span><span class="sc10">,</span><span class="sc11">SIZE</span><span class="sc10">,</span><span class="sc6">"%f"</span><span class="sc0"> </span><span class="sc10">,</span><span class="sc11">f</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">puts</span><span class="sc10">(</span><span class="sc11">str</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc2">// output: 456.890015
+</span><span class="sc0">    
+    </span><span class="sc1">/*
+     * The fraction is wrong from mathematics 
+     * because the double percision is the range value for real world.
+     * If you want to display how many of decimal point
+     * The point asterisk is a parameter that you want to display how many of decimal point.
+     */</span><span class="sc0">
+    </span><span class="sc16">float</span><span class="sc0"> </span><span class="sc11">fw</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">123.123</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc11">snprintf</span><span class="sc10">(</span><span class="sc11">str</span><span class="sc10">,</span><span class="sc11">SIZE</span><span class="sc10">,</span><span class="sc6">"%.*f"</span><span class="sc10">,</span><span class="sc4">3</span><span class="sc10">,</span><span class="sc11">fw</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">puts</span><span class="sc10">(</span><span class="sc11">str</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc2">// output: 123.123
+</span><span class="sc0">
+
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc4">0</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+
+</span></div></body>
+</html>
