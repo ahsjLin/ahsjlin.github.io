@@ -186,6 +186,8 @@ layout: default
 <a href="https://www.youtube.com/watch?v=4v27qWBFVxc" target="_blank">大哥圖奇回歸</a> <br />
 <a href="https://www.youtube.com/watch?v=XxRmrWZ3hnU" target="_blank">RB太沒禮貌吧! 人家在看阿盛台欸(手語</a> <br />
 <a href="https://www.youtube.com/watch?v=9E5W-EVXRWA" target="_blank">負荷老弟</a> <br />
+<a href="https://www.youtube.com/watch?v=3BVsRVKCE4A" target="_blank">那次沒有辦好</a> <br />
+<a href="https://www.youtube.com/watch?v=8SAyupZ7vgg" target="_blank">太恐怖了RRRRRRR</a> <br />
 
 <!--
 <a href="https://www.youtube.com/watch?v=zx7pcgHtU4I" target="_blank">O我的天</a> <br />
