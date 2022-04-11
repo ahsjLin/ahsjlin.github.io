@@ -54,6 +54,12 @@ How to run the gui mode of git in ubuntu?
 git citool
 </code>
 </pre>
+or
+<pre>
+<code>
+gitk
+</code>
+</pre>
 <hr>
 <h2>基本git指令</h2>
 <h3>一次加入全部更新的資料</h3>
@@ -199,6 +205,36 @@ clean 常需要 -f or --force 來強制刪除<br />
 -n or --dry-run 不會刪除資料， 但會顯示哪些會被刪除。<br />
 -q or --quiet 如果刪除成功，不會顯示出來，除了有錯誤訊息。<br />
 -e&ltpattern&gt or --exclude=&ltpattern&gt 刪除有關鍵字的檔案。
+<hr>
+<h3>tag</h3>
+tag有分Lightweight和有Annotated，簡單來說lightweight是沒有注解說明， 而Annotated是有注解説明的。<br />
+tag類似branch，但不同的是，tag是只記錄當下的狀態，不會因爲commit之後就改變了tag的內容。<br />
+tag適用區分版本的節點。<br />
+Lightweight:
+<pre>
+<code>
+git tag tagName
+</code>
+</pre>
+Annotated:
+<pre>
+<code>
+git tag -a tagName -m "tag note here"
+</code>
+</pre>
+可以用checkout去轉成tag的地方
+<pre>
+<code>
+git checkout tagName
+</code>
+</pre>
+刪除tag:
+<pre>
+<code>
+git tag -d tagName
+</code>
+</pre>
+
 
 
 <hr>
