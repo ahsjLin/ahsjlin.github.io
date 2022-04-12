@@ -1,6 +1,6 @@
 <html>
 <head>
-<title></title>
+<title>ubuntu</title>
 
 <!-- latex math javascript-->
 <script
@@ -86,6 +86,16 @@ sudo netplan --debug apply
 
 </ul>
 
+<hr>
+<h3>藍牙</h3>
+自從這臺x555L裝了ubuntu之後，藍牙就無法使用了，外接藍牙也無法使用。<br />
+但換回win10 藍牙還是正常的。<br />
+所以我嘗試了一下，內部藍牙還是不行，<span style="color: red;">不知道</span>是哪裏弄好了，外接藍牙起作用了<br />
+<a href="https://askubuntu.com/questions/1073678/no-bluetooth-found-plug-in-a-dongle-to-use-bluetooth-ubuntu-18-04-1-lts" target="_blank">這篇</a>是最接近我要的答案，但還是沒解決
+<br />
+推測是重裝了linux kernel，<a href="https://unix.stackexchange.com/questions/608116/bluetooth-wont-turn-on-on-ubuntu-20-04" target="_blank">這篇TiYan回覆的</a> - <code>sudo apt install linux-generic-hwe-20.04</code>
+<br />
+還有開機的時候選了新的linux kernel。
 <hr>
 <footer>
 <h2>Reference</h2>
