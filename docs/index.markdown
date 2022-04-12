@@ -189,6 +189,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=3BVsRVKCE4A" target="_blank">那次沒有辦好</a> <br />
 <a href="https://www.youtube.com/watch?v=8SAyupZ7vgg" target="_blank">太恐怖了RRRRRRR</a> <br />
 <a href="https://www.youtube.com/watch?v=tJ6UVUVK8zU" target="_blank">經紀人 大雨</a> <br />
+<a href="https://www.youtube.com/watch?v=TRzdLI42hYw" target="_blank">就輸在那兩顆</a> <br />
 
 <!--
 <a href="https://www.youtube.com/watch?v=zx7pcgHtU4I" target="_blank">O我的天</a> <br />
