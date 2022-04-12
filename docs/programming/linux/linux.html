@@ -28,6 +28,31 @@ function graph(name){
 inxi -Fxz
 </code>
 </pre>
+<hr>
+<h2>kill application</h2>
+這裏PID是每個application的id號碼
+<br />
+pseudo code:
+<pre>
+<code>
+kill PID
+</code>
+</pre>
+在command line 打上 top就可以查看所有application的PID
+<br />
+force:
+<pre>
+<code>
+kill -9 PID
+</code>
+</pre>
+關掉所有相關名字的application, ex. 關掉firefox
+<pre>
+<code>
+killall firefox
+</code>
+</pre>
+
 
 
 
