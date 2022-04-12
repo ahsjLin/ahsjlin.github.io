@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>windows</title>
+
+<!-- latex math javascript-->
+<script
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>cmd指令</h2>
+<h3>bat檔和cmd變數差異</h3>
+假設變數爲i<br />
+bat檔的變數要是兩個% ，ex. %%i<br />
+cmd的變數要是一個% ，ex. %i
+<h3>設定變數</h3>
+等號不能有空白
+<br />
+指令： set var=something variable contain
+<h3>不要顯示在視窗</h3>
+指令： @echo off
+<h3>for loop</h3>
+假設(cmd)有要查Test底下所有子資料夾的資料<br />
+指令： for /R "D:/Test" %i in (*.c) do echo %i<br />
+說明： /R "D:/Test"指資料夾Test底下所有的檔案，然後放入變數i裏，(*.c)指的是所有副檔名爲c的檔案，接着做do的內容，而內容做的的是印出變數內容。
+<h3>寫到檔案裏</h3>
+&gt : 覆蓋寫入<br />
+&gt&gt : 加入寫入
+<h3>If else</h3>
+指令： IF EXIST "filename" () ELSE ()<br />
+()寫要做的事情。
+<h3>find</h3>
+指令： find "string 內容" filePath
+<h3>要在同一行做多個指令</h3>
+指令： &&<br />
+ex. 假設要刪除123.txt檔案，然後新創一個456.txt檔<br />
+del 123.txt && echo &gt 456.txt
+<h3>新建資料夾</h3>
+假設要在這個地方新建名爲newDirectory的資料夾<br />
+指令： md ./newDirectory
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>
