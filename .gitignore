@@ -6,6 +6,8 @@
 # temp
 ~*.*
 
+# draft
+draft
 
 # latex
 *.aux
