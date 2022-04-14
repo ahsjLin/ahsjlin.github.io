@@ -100,6 +100,15 @@ sudo netplan --debug apply
 <h3>有線網路跟wifi問題</h3>
 有線網路通了之後，wifi就整個消失了，最後要我開回win10去重置wifi的driver，wifi才正常。
 <hr>
+<h3>開機卡在"A start job is running for /sys/devices/virtual/misc/vmbus!hv_kvp"</h3>
+解決方法：<br />
+<pre>
+<code>
+systemctl disable hv-kvp-daemon.service
+</code>
+</pre>
+<a href="https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1820063" target="_blank">Reference: [Hyper-V] KVP daemon fails to start on first boot of disco VM</a>
+<hr>
 <footer>
 <h2>Reference</h2>
 
