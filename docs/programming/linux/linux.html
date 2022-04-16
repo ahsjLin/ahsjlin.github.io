@@ -1,6 +1,6 @@
 <html>
 <head>
-<title></title>
+<title>Linux</title>
 
 <!-- latex math javascript-->
 <script
@@ -17,6 +17,7 @@ function graph(name){
 
 <link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
 <link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/code/code_color.css">
 
 
 
@@ -24,7 +25,7 @@ function graph(name){
 <body>
 <h2>展示硬體內容</h2>
 <pre>
-<code>
+<code class="co1">
 inxi -Fxz
 </code>
 </pre>
@@ -34,7 +35,7 @@ inxi -Fxz
 <br />
 pseudo code:
 <pre>
-<code>
+<code class="co1">
 kill PID
 </code>
 </pre>
@@ -42,19 +43,29 @@ kill PID
 <br />
 force:
 <pre>
-<code>
+<code class="co1">
 kill -9 PID
 </code>
 </pre>
 關掉所有相關名字的application, ex. 關掉firefox
 <pre>
-<code>
+<code class="co1">
 killall firefox
 </code>
 </pre>
 <hr>
 <h2>解壓縮參考</h2>
 <a href="http://note.drx.tw/2008/04/command.html" target="_blank">凍仁的筆記</a>
+<hr>
+<h3>whoami</h3>
+Show user name currently logged into the terminal session. 
+<br></br>
+command: <br></br><code class="co1">whoami</code>
+<hr>
+<h3>man</h3>
+Help you understand all the other commands.
+<br></br>
+command: <br></br><code class="co1">man &ltcommand&gt</code>
 
 
 
