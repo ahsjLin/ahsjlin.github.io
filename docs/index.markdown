@@ -192,6 +192,8 @@ layout: default
 <a href="https://www.youtube.com/watch?v=TRzdLI42hYw" target="_blank">就輸在那兩顆</a> <br />
 <a href="https://www.youtube.com/watch?v=NAkEH2mZ3K8" target="_blank">人機一體</a> <br />
 <a href="https://www.youtube.com/watch?v=gBw6v3Sxy_E" target="_blank">要準備送人去yt</a> <br />
+<a href="https://www.youtube.com/watch?v=M9JAXELqnAs" target="_blank">力量人 晨晨</a> <br />
+<a href="https://www.youtube.com/watch?v=tcQMLpBy398" target="_blank">偷學我們的力量人</a> <br />
 
 <!--
 <a href="https://www.youtube.com/watch?v=zx7pcgHtU4I" target="_blank">O我的天</a> <br />
