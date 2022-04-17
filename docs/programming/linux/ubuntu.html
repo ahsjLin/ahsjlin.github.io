@@ -109,6 +109,20 @@ systemctl disable hv-kvp-daemon.service
 </pre>
 <a href="https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1820063" target="_blank">Reference: [Hyper-V] KVP daemon fails to start on first boot of disco VM</a>, <a href="https://forum.proxmox.com/threads/nach-stromausfall-a-start-job-is-running-for-sys-devices-virtual-mis-vmbus.63583/" target="_blank">proxmox</a>
 <hr>
+<h3>wc</h3>
+print new linem, and byte counts for each file.
+<br/>
+<br/>
+<h4>piping</h4>
+Counting result from command "ls -la".
+<pre><code class="co1">ls -la | wc</code></pre>
+Counting result from command "cat fileName.txt".
+<pre><code class="co1">cat fileName.txt | wc -l</code></pre>
+<hr>
+<h3>sort</h3>
+sort file contains.
+
+<hr>
 <footer>
 <h2>Reference</h2>
 
