@@ -23,6 +23,8 @@ function graph(name){
 
 </head>
 <body>
+Code 的[]代表需要打的參數, 檔案或資料夾，實際[]的框框不需要打。
+<hr>
 <h2>展示硬體內容</h2>
 <pre>
 <code class="co1">
@@ -56,6 +58,12 @@ killall firefox
 <hr>
 <h2>解壓縮參考</h2>
 <a href="http://note.drx.tw/2008/04/command.html" target="_blank">凍仁的筆記</a>
+compress a directory:<br/>
+<code class="co1">tar -zcvf compressName.tar.gz directoryName</code>
+<br/>
+<br/>
+list "*.tar.gz" contains.<br/>
+<code class="co1">tar -tvf compressName.tar.gz</code>
 <hr>
 <h3>whoami</h3>
 Show user name currently logged into the terminal session. 
@@ -65,10 +73,107 @@ command: <br></br><code class="co1">whoami</code>
 <h3>man</h3>
 Help you understand all the other commands.
 <br></br>
-command: <br></br><code class="co1">man &ltcommand&gt</code>
+command: <br></br><code class="co1">man [command]</code>
+<hr>
+<h3>clear</h3>
+<code class="co1">clear</code>
+<br/>
+I prefer to use the "Control+l".<br/>
+Because using "clear" will put all commands that you have used into history.<br/>
+The "Control+l" is just scrolling down until your position.
+
+<hr>
+<h3>mkdir</h3>
+Create multiple folders.
+<code class="co1">mkdir [folderName1] [folderName2]</code>
+<br/>
+Create nested folders.
+<pre>
+<code class="co1">mkdir -p [folderName]
+
+// example
+mkdir -p mainFolder/subFolder/subsubFolder
+</code>
+</pre>
+<hr>
+<h3>rm</h3>
+<span style="color: red;">Using carefully! It will delete files permanently.</span>
+<br/>
+delete file/directory.
+<pre>
+<code class="co1">//delete file
+rm [fileName]
+
+// verbose
+rm -v [fileName]
+
+// delete directory
+rm -r [directoryName]
+</code>
+</pre>
+<hr>
+<h3>mv</h3>
+move or rename
+<pre><code class="co1">// move files
+mv [file1] [file2] [file3] [directory/]
+
+// move directory
+mv [directoryName/] [./position/]
+
+// rename file
+mv [oldName] [newName]
+
+// rename directory
+mv [oldDirectoryName/] [newDirectoryName]
+</code></pre>
+
+<hr>
+<h3>cp</h3>
+copy file or directory
+<pre><code class="co1">// copy file and rename
+cp [sourceFile] [destination]
+
+// copy directory recursively
+cp -r [sourceDirectory] [distination]
+</code>
+</pre>
+<hr>
+<h3>head</h3>
+output the first part of files
+<pre><code class="co1">head [OPTION]... [FILE]...</code><pre>
+
+<h3>tail</h3>
+output the last part of files
+<pre><code class="co1">tail [OPTION]... [FILE]...
+
+// without end file
+// If you want to read file contains refreshly.
+tail fileName -f
+</code><pre>
+<hr>
+<h3>redirecting standard output</h3>
+<pre><code class="co1">// write into file
+&gt
+
+// append
+&gt&gt
 
 
+// example
+ls &gt list.txt
 
+// example
+ls &gt&gt list_append.txt
+</code></pre>
+<hr>
+<h3>cat</h3>
+contatenate files and print on the standard output.
+<pre><code class="co1">cat [OPTION]... [FILE]...</code></pre>
+<hr>
+<h3>less</h3>
+read files contain
+<pre><code class="co1">less fileName</code></pre>
+"/findStr"
 
 
 <hr>

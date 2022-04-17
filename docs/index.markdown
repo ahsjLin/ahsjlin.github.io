@@ -225,7 +225,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=FUDlsSkrRAc" target="_blank">監獄線人</a> <br />
 <a href="https://www.youtube.com/watch?v=GOvYIPgIH3s" target="_blank">阿 怎麼穿布鞋</a> <br />
 <a href="https://www.youtube.com/watch?v=QooShJqKLVk" target="_blank">星星剛消掉欸</a> <br />
-<a href="https://www.youtube.com/watch?v=-vBE1AlSEoI" target="_blank">當警衛也錯啊</a> <br />
+<a href="https://www.youtube.com/watch?v=-vBE1AlSEoI" target="_blank">當警衛也不錯啊</a> <br />
 
 ### Animal
 <a href="https://www.youtube.com/watch?v=n2OEHlkCXio" target="_blank">不要玩麻雀</a> <br />
