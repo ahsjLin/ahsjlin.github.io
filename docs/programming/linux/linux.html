@@ -173,7 +173,52 @@ contatenate files and print on the standard output.
 read files contain
 <pre><code class="co1">less fileName</code></pre>
 "/findStr"
+<hr>
+<h3>wc</h3>
+print new linem, and byte counts for each file.
+<br/>
+<br/>
+<h4>piping</h4>
+Counting result from command "ls -la".
+<pre><code class="co1">ls -la | wc</code></pre>
+Counting result from command "cat fileName.txt".
+<pre><code class="co1">cat fileName.txt | wc -l</code></pre>
+<hr>
+<h3>sort</h3>
+sort file contains.
+<hr>
+<h3>uniq</h3>
+<pre><code class"co1">// display duplicate one
+uniq -d
 
+// display single one
+uniq -u
+
+// piping "sort"
+sort flavors.txt | uniq -u
+
+// counting and sort
+sort flavors.txt | uniq -c | sort -nr
+</code></pre>
+<hr>
+<h3>?</h3>
+any single character
+<pre><code>// example: remove all extension with two characters
+rm *.??</code></pre>
+<hr>
+<h3>dot dot</h3>
+arithmetic series
+<pre><code class="co1">// create Day1~Day100 file name
+touch Day{1..100}.txt</code></pre>
+<hr>
+<h3>diff</h3>
+Display different between two files contains.
+<pre><code class="co1">diff [FILE1] [FILE2]</code></pre>
+<hr>
+<h3>find</h3>
+find file with name, size, type...
+<pre><code class="co1">//find recursively with name
+find . -name 'fileName'</code></pre>
 <hr>
 <footer>
 <h2>Reference</h2>

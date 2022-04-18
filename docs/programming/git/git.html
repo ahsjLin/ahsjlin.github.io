@@ -65,16 +65,22 @@ gitk
 <h2>基本git指令</h2>
 <h3>一次加入全部更新的資料</h3>
 <pre>
-<code>
+<code>// three types
 git add .
-</code>
-</pre>
-或
-<pre>
-<code>
+//
 git add *
+//
+git add --all
 </code>
 </pre>
+Except adding files or directory contains
+<pre><code>// -- let git know path
+// windows
+git add --all -- :!path/to/file :!path/to/*
+
+// mac and linux
+git add --all -- ':!path/to/file' ':!path/to/*'
+</code></pre>
 <h3>拿掉加入的資料</h3>
 <pre>
 <code>
