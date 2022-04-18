@@ -49,11 +49,55 @@ kill -l</code></pre>
 <h2>解壓縮參考</h2>
 <a href="http://note.drx.tw/2008/04/command.html" target="_blank">凍仁的筆記</a>
 compress a directory:<br/>
-<code class="co1">tar -zcvf compressName.tar.gz directoryName</code>
+<code class="co1">tar -czfv compressName.tar.gz directoryName
+
+// The c option stands for create.
+// The z option stands for .gz
+// The f option is used to write to file the archive.
+// The v option display compress information.
+
+</code>
 <br/>
 <br/>
 list "*.tar.gz" contains.<br/>
 <code class="co1">tar -tvf compressName.tar.gz</code>
+compress files and directory into *.gz
+<pre><code class="co1">// easy way to compress files
+gzip -k file1 file2
+// result
+// file1.gz and file2.gz
+
+// standard way 
+gzip -c fileName &gt compressName.gz
+
+// compress all the files in directory
+gzip -r directoryName
+
+// show information 
+gzip -v fileName
+
+// decompress
+gzip -d fileName.gz
+// equal to "gzip -d ..."
+gunzip fileName.gz
+
+// archive
+tar -cf archive.tar file1 file2
+
+// The c option stands for create, the f option is used to write to file the archive.
+
+
+// To extract files from an archive in the current folder:
+tar -xf archive.tar
+
+// The x option stands for extract.
+
+// To extract them to a specify directory.
+tar -xf archive.tar <span style="color:blue;">-C</span> directory
+</code></pre>
+
+
+
 <hr>
 <h3>whoami</h3>
 Show user name currently logged into the terminal session. 
@@ -279,9 +323,86 @@ delay with seconds
 <pre><code class="co1">// sleep in background
 sleep 10 &</code></pre>
 
+<hr>
+<h3>alias</h3>
+The alias is working until terminating it.<br/>
+If you want to work it in all time.<br/>
+Type in ~/.bashrc 
+<pre><code class="co1">// double quotes
+// The variable will be assign to now value. Whatwhere you use it, it cannot change its value.
+alias ll="ls $PWD"
 
+// single quote
+// The variable would be changed when you use it. 
+alias ll='ls $PWD'</code></pre>
 
+<hr>
+<h3>Display variable</h3>
+<pre><code class="co1">printenv</code></pre>
 
+<hr>
+<h3>xargs</h3>
+build and execute command lines from standard input.
+<pre><code class="co1">// example
+// It will get arguments from deadPlayer.txt and put into rm.
+cat deadPlayer.txt | xargs rm
+
+// another example
+find . -size +10M | xargs ls -lh</code></pre>
+
+<hr>
+<h3>ln</h3>
+make links between files/Directories
+<pre><code class="co1">// hard link
+ln source.txt target.txt
+
+// soft link
+// It can link directory.
+ln -s source.txt target.txt
+ln -s sourceDir/ targetDir/</code></pre>
+<hr>
+<h3>who</h3>
+show who is logged on
+<hr>
+<h3>su</h3>
+run a command with substitute user and group ID.
+<pre><code class="co1">su [USERNAME]</code></pre>
+<hr>
+<h3>dpkg</h3>
+install .deb
+<a href="https://www.cnblogs.com/tankxiao/p/3332457.html" target="_blank">小坦克 - 博客網</a>
+<hr>
+<h3>passwd</h3>
+change password
+<hr>
+<h3>chown</h3>
+change file owner and group
+<pre><code class="co1">chown [OWNER] [FILE]
+
+// recursively
+chown -R owner fileName</code></pre>
+<a href="https://linux.vbird.org/linux_basic/mandrake9/0210filepermission.php" target="_blank">鳥哥Linux</a>
+<br/>
+<img src="https://linux.vbird.org/linux_basic/mandrake9/0210filepermission//0210filepermission_2.jpg" alt=""/><br/>
+<img src="https://linux.vbird.org/linux_basic/mandrake9/0210filepermission//0210filepermission_3.jpg" alt=""/><br/>
+<img src="img/fileType.png" alt=""/>
+<br/>
+<img src="img/OwnerGroupWorld.png" alt=""/>
+<br/>
+<img src="img/permission.png" alt=""/>
+<hr>
+<h3>ncal</h3>
+calendar
+<hr>
+<h3>chmod</h3>
+changing permissions<br/>
+<img src="img/chmod.png" alt=""/><br/>
+<img src="img/chmod_parameter.png" alt=""/>
+<br/>
+<pre><code class="co1">// Make an example:
+// Changing others' permission to execute.
+chmod o+x [FILENAME]</code></pre>
+<img src="img/chmod_oct_bin.png" alt=""/>
 <hr>
 <footer>
 <h2>Reference</h2>
