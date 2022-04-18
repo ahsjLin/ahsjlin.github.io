@@ -36,26 +36,16 @@ inxi -Fxz
 這裏PID是每個application的id號碼
 <br />
 pseudo code:
-<pre>
-<code class="co1">
-kill PID
-</code>
-</pre>
+<pre> <code class="co1">kill [PID] </code> </pre>
 在command line 打上 top就可以查看所有application的PID
 <br />
 force:
-<pre>
-<code class="co1">
-kill -9 PID
-</code>
-</pre>
+<pre> <code class="co1">kill -9 [PID]</code> </pre>
 關掉所有相關名字的application, ex. 關掉firefox
-<pre>
-<code class="co1">
-killall firefox
-</code>
-</pre>
+<pre> <code class="co1">killall firefox </code> </pre>
 <hr>
+<pre><code class="co1">// list kill signal
+kill -l</code></pre>
 <h2>解壓縮參考</h2>
 <a href="http://note.drx.tw/2008/04/command.html" target="_blank">凍仁的筆記</a>
 compress a directory:<br/>
@@ -218,11 +208,66 @@ Display different between two files contains.
 <h3>find</h3>
 find file with name, size, type...
 <pre><code class="co1">//find recursively with name
-find . -name 'fileName'</code></pre>
+find . -name 'fileName'
+
+// find directory with name
+find . -type d -name 'directoryName'
+
+// multiple files
+find . -type f -name 'name1' -or -name 'name2'
+
+// search with size
+find -type f -size +100k
+
+//search modify time
+// last 24 hours
+find . -type f -mtime -1
+// more than 3 days age
+find . -type f -mtime +3
+
+// search result and execute commands
+// find files and catenation
+find .-type f -size <span style="color: red;">-exec cat {} \;</span></code></pre>
 <hr>
+<h3>grep</h3>
+find string in files
+<pre><code class="co1">// find string in file
+grep string fileName.txt</code></pre>
+<hr>
+<h3>du</h3>
+estimate file space usage
+<pre><code class="co1">// display readable and sort them.
+du -h | sort </code></pre>
+<hr>
+<h3>df</h3>
+report file system disk space usage.
+<pre><code class="co1">// human readable
+df -h</code></pre>
+<hr>
+<h3>history</h3>
+<pre><code class="co1">//show ID and less them
+history | less
+// example
+...
+539  du -h
+// using ID command 539 means 'du -h'
+!539</code></pre>
+<hr>
+<hr>
+<h3>ps</h3>
+report a snapshot of the current processes.
+<pre><code class="co1">ps [OPTIONS]
+// pipeline process and name
+ps axww | grep "Visual"</code></pre>
+<hr>
+<h3>top</h3>
+display Linux processes
+<pre><code class="co1">// for mem
+top -o mem</code></pre>
 <footer>
 <h2>Reference</h2>
-
+<a href="https://www.freecodecamp.org/news/the-linux-commands-handbook/" target="_blank">The Linux Commands Handbook</a><br/>
+<a href="https://www.youtube.com/watch?v=ZtqBQ68cfJc" target="_blank">freeCodeCamp.org - The 50 Most Popular Linux & Terminal Commands - Full Course for Beginners</a>
 </footer>
 
 </body>
