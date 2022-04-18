@@ -253,7 +253,6 @@ history | less
 // using ID command 539 means 'du -h'
 !539</code></pre>
 <hr>
-<hr>
 <h3>ps</h3>
 report a snapshot of the current processes.
 <pre><code class="co1">ps [OPTIONS]
@@ -264,6 +263,26 @@ ps axww | grep "Visual"</code></pre>
 display Linux processes
 <pre><code class="co1">// for mem
 top -o mem</code></pre>
+<hr>
+<h3>jobs</h3>
+display Stopped processes
+<pre><code class="co1">jobs</code></pre>
+<br/>
+If you want to rerun processes.<br/>
+<h4>foreground</h4>
+<pre><code class="co1">fg ID</code></pre>
+<h4>background</h4>
+<pre><code class="co1">bg ID</code></pre>
+<hr>
+<h3>sleep</h3>
+delay with seconds
+<pre><code class="co1">// sleep in background
+sleep 10 &</code></pre>
+
+
+
+
+<hr>
 <footer>
 <h2>Reference</h2>
 <a href="https://www.freecodecamp.org/news/the-linux-commands-handbook/" target="_blank">The Linux Commands Handbook</a><br/>
