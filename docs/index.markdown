@@ -85,6 +85,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=bATBdc6erXg" target="_blank">丟了倪(阿倪閹割版</a> <br />
 <a href="https://www.youtube.com/watch?v=JXPWjR82L8Y" target="_blank">丟了倪(K7</a> <br />
 <a href="https://www.youtube.com/watch?v=mD9_PcIM0js" target="_blank">嘲笑自己傻得可以~</a> <br />
+<a href="https://www.youtube.com/watch?v=PZZ80gfKXuU" target="_blank">我只是加冰</a> <br />
 
 ### Overload Rules
 <a href="https://www.youtube.com/watch?v=AdudcVcMOgg" target="_blank">雙ni出擊</a> <br />
