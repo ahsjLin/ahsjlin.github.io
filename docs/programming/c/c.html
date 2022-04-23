@@ -1,6 +1,6 @@
 <html>
 <head>
-<title></title>
+<title>C</title>
 
 <!-- latex math javascript-->
 <script 
@@ -50,7 +50,39 @@ code裏有兩個sample, int和float的， 注意float的小數點位數記得設
 	sscanf第一個參數放字串變數， 第二個放要轉成的類型， 第三個放要放入<span style="color: red">變數的記憶體位址</span>。<br />
 code裏有四個sample， 前兩個爲int和混合string的， 後兩個爲float和混合string。
 </p>	
+<hr>
+<h3>String</h3>
+package: <pre><code class="co1">#include &ltstring.h&gt</code></pre>
+<br/>
+string length:<br/>
+<pre><code class="co1">size_t strlen ( const char * str );</code></pre>
+<br/>
+It will return how many characters in string.(without '\0')
+<br/>
+(It takes one byte to hold one character.)
+<br/>
+If a string contain "I am fine."
+<pre><code class="co1">#include &ltstdio.h&gt
+#include &ltstring.h&gt
+#define STR "I am fine."
 
+int main(void) {
+
+// strlen()
+printf("%zd", strlen(STR));
+// output 10
+
+// sizeof
+printf("%zd", sizeof STR);
+// output 11 (contain '\0' means null character.)
+</code></pre>
+
+<hr>
+<pre><code class="co1">sizeof</code></pre>
+is an operator.
+<hr>
+<h3>printf</h3>
+The "printf" will return number of characters.
 <hr>
 <footer>
 <h2>Reference</h2>
