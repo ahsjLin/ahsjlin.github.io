@@ -1,0 +1,219 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/code/code_color.css">
+
+
+</head>
+<body>
+<h3>Github Reference</h3>
+<a href="https://github.com/DaveGamble/cJSON" target="_blank">DaveGamble/cJSON</a>
+<hr>
+<h3>cJSON_CreateObject()</h3>
+<pre><code>cJSON *root; // or cJSON *root=NULL;
+root = cJSON_CreateObject();
+</code></pre>
+<hr>
+<a href="https://www.796t.com/content/1549947453.html" target="_blank">Create and Parse Sample</a>
+<h3>Add value into json</h3>
+<pre>
+<code class="co2">
+/* cjson sample */
+{
+	name : "Sarah Kinney",
+	id : 23, 
+	success : true 
+}
+</code>
+</pre>
+<br>
+<pre>
+<code class="co1">
+static cJSON* createObjectSample() {
+	// Create cJSON item
+	cJSON *XRoot; 
+	X = cJSON_CreateObject();
+
+	// Add String Type
+	cJSON_AddStringToObject(XRoot, "name", "Sarah Kinney");
+
+	// Add Number Type
+	cJSON_AddNumberToObject(XRoot, "id", 23);
+
+	// Add Boolean Type
+	cJSON_AddBoolToObject(XRoot, "success", 1);
+
+	return XRoot;
+}
+</code>
+</pre>
+<hr>
+<h3>Add Object Into Object</h3>
+<pre>
+<code class="co2">
+/* cjson sample */
+{
+	Extra : {
+		material : "Admantium"
+	}
+}
+</code>
+</pre>
+<pre>
+<code class="co1">
+static cJSON* createObjectWithObjectSample() {
+	cJSON *matRoot = NULL;
+	matRoot = cJSON_CreateObject();
+	if(NULL == matRoot) {
+		fprintf(stderr, "The matRoot did not created.\n")
+		return NULL;
+	}
+	cJSON *mat = NULL;
+	mat = cJSON_CreateObject();
+	if(NULL == mat) {
+		fprintf(stderr, "The mat did not created.\n")
+		cJSON_Delete(matRoot);
+		return NULL;
+	}
+	cJSON_AddStringToObject(mat, "material", "Admantium");
+
+	// Add mat into matRoot
+	cJSON_AddItemToObject(matRoot, "Extra", mat);
+
+	return matRoot;
+}
+</code>
+</pre>
+<hr>
+<h3>cJSON_Print()</h3>
+Print matRoot contain above sample.
+<pre>
+<code class="co1">
+char *ch = cJSON_Print(matRoot);
+// or 
+// char *ch = cJSON_PrintUnformatted(matRoot);
+
+if(NULL == ch) {
+	cJSON_Delete(matRoot);
+	return NULL;
+}
+cJSON_Delete(matRoot);
+...
+
+
+// The "ch" contain json format.
+
+</code>
+</pre>
+<hr>
+<h3>Parse</h3>
+<pre>
+<code class="co2">
+/* parse json sample */
+{
+	Race : "Elf",
+	Power : 203,
+	Darkness : false,
+	skill : {
+		arrow : 6.7
+	}
+
+}
+</code>
+</pre>
+<pre>
+<code class="co1">
+void parseJson(char *data) {
+	if(NULL == date) return NULL;
+
+	cJSON person = NULL;
+	person = cJSON_Parse(data);
+	if(NULL == person) {
+		fprintf(stderr, "%s\n", "Parse Error.");
+		return NULL;
+	}
+
+	// parse contain
+	cJSON *pSub = NULL;
+
+	pSub = cJSON_GetObjectItem(person, "Race");
+	if(NULL == pSub) return NULL;
+	printf("Race: %s", pSub-&gtvaluestring);
+
+	pSub = cJSON_GetObjectItem(person, "Power");
+	if(NULL == pSub) return NULL;
+	printf("Power: %d", pSub-&gtvalueint);
+
+	pSub = cJSON_GetObjectItem(person, "Darkness");
+	if(NULL == pSub) return NULL;
+	printf("Darkness: %d", pSub-&gtvaluebool);
+
+	pSub = cJSON_GetObjectItem(person, "skill");
+	if(NULL == pSub) return NULL;
+
+	cJSON *pSubSub = NULL;
+	pSubSub = cJSON_GetObjectItem(pSub, "arrow");
+	if(NULL == pSubSub) {
+		cJSON_Delete(pSub);
+		return NULL;
+	}
+	printf("Arrow Level: %.1f", pSubSub-&gtvaluedouble);
+
+	cJson_Delete(person);
+}
+</code>
+</pre>
+<hr>
+<h3>Parse Boolean to condition</h3>
+<a href="https://www.796t.com/post/Y3hkd2s=.html" target="_blank">程式人生</a>
+<br>
+<pre>
+<code class="co2">
+/* parse boolean sample */
+{
+	success : True
+}
+</code>
+</pre>
+<pre>
+<code class="co1">
+void parseJsonSample(char* data) {
+	cJSON *root = NULL;
+	root = cJSON_Parse(data);
+	if(NULL == root) return NULL;
+
+	cJSON *succ = cJSON_GetObjectItemCaseSensitive(root, "success");
+
+	if(cJSON_IsTrue(succ)) printf("Yes!");
+
+	cJSON_Delete(root);
+}
+</code>
+</pre>
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>
