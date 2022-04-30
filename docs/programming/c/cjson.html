@@ -24,6 +24,8 @@ function graph(name){
 <body>
 <h3>Github Reference</h3>
 <a href="https://github.com/DaveGamble/cJSON" target="_blank">DaveGamble/cJSON</a>
+<br/>
+Ref: Array(<a href="https://iter01.com/509794.html" target="_blank">東小東</a>)
 <hr>
 <h3>cJSON_CreateObject()</h3>
 <pre><code>cJSON *root; // or cJSON *root=NULL;
@@ -48,7 +50,7 @@ root = cJSON_CreateObject();
 static cJSON* createObjectSample() {
 	// Create cJSON item
 	cJSON *XRoot; 
-	X = cJSON_CreateObject();
+	XRoot = cJSON_CreateObject();
 
 	// Add String Type
 	cJSON_AddStringToObject(XRoot, "name", "Sarah Kinney");
