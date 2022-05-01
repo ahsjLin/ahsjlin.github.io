@@ -1,0 +1,90 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/code/code_color.css">
+
+
+</head>
+<body>
+<h3>Emergency mode root account locked!</h3>
+發生原因: 設定開機自動讀取外接硬碟，但讀取不到硬碟(有可能插拔過，使得硬碟的UUID改了)<br>
+solution:<br>
+<a href="https://samx18.io/blog/2017/11/05/piBootIssue.html" target="_blank">Reference 1</a><br>
+<a href="https://talhasariyuerek.com/en/linux-raspberry-pi-3b3b4-emergency-mode-root-account-locked-solution/" target="_blank">Reference 2</a><br>
+<ul>
+	<li>讀樹梅派的sd卡，裡面有個cmdline.txt檔案，在最後面加<pre><code class="co1">init=/bin/sh</code></pre>(不需要在新的一行加) </li>
+	<li>插回到樹梅派，畫面會進到read mode，這時候需要修改權限，到/dev底下，看有沒有mmcblk0p1或mmcblk0p2，那個mmcblk0p2是我們需要root的地方，輸入<pre><code class="co1">mount -o remount,rw /dev/mmcblk0p2 /</code></pre>
+	</li>
+	<li>成功不會報錯後，修改<pre><code class="co1">vim /etc/fstab</code></pre>，註解掉外接硬碟的UUID，並save。 </li>
+	<li>取出sd卡，回到cmdline.txt，拿掉<pre><code class="co1">init=/bin/sh</code></pre>即可。
+	</li>
+</ul>
+<hr>
+<h3>開機自動讀取外接硬碟</h3>
+<ul>
+	<li>建一個要mount外接硬碟的資料夾，假設我在/home/sjlin底下創名稱為DD的資料夾。</li>
+	<li>查看外接硬碟的UUID，輸入<pre><code class="co1">blkid
+// or
+sudo parted -l</code></pre>
+	</li>
+	<li>會看到/dev/sda*多少的後面，記住UUID和TYPE。(輸入 blkid會看到<br>
+/dev/sda2: LABEL="M-fM-^VM-0M-eM-\"M-^^M-gM-#M-^AM-gM-\"M-^_M-eM-^MM-^@" UUID="3864E6A404E6A134" TYPE="ntfs" PARTLABEL="Basic data partition" PARTUUID="dd135028-13l5-4132-b6a0-971489d03282"
+	</li>
+	<li>接著<pre><code class="co1">sudo vim /etc/fstab</code></pre>
+		底下加一行
+		<pre><code class="co1">UUID=3864E6A404E6A134 /home/sjlin/DD/ ntfs defaults	0	0</code></pre>
+	</li>
+	<li>reboot即可</li>
+</ul>
+<br>
+<br>
+<h4>如果只是想mount一次</h4>
+<ul>
+	<li>創一個指定的資料夾(假設在/home/sjlin/下，創一個名為D2的資料夾)<pre><code class="co1">sudo mkdir -p /home/sjlin/D2</code></pre>
+	</li>
+	<li>指令: <pre><code class="co1">sudo mount /dev/sdc2 /home/sjlin/D2</code></pre>
+	</li>
+</ul>
+<hr>
+<h3>Static IP Address</h3>
+<a href="https://www.youtube.com/watch?v=LCJtUbRlIXE" target="_blank">Reference</a>
+<br>
+<ul>
+	<li>ifconfig查看IP的網路類型(wlan0是wifi的, eth0是有線網路)</li>
+	<li><pre><code class="co1">sudo route -n</code></pre>
+		記住Gateway(在第一行) ex. 192.168.0.1
+	</li>
+	<li>寫入固定的IP(假設我想固定wifi為192.168.0.132),修改<pre><code class="co1">sudo vim /etc/dhcpcd.conf</code></pre>
+		在前面加
+		<pre><code class="co1"> interface wlan0
+static ip_address=192.168.0.132
+static routers=192.168.0.1
+static domain_name_servers=8.8.8.8 8.8.4.4</code></pre>
+	</li>
+</ul>
+		
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>
