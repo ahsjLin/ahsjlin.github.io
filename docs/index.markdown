@@ -197,6 +197,12 @@ layout: default
 <a href="https://www.youtube.com/watch?v=tcQMLpBy398" target="_blank">偷學我們的力量人</a> <br />
 <a href="https://www.youtube.com/watch?v=eXPEt1CFQEQ" target="_blank">阿比生日快樂</a> <br />
 <a href="https://www.youtube.com/watch?v=hvVFvsYwb04" target="_blank">R~~B...</a> <br />
+<a href="https://www.youtube.com/watch?v=a5iwga0Xiyk" target="_blank">派對咖RB</a> <br />
+<a href="https://www.youtube.com/watch?v=6LnvVPoGZ9w" target="_blank">空幹派對咖</a> <br />
+<a href="https://www.youtube.com/watch?v=K16yqk0Ft0U" target="_blank">又舔嘴唇</a> <br />
+<a href="https://www.youtube.com/watch?v=tkZjXn0KVUo" target="_blank">轉學生很囂張嘛</a> <br />
+<a href="https://www.youtube.com/watch?v=O8pdVZj2EmM" target="_blank">陽痿大談</a> <br />
+<a href="https://www.youtube.com/watch?v=gwlrwsp5Pd8" target="_blank">猜猜我是誰</a> <br />
 
 <!--
 <a href="https://www.youtube.com/watch?v=zx7pcgHtU4I" target="_blank">O我的天</a> <br />
