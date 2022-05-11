@@ -1,25 +1,7 @@
 <svg class="write-page" color-interpolation="linearRGB" width="928px" height="700px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g class="write-content write-v3" xruling="0" yruling="40" marginLeft="100" papercolor="#FFFFFF" rulecolor="#9A000000">
+  <g class="write-content write-v3" xruling="0" yruling="0" marginLeft="0" papercolor="#FFFFFF" rulecolor="#9A000000">
     <g class="ruleline write-std-ruling write-scale-down" fill="none" stroke="#000000" stroke-opacity="0.604" stroke-width="1" shape-rendering="crispEdges" vector-effect="non-scaling-stroke">
       <rect class="pagerect" fill="#FFFFFF" stroke="none" x="0" y="0" width="928" height="700" />
-      <path class="yrule_1" d="M0 40 l928 0" />
-      <path d="M0 80 l928 0" />
-      <path d="M0 120 l928 0" />
-      <path d="M0 160 l928 0" />
-      <path d="M0 200 l928 0" />
-      <path d="M0 240 l928 0" />
-      <path d="M0 280 l928 0" />
-      <path d="M0 320 l928 0" />
-      <path d="M0 360 l928 0" />
-      <path d="M0 400 l928 0" />
-      <path d="M0 440 l928 0" />
-      <path d="M0 480 l928 0" />
-      <path d="M0 520 l928 0" />
-      <path d="M0 560 l928 0" />
-      <path d="M0 600 l928 0" />
-      <path d="M0 640 l928 0" />
-      <path d="M0 680 l928 0" />
-      <path class="leftmargin" stroke="#FF0000" d="M100 0 l0 700" />
     </g>
     <path class="write-flat-pen" fill="#000000" stroke-width="1.6" __comx="122.006" __comy="24.805" __timestamp="0x180a91c4269" d="M118.332 16.309 l-0.595 -0.063 0 1.19 0.393 0.092 0.873 -0.188 1.044 -0.345 1.275 -0.4 1.282 -0.46 1.286 -0.465 1.103 -0.469 0.574 -0.263 0.177 -0.068 -0.83 -0.663 0.286 0.68 0.787 0 0.286 -0.68 -0.83 -0.663 -0.33 0.046 -0.693 0.309 -1.052 0.447 -1.249 0.451 -1.253 0.457 -1.26 0.402 -0.984 0.342 -0.648 0.156 -0.24 0.092 0 1.19 0.595 -0.063" />
     <path class="write-flat-pen" fill="#000000" stroke-width="1.6" __comx="118.606" __comy="24.805" __timestamp="0x180a91c432d" d="M118.62 23.388 l-1.132 -0.127 -0.047 0.681 -0.03 0.057 -0.028 0.229 -0.006 0.515 -0.002 0.709 0.233 0.985 0.405 0.659 0.349 0.395 0.502 0.321 0.267 -0.043 0.392 -0.063 0.314 -0.838 -0.746 -0.413 -0.225 0.137 0.265 -0.063 0.14 -0.043 -0.005 -0.023 -0.158 -0.178 -0.229 -0.372 -0.147 -0.618 -0.002 -0.55 -0.006 -0.515 -0.028 -0.229 -0.03 -0.057 -0.047 0.452 0 -0.127" />

@@ -1,35 +1,7 @@
 <svg class="write-page" color-interpolation="linearRGB" width="1060px" height="1100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g class="write-content write-v3" xruling="0" yruling="40" marginLeft="100" papercolor="#FFFFFF" rulecolor="#9A000000">
+  <g class="write-content write-v3" xruling="0" yruling="0" marginLeft="0" papercolor="#FFFFFF" rulecolor="#9A000000">
     <g class="ruleline write-std-ruling write-scale-down" fill="none" stroke="#000000" stroke-opacity="0.604" stroke-width="1" shape-rendering="crispEdges" vector-effect="non-scaling-stroke">
       <rect class="pagerect" fill="#FFFFFF" stroke="none" x="0" y="0" width="1060" height="1100" />
-      <path class="yrule_1" d="M0 40 l1060 0" />
-      <path d="M0 80 l1060 0" />
-      <path d="M0 120 l1060 0" />
-      <path d="M0 160 l1060 0" />
-      <path d="M0 200 l1060 0" />
-      <path d="M0 240 l1060 0" />
-      <path d="M0 280 l1060 0" />
-      <path d="M0 320 l1060 0" />
-      <path d="M0 360 l1060 0" />
-      <path d="M0 400 l1060 0" />
-      <path d="M0 440 l1060 0" />
-      <path d="M0 480 l1060 0" />
-      <path d="M0 520 l1060 0" />
-      <path d="M0 560 l1060 0" />
-      <path d="M0 600 l1060 0" />
-      <path d="M0 640 l1060 0" />
-      <path d="M0 680 l1060 0" />
-      <path d="M0 720 l1060 0" />
-      <path d="M0 760 l1060 0" />
-      <path d="M0 800 l1060 0" />
-      <path d="M0 840 l1060 0" />
-      <path d="M0 880 l1060 0" />
-      <path d="M0 920 l1060 0" />
-      <path d="M0 960 l1060 0" />
-      <path d="M0 1000 l1060 0" />
-      <path d="M0 1040 l1060 0" />
-      <path d="M0 1080 l1060 0" />
-      <path class="leftmargin" stroke="#FF0000" d="M100 0 l0 1100" />
     </g>
     <path class="write-stroke-pen" fill="none" stroke="#000000" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" __comx="115.099" __comy="29.167" __timestamp="0x180aaed3ac6" d="M116.145 20.532 l0 -0.344 0 -0.229 0 -0.115 0 -0.172 0 -0.057 0 -0.057 0 0.458 0 1.317 0 1.947 0 2.405 0 2.577 -0.444 2.692 -0.444 2.692 -0.38 2.52 -0.317 2.176 -0.19 1.661 -0.19 0.974 0 0.573 -0.127 0.172 0 -0.744 0.127 -1.031" />
     <path class="write-stroke-pen" fill="none" stroke="#000000" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" __comx="120.867" __comy="29.167" __timestamp="0x180aaed3ca4" d="M117.92 20.876 l0 -0.515 0 -0.458 0.507 -0.458 0.824 -0.63 1.014 -0.573 1.268 -0.458 1.268 -0.286 1.331 0 1.077 0 1.014 0.172 0.761 0.515 0.444 0.63 0.19 0.802 0 0.974 -0.19 1.203 -1.077 1.317 -1.521 1.317 -1.901 1.203 -1.901 0.974 -1.965 0.744 -1.711 0.515 -1.331 0.229 -1.014 0.115 -0.507 0 -0.317 0 -0.063 0 0.697 0 1.077 0 1.394 0.344 1.458 0.458 1.331 0.687 1.268 0.916 1.204 1.031 1.141 1.26 1.014 1.26 0.887 1.374 0.697 1.088 0.57 0.802 0.317 0.515 0.127 0.172 0.063 0.057 -0.127 0 -0.063 -0.115" />
