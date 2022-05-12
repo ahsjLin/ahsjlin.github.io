@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>MIPS</title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/code/code_color.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+<body>
+<h2>MIPS 模擬器:<a href="https://courses.missouristate.edu/kenvollmar/mars/download.htm" target="_blank">Mars</a>(需要安裝java)</h2>
+<!-- <img src="./img/mars_simulator.png" width="80%" alt=""/> -->
+<hr>
+register: s* 
+<br>
+使用一些function時，不去修改裡面內容的register。<br>
+ex.<br>
+<pre><code class="">sub $t0, $s0, $s1 </code></pre>
+
+<hr>
+<h3>Printing "Hello World!"</h3>
+<pre><code class="">.data
+    myMessage: .asciiz "Hello World!"
+.text
+    li $v0, 4 # Tell system to get ready.
+    la $a0, myMessage # Loading address.
+    syscall # Tell system to do it.
+</code></pre>
+<ul>
+	<li>"Run" - "Assembly"</li>
+	<li>Click "Execute"</li>
+	<li>Run the current program.</li>
+</ul>
+<hr>
+<h3>Printing a Character</h3>
+<pre><code class="">.data
+    myMessage: .byte 'm'
+.text
+    li $v0, 4
+    la $a0, myMessage
+    syscall
+</code></pre>
+<hr>
+<h3>Printing an Integer</h3>
+<pre><code class="">.data
+    level: .word 999
+.text
+    li $v0, 1 # Tell system to get ready (an integer or a word).
+    lw $a0, level
+    syscall</code></pre>
+Output: 999
+
+<hr>
+<h3>Printing a Float</h3>
+<pre><code class="">.data
+    PI: .float 3.14
+.text
+    li   $v0 , 2
+    lwc1 $f12, PI
+    syscall </code></pre>
+* $f12
+<hr>
+<h3>Printing a double</h3>
+<pre><code class="">.data
+    myDouble:   .double 1.618
+    zeroDouble: .double 0.0
+.text
+    # Loading data from the location of random memory.
+    ldc1 $f2, myDouble
+    ldc1 $f0, zeroDouble
+    
+    # Tell system to get ready.
+    li $v0, 3
+    
+    # Print result from $f12.
+    add.d $f12, $f2, $f0
+    
+    syscall</code></pre>
+<hr>
+<h3>Adding integers and Printing it</h3>
+<pre><code class="">.data
+    number1: .word 5
+    number2: .word 3
+.text
+    lw $t0, number1($zero)
+    lw $t1, number2($zero)
+    
+    add $t2, $t0, $t1    # t2 = t0 + t1
+    
+    # Tell system to print a integer.
+    li $v0, 1
+    
+    add $a0, $zero, $t2
+    syscall</code></pre>
+Output: 8
+<hr>
+<h3>Printing an Integer by "move"</h3>
+<pre><code class="">.data
+    number1: .word 10
+    number2: .word 8
+.text
+    lw $s0, number1    # s0 = 10
+    lw $s1, number2    # s1 = 8
+    
+    sub, $t0, $s0, $s1 # t0 = s0 - s1, t0 = 10 - 8
+    
+    # Tell system to print an integer.
+    li $v0, 1
+    move $a0, $t0      # a0 = t0, the system prints something from the argument.
+    syscall</code></pre>
+Output: 2
+<hr>
+<h3>Multiplying Integers</h3>
+<pre><code class="">.data
+
+.text
+    addi $s0, $zero, 10
+    addi $s1, $zero, 4
+    
+    mul $t0, $s0, $s1
+    
+    li $v0, 1
+    add $a0, $zero, $t0
+    syscall</code></pre>
+Output: 40
+
+<h3>More Bigger Value by Multiplying</h3>
+<pre><code class="">.data
+
+.text
+    addi $t0, $zero, 20000
+    addi $t1, $zero, 30
+    
+    # The product is in the "lo" register
+    mult $t0, $t1
+    
+    # Move from "lo".
+    mflo $s0
+    
+    # Display multiplication result.
+    li $v0, 1
+    add $a0, $zero, $s0
+    syscall</code></pre>
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>

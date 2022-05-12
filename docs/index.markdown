@@ -2,7 +2,7 @@
 layout: default
 ---
 <!--
-[test](./test.html)
+[test]({% post_url 2022-05-11-test %})
 -->
 ### <a href="one_more_time.html" target="_blank">Watch Later</a>
 
