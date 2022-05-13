@@ -47,6 +47,12 @@ ex.<br>
 	<li>Click "Execute"</li>
 	<li>Run the current program.</li>
 </ul>
+or
+<ul>
+	<li>f3</li>
+	<li>f5</li>
+</ul>
+
 <hr>
 <h3>Printing a Character</h3>
 <pre><code class="">.data
@@ -156,6 +162,56 @@ Output: 40
     # Display multiplication result.
     li $v0, 1
     add $a0, $zero, $s0
+    syscall</code></pre>
+<hr>
+<h3>Multiplying by sll</h3>
+<pre><code class="">.data
+
+.text
+    addi $s0, $zero, 4
+    sll $t0, $s0, 3 # multiply 2^3 = 8
+    
+    # Display result
+    li $v0, 1
+    add $a0, $zero, $t0
+    syscall</code></pre>
+
+<hr>
+<h3>Dividing by div</h3>
+<pre><code class="">.data
+
+.text
+    addi $t0, $zero, 20
+    addi $t1, $zero, 4
+    
+    div, $s0, $t0, $t1
+    
+    #Display result by dividing
+    li $v0, 1
+    add $a0, $zero, $s0
+    syscall</code></pre>
+
+<hr>
+<h3>Dividing Integers and Display Quotient/Remainder</h3>
+<pre><code class="">.data
+
+.text
+    addi $t0, $zero, 33
+    addi $t1, $zero, 6
+    
+    div $t0, $t1
+    
+    mflo $s0 # Quotient
+    mfhi $s1 # Remainder
+    
+    # Display Quotient
+    li $v0, 1
+    add $a0, $zero, $s0 
+    syscall
+    
+    # Display Remainder
+    li $v0, 1
+    add $a0, $zero, $s1
     syscall</code></pre>
 
 <hr>
