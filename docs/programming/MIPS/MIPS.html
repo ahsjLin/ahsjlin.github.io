@@ -128,6 +128,7 @@ Output: 8
     
     # Tell system to print an integer.
     li $v0, 1
+    # move is a pseudoinstruction
     move $a0, $t0      # a0 = t0, the system prints something from the argument.
     syscall</code></pre>
 Output: 2
@@ -213,6 +214,189 @@ Output: 40
     li $v0, 1
     add $a0, $zero, $s1
     syscall</code></pre>
+
+<hr>
+<h3>Function</h3>
+<pre><code class="">.data
+    msg: .asciiz "Hi, everybody.\nMy name is Jay."
+.text
+    main:
+        # Jump and link (Call the function)
+        jal displayMessage
+    
+    # Tell the system that the program is done.
+    li $v0, 10
+    syscall
+    
+    # Function
+    displayMessage:
+        li $v0, 4
+        la $a0, msg
+        syscall
+        
+        # Go back where you call.
+        jr $ra</code></pre>
+
+<h3>Passing parameters into function</h3>
+<pre><code class="">.data
+
+.text
+    main:
+        # The a* is stroages arguments
+        addi $a1, $zero, 10
+        addi $a2, $zero, 5
+        
+        jal addNumber
+        jal printInteger
+    
+    # Tell the system that the program is done.
+    li $v0, 10
+    syscall
+    
+    # Adding number
+    addNumber:
+        add $v1, $a1, $a2
+    
+        jr $ra
+        
+    # Printing Integer
+    printInteger:
+        li $v0, 1
+        add $a0, $v1, $zero
+        # or
+        # addi $a0, $v1, 0
+        
+        syscall
+        
+        jr $ra</code></pre>
+
+<hr>
+<h3>Stack</h3>
+<pre><code class="">.data
+    newLine: .asciiz "\n"
+.text
+    main:
+        # setting value 10 in $s0
+        addi $s0, $zero, 10
+        
+        
+        # jump to function
+        jal increaseRegiter
+        
+        # printing new line
+        li $v0, 4
+        la $a0, newLine
+        syscall
+        
+        # printing value
+        li $v0, 1
+        move $a0, $s0
+        syscall
+    
+    # Tell the system that the program is done.
+    li $v0, 10
+    syscall
+    
+    
+    increaseRegiter:
+        # Push
+	# Move stack pointer address decrease 4 bytes
+	# Because a register's contain is 4-byte for MIPS.
+        addi $sp, $sp, -4 
+        sw $s0, 0($sp) # Write $s0's value into stack pointer address.
+        
+        # Do something on $s0.
+        addi, $s0, $s0, 30
+
+        # print value
+        li $v0, 1
+        add $a0, $zero, $s0
+        syscall
+        
+	# Pop back to the  original location.
+        lw $s0, 0($sp) # Get back the contain of stack pointer address.
+        addi $sp, $sp, 4 # Move stack pointer address increase 4 bytes.
+        
+        
+        jr $ra
+        
+    </code></pre>
+Output: <br>
+40<br>
+10
+<hr>
+<h3>Nested Procedure</h3>
+<pre><code class="">.data
+    newLine: .asciiz "\n"
+.text
+    main:
+         addi $s0, $zero, 10
+         
+         jal increaseNumber
+         
+         
+         # print integer
+         jal printInteger
+         
+         
+    # done
+    li $v0, 10
+    syscall
+    
+    increaseNumber:
+        # push
+        # a register's contain in MIPS is 4-byte.
+        addi $sp, $sp, -8
+        sw $s0, 0($sp)
+        sw $ra, 4($sp)
+        
+        # do something on $s0
+        addi $s0, $s0, 30
+        
+        # call printInteger
+        jal printInteger
+        
+        
+        # pop back
+        lw $s0, 0($sp)
+        lw $ra, 4($sp)
+        
+        
+        addi $sp, $sp, 8
+        jr $ra
+        
+    printInteger:
+        li $v0, 1
+        add $a0, $s0, $zero
+        syscall
+        
+        # print new line
+        li $v0, 4
+        la $a0, newLine
+        syscall
+        
+        jr $ra</code></pre>
+Output: <br>
+40<br>
+10
+<hr>
+<h3>Getting user's input with integer.</h3>
+<pre><code class="">.data
+
+.text
+    # Get user's input into $v0
+    li $v0, 5
+    syscall
+    
+    # Store input integer
+    # move is a pseudoinstruction
+    move, $t0, $v0
+    
+    # print it
+    li $v0, 1
+    add $a0, $zero, $t0
+    syscall</code></pre>
+
 
 <hr>
 <footer>
