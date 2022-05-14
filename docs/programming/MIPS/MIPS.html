@@ -302,7 +302,7 @@ Output: 40
     increaseRegiter:
         # Push
 	# Move stack pointer address decrease 4 bytes
-	# Because a register's contain is 4-byte for MIPS.
+	# Because a register's content is 4-byte for MIPS.
         addi $sp, $sp, -4 
         sw $s0, 0($sp) # Write $s0's value into stack pointer address.
         
@@ -315,7 +315,7 @@ Output: 40
         syscall
         
 	# Pop back to the  original location.
-        lw $s0, 0($sp) # Get back the contain of stack pointer address.
+        lw $s0, 0($sp) # Get back the content of stack pointer address.
         addi $sp, $sp, 4 # Move stack pointer address increase 4 bytes.
         
         
@@ -346,7 +346,7 @@ Output: <br>
     
     increaseNumber:
         # push
-        # a register's contain in MIPS is 4-byte.
+        # a register's content in MIPS is 4-byte.
         addi $sp, $sp, -8
         sw $s0, 0($sp)
         sw $ra, 4($sp)
@@ -636,7 +636,7 @@ myArray(byte address)
     # reset index
     addi $t0, $zero, 0
     
-    # while loop print contain of array
+    # while loop print content of array
     while:
         beq $t0, 12, exit
         
@@ -667,10 +667,10 @@ myArray(byte address)
     main:
         # intialize index
         addi $t0, $zero, 0
-        # print array contain
+        # print array content
         while:
             beq $t0, 12, exit
-            # fetch array contain
+            # fetch array content
             lw $t1, myArray($t0)
             li $v0, 1
             add $a0, $zero, $t1
@@ -765,6 +765,244 @@ myArray(byte address)
      
        </code></pre>
 
+
+<hr>
+<h3>Recursion</h3>
+參考:<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VWTfowHHlnU?start=661" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+<b>Tip:</b><br>
+$a0 當作判斷式的參數, 每次$a0之值賦予給$s0，由$s0跟$v0運算，結果由$v0得到。<br>
+記得習慣得到$v0之值，要存到data block。
+<pre><code class=""># factorial in c program
+# int factorial(int n) {
+#     if(n==0) return 1;
+#     else return n*factorial(n-1);
+# }
+.data
+    msg:              .asciiz "Enter a number to find its factorial: "
+    resultMsg:        .ascii "\nThe factorial of the number is "
+    resultDot:        .asciiz ".\n"
+    theNumber:        .word 0
+    theResultNumber:  .word 0
+.text
+    .globl main
+    main:
+        # Get number from user.
+        li $v0, 4
+        la $a0, msg
+        syscall
+        
+        li $v0, 5
+        syscall
+        # save number to theNumber
+        sw $v0, theNumber($zero)
+        
+        # call factorial function
+        lw $a0, theNumber($zero)
+        jal fact
+        sw $v0, theResultNumber
+        
+        # Display the result
+        li $v0, 4
+        la $a0, resultMsg
+        syscall
+        # Answer Number
+        li $v0, 1
+        lw $a0, theResultNumber($zero)
+        syscall
+        # Dot
+        li $v0, 4
+        la $a0, resultDot
+        syscall
+        
+    
+    
+        # System call to end of program.
+        li $v0, 10
+        syscall
+#----------------------
+# Factorial Function
+.globl fact
+fact:
+    addi $sp, $sp, -8
+    sw $ra, 0($sp)
+    # the s0 will be reset by $a0
+    sw $s0, 4($sp)
+    
+    # Setting the value type is an integer.
+    li $v0, 1
+    # The zero is not to multiply.
+    # Therefore, the procedurce start to return where call this procedure by label fractorialDone.
+    # The register $a0 is the condition.
+    beq $a0, $zero, fractorialDone
+    
+    # i--
+    add $s0, $zero, $a0
+    addi $a0, $a0, -1
+    jal fact
+    
+    # Passing argument $a0 to $v0. $v0 := $a0
+    # The $s0 is this stack's $s0.
+    mul $v0, $v0, $s0
+    
+    fractorialDone:  
+        lw $ra, 0($sp)
+        lw $s0, 4($sp)
+        addi $sp, $sp, 8
+        
+        # Return to the next of the instruction of "jal fact" on label fract.
+        jr $ra</code></pre>
+<h4>practice:</h4>
+<pre><code class="">.data
+    number: .word 0
+    answer: .word 0
+.text
+.globl main
+main:
+    # get number from user.
+    li $v0 5
+    syscall
+    
+    sw $v0, number($zero)
+    
+    lw $a0, number($zero)
+    jal fact
+    sw $v0, answer($zero)
+    
+    # Display Output
+    li $v0, 1
+    lw $a0, answer($zero)
+    syscall
+    
+    # end of program
+    li $v0, 10
+    syscall
+    
+#-----------
+.globl fact
+fact:
+    addi $sp, $sp, -8
+    sw $ra, 0($sp)
+    # the s0 will be reset by $a0
+    sw $s0, 4($sp)
+    
+    # start to recursion 
+    # The register $a0 is the condition.
+    li $v0, 1
+    beq $a0, $zero, fracDone
+    
+    add $s0, $zero, $a0
+    addi $a0, $a0, -1
+    
+    jal fact
+    
+    mul $v0, $v0, $s0
+    
+    fracDone:
+        lw $ra, 0($sp)
+        lw $s0, 4($sp)
+        addi $sp, $sp, 8
+        
+        jr $ra</code></pre>
+
+
+<hr>
+<h3>Sum and average</h3>
+<pre><code class="">.data
+    array: .word 10, 3, 68
+    length: .word 3
+    sum: .word 0
+    avg: .word 0
+    newLine: .asciiz "\n"
+.text
+    main:
+        la $t0, array($zero)
+        li $t1, 0, # index
+        lw $t2, length($zero) # length
+        li $t3, 0 # avgerage
+        li $t4, 0 # sum
+        
+        sumLabel:
+           lw $t5, 0($t0)
+           # add elements
+           add $t4, $t4, $t5
+           addi $t1, $t1, 1
+           addi $t0, $t0, 4
+           blt $t1, $t2, sumLabel
+           # save result
+           sw $t4, sum($zero)
+           # calculate average
+           div $t3, $t4, $t2
+           sw $t3, avg($zero)
+        
+        # Display sum
+        li $v0, 1
+        lw $a0, sum($zero)
+        syscall
+        
+        # new line
+        li $v0, 4
+        la $a0, newLine($zero)
+        syscall
+        
+        # Display average
+        li $v0, 1
+        lw $a0, avg($zero)
+        syscall
+        
+        </code></pre>
+<hr>
+<h3>2D Array and Sum diagonal of values</h3>
+<pre><code class=""># [ [3, 4],
+#   [2, 5] ]
+.data
+    twoDArray: .word 3, 4
+               .word 2, 5
+    size: .word 2 # Equal to rowLen and columnLen
+    
+    # The "eqv" is like as "#define" in C.
+    .eqv DATA_SIZE 4
+    
+.text
+    main:
+    la $a0, twoDArray
+    lw $a1, size
+    jal sumDiagonal
+    add $a0, $v0, $zero
+    
+    # Display result
+    li $v0, 1
+    syscall
+    
+    # End the program
+    li $v0, 10
+    syscall
+    
+sumDiagonal:
+    li $v0, 0 # $v0 == sum
+    li $t0, 0 # index == rowIndex == columnIndex
+    
+    sumLoop:
+        mul $t1, $t0, $a1 # rowIndex * columnLen
+        add $t1, $t1, $t0 # + columnIndex
+        mul $t1, $t1, DATA_SIZE # *data size
+        add $t1, $t1, $a0 # + base address
+        
+        lw $t2, 0($t1) # load content of address
+        
+        add $v0, $v0, $t2 # adding into sum
+        addi $t0, $t0, 1 # update index
+        blt $t0, $a1, sumLoop
+    
+    # end of sumDiagonal
+    jr $ra
+    
+    
+    
+    
+    
+    </code></pre>
 
 <hr>
 <footer>
