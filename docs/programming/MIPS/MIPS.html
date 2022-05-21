@@ -22,6 +22,15 @@ function graph(name){
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 
+<style>
+table.tmp_table tr {
+	text-align: center;
+}
+table.tmp_table tr td {
+	width: 70px;
+}
+</style>
+
 </head>
 <body>
 <h2>MIPS 模擬器:<a href="https://courses.missouristate.edu/kenvollmar/mars/download.htm" target="_blank">Mars</a>(需要安裝java)</h2>
@@ -1003,6 +1012,82 @@ sumDiagonal:
     
     
     </code></pre>
+<hr>
+<h3>利用not or實現not功能</h3>
+<table class="tmp_table">
+<tr>
+<td>\( p \)</td>
+<td>\( q \)</td>
+<td>\( p \) nor \( q \)</td>
+</tr>
+<!-- row 1 -->
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<!-- row 2 -->
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<!-- row 3 -->
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<!-- row 4 -->
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</table>
+假設我們需要讓$t1之值反轉($t0為真值表的p),放入$t0，那就固定q為0, 即可實現。<br>
+<pre><code class="">nor $t0, $t1, $zero </code></pre>
+
+<hr>
+<h3>利用exclusive or 實現swap</h3>
+<table class="tmp_table">
+<tr>
+<td>\( p \)</td>
+<td>\( q \)</td>
+<td>\( p \) xor \( q \)</td>
+</tr>
+<!-- row 1 -->
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<!-- row 2 -->
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<!-- row 3 -->
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<!-- row 4 -->
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</table>
+<br>
+假設$t0和$t1之值交換
+<pre><code class="">xor $t0, $t0, $t1
+xor $t1, $t0, $t1
+xor $t0, $t0, $t1</code></pre>
+
+
 
 <hr>
 <footer>
