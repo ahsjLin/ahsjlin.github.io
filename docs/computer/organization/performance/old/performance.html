@@ -1,0 +1,489 @@
+<html>
+<head>
+<title>cpu performance</title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+<style>
+th{
+	border: 1px solid black;
+}
+</style>
+
+</head>
+<body>
+<h2>Defining Performance</h2>
+反應時間(response time)和生產量(throughput)是常見
+作為評估計算效能的標準。<br>
+反應時間是指工作從開始到完成所花的時間，又稱執行時間
+(execution time)。<br>
+生產量是指在單位時間內所完成的工作量。<br>
+\[
+\text{Performance} =
+\frac{1}{\text{Execution Time}}
+\]
+<br>
+<br>
+\[
+\text{Performance }\uparrow
+\text{, Execution Time}\downarrow
+\]<br>
+<h3>n times faster</h3>
+Two computer x and y.<br>
+The compouter x is n times faster than computer y.
+(performance ratio)
+<br>
+\[
+(\rightarrow )
+\frac{\text{Performance}_{\color{blue}x}}{\text{Performance}_{\color{red}y}} = n
+\]
+\[
+(\leftarrow )
+\frac{\text{Execution Time}_{\color{red}y}}{\text{Execution Time}_{\color{blue}x}} = n
+\]
+<hr>
+<h2>Execution Time</h2>
+Focus user cpu execution time.
+<br>
+時間定義:
+wall-clock time + response time + elapsed time<br>
+也就是完成工作的總時間，包括磁碟存取時間、記憶體存取時間、
+輸入/輸出動作時間、作業系統時間
+(operating system overhead)等。<br>
+CPU execution time without waiting I/O and other processes.<br>
+<br>
+<br>
+\(
+\text{執行一個程式所需時間(elapsed time)}
+\begin{cases}
+\text{程式執行及等待I/O時間}\\
+\text{程式使用CPU時間}
+\begin{cases}
+\text{CPU執行作業系統時間(System CPU time)}
+\rightarrow \text{For servering user process}\\
+\text{CPU執行使用者程式時間(User CPU time)}\\
+\end{cases}
+\end{cases}
+\)
+<hr>
+<h2>CPU Performance and Its Factors</h2>
+\(
+\text{CPU execution time for a program}
+=
+\text{CPU clock cycles for a program}
+\times
+\text{Clock cycle time}
+\)<br>
+Alternatively, because clock rate and clock cycle time
+are inverses,<br>
+<br>
+\(
+\text{CPU execution time for a program}
+=
+\frac{
+\text{CPU clock cycles for a program}
+}
+{
+\text{Clock rate}
+}
+\)
+<br>
+<br>
+Clock Cycle =
+Instruction count(IC)
+\(
+\times
+\)
+Cycles Per Instruction(CPI)<br>
+\(
+\Rightarrow 
+\)
+Execution Time =
+IC
+\(
+\times
+\)
+CPI
+\(
+\times
+\)
+CCT(clock cycle time)<br>
+=
+(IC
+\(
+\times
+\)
+CPI)
+\(
+/
+\)
+CR(clock rate)
+<br>
+<br>
+不同指令所需的Cycles Per Instruction 也會不同。因此，<br>
+Clock Cycles 也可以經由加總各類指令CPI與其指令使用個數
+的乘積而獲得。<br>
+\(
+\text{CPU clock cycles}=
+\sum_{i=1}^{n}(\text{CPI}_i\times C_i)
+\)<br>
+\( C_i \)為指令類別i所使用的指令個數<br>
+\( \text{CPI}_i \)為指令類別i的CPI<br>
+n: 指令類別數。<br>
+<hr>
+<h2>Notice</h2>
+改變指令集\( \rightarrow  \)降低指令數，
+有可能造成clock cycle增加。<br>
+由於CPI與指令的種類相關，指令數少的程式碼
+也未必就是最快的。
+<br>
+<br>
+\( V: \text{電壓} \)<br>
+功率(\( W \))的消耗正比於(clock rate\( \times \)\( V^2 \))
+<hr>
+<h2>Performance example</h2>
+A certain machine with a 10ns 
+\(
+(10\times 10^{-9}\text{s})
+\) 
+clock can perform <br>
+jumps (1 cycle),<br>
+branches (3 cycles), <br>
+arithmetic instructions (2 cycles), <br>
+multiply instructions (5 cycles), <br>
+and memory instructions (4 cycles). <br>
+<br>
+A certain program has <br>
+10% jumps, <br>
+10 branches, <br>
+50% arithmetic, <br>
+10% multiply, <br>
+and 20% memory instructions.<br>
+<br>
+Answer the following question. <br>
+Show your derivation in sufficient detail.
+<ol>
+	<li>
+What is the CPI of this program on this machine?
+	</li>
+	<li>
+If the program executes \( 10^9 \) instructions, 
+what is its execution time?
+	</li>
+	<li>
+A 5-cycle multiply-add instruction is implemented 
+that combines an arithmetic and a multiply instruction.<br>
+50% of the multiples can be tuned into multiply-adds.<br>
+What is the new CPI?
+	</li>
+	<li>
+Following (3) above, if the clock period remains the same,<br>
+what is the program's new execution time.
+	</li>
+</ol>
+<h3>Ans</h3>
+<ol style="line-height: 30px;">
+	<li>
+<table>
+	<tr>
+	<th>Type</th>
+	<th>Cycle</th>
+	<th>Instruction Count</th>
+	</tr>
+<tr>
+<td>jump</td>
+<td>1</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>branch</td>
+<td>3</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>ari</td>
+<td>2</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>mul</td>
+<td>5</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>mem</td>
+<td>4</td>
+<td>20%</td>
+</tr>
+</table>
+<br>
+\(
+\text{CPI}_\text{avg}
+=
+1\times 0.1 +
+3\times 0.1 +
+{\color{blue}2\times 0.5} +
+5\times 0.1 +
+4\times 0.2
+=
+2.7
+\)
+	</li>
+<li>
+Execution Time
+=
+\(
+\text{IC}\times \text{CPI}\times \text{Clock Cycle Time}
+\)
+\(
+=
+10^9 \times 2.7 \times (10\times 10^{-9})
+=27
+\)
+</li>
+<li>
+Combines 50% of <b>mul</b> into <b>ari</b>.<br>
+\(
+\Rightarrow \text{halve of }10\% \text{ is } 5\%
+\Rightarrow \text{all instructions reduce } 5\%
+\)
+<br>
+The ari cycle per instruction is 2.<br>
+The mul cycle per instruction is 5.<br>
+\( \therefore \) mul dominate clock cycle.
+\(
+\Rightarrow \text{ari part} = 50\% - 5\% = 45\%
+\)
+<br>
+\(
+\Rightarrow \text{CPI}_\text{new}
+=(
+1\times 0.1 + 
+3\times 0.1 +
+{\color{blue}
+2\times 0.45 +
+5\times 0.05} +
+5\times 0.05 +
+4\times 0.2
+)
+{\color{red}
+/
+0.95
+}
+=
+2.74
+\)
+</li>
+<li>
+Execution Time
+=IC\( \times  \)
+CPI\( \times  \)
+Clock Cycle Time
+<br>
+\(
+\Rightarrow 
+(10^9\times 0.95)\times 2.74\times (10\times 10^{-9})
+=
+26.03
+\)s
+</li>
+</ol>
+<hr>
+<h2>使用MIPS做為效能評估標準的謬誤</h2>
+非時間的效能評估標準叫做MIPS
+(million instructions per second 又稱 native MIPS)
+<br>
+<br>
+\[
+\text{MIPS}=
+\frac{
+\text{Instruction Count}
+}
+{
+\text{Execution Time}
+\times10^6
+}
+=
+\frac{
+\text{Instruction Count}
+}
+{
+\frac{\text{IC}\times\text{CPI}}{\text{Clock rate}}
+\times 10^6}
+=
+\frac{\color{red}{\text{Clock rate}}}{\text{CPI}\times 10^6}
+\]
+<br>
+<br>
+因為MIPS是指令的執行率，所以MIPS與執行時間成反比。
+<p style="color:red;">所以MIPS較高，效能就較好??</p>
+*但較快的電腦代表他有較大的MIPS。<br>
+<p>不同電腦或裝置不能用MIPS來比較效能。</p>
+<p>MIPS用於鑑別程式</p>
+MIPS表示指令的執行率(instruction execution rate)<br>
+並沒有考慮每個指令的能力(每類指令的CPI不同)考慮進來。<br>
+所以同一台電腦不同程式，其MIPS可能不同。<br>
+MIPS可能會與效能相反。ex IC增加, CPI減少。
+<br>
+<h3>Example</h3>
+某一電腦有三類指令A、B 和 C其CPI分別為1,2,3。<br>
+假設有兩個編譯器對同一程式進行編譯而產生程式碼，我們
+得到以下的資料:
+<table>
+<tr>
+<td>
+	Code from
+</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+</tr>
+<td>Compiler 1</td>
+<td>5</td>
+<td>1</td>
+<td>1</td>
+<tr>
+</tr>
+<tr>
+<td>Compiler 2</td>
+<td>10</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+假設clock cycle rate是4GHz。<br>
+哪一個編譯器產生的程式碼會執行的必較快?<br>
+若用執行時間當標準，哪個比較快?<br>
+<h4>Solution</h4>
+<b>Instruction count</b><br>
+compiler 1 : 5+1+1=7<br>
+compiler 2 : 10+1+1=12<br>
+<br>
+<b>Clock cycle</b><br>
+compiler 1 : \( 1\cdot 5 + 2\cdot 1 + 3\cdot 1= 10 \)<br>
+compiler 2 : \( 1\cdot 10 + 2\cdot 1 + 3\cdot 1= 15 \)<br>
+<br>
+<b>Execution Time</b><br>
+compiler 1 : \( \frac{10}{4\cdot 10^9}\)<br>
+compiler 2 : \( \frac{15}{4\cdot 10^9}\)<br>
+<br>
+\(\Rightarrow \) 就時間來說compiler 2較長
+\( \Rightarrow  \)compiler 1執行速度較快。
+<br>
+<br>
+<b>MIPS</b>
+<br>
+MIPS\( _1 = \frac{\text{IC}_1}{\text{ET}_1\cdot 10^6}
+=
+\frac{7}{\frac{10}{4\cdot 10^9}\cdot 10^6}
+=
+\frac{7\cdot 4\cdot 10^9}{10\cdot 10^6}
+\) <br>
+MIPS\( _2 = \frac{\text{IC}_2}{\text{ET}_2\cdot 10^6}
+=
+\frac{12}{\frac{15}{4\cdot 10^9}\cdot 10^6}
+=
+\frac{12\cdot 4\cdot 10^9}{15\cdot 10^6}
+\) <br>
+<br>
+\(
+\Rightarrow \frac{\text{MIPS}_1}{\text{MIPS}_2}
+=
+\frac{7\cdot 15}{10\cdot 12}=\frac{105}{120}
+\)<br>
+<br>
+\(
+\Rightarrow 
+\)
+compiler 2 有較高的MIPS。
+<hr>
+<h2>Amdahl's law</h2>
+
+<a href="https://en.wikipedia.org/wiki/Amdahl%27s_law" target="_blank">
+<img width="50%" height="70%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/AmdahlsLaw.svg/800px-AmdahlsLaw.svg.png" alt=""/>
+</a>
+<br>
+P = Performance<br>
+ET = Execution Time <br>
+Parallel portion is the part that can be improved.
+<br>
+\[
+\text{Overall Speedup}
+=
+\frac{\text{After }P}{\text{Before }P}
+=
+\frac{\text{Before }ET}{\text{After }ET}
+=
+\frac{\text{Before } ET}{\frac{\text{ET of Parallel portion}}{\text{speedup of Parallel portion}}+\text{unimproved time}}
+\]
+<br>
+For percentage
+\[
+\text{speedup}_\text{total}=
+\frac{\cancelto{1}{\frac{\text{all time}}{\text{all time}}}}{\frac{\text{improved time/all time}}{\text{speedup}_\text{improved part}}+\cancelto{\frac{\text{unimproved time}}{\text{all time}}}{(1-\frac{\text{improved time}}{\text{all time}}})}
+\]
+<h2>example</h2>
+目前一個正考慮中的效能評估程式，在舊的浮點數運算<br>
+硬體執行需100秒，為達到整體speedup為3，改善的部分為原來的
+5倍快。<br>
+請問原花在執行浮點數運算指令的時間應為多少?<br>
+<h2>solution</h2>
+\(
+3
+=
+\frac{100}{(100-x)+\frac{x}{5}}
+\)<br>
+\(
+\rightarrow x=\frac{250}{3}
+\)
+<hr>
+<h2>效能總評</h2>
+<b>SPECratio</b>的方法正規化<br>
+\(
+\text{SPECratio}
+=
+\frac{\text{Referenced(execution time)}}{\text{execution time}}
+\Rightarrow \text{Execution Time Ratio}
+\)<br>
+\(
+\Rightarrow 
+\)
+代表值越大，效率越好。
+<br>
+<br>
+<b>幾何平均(Geometric mean)</b>
+<br>
+<br>
+\(
+\sqrt[n]{\prod_{i=1}^{n}\text{Execution time ratio}_i}
+\)<br>
+\(
+\Rightarrow 
+\)
+不同的reference會有相同的值。<br>
+<br>
+如果用算數平均來做正規化，不同的reference會有不同的值，
+可能有誤差。
+<hr>
+<h2>效能評估程式</h2>
+常用 SPEC(System Performance Evaluation Coporation)
+評估效能。
+<br>
+評估兩個計算機系統時，只要簡單比較兩者的工作量的
+執行時間即可。
+<footer>
+<hr>
+<h2>Reference</h2>
+David A. Patterson - Computer Organization and Design. The HardwareSoftware Interface<br>
+張凡 - 計算機組織與結構重點直擊 
+</footer>
+</body>
+</html>
