@@ -204,6 +204,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=O8pdVZj2EmM" target="_blank">陽痿大談</a> <br />
 <a href="https://www.youtube.com/watch?v=gwlrwsp5Pd8" target="_blank">猜猜我是誰</a> <br />
 <a href="https://www.youtube.com/watch?v=uZgFWd_x-Vg" target="_blank">黃老師生氣囉</a> <br />
+<a href="https://www.youtube.com/watch?v=-r8VnoCgwAs" target="_blank">一刀殺進去</a> <br />
 
 <!--
 <a href="https://www.youtube.com/watch?v=zx7pcgHtU4I" target="_blank">O我的天</a> <br />
@@ -238,6 +239,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=-vBE1AlSEoI" target="_blank">當警衛也不錯啊</a> <br />
 <a href="https://www.youtube.com/watch?v=awGy4cjAZoM" target="_blank">我是一根豆芽菜</a> <br />
 <a href="https://www.youtube.com/watch?v=wB6fken8thI" target="_blank">輪到我的回合了</a> <br />
+<a href="https://www.youtube.com/watch?v=N1CgZAncU-M" target="_blank">很幸苦欸</a> <br />
 
 ### Animal
 <a href="https://www.youtube.com/watch?v=n2OEHlkCXio" target="_blank">不要玩麻雀</a> <br />
