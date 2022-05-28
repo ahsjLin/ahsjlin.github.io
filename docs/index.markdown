@@ -240,6 +240,8 @@ layout: default
 <a href="https://www.youtube.com/watch?v=awGy4cjAZoM" target="_blank">我是一根豆芽菜</a> <br />
 <a href="https://www.youtube.com/watch?v=wB6fken8thI" target="_blank">輪到我的回合了</a> <br />
 <a href="https://www.youtube.com/watch?v=N1CgZAncU-M" target="_blank">很幸苦欸</a> <br />
+<a href="https://www.youtube.com/watch?v=dB9UivyaUj8" target="_blank">古代詩人也一堆迷因R</a> <br />
+<a href="https://www.youtube.com/watch?v=dTTXwxZ4b6w" target="_blank">太帥了吧</a> <br />
 
 ### Animal
 <a href="https://www.youtube.com/watch?v=n2OEHlkCXio" target="_blank">不要玩麻雀</a> <br />
