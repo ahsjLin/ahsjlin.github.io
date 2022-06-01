@@ -1,0 +1,49 @@
+<svg class="write-page" color-interpolation="linearRGB" width="928px" height="1660px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g class="write-content write-v3" xruling="0" yruling="40" marginLeft="100" papercolor="#FFFFFF" rulecolor="#9F000023">
+    <g class="ruleline write-std-ruling write-scale-down" fill="none" stroke="#000023" stroke-opacity="0.624" stroke-width="1" shape-rendering="crispEdges" vector-effect="non-scaling-stroke">
+      <rect class="pagerect" fill="#FFFFFF" stroke="none" x="0" y="0" width="928" height="1660" />
+      <path class="yrule_1" d="M0 40 l928 0" />
+      <path d="M0 80 l928 0" />
+      <path d="M0 120 l928 0" />
+      <path d="M0 160 l928 0" />
+      <path d="M0 200 l928 0" />
+      <path d="M0 240 l928 0" />
+      <path d="M0 280 l928 0" />
+      <path d="M0 320 l928 0" />
+      <path d="M0 360 l928 0" />
+      <path d="M0 400 l928 0" />
+      <path d="M0 440 l928 0" />
+      <path d="M0 480 l928 0" />
+      <path d="M0 520 l928 0" />
+      <path d="M0 560 l928 0" />
+      <path d="M0 600 l928 0" />
+      <path d="M0 640 l928 0" />
+      <path d="M0 680 l928 0" />
+      <path d="M0 720 l928 0" />
+      <path d="M0 760 l928 0" />
+      <path d="M0 800 l928 0" />
+      <path d="M0 840 l928 0" />
+      <path d="M0 880 l928 0" />
+      <path d="M0 920 l928 0" />
+      <path d="M0 960 l928 0" />
+      <path d="M0 1000 l928 0" />
+      <path d="M0 1040 l928 0" />
+      <path d="M0 1080 l928 0" />
+      <path d="M0 1120 l928 0" />
+      <path d="M0 1160 l928 0" />
+      <path d="M0 1200 l928 0" />
+      <path d="M0 1240 l928 0" />
+      <path d="M0 1280 l928 0" />
+      <path d="M0 1320 l928 0" />
+      <path d="M0 1360 l928 0" />
+      <path d="M0 1400 l928 0" />
+      <path d="M0 1440 l928 0" />
+      <path d="M0 1480 l928 0" />
+      <path d="M0 1520 l928 0" />
+      <path d="M0 1560 l928 0" />
+      <path d="M0 1600 l928 0" />
+      <path d="M0 1640 l928 0" />
+      <path class="leftmargin" stroke="#FF0000" d="M100 0 l0 1660" />
+    </g>
+  </g>
+</svg>
