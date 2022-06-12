@@ -1,54 +1,7 @@
 <svg class="write-page" color-interpolation="linearRGB" width="928px" height="1860px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g class="write-content write-v3" xruling="0" yruling="40" marginLeft="100" papercolor="#FFFFFF" rulecolor="#9F000023">
+  <g class="write-content write-v3" xruling="0" yruling="0" marginLeft="0" papercolor="#FFFFFF" rulecolor="#9F000023">
     <g class="ruleline write-std-ruling write-scale-down" fill="none" stroke="#000023" stroke-opacity="0.624" stroke-width="1" shape-rendering="crispEdges" vector-effect="non-scaling-stroke">
       <rect class="pagerect" fill="#FFFFFF" stroke="none" x="0" y="0" width="928" height="1860" />
-      <path class="yrule_1" d="M0 40 l928 0" />
-      <path d="M0 80 l928 0" />
-      <path d="M0 120 l928 0" />
-      <path d="M0 160 l928 0" />
-      <path d="M0 200 l928 0" />
-      <path d="M0 240 l928 0" />
-      <path d="M0 280 l928 0" />
-      <path d="M0 320 l928 0" />
-      <path d="M0 360 l928 0" />
-      <path d="M0 400 l928 0" />
-      <path d="M0 440 l928 0" />
-      <path d="M0 480 l928 0" />
-      <path d="M0 520 l928 0" />
-      <path d="M0 560 l928 0" />
-      <path d="M0 600 l928 0" />
-      <path d="M0 640 l928 0" />
-      <path d="M0 680 l928 0" />
-      <path d="M0 720 l928 0" />
-      <path d="M0 760 l928 0" />
-      <path d="M0 800 l928 0" />
-      <path d="M0 840 l928 0" />
-      <path d="M0 880 l928 0" />
-      <path d="M0 920 l928 0" />
-      <path d="M0 960 l928 0" />
-      <path d="M0 1000 l928 0" />
-      <path d="M0 1040 l928 0" />
-      <path d="M0 1080 l928 0" />
-      <path d="M0 1120 l928 0" />
-      <path d="M0 1160 l928 0" />
-      <path d="M0 1200 l928 0" />
-      <path d="M0 1240 l928 0" />
-      <path d="M0 1280 l928 0" />
-      <path d="M0 1320 l928 0" />
-      <path d="M0 1360 l928 0" />
-      <path d="M0 1400 l928 0" />
-      <path d="M0 1440 l928 0" />
-      <path d="M0 1480 l928 0" />
-      <path d="M0 1520 l928 0" />
-      <path d="M0 1560 l928 0" />
-      <path d="M0 1600 l928 0" />
-      <path d="M0 1640 l928 0" />
-      <path d="M0 1680 l928 0" />
-      <path d="M0 1720 l928 0" />
-      <path d="M0 1760 l928 0" />
-      <path d="M0 1800 l928 0" />
-      <path d="M0 1840 l928 0" />
-      <path class="leftmargin" stroke="#FF0000" d="M100 0 l0 1860" />
     </g>
     <path class="write-flat-pen" fill="#000000" stroke-width="1.6" __comx="118.982" __comy="28.819" __timestamp="0x1811f3c84f4" d="M116.195 16.43 l-0.423 -0.063 -0.063 -0.057 -0.063 -0.057 -0.063 -0.04 0 1.155 0.444 0.1 0.951 0.005 1.175 0.002 1.294 -0.13 1.243 -0.603 0.808 -0.629 0.887 -0.76 -0.736 -0.95 -0.951 0.663 -0.713 0.516 -0.912 0.427 -0.988 0.099 -1.107 0.002 -0.951 0.005 -0.444 0.1 0 1.155 0.063 -0.04 0.063 -0.057 0.063 -0.057 0.423 -0.063" />
     <path class="write-flat-pen" fill="#000000" stroke-width="1.6" __comx="116.137" __comy="28.819" __timestamp="0x1811f3c85be" d="M111.049 23.508 l0.354 -0.28 1.01 -0.376 1.214 -0.551 1.515 -0.527 1.504 -0.554 1.36 -0.391 1.178 -0.289 0.822 -0.18 0.773 -0.048 1.061 -0.122 0 -0.728 -1.061 -0.122 -0.875 -0.048 -0.953 0.163 -1.23 0.283 -1.429 0.411 -1.538 0.591 -1.527 0.618 -1.194 0.594 -1.145 0.426 -0.454 0.45" />
