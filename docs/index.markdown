@@ -244,6 +244,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=N1CgZAncU-M" target="_blank">很幸苦欸</a> <br />
 <a href="https://www.youtube.com/watch?v=dB9UivyaUj8" target="_blank">古代詩人也一堆迷因R</a> <br />
 <a href="https://www.youtube.com/watch?v=dTTXwxZ4b6w" target="_blank">太帥了吧</a> <br />
+<a href="https://www.youtube.com/watch?v=Uf4UW6QhHqM" target="_blank">那個弧線跟圓 匠人精神</a> <br />
 
 ### Animal
 <a href="https://www.youtube.com/watch?v=n2OEHlkCXio" target="_blank">不要玩麻雀</a> <br />
