@@ -1,0 +1,213 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+<h2>Locality</h2>
+<ul>
+<li>
+<a href="img/memory_locality.png" target="_blank">locality</a>
+</li>
+</ul>
+<h2>Level</h2>
+<ul>
+<li>
+<a href="img/memory_level.png" target="_blank">level</a>
+</li>
+</ul>
+<hr>
+字組: word<br>
+位元組: byte<br>
+<h2>Direct mapping</h2>
+<ul>
+
+<li>
+<a href="img/direct_mapping.png" target="_blank">Direct mapping</a>
+</li>
+
+<li>
+<a href="img/calculator_cache_memory.png" target="_blank">calculate entry in cache</a>
+</li>
+
+<li>
+<a href="img/more_word_in_block_to_spatial_locality.png" target="_blank">More word in block</a>
+-- 
+<a href="img/more_word_in_block_in_cache_exercise.png" target="_blank">exercise</a>
+</li>
+</ul>
+<hr>
+<h2>Cache</h2>
+<ul>
+
+<li>
+<a href="img/cache_basic.png" target="_blank">cache basic</a>
+</li>
+
+<li>
+<a href="pdf/bank_exercise.html" target="_blank">(待)Increase bandwidth</a>
+</li>
+
+<li>
+<a href="img/speedup_access_memory_to_cache.png" target="_blank">speedup access data from memory to cache</a>
+</li>
+
+<li>
+<a href="pdf/calculate_efficacy.html" target="_blank">(待)calculate efficacy</a>
+</li>
+
+</ul>
+<h2>Set associative mapping</h2>
+<ul>
+
+<li>
+<a href="img/set_associative_mapping.png" target="_blank">set associative mapping</a>
+</li>
+<li>
+<a href="img/search_data_from_cache.png" target="_blank">search data</a>
+</li>
+<li>
+<a href="img/replace_block.png" target="_blank">victim block</a>
+</li>
+<li>
+<a href="img/length_of_tag_and_n_way_set_associatity.png" target="_blank">calculate tag bits</a>
+</li>
+</ul>
+
+<h2>Multilevel</h2>
+<ul>
+
+<li>
+<a href="img/multilevel_cache.png" target="_blank">multilevel</a>
+</li>
+
+<li>
+<a href="img/GMR_LMR.png" target="_blank">global miss rate / local miss rate</a>
+</li>
+
+<li>
+<a href="pdf/multilevel_efficacy.html" target="_blank">calculate multilevel efficacy</a>
+</li>
+
+</ul>
+<h2>AMAT</h2>
+<ul>
+
+<li>
+<a href="img/AMAT_average_memory_access_time.png" target="_blank">(AMAT) Average memory access time</a>
+-- 
+<a href="pdf/AMAT_exercise.html" target="_blank">exercise</a>
+</li>
+
+</ul>
+<hr>
+In disk:<br>
+page<br><br>
+In memory:<br>
+page table<br><br>
+special cache:<br>
+(TLB) Translation lookaside Buffer
+<hr>
+If the address do not miss, step by step.
+<br>
+CPU
+\(
+\rightarrow 
+\)
+TLB
+\(
+\rightarrow 
+\)
+Cache
+\(
+\rightarrow 
+\)
+CPU
+
+<hr>
+<h2>Virtual Memory</h2>
+<ul>
+<li>
+<a href="img/difference_between_cache_and_VM.png" target="_blank">cache and virtual memory term</a>
+</li>
+<li>
+<a href="img/virtual_memory.png" target="_blank">virtual memory</a>
+</li>
+
+<li>
+<a href="img/page_table.png" target="_blank">page table</a>
+</li>
+
+<li>
+<a href="img/page_write_mechanism.png" target="_blank">page write mechanism</a>
+</li>
+
+<li>
+<a href="img/page_fault.png" target="_blank">page fault</a>
+</li>
+
+<li>
+<a href="img/page_table_size.png" target="_blank">page table size</a>
+-- 
+<a href="pdf/page_table_size_exercise.html" target="_blank">exercise</a>
+</li>
+
+</ul>
+<h2>TLB</h2>
+<ul>
+
+<li>
+<a href="img/TLB_translation_lookaside_buffer.png" target="_blank">(TLB) translation lookaside buffer</a>
+-- 
+<a href="pdf/TLB_exercise.html" target="_blank">exercise</a>
+</li>
+	
+</ul>
+<hr>
+<h2>miss 來源分類</h2>
+<ul>
+<li><b>強迫性失誤(Compulsory misses)</b>:
+此block從未被使用，這種情況是在第一次讀記憶體時會發生，
+因為一定不在cache之中，這也稱為<b>冷開機失誤
+	(cold-start misses)</b>
+</li>
+<li><b>容量性失誤(Capacity misses):</b>
+process執行時，若cache容量不足以包含process所需要
+read的block時，就會發生cache miss。發生原因為block不斷的被替換，需要時又要被重新被擷取。
+</li>
+<li><b>衝突性失誤(Conflict misses)</b>
+也稱為<b>碰撞失誤(collision misses)</b>:
+在direct-mapping和set associative的cache中，
+不同block mapping 到cache的同一個位置中，導致
+cache miss。<br>
+而fully set associative mapping 是不會有Conflict misses發生的。
+</li>
+
+</ul>
+
+<hr>
+<footer>
+<h2>Reference</h2>
+張凡 - 計算機組織與結構重點直擊
+</footer>
+
+</body>
+</html>
