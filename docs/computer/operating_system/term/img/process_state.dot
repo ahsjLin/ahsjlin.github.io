@@ -1,0 +1,17 @@
+digraph process {
+label="Process State";
+	node [label="init"] init;
+	node [label="ready"] ready;
+	node [label="wait"] wait;
+	node [label="running"] running;
+	node [label="finish"] finish;
+	node [label="abort"] abort;
+
+	init -> ready;
+	ready -> running;
+	running -> finish;
+	running -> wait [label="wait I/O"];
+	running -> abort [label="run-time error"];
+	running -> ready [label="Preempty by high priority"];
+	wait -> ready;
+}

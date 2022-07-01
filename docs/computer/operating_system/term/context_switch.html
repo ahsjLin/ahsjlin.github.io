@@ -1,0 +1,54 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/code/code_color.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+<body>
+<h2>定義</h2>
+當process被迫離開CPU時(可能是Interrupt or preempted)，須將當時的processes information(PCB, Process Control Block)儲存, 並載入新的Process之information。
+<h2>OS 如何運作</h2>
+OS將process之CPU register內容及其他有關information存入memory中，再將新的process有的information載入CPU register，且OS需將目前的PCB pointer指向新的PCB的記憶體位址，最後再將控制權交給新的process。<br>
+<br>
+若CPU register數量夠多，不同process可以占用不同register set，此時，OS只需要轉換register set pointer去新的位址就可以完成context switch。
+<hr>
+<h2>可能發生context switch的地方</h2>
+running 到 wait: 等待I/O<br>
+running 到 ready: 被高優先權的process搶走<br>
+running 到 abort: 執行發生錯誤<br>
+<img src="img/process_state.png" alt="error"/>
+<br>
+New to Ready: Long-term scheduler<br>
+Ready to Run: Short-term scheduler<br>
+
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>

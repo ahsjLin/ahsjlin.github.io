@@ -1,0 +1,71 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/code/code_color.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+<body>
+<h2>Thread 和 Process 差異</h2>
+Thread<br>
+同一個task之間可以共享data(code section, data section)<br>
+Process則否。
+<br>
+<br>
+Thread的context switching較輕。
+<br>
+<br>
+Process只有單一的thread。<br>
+<br>
+Thread: 內只要還有可以用的threads, process就不會停
+<br>
+<br>
+Threads之間需要提供資料的互斥保護，防止threads之間不正常運作引起之危害。
+<hr>
+<h2>multithread之缺點</h2>
+<ol>
+	<li> 有順序的process不適用, ex. Shell program, printer。<br> </li>
+	<li>小程式, 簡單的嵌入式硬體/chips</li>
+</ol>
+<hr>
+<h2>multithread之優點</h2>
+<ol>
+	<li> Responsiveness </li>
+	<li>Resource sharing</li>
+	<li>Economy</li>
+	<li>Utilization of multiprocessor architectures</li>
+</ol>
+
+
+<hr>
+<h2>Process比Thread差的地方</h2>
+Process需要配置新的address space and other OS resources， 且有共享記憶體的情形，則需要另外處理process communication之overhead。較Thread creation cost高。
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>

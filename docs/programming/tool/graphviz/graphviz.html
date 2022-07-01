@@ -1,0 +1,93 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/code/code_color.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+<body>
+ref<br>
+<a href="https://zhuanlan.zhihu.com/p/21993254" target="_blank">知乎</a>
+<hr>
+<h3>variable</h3>
+Put string "string in node" into n1
+<pre><code class="co1">node [label="string in node"] n1 </code></pre>
+<hr>
+<h3>digraph & graph</h3>
+Connect between node and node
+<br>
+arrow: (digraph)
+<pre><code class="co1">n0 -> n1 </code></pre>
+<br>
+edge: (graph)
+<pre><code class="co1">n0 -- n1 </code></pre>
+<br>
+string on arrow/edge
+<pre><code class="co1">n0 -> n1 [label="on the arrow"] </code></pre>
+
+<hr>
+<h2>Sample</h2>
+arrow sample: fileName: sample.dot
+<pre><code class="co1"> digraph graphName {
+	node [label="node1 content"] n1;
+	node [label="node2 content"] n2;
+
+	n1 -> n2;
+}</code></pre>
+cmd command:
+<pre><code class="co1">dot  sample.dot -Tpng -o sample.png</code></pre>
+<hr>
+<h3>node setting</h3>
+<pre><code class="co1">b [shape=box];
+c [shape=triangle];</code></pre>
+<h3>edge setting</h3>
+<pre><code class="co1"> b -- c [color=blue];
+a -- c [style=dotted];</code></pre>
+<hr>
+<h3>subgraph</h3>
+<pre><code class="co1">digraph have_sub {
+	a -> {b,c};
+	subgraph sub_bc {
+		bgcolor=blue;
+		b;
+		c;
+	}
+}</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/code/code_color.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+<body>
+<h2>User/Kerval level thread</h2>
+User-level threads have no kernel support, so they are very inexpensive to ceate, destroy, and switch among.<br>
+However, if one blocks, the whole process blocks. <br>
+<br>
+Kerval-supported threads are more expensive because system calls are needed to create and destroy them and the kernel must schedule them.<br>
+They are more powerful because they are independently scheduled and block individually.
+<hr>
+<h2>User Thread</h2>
+<h3>Def</h3>
+Thread management是由在user site端之thread library負責(i.e., 提供API供user process使用)，完全不須kernel介入，kernel不知道有user thread存在。
+<h3>Thread發出Blocking system call</h3>
+會導致整個process一同blocked，even if there is available user thread in a process。
+<h3>Multiprocessor架構之效益發揮</h3>
+差
+<h3>Thread management cost</h3>
+低, context switching負擔較低
+<hr>
+<h2>Kernel Thread</h2>
+<h3>Def</h3>
+Thread management完全由kernel負責
+<h3>Thread發出Blocking system call</h3>
+不會導致整個process blocked, kernel可切給另一個thread執行。
+<h3>Multiprocessor架構之效益發揮</h3>
+佳, (同一個process之不同thread可在不同的processor上平行執行。)
+<h3>Thread management cost</h3>
+高,  slower context switching.
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>
