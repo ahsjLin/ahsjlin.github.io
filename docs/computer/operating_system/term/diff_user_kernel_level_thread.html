@@ -50,6 +50,15 @@ Thread management完全由kernel負責
 佳, (同一個process之不同thread可在不同的processor上平行執行。)
 <h3>Thread management cost</h3>
 高,  slower context switching.
+<hr>
+<h2>Thread的特性</h2>
+<ol>
+	<li>User threads run faster than kernel threads</li>
+	<li>If the kernel is single-threaded, any user-level thread performing a blocking system call will cause the entire process to block, even if other threads are available to run within the application.</li>
+	<li>Using threads can increase the utilization of a multi-processor system.</li>
+	<li>Each user thread must have its own stack in the application.</li>
+	<li>Pthreads defines the specification.</li>
+</ol>
 
 
 
