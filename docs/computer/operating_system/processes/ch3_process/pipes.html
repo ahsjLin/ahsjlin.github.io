@@ -1,0 +1,51 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/code/code_color.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+<body>
+<h2>Pipes</h2>
+A <b>pipe</b> acts as a conduit allowing two processes to communicate. Pipes were one of the first IPC mechanisms in early UNIX systems and typically provide one of the simpler ways for processes to communicate with one another, although they also have some limitations. In implementing a pipe, four issues must be considered:
+<ol>
+	<li>Does the pipe allow unidirectional communication or bidirectional communication?</li>
+	<li>If two-way communication is allowed, is it half duplex(data can travel only one way at a time) or full duplex(data can travel in both directions at the same time)?</li>
+	<li>Must a relationship(such as <i>parent-child</i>) exist between the communicating processes?</li>
+	<li>Can the pipes communicate over a network, or must the communicating processes reside on the same machine?</li>
+</ol>
+<hr>
+<h3>Ans 1</h3>
+Ordinary pipes are unidirectional, allowing only one-way communication.<br>
+If two-way communication is required, two pipes must be used, with each pipe sending data in a different direction.
+
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>

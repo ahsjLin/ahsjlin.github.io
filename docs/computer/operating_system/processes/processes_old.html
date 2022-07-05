@@ -1,0 +1,214 @@
+<html>
+<head>
+<title>process</title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+
+
+
+</head>
+<body>
+Process is a program in execution.
+<hr>
+Process is the unit of execution and contain of code.<br>
+Process stack 包含一些臨時性資料，例如副程式參數, 返回位址,
+以及一些臨時變數。<br>
+包括一個裝有整體變數的資料區 (Data Section)<br>
+Programming counter (用途: 指向下一個要執行的指令)<br>
+cpu register <br>
+<hr>
+Life cycle of process<br>
+<img  src="img/process_state.png" alt=""/>
+<hr>
+處理程序控制區段(Process Control Block,PBC)<br>
+作業系統利用PCB紀錄每個處理程序的所有資訊。<br>
+<img src="img/pcb.png" alt=""/>
+<br>
+PCB包括:<br>
+<ul>
+<li>Process ID: 每個id是唯一、不重複的 </li>
+<li>Process state: ready, running, wait, and suspended</li>
+<li>programming counter: 放置下一個要執行的指令位址。</li>
+<li>cpu register: <br>
+包括: 累加器, index register, stack pointer, 通用暫存器, 
+條件碼資訊等。 在interrupt發生時，這些狀態資訊連同
+programming counter必須保存起來，以便processes往後能夠
+繼續運作。
+</li>
+<li>CPU排班資訊: priority of process, the pointer of scheduling queue, 以及其他排班的參數。</li>
+<li>記憶體管理資訊:
+Base, limit Register, and Contain of page table.</li>
+<li>Accounting information.<br>
+This information includes the amount of CPU and <br>
+real time used, time limits, account numbers, <br>
+job or process numbers, and so on.
+</li>
+<li>I/O status information.<br>
+This information includes the list of I/O devices<br>
+allocated to the process, a list of open files, and so on.
+</li>
+</ul>
+<hr>
+Concurrent Processes:<br>
+許多Processes可以交錯地在一個CPU下執行<br>
+<ul>
+<li>資源共享: 例如多個使用者read同一個file, 實行concurrent processes.</li>
+<li>加速運算:<br>
+將某個特定的task分解成一些子任務, 這些子任務可以再以concurrent方式執行，這種加速只有在電腦具有多個CPU的情形才能實現。</li>
+<li>模組化:<br>
+按模組方式來構建系統，將系統功能分成好幾個processes.
+</li>
+<li>方便性:<br>
+即使是單一使用者，在某一時間內可能會執行多個任務，
+Concurrent執行可以增加其方便性。
+</li>
+</ul>
+<hr>
+<h2>Process 運作</h2>
+<ul>
+	<li>Creation(建立)</li>
+	<li>Destruction(破壞\( \rightarrow  \)回收)</li>
+	<li>Assign and Change Attribute</li>
+	<li>Suspend and Wakeup</li>
+</ul>
+<b>Creation:</b><br>
+一個parent process可以執行 process creation system call 
+to create child process.<br>
+The child process也可以產生他的child process.<br>
+建立child process目的在於幫助parent process完成一些小task,
+以便parent process去執行其他task.<br>
+The child process在執行時，獲取資源的方法可能有1. 
+直接從operating system拿, 2. 或只限於parent process
+所擁有的資源裡拿。<br>
+Parent process 可以決定將資源分配給哪個child process 
+或把資源設定為共享，讓多個child process可以使用(ex.
+記憶體、檔案)。<br>
+當the child process可使用的資源只限定於parent process 時，
+可以防止parent process 產生太多 child processs
+使得system負擔過重。<br>
+For instance.<br>
+當parent process 產生 child process 時, 除了要分配資源, <br>
+也可能要向child process 傳遞資料(ex. 要處理的檔案名稱).<br>
+parent process 產生child process時,可能有兩種運作模式:
+<ul>
+<li>Parent process and child process is running parallelly.<br>
+<button onclick="graph('create_process.cpp')">code</button><br>
+<img src="img/parent_create_child.png" alt=""/><br>
+
+
+
+</li>
+<li>Parent wait until child finish.(利用"wait()")<br>
+<button onclick="graph('create_process_wait.cpp')">code</button><br>
+<img src="img/parent_wait.png" alt=""/><br>
+
+</li>
+</ul>
+<br>
+<br>
+child的fork回傳值為0<br>
+由fork產生的child process與parent process具有相同的位址空間。<br>
+<br>
+Process Creation Steps:<br>
+<ul>
+	<li>建立或配置一個PCB</li>
+	<li>配置Initial memory space for program and data.</li>
+	<li>Load program to be run.</li>
+	<li>Assign initial attributes and resource
+	limit to the process.</li>
+	<li>If any, allocate initial resource to the child
+	process.</li>
+	<li>Establish the starting state for the process,
+	and setup the PCB.</li>
+</ul>
+<br>
+<br>
+<hr>
+<h2>Process end task</h2>
+當child process完成task, 會經由system call回傳資料給parent process. <br>
+一個process也可由system call(abort)來終止另一個process.<br>
+Parent process可以由以下理由終止child process運作.
+<ul>
+<li>
+child process使用過多的資源。
+</li>
+<li>
+parent process已經完成(終止)或不需要了。
+</li>
+</ul>
+第一種狀況，parent process必須要有方法檢查child process運作的狀況。<br>
+第二種狀況通常是由作業系統來處理。<br>
+如果process終止(正常或異常)，則他的child process
+也必須終止。稱為(Cascading Termination)
+<br>
+<br>
+Process Destruction步驟:
+<ul>
+<li>Remove PCB from its current state queue</li>
+<li>Destroy or reassign child processes</li>
+<li>Free all allocated memory and resources</li>
+<li>Free PCB</li>
+</ul>
+<br>
+Child Process 的 Destruction 作法:
+<ul>
+	<li>Delete</li>
+	<li>繼承parent process</li>
+	<li>成為獨立的process</li>
+</ul>
+<br>
+Process Destruction 的理由<br>
+<ul>
+	<li>正常結束</li>
+	<li>由Operator終止(溢出)</li>
+	<li>Error</li>
+	<li>Parent terminate child</li>
+	<li>Authorized process terminate</li>
+</ul>
+<hr>
+<h2>Processes之間的關係</h2>
+The Relation of Processes in operating system.<br>
+<ul>
+<li>Independent:
+<ul>
+<li>其他process不能干涉</li>
+<li>具有確定性,執行結果只取決於它的輸入狀態</li>
+<li>運作結果是固定的</li>
+<li>運作停止不會影響其他process</li>
+</ul>
+</li>
+<li>Cooperating<br>
+<ul>
+<li>其狀態在多個process之間可共享</li>
+<li>運作結果受執行順序影響</li>
+<li>運行結果為不確定性</li>
+任何與其他process共享資料的process都是cooperating process。
+</ul>
+</li>
+</ul>
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+洪逸-作業系統金寶典<br>
+Abraham Silberschatz, Greg Gagne, Peter B. Galvin - Operating System Concepts-Wiley<br>
+
+</footer>
+
+</body>
+</html>

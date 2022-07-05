@@ -1,0 +1,62 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/code/code_color.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+<body>
+<h2>Interprocess Communication</h2>
+Processes executing concurrently in the OS may be either <b>independent processes</b> or <b>cooperating processes</b>.
+<hr>
+There are several reasons for providing an environment that allows process cooperation:
+<ol>
+	<li><b>Information sharing: </b>
+		許多使用者可能需要用到同一個file的資訊，所以OS必須提供同時access的環境。
+	</li>
+	<li><b>Computation speedup: </b>
+		如果希望某個task可以執行快一點，可以將task分割成許多子task，再executing in parallel。<br>
+		注意: 只有在機器提供multiple processing的環境才能達成。(such as CPUs or I/O channels).  </li>
+	<li><b>Modularity: </b></li>
+	<li><b>Convenience: </b>
+	Even an individual user_ay work on many tasks at same time. For instance, a user may be editing, printing, and compiling in parallel.
+	</li>
+</ol>
+<hr>	
+Cooperating processes require an <b>interprocess communication(IPC)</b> mechanism that will allow them to exchange data and information.
+<h2>Two models of interprocess communication</h2>
+There are two fundamental models of interprocess communication: 
+<ol>
+	<li>Shared memory</li>
+	<li>message passing</li>
+</ol>
+<img src="img/share_mem_pass_msg.png" alt=""/>
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>

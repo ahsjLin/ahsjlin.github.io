@@ -1,0 +1,52 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/code/code_color.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+<body>
+Each process is represented in the OS by a <b>process control block(PCB)</b> - also called a <i>task control block</i>.
+<br>
+<img src="img/PCB.png" alt="PCB"/>
+<br>
+<h3>PCB包含的內容</h3>
+<ol>
+	<li><b>Process state:</b> The state may be new, ready, running, waiting, halted, and so on.</li>
+	<li><b>Program counter:</b> The counter indicates the address of the next instruction to be executed for this process.</li>
+	<li><b>Program counter:</b> The registers vary in number and type, depending on the computer architecture. The include accumulators, index registers, stack pointers, and general-purpose registers, plus any condition-code information. Along with the program counter, this state infromation must be saved when an interrupt occurs, to allow the process to be continued correctly afterward.</li>
+<br>
+<img src="img/cpu_switch_proc_2_proc.png" alt=""/></ol>
+<li><b>CPU-scheduling information: </b> 包含process的優先權, scheduling queues的pointer, scheduling 的參數等。</li>
+<li><b>Memory-management information: </b>包含 base register, limit register, page tables, segment tables。</li>
+<li><b>Accounting information: </b>包含CPU數量, real time used, time limits, account numbers, process numbers等。</li>
+<li><b>I/O status information: </b>包含有哪些I/O裝置分配給process, a list of open files, and so on.</li>
+簡而言之, the PCB serves as the repository for any information that may vary from process to process.
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>
