@@ -1,0 +1,127 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/code/code_color.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+<body>
+<h2>Critical Section</h2>
+n個processes(處理程序)組成系統，每個process都有一個code的片段來處理共用變數，稱為Critical Section(臨界區間)。<br>
+當一個process在使用critical section時，則其他process是不允許在此運作。<br>
+<hr>
+<h3>主要設計</h3>
+要設計一個各process透過申請才能使用critical section，來達到一次只有一個process才能使用critical section。
+<hr>
+<h3>達成3種條件, 解決Critical Section</h3>
+<ol>
+	<li>Mutual Exclusion</li>
+	<li>Progress</li>
+	<li>Bounded Waiting</li>
+</ol>
+<h4>Mutual Exclusion</h4>
+一次只能有一個Process進入Critical Section。
+<h4>Progress</h4>
+<ol>
+	<li>不需進入Critical Section的Process不會去影響其他需要進入Critical Section的Process</li>
+	<li>決定要不要進入Critical Section的時間有限(為了防止Deadlock)。</li>
+</ol>
+<h4>Bounded Waiting</h4>
+當一個process提出申請要進入critical section，是不能無限等待進入(一直等待會造成starvation)，解決方法是若有n個process提出要進入critical section，那其中的process最多等(n-1)個結束後，必須要進入critical section。
+<hr>
+<h2>Peterson's Solution</h2>
+<b>兩個process需要進入critical section</b><br>
+A classic software-based solution to the critical-section.<br>
+Requires the two processes to share two data:
+<pre><code class="co1">int turn; // 禮讓給另一個process
+boolean flag[2]; // ex. flag[0]=1;代表process 0需要進入c.s.</code></pre>
+<h3>參數:</h3>
+<ul>
+	<li>有兩process i 和 process j。</li>
+	<li>turn: 整數, 存放誰要busy waiting。</li>
+	<li>flag[i]: boolean array, 詢問i是否想進critical section。</li>
+</ul>
+<pre><code class="co1">int turn;
+boolean flag[2];
+do {
+	flag[i] = TRUE;
+	turn = j; // 這讓j進去loop(busy waiting)
+	while(flag[j] && turn==j); // busy waiting
+	/* Critical Section */
+
+	flag[i] = FALSE; // process i已經做完critical section部分
+
+	/* Remainder Section */
+
+}while(TRUE);</code></pre>
+
+<hr>
+<h2>Hardware's way solution</h2>
+<ol>
+	<li>TestAndSet</li>
+	<li>Swap</li>
+</ol>
+<h3>使用TestAndSet和Swap缺點</h3>
+<ol>
+	<li>只有kernel mode能使用</li>
+	<li>花費時間</li>
+	<li>muti-processor會失效, single-processor(busy waiting)</li>
+	<li>會有starvation</li>
+</ol>
+個別指出缺點(uniprocessor & multiprocessor)
+<br>
+<h4>Uniprocessor</h4>
+<ul>
+	<li>Interrupt disabling
+	<ul>
+		<li>只能用在kernel space</li>
+		<li>增加interrupt latency</li>
+	</ul></li>
+	<li>Spin lock(TestAndSet, Swap)<ul>
+		<li>浪費CPU cycles</li>
+	</ul></li>
+</ul>
+<h4>Multiprocessor</h4>
+<ul>
+	<li>Interrupt disabling <ul>
+		<li>全部processes interrupt disabling花費太高了</li>
+		<li>如果參與的process在不同的processor，則無法使用。</li>
+	</ul></li>
+	<li>Spin lock <ul>
+		<li>浪費CPU cycles。</li>
+	</ul></li>
+</ul>
+<hr>
+<h2>Semaphore(hardware)</h2>
+Semaphore不需要busy waiting，而是使用waiting queue。
+
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>

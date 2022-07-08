@@ -24,27 +24,14 @@ function graph(name){
 
 </head>
 <body>
-<h3>Process Concept</h3>
-<ol>
-	<li><a href="./ch3_process/PCB.html" target="processes_content">PCB (Process Control Block)</a></li>
-	<li><a href="./ch3_process/process_scheduling.html" target="processes_content">Process Scheduling Queue</a></li>
-	<li><a href="./ch3_process/interprocess_communication.html" target="processes_content">Interprocess Communication</a></li>
-</ol>
-<hr>
-<h2>Communication in Client-Server Systems</h2>
-<h3>RPC(Remote Procedure Calls)</h3>
-<ol>
-	<li><a href="./ch3_process/RPC.html" target="processes_content">RPC</a></li>
-	<li><a href="./ch3_process/pipes.html" target="processes_content">Pipes</a></li>
-</ol>
-<hr>
 <h2>生產者與消費者</h2>
-<ol>
-	<li><a href="./process/producer_and_consumer.html" target="processes_content">生產者&消費者</a></li>
-	<li><a href="./process/critical_section.html" target="processes_content">Critical Section</a></li>
-</ol>
-
-<hr>
+在OS的應用程式裡，ex. 列印程式產生字元給printer driver使用。<br>
+欲使producer and consumer兩個Process運作，OS必須建立一個buffers(緩衝區)，由生產者處理程序來產生Input data，並由consumer process來使用。
+<h3>The Bounded-Buffer Problem</h3>
+有一個大小限制的Buffer，<br>
+如果Buffer是滿的，生產者(Producer)需等待; <br>
+如果Buffer為空的，消費者(Consumer)需等待。<br>
+<a href="https://zh.wikipedia.org/zh-tw/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98" target="_blank">不完善的生產者&消費者問題會產生race condition的問題</a>。
 
 
 
@@ -52,7 +39,7 @@ function graph(name){
 <hr>
 <footer>
 <h2>Reference</h2>
-2011恐龍書
+
 </footer>
 
 </body>
