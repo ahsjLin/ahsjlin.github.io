@@ -27,7 +27,7 @@ layout: default
 <!-- ### <a href="diary/diary.html" target="_blank">Diary</a> -->
 
 ### <a href="dump/dump.html" target="_blank">Dump</a>
-
+<!--
 ### sam1268
 <a href="https://www.youtube.com/watch?v=xwKDL3vBC5U" target="_blank">海上的人</a> <br />
 <a href="https://www.youtube.com/watch?v=gj1aPwqEAv4" target="_blank">浪流連</a> <br />
@@ -209,7 +209,6 @@ layout: default
 <a href="https://www.youtube.com/watch?v=0V9D4XqMJRw" target="_blank">熊甲之夜</a> <br />
 <a href="https://www.youtube.com/watch?v=f7GNnoRdSs0" target="_blank">One Two San Shi</a> <br />
 
-<!--
 <a href="https://www.youtube.com/watch?v=zx7pcgHtU4I" target="_blank">O我的天</a> <br />
 <a href="https://www.youtube.com/watch?v=k3UCe1pjOIU" target="_blank">我以為</a> <br />
 <a href="https://www.youtube.com/watch?v=XedeOw8O09U" target="_blank">直到世界的盡頭 (feat.世誠 阿法 威傅 楊坤 張杰)</a> <br />
