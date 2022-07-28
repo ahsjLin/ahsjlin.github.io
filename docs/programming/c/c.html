@@ -17,6 +17,20 @@ function graph(name){
 
 <link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
 <link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/code/code_color.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<style>
+table.tmp_table tr {
+	text-align: center;
+}
+table.tmp_table tr td {
+	width: 70px;
+}
+</style>
+
 
 
 
@@ -106,6 +120,85 @@ ref<br>
 <h3>gcc link dll</h3>
 dllName: this_dll_sample.dll
 <pre><code class="co1">gcc sample.c -lthis_dll_sample </code></pre>
+<hr>
+<h3>Displaying Octal and Hexadecimal</h3>
+Write pound sign in center of percent sign and number notation.
+<pre><code class="co1">// print octal and hexadecimal
+printf("%#o, %#x\n", octal, hexadecimal);</code></pre>
+<hr>
+<h3>Integer Type</h3>
+<pre><code class="co1">// "short int" or short
+short int a_1;
+// or
+short a_2;
+
+// "long int" or "long"
+long int b_1;
+// or 
+long b_2
+
+// "long long int" or "long long", at least 64-bit cpu.
+long long int c_1;
+// or
+long long c_2;</code></pre>
+<hr>
+<h3>integer type</h3>
+The "int32_t" is equal to "int".
+<br>
+The "uintmax_t" is bigger than "long long int" and "unsigned long".
+<hr>
+<h2>Floating-Point numbers</h2>
+float, double, long double.
+<br>
+<h4>floating-point</h4>
+<pre><code class="co1">printf("%f\n", -1.32e-11); </code></pre>
+<hr>
+<h2>Boolean Type</h2>
+<pre><code class="co1">// example
+_Bool b_1;
+
+// C99, stdbool.h
+bool b_2;</code></pre>
+<hr>
+<h2>sizeof</h2>
+sizeof 搭配 %zd
+<hr>
+<h2>macro</h2>
+<pre><code class="co1">#define MAX(a,b) ((a) > (b) ? (a) : (b)) </code></pre>
+<pre><code class="co1">#ifndef SOME_H
+#define SOME_H
+
+/* Declare some data types and public functions. */
+
+#endif</code></pre>// 測測編譯環境
+#if defined(_WIN32)
+	#define PLATFORM "windows"
+#elif defined(__linux__)
+	#define PLATFORM "Linux"
+#elif defined(__APPLE__)
+	#define PLATFORM "mac"
+#else
+	#define PLATFORM "other os"
+#endif
+<pre><code class="co1"> </code></pre>
+
+
+<a href="https://opensourcedoc.com/c-programming/preprocessor/" target="_blank">更多巨集</a>
+<hr>
+<h2>assert</h2>
+assert內容是True則不做任何事, Flase為顯示stderr，並停止。
+<pre><code class="co1">#include <assert.h>
+
+/* ...  */
+
+int a;
+scanf("%d", &a);
+assert(a>10);
+printf("a == %d", a);</code></pre>
+
+
+
+
 
 <hr>
 <footer>
