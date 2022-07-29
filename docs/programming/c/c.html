@@ -330,7 +330,7 @@ int main(int argc, char *argv[]) {
 <br>
 
 <pre><code class="co1">int a[3][2] = {{1,2}, {3,4}, {5,6}};
-	int (*p)[2]; // The 'p' is an address for two ints.
+	int (*p)[2]; // The 'p' is an address that point to two ints' address.
 	p = a+1;
 	printf("%d\n", (*p)[1]);
 	/* output: 4 */
