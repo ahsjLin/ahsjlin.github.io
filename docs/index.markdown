@@ -286,7 +286,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=oAUmNEUJlJ0" target="_blank">囂張</a> <br />
 <a href="https://www.youtube.com/watch?v=k1YQE3YeMyw" target="_blank">心悶</a> <br />
 <a href="https://www.youtube.com/watch?v=S4JLJVVjevI" target="_blank">捲菸</a> <br />
-<a href="https://www.youtube.com/watch?v=W1FYJ8nqQZQ" target="_blank">鯊魚</a> <br />
+<a href="https://www.youtube.com/watch?v=9bmrIlkhzyk" target="_blank">鯊魚</a> <br />
 <a href="https://www.youtube.com/watch?v=sgDqHSQRJFg" target="_blank">365节</a> <br />
 <a href="https://www.youtube.com/watch?v=137QoB4tQfc" target="_blank">他媽的</a> <br />
 <a href="https://www.youtube.com/watch?v=pM9zZinLvkA" target="_blank">惡作劇</a> <br />
@@ -325,7 +325,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=OeJYC04XKh4" target="_blank">青春禮讚</a> <br />
 <a href="https://www.youtube.com/watch?v=bD12C-mGth4" target="_blank">夜間獨白</a> <br />
 <a href="https://www.youtube.com/watch?v=djACkCHl3JA" target="_blank">失蹤人口</a> <br />
-<a href="https://www.youtube.com/watch?v=v3AIVgbmyOM" target="_blank">縱情年代</a> <br />
+<a href="https://www.youtube.com/watch?v=3JrR8ukWiGE" target="_blank">縱情年代</a> <br />
 <a href="https://www.youtube.com/watch?v=OP4vwOJlhxk" target="_blank">忽然之間</a> <br />
 <a href="https://www.youtube.com/watch?v=1A76BpaOJfY" target="_blank">愛してる</a> <br />
 <a href="https://www.youtube.com/watch?v=JFXby7yfGGw" target="_blank">灰色先生</a> <br />

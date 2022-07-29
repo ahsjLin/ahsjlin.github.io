@@ -170,7 +170,8 @@ sizeof 搭配 %zd
 
 /* Declare some data types and public functions. */
 
-#endif</code></pre>// 測測編譯環境
+#endif</code></pre>
+<pre><code class="co1">// 測測編譯環境
 #if defined(_WIN32)
 	#define PLATFORM "windows"
 #elif defined(__linux__)
@@ -194,6 +195,148 @@ int a;
 scanf("%d", &a);
 assert(a>10);
 printf("a == %d", a);</code></pre>
+
+<hr>
+<h2>scanf</h2>
+Pass parameter into the "*".<br>
+*.*的第一個*是整個寬度(包含小數點位數), 第二個*為小數點後幾位。
+<pre><code class="co1"> int width, percision;
+scanf("%d, %d", &width, &percision);
+printf("%*.*f", width, percision, 3.2)</code></pre>
+<h4>處理scanf("%d", var), var為非整數</h4>
+<pre><code class="co1">int status;
+int code;
+while(status=scanf("%d", code)){
+	if(status != 1)
+		scanf("%*s"); // dispose non-integer
+	printf("Enter an integer, please.\n");
+}</code></pre>
+
+<hr>
+<h2>static</h2>
+<ul>
+	<li>static放區域變數前, 可保留變數之值，直到程式結束。</li>
+	<li>static放全域變數前, 可防止其他c/cpp利用extern讀取。 </li>
+	<li>static放函數前, 可防止其他c/cpp利用extern讀取。 </li>
+</ul>
+<a href="https://shengyu7697.github.io/cpp-static/" target="_blank">ShengYu Talk - C/C++ static 的 5 種用法</a>
+<hr>
+<h2>while搭配scanf輸入資料</h2>
+<pre><code class="co1">#include &ltstdio.h&gt
+#define FREEZING 4.0
+
+int main(int argc, char *argv[]) {
+	float temperature;
+	int all_day = 0;
+	int cold_day = 0;
+	printf("Input temperature value. (any character to quit)\n");
+	while(scanf("%f", &temperature)) {
+		all_day++;
+		if(temperature < FREEZING)
+			cold_day++;
+	}
+	if(all_day==0)
+		printf("No data!\n");
+	else
+		printf("%d cold day. Total of %d day(s).\n", cold_day, all_day);
+
+	return 0;
+}</code></pre>
+<hr>
+<h2>getchar() and putchar()</h2>
+加密輸入值
+<pre><code class="co1">#include &ltstdio.h&gt
+
+int main(int argc, char *argv[]) {
+	char ch;
+	/* move characters. */
+	/* getchar() be a statement. */
+	/* while( (ch=getchar() ) != '\n'), don't need "ch = getchar()" in end. */
+	/* The operator '!=' is higher priority than '='. Therefore, It need to bracket on "ch = getchar()". */
+	ch = getchar();
+	while(ch != '\n') {
+		if(ch == ' ') {
+			putchar(ch);
+		} else {
+			putchar(ch+1); // encryption
+		}
+		ch = getchar();
+	}
+	putchar(ch); // print the newline.
+	return 0;
+}</code></pre>
+<hr>
+<h2>ctype.h</h2>
+提供判斷char類型的函數(ex. isalpha())
+<br>
+改寫上題
+<pre><code class="co1">#include &ltstdio.h&gt
+#include &ltctype.h&gt
+
+int main(int argc, char *argv[]) {
+	char ch;
+	/* move characters. */
+	while( (ch=getchar()) != '\n') {
+		if(ch == isalpha()) {
+			putchar(ch+1); // encryption
+		} else {
+			putchar(ch);
+		}
+	}
+	putchar(ch); // print the newline.
+	return 0;
+}</code></pre>
+<a href="https://cplusplus.com/reference/cctype/" target="_blank">cplusplus - cctype</a>
+<hr>
+<h2>conio.h</h2>
+unbuffered input with getche().
+<hr>
+<h2>EOF</h2>
+Control + Z
+<pre><code class="co1">while( (ch=getchar()) != EOF); </code></pre>
+<hr>
+<h2>Pass pointer to function</h2>
+ex. sum
+<pre><code class="co1">#include &ltstdio.h&gt
+#define SIZE 10
+int total(int *start, int *end)
+{
+	int sum = 0;
+	while(start < end) {
+		sum += *start;
+		start++;
+	}
+	return sum;
+}
+int main(int argc, char *argv[]) {
+	int a[SIZE];
+	int sum;
+	for(int i=0; i&ltSIZE; i++)
+		a[i] = 10;
+	sum = total(a, a+SIZE);
+	printf("%d\n", sum);
+	return 0;
+}
+
+
+</code></pre>
+
+<hr>
+<h2>pointer and array</h2>
+<pre><code class="co1">*(array_a + 2) == array_a[2];
+*(*(array_b + 4) + 5) == array_b[4][5];
+</code></pre>
+<br>
+<br>
+
+<pre><code class="co1">int a[3][2] = {{1,2}, {3,4}, {5,6}};
+	int (*p)[2]; // The 'p' is an address for two ints.
+	p = a+1;
+	printf("%d\n", (*p)[1]);
+	/* output: 4 */
+</code></pre>
+
+
 
 
 
