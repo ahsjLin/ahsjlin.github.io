@@ -331,10 +331,220 @@ int main(int argc, char *argv[]) {
 
 <pre><code class="co1">int a[3][2] = {{1,2}, {3,4}, {5,6}};
 	int (*p)[2]; // The 'p' is an address that point to two ints' address.
+	/* Alternatively, p[][2] */
 	p = a+1;
 	printf("%d\n", (*p)[1]);
 	/* output: 4 */
 </code></pre>
+
+<hr>
+<h2>Variable-Length Arrays (VLAs)</h2>
+<pre><code class="co1">#define COLS 4
+int Sum(int ar[][COLS], int rows)
+{
+	int total = 0;
+
+	for(int r=0; r&ltrows; r++)
+		for(int c=0; c&ltCOLS; c++)
+			total += ar[r][c];
+
+	return total;
+}
+</code></pre>
+假設要傳2維array, 其rows和columns也是傳送參數，則rows和columns要先傳(寫在左邊)
+<pre><code class="co1">int Sum(int rows, int cols, int ar[rows][cols]); </code></pre>
+C99/C11 可以捨棄變數名稱<br>
+<pre><code class="co1">int Sum(int, int, int ar[*][*]); </code></pre>
+
+<hr>
+<h2>Compound Literals</h2>
+<pre><code class="co1">int div[2] = {10, 20};
+/* equal */
+/* nameless */
+(int [2]){10,20};
+
+/* initialize */
+(int []){50, 20, 100}; // a compound literal with 3 elements.
+
+/* example */
+int *pt1;
+pt1 = (int [2]) {10, 20};
+
+
+/* example */
+/* pass parameters */
+int sum(const int1r[], int n);
+
+...
+
+int total;
+total = sum((int []{4, 2, 2, 4, 5}, 6);
+
+
+/* example */
+int (*pt)[4]; // int pt[][4] can not initialize.
+
+pt = (int [2][4]){ {1,2,3,4}, {5,6,7,8} };
+</code></pre>
+
+<hr>
+<h1 style="text-align: center;">Strings</h1>
+<hr>
+<pre><code class="co1">puts(); 
+
+char str[] = "First" " Second" 
+	" Third.";
+/* Output: First Second Third.*/
+</code></pre>
+<br>
+<br>
+<a href="https://www.tutorialspoint.com/c_standard_library/c_function_fgets.htm" target="_blank">fgets()</a><br>
+<a href="https://www.tutorialspoint.com/c_standard_library/c_function_fputs.htm" target="_blank">fputs()</a><br>
+
+<h4>putchar with pointer</h4>
+<pre><code class="co1">#include &ltstdio.h&gt
+void put1(const char *str)
+{
+	while(*str!='\0') // while(*str)
+		putchar(*str++);
+}
+int main(int argc, char *argv[]) {
+	put1("I want to fly!\n");
+	return 0;
+
+}
+
+
+</code></pre>
+
+
+<hr>
+<h3>sprintf</h3>
+write data into an address.
+<pre><code class="co1">#include &ltstdio.h&gt
+int main(int argc, char *argv[]) {
+	char a1[40];
+	int count;
+	count = sprintf(a1, "Number is %d.", 10);
+	puts(a1);
+	printf("%d\n", count);
+	return 0;
+
+}
+
+
+</code></pre>
+
+
+<hr>
+<h2>malloc</h2>
+<pre><code class="co1">double *pt
+pt = (double *) malloc(30 * sizeof(double));
+
+...
+
+free(pt);</code></pre>
+
+
+<hr>
+<h2>Volatile</h2>
+只某個變數的值會隨時變化，如果沒有告訴compiler這個性質，它可能會最佳化結果(參考有詳細說明)，導致錯誤。
+<br>
+<a href="https://www.w3help.cc/a/202107/279361.html" target="_blank">reference - w3help</a>
+
+<hr>
+<h2>restrict</h2>
+用來修飾pointer, 告訴compiler不能用其他變數去改這pointer的data。
+<pre><code class="co1">int *restruct pt = (int*) malloc(10 sizeof(int));</code></pre>
+
+<a href="https://liquid0118.pixnet.net/blog/post/48494846" target="_blank">Y CP的部落格</a>
+
+<hr>
+<h2>_Atomic</h2>
+即設置的變數不能中途被訪問。
+<a href="https://blog.csdn.net/Galaxy_Robot/article/details/106991200" target="_blank">CSDN - C语言的_Atomic类型限定符(C11)</a>
+
+<hr>
+<h1 style="text-align: center;">Files I/O</h1>
+<hr>
+<h2>fopen</h2>
+<pre><code class="co1">#include &ltstdio.h&gt
+#include &ltstdlib.h&gt
+
+int main(int argc, char *argv[]) {
+	int ch;
+	FILE *fp;
+	fp = fopen("SomeTextFile.txt", "r");
+	while((ch=getc(fp)) != EOF)
+		putc(ch, stdout); // putchar
+	fclose(fp);
+
+	return 0;
+}
+
+</code></pre>
+<hr>
+<h2>getc()</h2>
+fp為FILE類型的指標, 功能是取得內容。
+<pre><code class="co1">getc(fp); </code></pre>
+<hr>
+<h2>putc()</h2>
+ch為要寫進的內容, fp為FILE類型的指標。
+<pre><code class="co1">putc(ch, fp); </code></pre>
+
+<hr>
+<h2>rewind()</h2>
+Go back to begining of file.
+<pre><code class="co1">rewind(fp); </code></pre>
+
+
+<hr>
+<h2>fscanf()</h2>
+參數: 第一個為file的指標, 第二個為類型, 第三個為所要放進內容的地方(要接受內容的變數)
+<pre><code class="co1">#include &ltstdio.h&gt
+#include &ltstdlib.h&gt
+
+int main(int argc, char *argv[]) {
+	int ch;
+	char word[50];
+	FILE *fp;
+	fp = fopen("SomeTextFile.txt", "r");
+	while(fscanf(fp, "%s", word)==1);
+	fclose(fp);
+	printf("%s", word);
+
+
+
+	return 0;
+}
+
+
+</code></pre>
+
+<hr>
+<h2>fgets()</h2>
+限制從file取得的長度
+<pre><code class="co1">#include &ltstdio.h&gt
+#include &ltstdlib.h&gt
+
+int main(int argc, char *argv[]) {
+	int ch;
+	char word[50];
+	FILE *fp;
+	fp = fopen("SomeTextFile.txt", "r");
+	fgets(word, 7, fp);
+	fclose(fp);
+	printf("%s", word);
+
+	return 0;
+}
+
+</code></pre>
+<hr>
+<h2>fputs()</h2>
+參數: 第一個為char的array指標變數, 第二個為FILE類型的指標。
+<pre><code class="co1">fputs(word, fp); </code></pre>
+
 
 
 

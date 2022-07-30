@@ -426,6 +426,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=HqmpIQ9l-uA" target="_blank">大風吹</a> <br />
 <a href="https://www.youtube.com/watch?v=6kMSaIn1lw0" target="_blank">打雷了</a> <br />
 <a href="https://www.youtube.com/watch?v=Ad4CFJxOaAI" target="_blank">夜神月</a> <br />
+<a href="https://www.youtube.com/watch?v=fRJohcv82oY" target="_blank">謎路人</a> <br />
 <a href="https://www.youtube.com/watch?v=7H52yGup84A" target="_blank">轉圈圈</a> <br />
 <a href="https://www.youtube.com/watch?v=xSbeUixi22o" target="_blank">搖啊搖</a> <br />
 <a href="https://www.youtube.com/watch?v=k5Vls5GEf1Y" target="_blank">放個假</a> <br />
