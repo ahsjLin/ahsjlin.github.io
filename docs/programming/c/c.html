@@ -545,6 +545,69 @@ int main(int argc, char *argv[]) {
 參數: 第一個為char的array指標變數, 第二個為FILE類型的指標。
 <pre><code class="co1">fputs(word, fp); </code></pre>
 
+<hr>
+<h2>Pointers to Strutures</h2>
+<pre><code class="co1">#include &ltstdio.h&gt
+ 
+struct book {
+	char linear_algebra[50];
+	char Discrete[50];
+};
+
+int main(int argc, char *argv[]) {
+	struct book bookcase[2] = {
+		{"book_a", "book_b"},
+		{"book_c", "book_d"}
+	};
+	struct book *pt;
+
+	pt = bookcase;
+
+	puts(pt->linear_algebra);
+	// output: book_a
+	
+	pt++; // point to next index.
+	puts(pt->linear_algebra);
+	// output: book_c
+
+	return 0;
+}
+
+</code></pre>
+
+
+<hr>
+<h2>fwrite()</h2>
+參數: 第一個為字串的指標, 第二個為寫入類型大小, 第三個為要寫入多少進去, 第四個為寫進FILE類型的指標。
+<pre><code class="co1">fwrite(&primer, sizeof(struct book), 1, fp); </code></pre>
+
+<a href="https://www.796t.com/content/1547098574.html" target="_blank">ref - 程式人生</a> <br>
+<a href="http://c.biancheng.net/view/2071.html#:~:text=ptr%20%E4%B8%BA%E5%86%85%E5%AD%98%E5%8C%BA%E5%9D%97,%E6%95%B0%E6%8D%AE%E5%9D%97%E7%9A%84%E5%9D%97%E6%95%B0%E3%80%82" target="_blank">ref - C語言中文網</a> <br>
+
+<hr>
+<h2>enum</h2>
+<pre><code class="co1">enum DAY {
+	MON=1,
+	TUE,
+	WED,
+	THU,
+	FRI,
+	SAT,
+	SUN
+};
+int main(void)
+{
+	enum DAY day_var;
+	day_var = WED;
+
+	printf("%d\n", day_var);
+	// output: 3
+
+
+	return 0;
+}</code></pre>
+
+<a href="https://www.runoob.com/cprogramming/c-enum.html" target="_blank">ref - runoob</a>
 
 
 
