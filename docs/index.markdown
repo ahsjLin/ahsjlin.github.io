@@ -372,8 +372,10 @@ layout: default
 <a href="https://www.youtube.com/watch?v=tdN7domIZfc" target="_blank">不完美練習題</a> <br />
 <a href="https://www.youtube.com/watch?v=mXeKYmS8p38" target="_blank">再陪我抽根菸</a> <br />
 <a href="https://www.youtube.com/watch?v=5Of9Rh4BxVo" target="_blank">恋をしたのは</a> <br />
+<a href="https://www.youtube.com/watch?v=9AHvMtDwu6M" target="_blank">阿拉斯加海灣</a> <br />
 <a href="https://www.youtube.com/watch?v=BRToibo1tfw" target="_blank">Still Into You</a> <br />
 <a href="https://www.youtube.com/watch?v=y_oFumwbj3k" target="_blank">飛機場的10:30</a> <br />
+<a href="https://www.youtube.com/watch?v=Af_DsB0jwh4" target="_blank">我的世界沒有你</a> <br />
 <a href="https://www.youtube.com/watch?v=G67MUh_ljkY" target="_blank">城市的浪漫運作</a> <br />
 <a href="https://www.youtube.com/watch?v=fl1Wbd-ldMQ" target="_blank">終究還是因為愛</a> <br />
 <a href="https://www.youtube.com/watch?v=eZ8K3JQ9Ks4" target="_blank">下次遇見再相愛</a> <br />
@@ -385,6 +387,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=YYQRD6ng7to" target="_blank">可以陪在我身邊嗎</a> <br />
 <a href="https://www.youtube.com/watch?v=1BJ2WLddm50" target="_blank">木吉他民歌西餐廳</a> <br />
 <a href="https://www.youtube.com/watch?v=gWUNEKCJ5DU" target="_blank">絕對佔有 相對自由</a> <br />
+<a href="https://www.youtube.com/watch?v=ynaARgs_yvQ" target="_blank">你的酒館對我打了烊</a> <br />
 <a href="https://www.youtube.com/watch?v=lWLHG_mcDw4" target="_blank">在這座城市遺失了你</a> <br />
 <a href="https://www.youtube.com/watch?v=sEJKG60a1Zc" target="_blank">成為別人的女朋友了</a> <br />
 <a href="https://www.youtube.com/watch?v=FuDdstaZXdw" target="_blank">我的故事都是关于你</a> <br />
