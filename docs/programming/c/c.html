@@ -183,6 +183,64 @@ sizeof 搭配 %zd
 #endif
 </code></pre>
 
+<h2>一個#代表字串</h2>
+#的內容要左右括號。(變數為字串)
+<pre><code class="co1">#include &ltstdio.h&gt
+ 
+#define pow(a) (#a)
+
+int main(int argc, char *argv[]) {
+	printf("%s\n", pow(sdkfjsdkf));
+} </code></pre>
+<h2>...和__VA_ARGS__</h2>
+<pre><code class="co1">#define test(...) (printf("%d\n", __VA_ARGS__))
+
+...
+
+test(5000);
+// output: 5000
+
+</code></pre>
+<h2>##可黏兩個變數</h2>
+<pre><code class="co1">#define test(a,b) (printf("%d\n", a##b))
+
+...
+
+test(50,6);
+// output: 506
+</code></pre>
+
+
+<h2>換行(反斜線)</h2>
+<pre><code class="co1">#define test(5,6) ( \
+printf("%d\n", a##b))</code></pre>
+
+<h2>function sample</h2>
+<pre><code class="co1">#define cmp(a,b,tmp)({ \
+if((a)&gt(b)) { \
+tmp = -1; \
+} else if(((a)&lt(b))) { \
+tmp = 1; \
+} \
+else { \
+tmp = 0; \
+} \
+}) </code></pre>
+
+
+<h2>pragma</h2>
+說明define時的變數名稱可能撞名，可以在header的第一行加入#pragma once
+<pre><code class="co1">#pragma once
+#ifndef UTILS_H 
+#define UTILS_H
+
+/* ... */
+
+#endif</code></pre>
+<a href="https://opensourcedoc.com/c-programming/preprocessor/" target="_blank">參考</a>
+
+
+
 <a href="https://opensourcedoc.com/c-programming/preprocessor/" target="_blank">更多巨集</a>
 <hr>
 <h2>assert</h2>

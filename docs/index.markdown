@@ -296,7 +296,9 @@ layout: default
 <a href="https://www.youtube.com/watch?v=1cj1BApoYF0" target="_blank">南山南</a> <br />
 <a href="https://www.youtube.com/watch?v=t7VXOCxwLDg" target="_blank">關渡口</a> <br />
 <a href="https://www.youtube.com/watch?v=ftfAAINr1zc" target="_blank">擋一根</a> <br />
+<a href="https://www.youtube.com/watch?v=yZmwvfam9oE" target="_blank">浪流連</a> <br />
 <a href="https://www.youtube.com/watch?v=h2VO3TXoXWw" target="_blank">從前說</a> <br />
+<a href="https://www.youtube.com/watch?v=v7y2Xdg_MZ8" target="_blank">丟了你</a> <br />
 <a href="https://www.youtube.com/watch?v=xbDZW21mczQ" target="_blank">那種人</a> <br />
 <a href="https://www.youtube.com/watch?v=5M_gj4zrVPs" target="_blank">他不懂</a> <br />
 <a href="https://www.youtube.com/watch?v=x-SVAkOGfNY" target="_blank">都是你</a> <br />
@@ -307,8 +309,11 @@ layout: default
 <a href="https://www.youtube.com/watch?v=nGF9ANRIYck" target="_blank">甲午戰爭</a> <br />
 <a href="https://www.youtube.com/watch?v=ZrpZB8-VBD0" target="_blank">安平之光</a> <br />
 <a href="https://www.youtube.com/watch?v=6D79CYTxvOM" target="_blank">愛人錯過</a> <br />
+<a href="https://www.youtube.com/watch?v=0RsL8Ga73QQ" target="_blank">無人之島</a> <br />
+<a href="https://www.youtube.com/watch?v=lJa80mP5BfY" target="_blank">海上的人</a> <br />
 <a href="https://www.youtube.com/watch?v=DVUAd1OTflE" target="_blank">若無其事</a> <br />
 <a href="https://www.youtube.com/watch?v=e5WNNL13bYU" target="_blank">男孩别哭</a> <br />
+<a href="https://www.youtube.com/watch?v=wWZP-Mu6czU" target="_blank">專屬天使</a> <br />
 <a href="https://www.youtube.com/watch?v=dCcjL2X7jho" target="_blank">四季予你</a> <br />
 <a href="https://www.youtube.com/watch?v=FIK4InBh6lE" target="_blank">餘生漫漫</a> <br />
 <a href="https://www.youtube.com/watch?v=M1tmYdeh6ZM" target="_blank">你啊你啊</a> <br />
@@ -389,11 +394,13 @@ layout: default
 <a href="https://www.youtube.com/watch?v=vEpkphm9WAk" target="_blank">在這個年代 我們不浪漫</a> <br />
 <a href="https://www.youtube.com/watch?v=i19bvo5Afuw" target="_blank">you can be king again</a> <br />
 <a href="https://www.youtube.com/watch?v=DHMx_B9-zdY" target="_blank">你是我最愚蠢的一次浪漫</a> <br />
+<a href="https://www.youtube.com/watch?v=4sLJoibqNa4" target="_blank">走建國路回家但後座少ㄌ泥</a> <br />
 <a href="https://www.youtube.com/watch?v=32LE4J4w6vU" target="_blank">杜斯妥耶夫斯基也不能的夜晚</a> <br />
 <a href="https://www.youtube.com/watch?v=xEVSuD4lu4s" target="_blank">對不起我做不到答應了你的事</a> <br />
 <a href="https://www.youtube.com/watch?v=c0VidrNYJm4" target="_blank">你能不能成為我的簡單的浪漫</a> <br />
 <a href="https://www.youtube.com/watch?v=UBT0_HEsKaI" target="_blank">你迎面走來 再面無表情地離開</a> <br />
 <a href="https://www.youtube.com/watch?v=rlRSJNHS40s" target="_blank">我沒有用 沒辦法給你想要的生活</a> <br />
+<a href="https://www.youtube.com/watch?v=limO55Q_2VM" target="_blank">藍</a> <br />
 <a href="https://www.youtube.com/watch?v=v-7ygGWkU8A" target="_blank">yet</a> <br />
 <a href="https://www.youtube.com/watch?v=Krz6paVJMSk" target="_blank">如常(草東</a> <br />
 <a href="https://www.youtube.com/watch?v=dKatg043PDU" target="_blank">故障</a> <br />
