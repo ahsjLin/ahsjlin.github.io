@@ -1,0 +1,76 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/code/code_color.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+<body>
+<h2>Constant</h2>
+<pre><code class="co1">final int i=10; // as const in C. </code></pre>
+<hr>
+<h2>整數類型的轉換</h2>
+為了防止整數溢位，可以在其數值的後方加上一個L, 強制轉換成long類型。
+<pre><code class="co1">int i=java.lang.Integer.MAX_VALUE; //讓java提供整數的最大值
+System.out.println("Value: "+(i+100L)); // 會使i的結果為long 類型</code></pre>
+<hr>
+<h2>Input data from user</h2>
+<pre><code class="co1">import java.util.Scanner;
+...
+
+Scanner scn = new Scanner(System.in);
+int i;
+double d;
+i=scn.nextInt();
+d=scn.nextDouble();</code></pre>
+
+<hr>
+<h2>運算元、運算子</h2>
+運算元(operand) : 變數或數值<br>
+運算子(operator) : 運算符號
+<hr>
+<h2>宣告陣列和分配記憶體空間</h2>
+<pre><code class="co1">int arr[]; //宣告陣列但未分配記憶體位址
+arr = new int[4]</code></pre>
+宣告陣列並初始數值
+<pre><code class="co1">int a[] = {40, 39, 38}; </code></pre>
+二維陣列
+<pre><code class="co1">int score[][];
+score = new int[4][3];
+// 或合在一起寫成
+int score[][] = new int[4][3];</code></pre>
+
+
+
+
+
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>
