@@ -43,6 +43,19 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
 }</code></pre>
 
 
+<hr>
+<h2>9. Palindrome Number</h2>
+<pre><code class="co1">bool isPalindrome(int x){
+	long int rev, tmp;
+	rev = 0;
+	tmp = x;
+	while(tmp&gt0){
+		rev = rev*10 + tmp%10;
+		tmp /= 10;
+	}
+	return (rev==x && x&gt-1);
+
+}</code></pre>
 
 
 
