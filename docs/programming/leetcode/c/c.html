@@ -110,6 +110,88 @@ struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2){
 
 
 
+<hr>
+<h2>9. Palindrome Number</h2>
+<pre><code class="co1">bool isPalindrome(int x){
+	long int rev, tmp;
+	rev = 0;
+	tmp = x;
+	while(tmp&gt0){
+		rev = rev*10 + tmp%10;
+		tmp /= 10;
+	}
+	return (rev==x && x&gt-1);
+
+}</code></pre>
+
+<hr>
+<h2>13. Roman to Integer</h2>
+<pre><code class="co1">int checkLastNumber(int now, int last) {
+	return ( now&lt=last ? now : now-2*last );
+}
+
+int romanToInt(char * s){
+	int rev=0;
+	int lastValue = rev;
+	for(int i=0; i&ltstrlen(s); i++) {
+		switch(s[i]) {
+			case 'M':
+				rev += checkLastNumber(1000, lastValue);
+				lastValue = 1000;
+				break;
+			case 'D':
+				rev += checkLastNumber(500, lastValue);
+				lastValue = 500;
+				break;
+			case 'C':
+				rev += checkLastNumber(100, lastValue);
+				lastValue = 100;
+				break;
+			case 'L':
+				rev += checkLastNumber(50, lastValue);
+				lastValue = 50;
+				break;
+			case 'X':
+				rev += checkLastNumber(10, lastValue);
+				lastValue = 10;
+				break;
+			case 'V':
+				rev += checkLastNumber(5, lastValue);
+				lastValue = 5;
+				break;
+			case 'I':
+				rev += checkLastNumber(1, lastValue);
+				lastValue = 1;
+				break;
+			default: break;
+		}
+	}
+	return rev;
+}</code></pre>
+<a href="https://leetcode.com/problems/roman-to-integer/discuss/2373950/1LINERFastest-Solution-Explained-O(n)time-complexity-O(n)space-complexity" target="_blank">用Hash Table解法</a>
+<hr>
+<h2>14. Longest Common Prefix</h2>
+<pre><code class="co1">char * longestCommonPrefix(char ** strs, int strsSize){
+	int min=INT_MAX;
+	int counter = 0;
+	char *rev;
+	for(int i=0; i&ltstrsSize; i++) {
+		min = strlen(strs[i]) &lt min ? strlen(strs[i]) : min;
+	}
+	for(int i=0; i&ltmin; i++) {
+		for(int j=1; j&ltstrsSize; j++) {
+			if(strs[0][i]!=strs[j][i]) {
+				min = 0;
+				counter--; //寫這個的原因是要讓下面的counter增加，而下面的counter一定要增加，因為如果傳進來的strs只有一個字串且一個字元, 這裡的for就不會run, 分配的空間'\0'需要佔一char，所以下面calloc分配的空間要再加一。
+				break;
+			}
+		}
+		counter++;
+	}
+	rev = (char *)calloc((++counter), sizeof(char));
+	snprintf(rev, counter, "%s", *strs);
+	return rev;
+}</code></pre>
 
 
 
