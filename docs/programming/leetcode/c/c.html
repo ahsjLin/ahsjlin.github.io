@@ -43,74 +43,6 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
 }</code></pre>
 
 <hr>
-<h2>20. Valid Parentheses</h2>
-策略: s指標不動(即字串開頭), p指標持續前進, q指標遇(,[,{則將內容改成),],}且q指標前進, 而其他內容則q後退，最後return看q指標的位址是否是s指標相同。
-<pre><code class="co1">bool isValid(char *s) {
-	char *q = s;
-	for(char *p=s; *p; p++)
-		switch(*p) {
-			case '(':
-				*q++ = ')';
-				continue;
-			case '{':
-				*q++ = '}';
-				continue;
-			case '[':
-				*q++ = ']';
-				continue;
-			default: 
-				if(q==s || *p != *--q) 
-					return false;
-		}
-	return q==s;
-}</code></pre>
-
-
-<hr>
-
-
-<h2>21. Merge Two Sorted Lists</h2>
-hint: 犧牲起始開頭的node。
-<pre><code class="co1">/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     struct ListNode *next;
- * };
- */
-
-
-struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2){
-	struct ListNode *pt, start;
-	pt = &start;
-	while(list1 && list2) {
-		if(list1-&gtval < list2->val) {
-			pt-&gtnext = list1;
-			list1 = list1-&gtnext;
-		} else {
-			pt-&gtnext = list2;
-			list2 = list2-&gtnext;
-		}
-		pt = pt-&gtnext;
-	}
-	// 有個list的內容已經沒有了, 所以跳出while
-	pt-&gt next = (list1 ? list1 : list2);
-	return start.next;
-}</code></pre>
-
-<hr>
-<h2>26. Remove Duplicates from Sorted Array</h2>
-策略: i和j是nums的index, i持續前進檢查, j只會停在新寫入的index，回傳值是有幾個不同的index。
-<pre><code class="co1">int removeDuplicates(int* nums, int numsSize){
-	int i,j;
-	for(i=1,j=0; i&ltnumsSize; i++)
-		if(nums[j]!=nums[i]) nums[++j] = nums[i];
-    return ++j;
-}</code></pre>
-
-
-
-<hr>
 <h2>9. Palindrome Number</h2>
 <pre><code class="co1">bool isPalindrome(int x){
 	long int rev, tmp;
@@ -192,6 +124,111 @@ int romanToInt(char * s){
 	snprintf(rev, counter, "%s", *strs);
 	return rev;
 }</code></pre>
+<hr>
+<h2>20. Valid Parentheses</h2>
+策略: s指標不動(即字串開頭), p指標持續前進, q指標遇(,[,{則將內容改成),],}且q指標前進, 而其他內容則q後退，最後return看q指標的位址是否是s指標相同。
+<pre><code class="co1">bool isValid(char *s) {
+	char *q = s;
+	for(char *p=s; *p; p++)
+		switch(*p) {
+			case '(':
+				*q++ = ')';
+				continue;
+			case '{':
+				*q++ = '}';
+				continue;
+			case '[':
+				*q++ = ']';
+				continue;
+			default: 
+				if(q==s || *p != *--q) 
+					return false;
+		}
+	return q==s;
+}</code></pre>
+
+
+<hr>
+
+
+<h2>21. Merge Two Sorted Lists</h2>
+hint: 犧牲起始開頭的node。
+<pre><code class="co1">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+
+
+struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2){
+	struct ListNode *pt, start;
+	pt = &start;
+	while(list1 && list2) {
+		if(list1-&gtval < list2->val) {
+			pt-&gtnext = list1;
+			list1 = list1-&gtnext;
+		} else {
+			pt-&gtnext = list2;
+			list2 = list2-&gtnext;
+		}
+		pt = pt-&gtnext;
+	}
+	// 有個list的內容已經沒有了, 所以跳出while
+	pt-&gt next = (list1 ? list1 : list2);
+	return start.next;
+}</code></pre>
+
+<hr>
+<h2>26. Remove Duplicates from Sorted Array</h2>
+策略: i和j是nums的index, i持續前進檢查, j只會停在新寫入的index，回傳值是有幾個不同的index。
+<pre><code class="co1">int removeDuplicates(int* nums, int numsSize){
+	int i,j;
+	for(i=1,j=0; i&ltnumsSize; i++)
+		if(nums[j]!=nums[i]) nums[++j] = nums[i];
+    return ++j;
+}</code></pre>
+
+<hr>
+<h2>27. Remove Element</h2>
+<pre><code class="co1">int removeElement(int* nums, int numsSize, int val){
+    int counter=numsSize;
+    int i;
+    for(i=0; i&ltcounter;)
+	    if(nums[i]==val){ 
+			    nums[i] = nums[counter-1];
+                counter--;
+		} else 
+            i++;
+    return counter;
+}</code></pre>
+<hr>
+<h2>28. Implement strStr()</h2>
+<pre><code class="co1">int strStr(char * haystack, char * needle){
+	int s1=strlen(haystack);
+	int s2=strlen(needle);
+	int i,j;
+	for(i=0;i&lts1;i++) {
+		if(haystack[i]==needle[0]) {
+			if((i+s2-1)&lts1) {
+				for(j=0;j&lts2;j++) {
+					if(haystack[j+i]!=needle[j]) {
+						j++;
+						break;
+					}
+				}
+				j--; 
+				if(haystack[j+i]==needle[j])
+					return i;
+			}
+		}
+	}
+	return -1;
+}</code></pre>
+
+
+
 
 
 
