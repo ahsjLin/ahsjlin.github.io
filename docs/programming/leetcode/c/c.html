@@ -344,17 +344,83 @@ struct ListNode* deleteDuplicates(struct ListNode* head){
 	struct ListNode *p, *q;
 	/* p keep forward, q remark pointer */
 	p = q = head;
-	while(q-&ltnext) {
-		if(q-&ltval == q-&ltnext-&ltval) {
-			p = q-&ltnext-&ltnext;
-			free(q-&ltnext);
-			q-&ltnext = p;
+	while(q-&gtnext) {
+		if(q-&gtval == q-&gtnext-&gtval) {
+			p = q-&gtnext-&lgnext;
+			free(q-&gtnext);
+			q-&gtnext = p;
 		} else {
-			q = q-&ltnext;
+			q = q-&gtnext;
 		}
 	}
 	return head;
 } </code></pre>
+<hr>
+<h2>88. Merge Sorted Array</h2>
+切記不要自作聰明用"? :"加上--或++ , 在還沒賦予之前就改變裡面內容了。
+<pre><code class="co1">void merge(int* nums1, int nums1Size, int m, int* nums2, int nums2Size, int n){
+	/* index minus 1*/
+	--m; --n;
+
+	while(m&gt=0 && n&gt=0) {
+		if(nums1[m]&gtnums2[n]) {
+			nums1[m+n+1] = nums1[m];
+			m--;
+		} else {
+			nums1[m+n+1] = nums2[n];
+			n--;
+		}
+	}
+	while(n&gt=0) {
+		nums1[n] = nums2[n];
+		n--;
+	}
+}</code></pre>
+
+<hr>
+<h2>94. Binary Tree Inorder Traversal</h2>
+<pre><code class="co1">/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+static int buffer[100];
+static int counter;
+void inorder(struct TreeNode *root) {
+	if(root!=NULL) {
+		inorder(root-&gtleft);
+		buffer[counter++] = root-&gtval;
+		inorder(root-&gtright);
+	}
+}
+int* inorderTraversal(struct TreeNode* root, int* returnSize){
+	counter = 0;
+	if(root==NULL) {
+		*returnSize = 0;
+		return NULL;
+	}
+	inorder(root);
+	*returnSize = counter;
+	return buffer;
+
+}</code></pre>
+
+<hr>
+<h2>100. Same Tree</h2>
+<pre><code class="co1">/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+
+bool isSameTree(struct TreeNode* p, struct TreeNode* q){
+	if(p==NULL && q==NULL) return true;
+	else if(p==NULL || q==NULL) return false;
+	return (p-&gtval==q-&gtval) && isSameTree(p-&gtleft, q-&gtleft) && isSameTree(p-&gtright, q-&gtright);
+} </code></pre>
+
 
 
 
