@@ -205,6 +205,7 @@ struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2){
 }</code></pre>
 <hr>
 <h2>28. Implement strStr()</h2>
+If it can work. Don't touch it!
 <pre><code class="co1">int strStr(char * haystack, char * needle){
 	int s1=strlen(haystack);
 	int s2=strlen(needle);
@@ -226,6 +227,31 @@ struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2){
 	}
 	return -1;
 }</code></pre>
+
+<hr>
+<h2>35. Search Insert Position</h2>
+<pre><code class="co1">int searchInsert(int* nums, int numsSize, int target){
+	int i;
+	for(i=0; i&ltnumsSize; i++) 
+		if(target&lt=nums[i])
+			break;
+	return i;
+}</code></pre>
+
+
+<hr>
+<h2>58. Length of Last Word</h2>
+<pre><code class="co1">int lengthOfLastWord(char * s){
+	int lastIndex = strlen(s)-1;
+	int counter = 0;
+	for(int i=lastIndex; i&gt=0; i--)
+		if(s[i]==' ' && counter!=0)
+			break;
+		else if(s[i]!=' ')
+			counter++;
+	return counter;
+}</code></pre>
+
 
 
 
