@@ -252,6 +252,109 @@ If it can work. Don't touch it!
 	return counter;
 }</code></pre>
 
+<hr>
+<h2>66. Plus One</h2>
+這裡returnSize指的是回傳陣列的size, 並不是回傳值。
+<pre><code class="co1">/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+int* plusOne(int* digits, int digitsSize, int* returnSize){
+	digits[digitsSize-1]++;
+	for(int i=digitsSize-1; i&gt0 && digits[i]&gt=10; i--) {
+		digits[i] -= 10;
+		digits[i-1] += 1;
+	}
+	int *rev = digits;
+	*returnSize = digitsSize;
+	if(digits[0]&gt=10) {
+		digits[0] -=10;
+		rev = (int *)calloc(++*returnSize, sizeof(int));
+		rev[0] = 1;
+		memcpy(rev+1, digits, digitsSize*sizeof(int));
+	}
+	return rev;
+}</code></pre>
+<hr>
+<h2>67. Add Binary</h2>
+<pre><code class="co1">char * addBinary(char * a, char * b){
+	int sizeA = strlen(a);
+	int sizeB = strlen(b);
+	int sizeOutput = (sizeA &gt sizeB ? sizeA : sizeB) + 1; // 可能進位, 所以預留一格(size+1)。
+	char *output = (char *) malloc(sizeOutput*sizeof(char)+1); // 需要留一個'\0'的字元 所以多分配一個byte。
+	int sum=0;
+
+	output[sizeOutput] = '\0';
+
+	/* sizeA和sizeB計算完了，sum可能還需要計算進位的值。 */
+	while(sizeA&gt0 || sizeB&gt0 || sum&gt0) { 
+		if(sizeA&gt0)
+			sum += a[--sizeA] - '0';
+		if(sizeB&gt0)
+			sum += b[--sizeB] - '0';
+		output[--sizeOutput] = sum%2 + '0';
+		sum /=2;
+	}
+	/* 這邊回傳output的位址加sizeOutput, 是因為如果沒進位, sizeOutput值是1,
+	   而進位的那格會是亂碼，那從output[1]的位址回傳就行了。 
+	*/
+	return output + sizeOutput;
+} </code></pre>
+
+
+<hr>
+<h2>69. Sqrt(x)</h2>
+<pre><code class="co1">int mySqrt(int x){
+	int rev;
+	if(x&lt=1) return x;
+	for(long int i=1; i*i&lt=x; i++)
+		rev = i;
+	return rev;
+}</code></pre>
+
+<hr>
+<h2>70. Climbing Stairs</h2>
+<pre><code class="co1">int climbStairs(int n){
+	int ways = 0;
+	int lastFirst=2, lastSec=1;
+	if(n==0 || n==1 || n==2) return n;
+	for(int i=3; i&lt=n; i++){
+		/* calculate ways */
+		ways = lastFirst + lastSec;
+
+		/* prepare for next steps */
+		lastSec = lastFirst;
+		lastFirst = ways;
+	}
+	return ways;
+}</code></pre>
+
+<hr>
+<h2>83. Remove Duplicates from Sorted List</h2>
+<pre><code class="co1">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+
+
+struct ListNode* deleteDuplicates(struct ListNode* head){
+	if(head==NULL) return NULL;
+	struct ListNode *p, *q;
+	/* p keep forward, q remark pointer */
+	p = q = head;
+	while(q-&ltnext) {
+		if(q-&ltval == q-&ltnext-&ltval) {
+			p = q-&ltnext-&ltnext;
+			free(q-&ltnext);
+			q-&ltnext = p;
+		} else {
+			q = q-&ltnext;
+		}
+	}
+	return head;
+} </code></pre>
 
 
 
