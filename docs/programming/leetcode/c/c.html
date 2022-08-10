@@ -421,6 +421,34 @@ bool isSameTree(struct TreeNode* p, struct TreeNode* q){
 	return (p-&gtval==q-&gtval) && isSameTree(p-&gtleft, q-&gtleft) && isSameTree(p-&gtright, q-&gtright);
 } </code></pre>
 
+<hr>
+<h2>101. Symmetric Tree</h2>
+邏輯判斷要思考清楚。
+<pre><code class="co1">/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+void cmp(struct TreeNode *left, struct TreeNode *right, bool *ans) {
+	if((left && !right) || (right && !left)) *ans=false;
+	else if(left && right){
+		if(left-&gtval != right-&gtval) *ans=false;
+		cmp(left-&gtleft, right-&gtright, ans);
+		cmp(left-&gtright, right-&gtleft, ans);
+	}
+}
+
+
+bool isSymmetric(struct TreeNode* root){
+	bool ans = true;
+	if(root-&gtleft==NULL && root-&gtright==NULL) return true;
+	cmp(root-&gtleft, root-&gtright, &ans);
+	return ans;
+}</code></pre>
 
 
 
