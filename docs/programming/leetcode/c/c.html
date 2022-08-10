@@ -599,6 +599,161 @@ int* getRow(int rowIndex, int* returnSize){
 	return returnArr;
 }</code></pre>
 
+<hr>
+<h2>121. Best Time to Buy and Sell Stock</h2>
+<pre><code class="co1">
+int maxProfit(int* prices, int pricesSize){
+	int minDay = INT_MAX;
+	int maxProfit = 0;
+	for(int i=0; i&ltpricesSize; i++) {
+		if(prices[i]&ltminDay) minDay = prices[i];
+		else if(maxProfit&ltprices[i]-minDay)
+			maxProfit = prices[i]-minDay; 
+	}
+	return maxProfit;
+}</code></pre>
+
+<hr>
+<h2>125. Valid Palindrome</h2>
+<pre><code class="co1">
+bool isPalindrome(char * s){
+	int i=0;
+	int j=strlen(s)-1;
+	while(j&gti) {
+		if(isalnum(s[i]) && isalnum(s[j])) {
+			/* i++ and j-- must be implement. Otherwise, leetcode will tell you "Time Limit Exceeded" */
+			if(tolower(s[i++])!=tolower(s[j--])) return false;
+		}
+		else {
+			if(!isalnum(s[i])) i++;
+			if(!isalnum(s[j])) j--;
+		}
+	}
+	return true;
+
+}
+</code></pre>
+<hr>
+<h2>136. Single Number</h2>
+<pre><code class="co1">int singleNumber(int* nums, int numsSize){
+	int res = nums[0];
+	for(int i=1; i&ltnumsSize; i++)
+		/* xor */
+		res ^= nums[i];
+	return res;
+}</code></pre>
+<hr>
+<h2>141. Linked List Cycle</h2>
+倒追
+<pre><code class="co1">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+bool hasCycle(struct ListNode *head) {
+	struct ListNode *fast, *slow;
+	fast = slow = head;
+	while(fast && fast-&gtnext) {
+		slow = slow-&gtnext;
+		fast = fast-&gtnext-&gtnext;
+		if(slow == fast) return true;
+	}
+	return false;
+}</code></pre>
+
+<hr>
+<h2>144. Binary Tree Preorder Traversal</h2>
+<pre><code class="co1">/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+
+/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+void travel(struct TreeNode *root, int *returnArr,int *returnSize) {
+	if(root != NULL) {
+		returnArr[(*returnSize)++] = root-&gtval;
+		travel(root-&gtleft, returnArr, returnSize);
+		travel(root-&gtright, returnArr, returnSize);
+	}
+}
+int* preorderTraversal(struct TreeNode* root, int* returnSize){
+	*returnSize = 0;
+	int *returnArr = (int *)malloc(100*sizeof(int));
+	travel(root, returnArr, returnSize);
+	returnArr = realloc(returnArr, (*returnSize)*sizeof(int));
+	return returnArr;
+
+}</code></pre>
+
+<hr>
+<h2>145. Binary Tree Postorder Traversal</h2>
+<pre><code class="co1">/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+
+/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+void travel(struct TreeNode *root, int *returnArr,int *returnSize) {
+	if(root != NULL) {
+		travel(root-&gtleft, returnArr, returnSize);
+		travel(root-&gtright, returnArr, returnSize);
+		returnArr[(*returnSize)++] = root-&gtval;
+	}
+}
+
+
+int* postorderTraversal(struct TreeNode* root, int* returnSize){
+	*returnSize = 0;
+	int *returnArr = (int *)malloc(100*sizeof(int));
+	travel(root, returnArr, returnSize);
+	returnArr = realloc(returnArr, (*returnSize)*sizeof(int));
+	return returnArr;
+}</code></pre>
+
+<hr>
+<h2>160. Intersection of Two Linked Lists</h2>
+齊頭
+<pre><code class="co1">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *headB) {
+	int countLen = 0;
+	struct ListNode *needle;
+	for(needle = headA; needle; ++countLen, needle=needle-&gtnext);
+	for(needle = headB; needle; --countLen, needle=needle-&gtnext);
+
+	if(countLen&lt0)
+		for(; countLen!=0; ++countLen, headB=headB-&gtnext);
+	else if(countLen&gt0)
+		for(;countLen; --countLen, headA=headA-&gtnext);
+	while(headA && headB) {
+		if(headA==headB) return headA;
+		headA = headA-&gtnext;
+		headB = headB-&gtnext;
+	}
+	return NULL;
+}</code></pre>
+
 
 
 <hr>
