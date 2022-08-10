@@ -451,8 +451,153 @@ bool isSymmetric(struct TreeNode* root){
 }</code></pre>
 
 
+<hr>
+<h2>104. Maximum Depth of Binary Tree</h2>
+<pre><code class="co1">/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
 
 
+int maxDepth(struct TreeNode* root){
+	/* root==NULL */
+	if(!root) return 0;
+	int maxLeft = maxDepth(root-&gtleft);
+	int maxRight = maxDepth(root-&gtright);
+	return ( maxLeft&gtmaxRight ? maxLeft : maxRight )+1; 
+}</code></pre>
+
+
+
+<hr>
+<h2>110. Balanced Binary Tree</h2>
+<pre><code class="co1">/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+int findDepth(struct TreeNode *root) {
+	/* if node is empty. */
+	if(!root) return 0;
+	int leftDepth = findDepth(root-&gtleft);
+	int rightDepth = findDepth(root-&gtright);
+	return (leftDepth&gtrightDepth ? leftDepth : rightDepth)+1;
+}
+
+bool isBalanced(struct TreeNode* root){
+	/* if tree is empty. */
+	if(!root) return true;
+	int leftDepth = findDepth(root-&gtleft);
+	int rightDepth = findDepth(root-&gtright);
+	if(leftDepth-rightDepth&lt-1 || leftDepth-rightDepth&gt1) return false;
+	/* checking subtree */
+	return (isBalanced(root-&gtleft) && isBalanced(root-&gtright));
+}</code></pre>
+
+
+<hr>
+<h2>111. Minimum Depth of Binary Tree</h2>
+<pre><code class="co1">/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+
+int minDepth(struct TreeNode* root){
+	if(!root) return 0;
+	if(!root-&gtleft && !root-&gtright) return 1;
+	else if(!root-&gtleft && root-&gtright)
+		return 1+minDepth(root-&gtright);
+	else if(root-&gtleft && !root-&gtright)
+		return 1+minDepth(root-&gtleft);
+	int leftMin = minDepth(root-&gtleft); 
+	int rightMin = minDepth(root-&gtright); 
+	return ( leftMin&ltrightMin ? leftMin : rightMin )+1;
+}</code></pre>
+
+<hr>
+<h2>112. Path Sum</h2>
+<a href="https://leetcode.com/problems/path-sum/discuss/2291005/C-easy-and-effecient-recursive-solution" target="_blank">ref</a>
+<pre><code class="co1">/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+
+bool hasPathSum(struct TreeNode* root, int targetSum){
+	/* if root is empty */
+	if(!root) return false;
+	if(!root-&gtleft && !root-&gtright)
+		return targetSum==root-&gtval;
+	if(root-&gtleft && hasPathSum(root-&gtleft, targetSum-root-&gtval)) return true;
+	if(root-&gtright && hasPathSum(root-&gtright, targetSum-root-&gtval)) return true;
+	return false;
+}</code></pre>
+
+<hr>
+<h2>118. Pascal's Triangle</h2>
+<pre><code class="co1">
+
+/**
+ * Return an array of arrays of size *returnSize.
+ * The sizes of the arrays are returned as *returnColumnSizes array.
+ * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().
+ */
+int** generate(int numRows, int* returnSize, int** returnColumnSizes){
+	*returnSize = numRows;
+	*returnColumnSizes = (int *) malloc(numRows*sizeof(int));
+	int **returnArr = (int **) malloc(numRows*sizeof(int*));
+	for(int i=0; i&lt*returnSize; i++) {
+		returnArr[i] = (int*)malloc((i+1)*sizeof(int));
+		(*returnColumnSizes)[i] = i+1;
+		for(int j=0; j&lti+1; j++) {
+			if(j==0 || j==i)
+				/* 最左跟最右 */
+				returnArr[i][j] = 1;
+			else
+				returnArr[i][j] = returnArr[i-1][j] + returnArr[i-1][j-1];
+		}
+	}
+	return returnArr;
+}</code></pre>
+
+<hr>
+<h2>119. Pascal's Triangle II</h2>
+<pre><code class="co1">/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+int* getRow(int rowIndex, int* returnSize){
+	*returnSize = rowIndex+1;
+	int *returnArr = (int*)malloc((*returnSize)*sizeof(int));
+	if(rowIndex==0) returnArr[0]=1;
+	else{
+		returnArr[0] = returnArr[rowIndex] = 1;
+		returnArr[1] = returnArr[rowIndex-1] = rowIndex;
+		long number = rowIndex;
+		for(int i=1; i&ltrowIndex-1; i++) {
+		        /* 這裡使用 "*="會錯  */
+			number = number*(rowIndex-i)/(i+1);
+			returnArr[i+1] = number;
+		}
+	}
+	return returnArr;
+}</code></pre>
 
 
 
