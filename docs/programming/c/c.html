@@ -685,6 +685,34 @@ printf("%d\n", t['d']); // t['d'] == 40
 <a href="https://leetcode.com/problems/roman-to-integer/discuss/2373950/1LINERFastest-Solution-Explained-O(n)time-complexity-O(n)space-complexity" target="_blank">cucerdariancatalin - [1LINER][Fastest Solution Explained] O(n)time complexity O(n)space complexity</a>
 
 
+<hr>
+<h2>Print binary bit</h2>
+<pre><code class="co1">
+int a= 10
+for(int n=31; n&gt=0; n--) {
+	printf("%d", a&gt&gtn & 1);
+}
+</code></pre>
+<hr>
+<h2>Bit Mask</h2>
+<pre><code class="co1">
+
+
+int n = 10;
+// set the 5th bit from right to 1
+int mask = 1&lt&lt4;
+n |= mask;
+
+// set the 3rd bit from right to 0
+int mask = ~(1&lt&lt2);
+n &= mask;
+
+// toggle the 4rd bit from right
+int mask = 1&lt&lt3;
+n ^= mask;
+</code></pre>
+
+
 
 
 

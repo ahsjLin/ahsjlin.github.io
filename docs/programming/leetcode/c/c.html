@@ -753,7 +753,59 @@ struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *he
 	}
 	return NULL;
 }</code></pre>
+<hr>
+<h2>168. Excel Sheet Column Title</h2>
+<pre><code class="co1"> 
 
+char * convertToTitle(int columnNumber){
+	char *pt = (char*) malloc(32*sizeof(char));
+	pt += 31;
+	*pt = '\0';
+
+	while(columnNumber) {
+		pt--;
+		/* 配合0~25 */
+		columnNumber--;
+		*pt = (columnNumber%26) + 65;
+		columnNumber /= 26;
+	}
+	return pt;
+}
+</code></pre>
+
+<hr>
+<h2>169. Majority Element</h2>
+
+<pre><code class="co1">
+
+int majorityElement(int* nums, int numsSize){
+	int res;
+	/* 當counter為0時，res換人，res值一樣時counter++, 否則counter--。 */
+	int counter=0;
+	for(int i=0; i&ltnumsSize; i++) {
+		if(counter==0) {
+			res = nums[i];
+			counter++;
+		}
+		else if(res==nums[i]) counter++;
+		else counter--;
+	}
+	return res;
+}
+</code></pre>
+
+<hr>
+<h2>171. Excel Sheet Column Number</h2>
+<pre><code class="co1">
+
+int titleToNumber(char * columnTitle){
+	int returnNumber = 0;
+	for(int i=strlen(columnTitle)-1; i&gt=0; i--) { 
+		returnNumber += (((int)columnTitle[i] -64 )*(pow(26,(strlen(columnTitle)-(i+1)))));
+	}
+	return returnNumber;
+}
+</code></pre>
 
 
 <hr>
