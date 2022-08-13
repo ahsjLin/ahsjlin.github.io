@@ -197,10 +197,11 @@ struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2){
     int i;
     for(i=0; i&ltcounter;)
 	    if(nums[i]==val){ 
-			    nums[i] = nums[counter-1];
+	    	/* 就算賦予counter-1的index還是和val相等, 下個iteration還是會去檢查, 但這次counter不同了。*/
+	        nums[i] = nums[counter-1];
                 counter--;
 		} else 
-            i++;
+		    i++;
     return counter;
 }</code></pre>
 <hr>
@@ -215,11 +216,12 @@ If it can work. Don't touch it!
 			if((i+s2-1)&lts1) {
 				for(j=0;j&lts2;j++) {
 					if(haystack[j+i]!=needle[j]) {
-						j++;
+						j++; // break的話, for裡的j不會++, 所以在這裡j++
 						break;
 					}
 				}
-				j--; 
+				/* 上面for結束, j會多加一(不論是for裡還是if執行的) */
+				j--; // 以便下面if的判斷
 				if(haystack[j+i]==needle[j])
 					return i;
 			}
@@ -806,6 +808,84 @@ int titleToNumber(char * columnTitle){
 	return returnNumber;
 }
 </code></pre>
+<hr>
+<h2>190. Reverse Bits</h2>
+<pre><code class="co1">uint32_t reverseBits(uint32_t n) {
+	uint32_t res = 0;
+	uint32_t tmp;
+	for(int i=0; i&lt32; i++) {
+		tmp = (n &gt&gt i) & 1;
+		res += tmp &lt&lt (31-i);
+	}
+	return res;
+}</code></pre>
+<hr>
+<h2>191. Number of 1 Bits</h2>
+<pre><code class="co1">
+int hammingWeight(uint32_t n) {
+	int count=0;
+	while(n) {
+		if(n&1)
+			count++;
+		n = n&gt&gt1;
+	}
+	return count;
+}
+</code></pre>
+<hr>
+<h2>202. Happy Number</h2>
+最小的不快樂數為4
+<br>
+<a href="https://zh.m.wikipedia.org/zh-tw/%E5%BF%AB%E6%A8%82%E6%95%B8" target="_blank">wiki</a>
+<pre><code class="co1">
+
+bool isHappy(int n){
+	int total = 0;
+	while(true) {
+		while(n&gt0) { 
+			total += (n%10) * (n%10);
+			n /= 10;
+		}
+		if(total==1) return true;
+		else if(total==4) return false;
+		n = total;
+		total = 0;
+	}
+}
+</code></pre>
+<hr>
+<h2>203. Remove Linked List Elements</h2>
+雙指標
+<pre><code class="co1">
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+
+
+struct ListNode* removeElements(struct ListNode* head, int val){
+	struct ListNode **hRef = &head;
+	struct ListNode *tmp = NULL; // for free node
+	while(*hRef) {
+		if((*hRef)-&gtval == val) {
+			tmp = *hRef;
+			*hRef = tmp-&gtnext;
+			free(tmp);
+		} else {
+			hRef = &((*hRef)-&gtnext);
+		}
+	}
+	return head;
+}
+</code></pre>
+
+
+
+
 
 
 <hr>
