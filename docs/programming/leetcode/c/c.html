@@ -348,7 +348,7 @@ struct ListNode* deleteDuplicates(struct ListNode* head){
 	p = q = head;
 	while(q-&gtnext) {
 		if(q-&gtval == q-&gtnext-&gtval) {
-			p = q-&gtnext-&lgnext;
+			p = q-&gtnext-&gtnext;
 			free(q-&gtnext);
 			q-&gtnext = p;
 		} else {
@@ -448,6 +448,7 @@ void cmp(struct TreeNode *left, struct TreeNode *right, bool *ans) {
 bool isSymmetric(struct TreeNode* root){
 	bool ans = true;
 	if(root-&gtleft==NULL && root-&gtright==NULL) return true;
+	/* cmp只要一步沒過, ans就是false了 */
 	cmp(root-&gtleft, root-&gtright, &ans);
 	return ans;
 }</code></pre>
@@ -882,6 +883,59 @@ struct ListNode* removeElements(struct ListNode* head, int val){
 	return head;
 }
 </code></pre>
+
+<hr>
+<h2>205. Isomorphic Strings</h2>
+bijective
+<pre><code class="co1">
+
+bool isIsomorphic(char * s, char * t){
+	int domain[127] = {0};
+	int coDomain[127] = {0};
+	if(strlen(s)!=strlen(t)) return false;
+	for(int i=0; i&ltstrlen(s); i++) {
+		/* 先看在domain或coDomain裡有無值, 再看內容對不對。 */
+		if((domain[s[i]] || coDomain[t[i]]) && (domain[s[i]] != t[i] || coDomain[t[i]] != s[i])) return false;
+		/* 還沒有內容時，寫入相對應之值。 */
+		else {
+			domain[s[i]] = t[i];
+			coDomain[t[i]] = s[i];
+		}
+	}
+	return true;
+}
+</code></pre>
+<h2>206. Reverse Linked List</h2>
+<hr>
+<pre><code class="co1">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+
+
+struct ListNode* reverseList(struct ListNode* head){
+	struct ListNode *pre, *next, *pt;
+	pre = NULL;
+      	next = NULL;
+	pt = head;
+	while(pt) {
+		/* next指向下一個 */
+		next = pt-&gtnext;
+		/* 現在的指標反轉到前面 */
+		pt-&gtnext = pre;
+
+		/* pre 換成現在pt位址 */
+		pre = pt;
+		/* pt 換成現在next位址 */
+		pt = next;
+	}
+	return pre;
+}
+</code></pre>
+
 
 
 
