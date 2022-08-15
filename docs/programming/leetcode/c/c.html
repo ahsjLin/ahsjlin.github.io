@@ -981,7 +981,7 @@ bool containsNearbyDuplicate(int* nums, int numsSize, int k){
 		} else {
 			if(i-(temp-&gtvalue) &lt=k) return true;
 			else 
-				/* 沒有符合&lt=k就使temp成為新的i */
+				/* 沒有符合&lt=k就使temp的value成為新的i */
 				temp-&gtvalue = i;
 		}
 	}
