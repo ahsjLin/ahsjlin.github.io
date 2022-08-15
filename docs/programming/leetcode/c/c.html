@@ -936,8 +936,58 @@ struct ListNode* reverseList(struct ListNode* head){
 }
 </code></pre>
 
+<hr>
+<h2>217. Contains Duplicate</h2>
+quick sort 函式: qsort, <a href="https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/460267/" target="_blank">reference</a><br>
+<a href="https://leetcode.com/problems/contains-duplicate/discuss/2312924/C-using-merge-sort" target="_blank">Merge sort參考</a>
+<pre><code class="co1">int compare(const void *a, const void *b) {
+	return *(int*)a - *(int*)b;
+}
+
+bool containsDuplicate(int* nums, int numsSize){
+	/* qsort( 陣列指標, 陣列長度, 陣列每格大小, 比較函式(引數為函式指標) ) */
+	qsort(nums, numsSize, sizeof(int), compare);
+	for(int i=0; i&ltnumsSize-1; i++)
+		if(nums[i]==nums[i+1]) return true;
+	return false;
+}
+</code></pre>
 
 
+<hr>
+<h2>219. Contains Duplicate II</h2>
+<pre><code class="co1">
+
+struct hash_table {
+	int key;
+	int value;
+	/* hash table 初始化用 */
+	UT_hash_handle hh;
+};
+
+bool containsNearbyDuplicate(int* nums, int numsSize, int k){
+	struct hash_table *map = NULL;
+	for(int i=0; i&ltnumsSize; i++) {
+		struct hash_table *temp;
+		/* HASH_FIND_INT用來檢查nums[i]是否有這個在map的key了 */
+		/* 即map裡有nums[i]就賦予給temp */
+		HASH_FIND_INT(map, &nums[i], temp);
+		if(temp==NULL) {
+			temp = (struct hash_table *)malloc(sizeof(struct hash_table));
+			temp-&gtkey = nums[i];
+			temp-&gtvalue = i;
+			/* 將temp的key當作index放入map */
+			HASH_ADD_INT(map, key, temp);
+		} else {
+			if(i-(temp-&gtvalue) &lt=k) return true;
+			else 
+				/* 沒有符合&lt=k就使temp成為新的i */
+				temp-&gtvalue = i;
+		}
+	}
+	return false;
+}
+</code></pre>
 
 
 
