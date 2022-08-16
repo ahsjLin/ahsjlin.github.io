@@ -988,7 +988,107 @@ bool containsNearbyDuplicate(int* nums, int numsSize, int k){
 	return false;
 }
 </code></pre>
+<hr>
+<h2>225. Implement Stack using Queues</h2>
+<pre><code class="co1">typedef struct {
+	/* f: front, r: rear*/
+	int f, r, size; // 這裡的f,r為arr的index, size為arr的大小
+	int *arr;
+} queue;
 
+typedef struct {
+	/* q: myQueue */
+	queue *q;
+} MyStack;
+
+void enQueue(queue *q, int val) {
+	if(q-&gtr != q-&gtsize-1) {
+		(q-&gtr)++;
+		q-&gtarr[q-&gtr] =val;
+	}
+}
+
+int deQueue(queue *q) {
+	if(q-&gtr != q-&gtf) {
+		int val = q-&gtarr[q-&gtr];
+		(q-&gtr)--;
+		return val;
+	}
+	return -1;
+}
+
+MyStack* myStackCreate() {
+	MyStack* stack = (MyStack*) malloc(sizeof(MyStack));
+	/* 分配完queue的空間後, 再去分配arr的空間 */
+	stack-&gtq = (queue*) malloc(sizeof(queue));
+	stack-&gtq-&gtf = stack-&gtq-&gtr = -1;
+	stack-&gtq-&gtsize = 50;
+	stack-&gtq-&gtarr = (int *)malloc(sizeof(int)*(stack-&gtq-&gtsize));
+	return stack;
+}
+
+void myStackPush(MyStack* obj, int x) {
+	enQueue(obj-&gtq, x);
+}
+
+int myStackPop(MyStack* obj) {
+	return deQueue(obj-&gtq);
+}
+
+int myStackTop(MyStack* obj) {
+	return obj-&gtq-&gtarr[obj-&gtq-&gtr];
+}
+
+bool myStackEmpty(MyStack* obj) {
+	return (obj-&gtq-&gtf == obj-&gtq-&gtr);
+}
+
+void myStackFree(MyStack* obj) {
+	free(obj-&gtq);
+	free(obj);
+}
+
+/**
+ * Your MyStack struct will be instantiated and called as such:
+ * MyStack* obj = myStackCreate();
+ * myStackPush(obj, x);
+ 
+ * int param_2 = myStackPop(obj);
+ 
+ * int param_3 = myStackTop(obj);
+ 
+ * bool param_4 = myStackEmpty(obj);
+ 
+ * myStackFree(obj);
+*/
+</code></pre>
+
+<hr>
+<h2>226. Invert Binary Tree</h2>
+<pre><code class="co1">/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+
+struct TreeNode* invertTree(struct TreeNode* root){
+	if(root==NULL || (root-&gtleft==NULL && root-&gtright==NULL)) return root;
+
+	struct TreeNode *tmp;
+	tmp = root-&gtleft;
+	root-&gtleft = root-&gtright;
+	root-&gtright = tmp;
+
+	invertTree(root-&gtleft);
+	invertTree(root-&gtright);
+
+	return root;
+}
+</code></pre>
 
 
 
