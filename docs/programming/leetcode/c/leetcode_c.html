@@ -1,6 +1,6 @@
 <html>
 <head>
-<title></title>
+<title>LeetCode CCCCCCCCCCCCCCCC</title>
 
 <!-- latex math javascript-->
 <script 
@@ -475,6 +475,31 @@ int maxDepth(struct TreeNode* root){
 }</code></pre>
 
 
+<hr>
+<h2>108. Convert Sorted Array to Binary Search Tree</h2>
+<pre><code class="co1">/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+struct TreeNode* createNode(int* nums, int l, int r) {
+	if(r&ltl) return NULL;
+	int m = (l+r)/2;
+	struct TreeNode *root = (struct TreeNode*) malloc(sizeof(struct TreeNode));
+	root-&gtval = nums[m];
+	root-&gtleft = createNode(nums, l, m-1);
+	root-&gtright = createNode(nums, m+1, r);
+	return root;
+}
+
+struct TreeNode* sortedArrayToBST(int* nums, int numsSize){
+	return createNode(nums, 0, numsSize-1);
+}
+</code></pre>
 
 <hr>
 <h2>110. Balanced Binary Tree</h2>
@@ -492,6 +517,7 @@ int findDepth(struct TreeNode *root) {
 	if(!root) return 0;
 	int leftDepth = findDepth(root-&gtleft);
 	int rightDepth = findDepth(root-&gtright);
+	/* return的時候才增加深度 */
 	return (leftDepth&gtrightDepth ? leftDepth : rightDepth)+1;
 }
 
@@ -1090,7 +1116,44 @@ struct TreeNode* invertTree(struct TreeNode* root){
 }
 </code></pre>
 
+<hr>
+<h2>228. Summary Ranges</h2>
+ret分配的大小需要大一點。
+<pre><code class="co1">/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+char ** summaryRanges(int* nums, int numsSize, int* returnSize){
+	*returnSize = 0;
+	if(numsSize==0) return NULL;
 
+	int count=0;
+	int start = nums[0];
+	/* pre_pt會去檢查num[i]前一個數是否連續 */
+	int pre_pt = nums[0];
+
+	char **ret = (char**)malloc(sizeof(char*)*20);
+	ret[0] = (char*)malloc(sizeof(char)*30);
+
+	for(int i=1; i&ltnumsSize; i++) {
+		ret[i] = (char*)malloc(sizeof(char)*30);
+		if( pre_pt != (nums[i]-1) ) {
+			if(pre_pt==start)
+				sprintf(ret[count++], "%d", start);
+			else
+				sprintf(ret[count++], "%d-&gt%d", start, pre_pt);
+			start = nums[i];
+		}
+		pre_pt = nums[i];
+	}
+	if(pre_pt==start)
+		sprintf(ret[count++], "%d", start);
+	else
+		sprintf(ret[count++], "%d-&gt%d", start, pre_pt);
+
+	*returnSize = count;
+	return ret;
+}
+</code></pre>
 
 <hr>
 <footer>

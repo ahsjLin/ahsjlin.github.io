@@ -711,6 +711,30 @@ n &= mask;
 int mask = 1&lt&lt3;
 n ^= mask;
 </code></pre>
+<hr>
+<h2>conio.h</h2>
+get char without display
+<pre><code class="co1">getch() </code></pre>
+display version
+<pre><code class="co1">getche() </code></pre>
+
+<hr>
+set cursor position
+<pre><code class="co1">
+    // COORD pos = { 10,5 };
+    COORD pos;
+    pos.X = (short)5;
+    pos.Y = (short)3;
+    HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+ 
+    SetConsoleCursorPosition(hOut, pos);
+ 
+ 	/* set text color */
+    SetConsoleTextAttribute(hOut, 0x01 | 0x05);
+ 
+    printf("Something Something");
+</code></pre>
+
 
 
 
