@@ -1154,7 +1154,105 @@ char ** summaryRanges(int* nums, int numsSize, int* returnSize){
 	return ret;
 }
 </code></pre>
+<hr>
+<h2>231. Power of Two</h2>
+<pre><code class="co1">
 
+bool isPowerOfTwo(int n){
+	if(n&lt1) return false;
+	while(n&gt1) {
+		if(n%2!=0) return false;
+		n /= 2;
+	}
+	return true;
+}
+</code></pre>
+<hr>
+<h2>232. Implement Queue using Stacks</h2>
+<pre><code class="co1">typedef struct {
+	int top;
+	int bottom;
+	int size;
+	int *arr;
+
+} MyQueue;
+
+
+MyQueue* myQueueCreate() {
+	MyQueue *myqueue = (MyQueue*) malloc(sizeof(MyQueue));
+	myqueue-&gttop = -1;
+	myqueue-&gtbottom = 0;
+	myqueue-&gtsize = 50;
+	myqueue-&gtarr = (int*) malloc((myqueue-&gtsize)*sizeof(int));
+	return myqueue;
+}
+
+void myQueuePush(MyQueue* obj, int x) {
+	if((obj-&gttop)!=(obj-&gtsize)-1)
+		obj-&gtarr[++(obj-&gttop)] = x;
+}
+
+bool myQueueEmpty(MyQueue* obj) {
+	if((obj-&gttop) &lt=-1 || (obj-&gtbottom &gt obj-&gttop)) 
+		return true;
+	return false;
+}
+
+int myQueuePop(MyQueue* obj) {
+	int tmp;
+	if(!myQueueEmpty(obj)) {
+		tmp = obj-&gtarr[(obj-&gtbottom)++];
+		return tmp;
+	}
+	exit(1);
+}
+
+int myQueuePeek(MyQueue* obj) {
+	return obj-&gtarr[obj-&gtbottom];
+}
+
+
+void myQueueFree(MyQueue* obj) {
+	free(obj);
+}
+
+/**
+ * Your MyQueue struct will be instantiated and called as such:
+ * MyQueue* obj = myQueueCreate();
+ * myQueuePush(obj, x);
+ 
+ * int param_2 = myQueuePop(obj);
+ 
+ * int param_3 = myQueuePeek(obj);
+ 
+ * bool param_4 = myQueueEmpty(obj);
+ 
+ * myQueueFree(obj);
+*/
+</code></pre>
+
+<hr>
+<h2>235. Lowest Common Ancestor of a Binary Search Tree</h2>
+<pre><code class="co1">/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+struct TreeNode* lowestCommonAncestor(struct TreeNode* root, struct TreeNode* p, struct TreeNode* q) {
+	if(root==p || root==q || !root)
+		return root;
+	struct TreeNode *left = lowestCommonAncestor(root-&gtleft, p, q);
+	struct TreeNode *right = lowestCommonAncestor(root-&gtright, p, q);
+	if(left && right) return root;
+	else if(left) return left;
+	else if(right) return right;
+	else return NULL;
+}
+</code></pre>
 <hr>
 <footer>
 <h2>Reference</h2>
