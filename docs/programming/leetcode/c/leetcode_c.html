@@ -1254,6 +1254,142 @@ struct TreeNode* lowestCommonAncestor(struct TreeNode* root, struct TreeNode* p,
 }
 </code></pre>
 <hr>
+
+<hr>
+<h2>234. Palindrome Linked List</h2>
+<pre><code class="co1">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+struct ListNode* reverse(struct ListNode *node) {
+	struct ListNode *rev = node;
+	if(node && node-&gtnext) {
+		rev = reverse(node-&gtnext);
+		node-&gtnext-&gtnext = node;
+		node-&gtnext = NULL;
+	}
+	/* 遞迴到最後回傳原本最後一個node的位址 */
+	return rev;
+}
+
+bool isPalindrome(struct ListNode* head){
+	if(!head-&gtnext) return true;
+	struct ListNode *h = head;
+	struct ListNode *part_two = head;
+
+	/* counting nodes */
+	int count = 0;
+	while(h) {
+		h = h-&gtnext;
+		count++;
+	}
+	h = head;
+
+	int mid = count/2;
+	/* move part_two to half part */
+	for(int i=0; i&ltmid; i++) {
+		part_two = part_two-&gtnext;
+	}
+	if(count%2==1) part_two = part_two-&gtnext;
+
+	part_two = reverse(part_two);
+
+	while(h && part_two) {
+		if(h-&gtval != part_two-&gtval) return false;
+		h = h-&gtnext;
+		part_two = part_two-&gtnext;
+	}
+	return true;
+
+}</code></pre>
+
+<hr>
+<h2>237. Delete Node in a Linked List</h2>
+<pre><code class="co1">
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+void deleteNode(struct ListNode* node) {
+	struct ListNode *tmp = node-&gtnext;
+	node-&gtval = node-&gtnext-&gtval;
+	node-&gtnext = node-&gtnext-&gtnext;
+	free(tmp);
+}
+</code></pre>
+
+<hr>
+<h2>242. Valid Anagram</h2>
+<pre><code class="co1">bool isAnagram(char * s, char * t){
+	int h['z'+1] = {0};
+	for(;*s;s++) h[*s]++;
+	for(;*t;t++) h[*t]--;
+	for(int i='a'; i&lt'z'; i++)
+		if(h[i]!=0) return false;
+	return true;
+}</code></pre>
+
+<hr>
+<h2>257. Binary Tree Paths</h2>
+<pre><code class="co1">/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+
+/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+
+void treePath(struct TreeNode* root, char **ret, int *returnSize) {
+	if(!root-&gtright && !root-&gtleft) {
+		ret[*returnSize] = calloc(700, sizeof(char));
+		sprintf(ret[*returnSize], "%d", root-&gtval);
+		(*returnSize)++;
+		return;
+	}
+
+	int i=0;
+	if(root-&gtleft) {
+		i = *returnSize;
+		treePath(root-&gtleft, ret, returnSize);
+		char tmp[700] = {};
+		for(;i&lt*returnSize; i++) {
+			sprintf(tmp, "%d-&gt%s", root-&gtval, ret[i]);
+			sprintf(ret[i], "%s", tmp);
+		}
+	}
+
+	if(root-&gtright) {
+		i = *returnSize;
+		treePath(root-&gtright, ret, returnSize);
+		char tmp[700] = {};
+		for(; i&lt*returnSize; i++) {
+			sprintf(tmp, "%d-&gt%s", root-&gtval, ret[i]);
+			sprintf(ret[i], "%s", tmp);
+		}
+	}
+}
+
+
+
+char ** binaryTreePaths(struct TreeNode* root, int* returnSize){
+	char **ret = (char**) malloc(sizeof(char*)*100);
+	*returnSize = 0;
+	treePath(root, ret, returnSize);
+	return ret;
+}
+</code></pre>
 <footer>
 <h2>Reference</h2>
 
