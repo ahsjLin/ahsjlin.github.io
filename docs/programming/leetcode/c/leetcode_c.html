@@ -709,6 +709,7 @@ bool hasCycle(struct ListNode *head) {
  */
 void travel(struct TreeNode *root, int *returnArr,int *returnSize) {
 	if(root != NULL) {
+		/* *returnSize要括號，不然會位移returnSize的位址*/
 		returnArr[(*returnSize)++] = root-&gtval;
 		travel(root-&gtleft, returnArr, returnSize);
 		travel(root-&gtright, returnArr, returnSize);
@@ -805,9 +806,7 @@ char * convertToTitle(int columnNumber){
 <hr>
 <h2>169. Majority Element</h2>
 
-<pre><code class="co1">
-
-int majorityElement(int* nums, int numsSize){
+<pre><code class="co1">int majorityElement(int* nums, int numsSize){
 	int res;
 	/* 當counter為0時，res換人，res值一樣時counter++, 否則counter--。 */
 	int counter=0;
@@ -820,8 +819,24 @@ int majorityElement(int* nums, int numsSize){
 		else counter--;
 	}
 	return res;
-}
-</code></pre>
+}</code></pre>
+
+<pre><code class="co1">int majorityElement(int* nums, int numsSize){
+	int ret = nums[0];
+	int count = 1;
+	for(int i=1; i&ltnumsSize; i++) {
+		if(ret == nums[i]) count++;
+		else {
+			count--;
+			/* count==0時換人, count裡的值代表ret的個數 */
+			if(count==0) {
+				ret = nums[i];
+				count++;
+			}
+		}
+	}
+	return ret;
+}</code></pre>
 
 <hr>
 <h2>171. Excel Sheet Column Number</h2>
@@ -835,6 +850,17 @@ int titleToNumber(char * columnTitle){
 	return returnNumber;
 }
 </code></pre>
+<pre><code class="co1">int titleToNumber(char * columnTitle){
+	long int ret=0;
+	long int len = strlen(columnTitle);
+	for(int i=len-1; i&gt=0; i--)
+		ret +=
+			((int)columnTitle[i] - 64)
+			*
+			pow(26, len-i-1);
+	return ret;
+}</code></pre>
+
 <hr>
 <h2>190. Reverse Bits</h2>
 <pre><code class="co1">uint32_t reverseBits(uint32_t n) {
@@ -1390,6 +1416,75 @@ char ** binaryTreePaths(struct TreeNode* root, int* returnSize){
 	return ret;
 }
 </code></pre>
+<hr>
+<h2>258. Add Digits</h2>
+<pre><code class="co1">int addDigits(int num){
+	if(num==0) return 0;
+	int ret = 0;
+	while(true) {
+		while(num&gt0) {
+			ret += num%10;
+			num/=10;
+		}
+		if((ret/10)==0) return ret;
+		num = ret;
+		ret = 0;
+	}
+}</code></pre>
+<hr>
+<h2>263. Ugly Number</h2>
+<pre><code class="co1">bool isUgly(int n){
+	if(n&lt2 && n&gt0) return true;
+	while(n>0) {
+		while(n&gt1) { 
+			if(n%2==0) n /=2;
+			else if(n%3==0) n /= 3;
+			else if(n%5==0) n /= 5;
+			else return false;
+		}
+		return true;
+	}
+	return false;
+}</code></pre>
+<hr>
+<h2>268. Missing Number</h2>
+兩底和乘高除二<br>
+為啥for(; *nums; nums++)會錯啊
+<pre><code class="co1">
+int missingNumber(int* nums, int numsSize){
+	long int total = ((numsSize+1)*numsSize) /2;
+	for(int i=0; i&ltnumsSize; i++) 
+		total -=nums[i];
+	return total;
+}
+</code></pre>
+<hr>
+<h2>278. First Bad Version</h2>
+<pre><code class="co1">// The API isBadVersion is defined for you.
+// bool isBadVersion(int version);
+
+int firstBadVersion(int n) {
+	long int l,r,mid;
+	l = 0;
+	r = n-1;
+	while(l&lt=r) {
+		mid = (l+r)/2;
+		if(isBadVersion(mid)) {
+			if(isBadVersion(mid)==isBadVersion(mid-1)) {
+				r = mid-1;
+			} else {
+				return mid;
+			}
+		} else {
+			if(isBadVersion(mid) == isBadVersion(mid+1)) {
+				l = mid+1;
+			} else {
+				return mid+1;
+			}
+		}
+	}
+	return 0;
+}</code></pre>
 <footer>
 <h2>Reference</h2>
 

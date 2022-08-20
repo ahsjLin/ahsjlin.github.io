@@ -673,6 +673,16 @@ int main(void)
 需要stdlib.h<br>
 calloc和malloc相似，但calloc會初始化內容為都為0。calloc輸入為2個參數。
 <hr>
+<h2>realloc</h2>
+重新分配大小
+<pre><code class="co1">
+int *returnArr = (int *)malloc(100*sizeof(int));
+int *size = 10;
+returnArr = realloc(returnArr, (*size)*sizeof(int));
+
+</code></pre>
+
+<hr>
 <h2>Hash Table</h2>
 <pre><code class="co1">int t['z'+1] = {
 	['a'] = 10,
