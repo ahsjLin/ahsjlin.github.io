@@ -921,20 +921,25 @@ bool isHappy(int n){
 
 
 struct ListNode* removeElements(struct ListNode* head, int val){
-	struct ListNode **hRef = &head;
+	struct ListNode **hRef = &head; /* hRef本身的位址是不變的 */
 	struct ListNode *tmp = NULL; // for free node
 	while(*hRef) {
 		if((*hRef)-&gtval == val) {
 			tmp = *hRef;
-			*hRef = tmp-&gtnext;
+			/* 原本上一個node的next會等於*hRef, 現在改成下一個node的位址。*/
+			*hRef = (*hRef)-&gtnext;
+			/* free掉這個node */
 			free(tmp);
 		} else {
+			/* hRef換成下一個node位址的位址 */
 			hRef = &((*hRef)-&gtnext);
 		}
 	}
 	return head;
 }
 </code></pre>
+<img src="img/double_pointer.png" alt=""/>
+
 
 <hr>
 <h2>205. Isomorphic Strings</h2>
@@ -1485,6 +1490,27 @@ int firstBadVersion(int n) {
 	}
 	return 0;
 }</code></pre>
+<hr>
+<h2>283. Move Zeroes</h2>
+<pre><code class="co1">void moveZeroes(int* nums, int numsSize){
+	for(int i=0; i&ltnumsSize; i++) {
+		if(nums[i]==0) {
+			for(int j=i+1; j&ltnumsSize; j++) {
+				if(nums[j]!=0) {
+					nums[i] = nums[j];
+					nums[j] = 0;
+					break;
+				}
+				if(j==numsSize-1 && nums[j]==0) {
+					/* break outer loop */
+					i = numsSize;
+					break;
+				}
+			}
+		}
+	}
+}
+</code></pre>
 <footer>
 <h2>Reference</h2>
 
