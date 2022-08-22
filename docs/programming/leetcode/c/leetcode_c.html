@@ -1511,6 +1511,114 @@ int firstBadVersion(int n) {
 	}
 }
 </code></pre>
+<hr>
+<h2>290. Word Pattern</h2>
+<pre><code class="co1">
+bool wordPattern(char * pattern, char * s){
+
+	// -------------------------
+	// 確認數目
+	int count_word = 0;
+	/* strlen(s) -1 是為了要檢查下一個char */
+	for(int i=0; i&ltstrlen(s)-1; i++)
+		if(s[i]==' ' && s[i+1]!= ' ')
+			count_word++;
+	/* 只有計算空格的數目，所以+1為word的數目 */
+	count_word++;
+	if(count_word!=strlen(pattern)) return false;
+	// --------------------------
+
+	char **ret = (char**) calloc(26, sizeof(char*));
+	for(int i=0; i&lt26; i++) {
+		ret[i] = calloc(200, sizeof(char));
+	}
+	int pattern_index = 0;
+
+	for(int i=0; i&ltstrlen(s); i++) {
+		if(s[i]!=' ') {
+			int forward_index = i;
+			int tmp_index = 0;
+			char tmp[200] = {0};
+			while(s[forward_index]!=' ' && forward_index&ltstrlen(s)) 
+				/* 將s的word放入tmp中 */
+				tmp[tmp_index++] = s[forward_index++];
+			/* 如果ret[][0]有寫入東西, 就判斷有沒有相同。 */
+			if(ret[pattern[pattern_index]-'a'][0] != 0) {
+				/* strcmp相同回傳0 */
+				/* 即相同就不執行內容 */
+				if(strcmp(ret[pattern[pattern_index]-'a'], tmp)) return false;
+			}
+			else {
+				strcpy(ret[pattern[pattern_index]-'a'], tmp);
+			}
+			/* 可以看下個pattern的字母 */
+			pattern_index++;
+
+			/* 此時forward_index是指到' '或等於strlen(s) */
+			i = forward_index;
+		}
+	}
+
+	/* 檢查在pattern的其他字母所對應的單字有沒有相同, 相同==錯的 */
+	/* 會去檢查pattern下一個字母, 所以26-1 */
+	for(int i=0; i&lt26-1; i++) {
+		if(ret[i][0]!=0) {
+			for(int j=i+1; j&lt26; j++) {
+				if(ret[j][0]!=0 && strcmp(ret[i], ret[j])==0 ) return false;
+			}
+		}
+	}
+
+
+	/* 前面都沒有檢查到不對的地方 */
+	return true;
+}
+</code></pre>
+<hr>
+<h2>292. Nim Game</h2>
+<pre><code class="co1"> bool canWinNim(int n){
+	return n%4 != 0;
+}</code></pre>
+
+<pre><code class="co1">bool canWinNim(int n){
+	return n & 3;
+}</code></pre>
+<hr>
+<h2>303. Range Sum Query - Immutable</h2>
+<pre><code class="co1">typedef struct {
+	int *levelTotal;
+} NumArray;
+
+
+NumArray* numArrayCreate(int* nums, int numsSize) {
+	NumArray *obj = (NumArray*) calloc(1, sizeof(NumArray));
+	obj-&gtlevelTotal = (int *) calloc(numsSize, sizeof(int));
+	(obj-&gtlevelTotal)[0] = nums[0];
+	/* obj-&gtlevelTotal裡的每一個index內容, 放的是從nums[0]到index的加總。 */
+	for(int i=1; i&ltnumsSize; i++)
+		(obj-&gtlevelTotal)[i] = nums[i] + (obj-&gtlevelTotal)[i-1];
+
+	return obj;
+}
+
+int numArraySumRange(NumArray* obj, int left, int right) {
+	/* left的index是包含在裡面的 */
+	return left ? (obj-&gtlevelTotal)[right] - (obj-&gtlevelTotal)[left-1] : (obj-&gtlevelTotal)[right] ;
+}
+
+void numArrayFree(NumArray* obj) {
+	free(obj-&gtlevelTotal);
+	free(obj);
+}
+
+/**
+ * Your NumArray struct will be instantiated and called as such:
+ * NumArray* obj = numArrayCreate(nums, numsSize);
+ * int param_1 = numArraySumRange(obj, left, right);
+ 
+ * numArrayFree(obj);
+*/
+</code></pre>
 <footer>
 <h2>Reference</h2>
 
