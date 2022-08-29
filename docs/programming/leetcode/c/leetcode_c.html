@@ -1619,6 +1619,34 @@ void numArrayFree(NumArray* obj) {
  * numArrayFree(obj);
 */
 </code></pre>
+<hr>
+<h2>326. Power of Three</h2>
+<pre><code class="co1"> bool isPowerOfThree(int n){
+	while(n%3==0 && n&gt1)
+		n = n/3;
+	return n==1 ? true: false;
+}</code></pre>
+<hr>
+<h2>338. Counting Bits</h2>
+<pre><code class="co1">/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+int* countBits(int n, int* returnSize){
+	*returnSize = ++n;
+	int *tmpArr = (int*)calloc(n, sizeof(int));
+	int targetPower = 1;
+	int counter = 0;
+	for(int i=1; i&ltn; i++,counter++) {
+		if(counter==targetPower) {
+			counter =0;
+			/* 有進位代表較小的基數會清成0 */
+			targetPower *=2;
+		}
+		/* DP */
+		tmpArr[i] = tmpArr[counter]+1;
+	}
+	return tmpArr;
+}</code></pre>
 <footer>
 <h2>Reference</h2>
 
