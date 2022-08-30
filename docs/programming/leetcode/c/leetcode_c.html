@@ -1647,6 +1647,32 @@ int* countBits(int n, int* returnSize){
 	}
 	return tmpArr;
 }</code></pre>
+<hr>
+<h2>342. Power of Four</h2>
+<pre><code class="co1">
+
+bool isPowerOfFour(int n){
+	while(n%4==0 && n&gt0) {
+		n/=4;
+	}
+	return n==1?true:false;
+}
+</code></pre>
+<hr>
+<h2>344. Reverse String</h2>
+<pre><code class="co1">
+
+void reverseString(char* s, int sSize){
+	int l,r,tmp;
+	l=0;
+	r=sSize-1;
+	while(l&ltr) {
+		tmp = s[l];
+		s[l++] = s[r];
+		s[r--] = tmp;
+	}
+}
+</code></pre>
 <footer>
 <h2>Reference</h2>
 
