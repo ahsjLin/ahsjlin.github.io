@@ -33,6 +33,293 @@ table.tmp_table tr td {
 
 </head>
 <body>
+<h2>Create Object</h2>
+<pre><code class="co1">
+# example 1
+$var = New-Object System.DateTime
+
+# example 2
+$newObject = [PSCustomObject]@{
+	ComputerName	= 'Server1'
+	Role		= 'Interface'
+	Environment	= 'Production'
+}
+
+</code></pre>
+<hr>
+<h2>Split variable</h2>
+<pre><code class="co1">$intput = "foo.baz,bar"
+$part = $input.Split(".")
+$fooVar = $part[0]
+$bazVar = $part[1]
+$barVar = $part[2]
+
+# simply do this
+$foo, $baz, $bar = $input.Split(".")
+
+# whatif number of variables is less than splits.
+$foo, $sec = $input.Split(".")
+# $foo == foo, $sec = ["baz", "bar"]
+</code></pre>
+<hr>
+<h2>Scope(global and local)</h2>
+<pre><code class="co1">$foo = "global"
+function myFunc {
+	$foo = "local"
+	Write-Host $global:foo 	# global
+	Write-Host $local:foo 	# local
+	Write-Host $foo		# local
+}
+# call function
+myFunc
+Write-Host $local:foo 	# global
+Write-Host $foo 	# global
+</code></pre>
+<hr>
+<h2>Remove Variable</h2>
+<pre><code class="co1">
+$var = "something in here"
+
+# remove it
+Remove-Variable -Name var
+# or
+rv var
+</code></pre>
+<hr>
+<h2>Operators</h2>
+Comparision Operators
+<pre><code class="co1">
+-eq ==
+-ne !=
+-gt &gt
+-ge &gt=
+-lt &lt
+-le &lt=
+
+# example 
+# 5 -eq 5
+
+#-----------------------------
+
+# String comparison operators
+"myString" -like "*String"
+"myString" -nolike "Other*"
+"myString" -match '^String$'
+"myString" -nomatch '^Other$'
+
+
+#-----------------------------
+
+# Collection comparison operators
+"abc", "def" -contains "def" 		# return true
+"abc", "def" -notcontains "123"		# return true
+"def" -in "abc", "def"			# return true
+"123" -notin "abc", "def"		# return true
+
+</code></pre>
+
+Arithmetic Operators
+<pre><code class="co1">
++
+-
+-1 # set negative value
+*
+/
+%
+
+# Bitwise
+100 -shl 2 # Bitwise Shift-left
+100 -shr 1 # Bitwise Shift-right
+
+#------------------------------
+# Assignment Operators
+$var = 1
+$var += 1
+
+...
+
+$var++
+$var--
+
+</code></pre>
+
+
+<hr>
+<h2>Mixing operand types</h2>
+<pre><code class="co1">
+# For Addition
+"4" + 2 	# 42
+4 + "2" 	# 6
+1,2,3 + "Hello"	# 1,2,3,"Hello"
+"Hello" + 1,2,3 # "Hello1 2 3"
+
+# For Multiplication
+"3" * 2 	# "33"
+2 * "3"		# 6
+1,2,3 * 2	# 1,2,3,1,2,3
+2 * 1,2,3	# error
+</code></pre>
+<hr>
+<h2>Read Input</h2>
+<pre><code class="co1">
+$a = Read-Host "Enter a number:"
+# assigned value into $a
+</code></pre>
+<hr>
+<hr>
+<h2>Logical Operator</h2>
+<pre><code class="co1">
+-and 
+-or 
+-xor 	# exclusive or
+-not 
+! 	# not
+</code></pre>
+<hr>
+<h2>Replace Operator</h2>
+<pre><code class="co1">
+"The rain in Seattle." -replace 'rain' 'hail' # return "The hail in Seattle."
+</code></pre>
+<hr>
+<hr>
+<h2>split and join</h2>
+<pre><code class="co1">
+"A B C" -split " "  		# Return an array string
+
+"E", "F", "G" -join ":" 	# Return a single string, E,F,G
+</code></pre>
+
+<hr>
+<h2>Where</h2>
+<pre><code class="co1">Where-Object
+where
+?</code></pre>
+<hr>
+<hr>
+<h2>Select</h2>
+<pre><code class="co1">
+$dir = dir "C:\myDir"
+
+$dir | select Name, FullName, Attributes
+</code></pre>
+<hr>
+<h2>Foreach</h2>
+shorthand syntax == %
+<pre><code class="co1">$Numbers = ForEach ($Number in 1..20) {
+	$Number
+}</code></pre>
+<pre><code class="co1">(1..10).ForEach{$_ * $_}
+# output
+1
+4
+9
+16
+25
+
+...
+</code></pre>
+<hr>
+<h2>Break Labels</h2>
+<pre><code class="co1">$i = 0
+:mainLoop While($i -lt 15) {
+	$j = 0
+	While($j -lt 15) {
+		if($i -gt 10) {
+			break mainLoop
+		}
+		$j++
+	}
+	$i++
+}</code></pre>
+<hr>
+<h2>while application</h2>
+<pre><code class="co1">Start-Process notepad.exe
+while(Get-Process notepad -ErrorAction SilentlyContinue) {
+	Start-Sleep -Milliseconds 500
+}</code></pre>
+<hr>
+<h2>switch</h2>
+<pre><code class="co1">switch($val){
+	'First condition' 	{First action}
+	'Second condition'	{Second action}
+	Default			{}
+}</code></pre>
+Case Sensitive
+<pre><code class="co1">switch -CaseSensitive ('Condition'){
+	'condition' 	{First action}
+	'Condition'	{Second action}
+	Default		{}
+}
+# output: Second action
+</code></pre>
+Wildcard
+<pre><code class="co1">switch -Wildcard ('Condition') {
+	'Condition'		{first}
+	'Condit*'		{second}
+	'C[aeo]ndit[f-l]on'	{third}
+	'C?ndition'		{fourth}
+	'Test*'			{fifth}
+	Default			{}
+}</code></pre>
+File
+<pre><code class="co1"># input.txt
+# condition
+# test
+
+switch -file input.txt
+{
+	'condition'	{First}
+	'test'		{Second}
+	'fail'		{Third}
+	Default		{}
+}
+
+# output
+# First
+# Second
+</code></pre>
+
+<hr>
+<h2>Special characters</h2>
+<pre><code class="co1">
+`0	# NUll
+`a 	# Alert/Beep
+`b 	# Backspace
+`f 	# Form feed (used for printer output)
+`n 	# New line
+`r	# Carriage return
+`t 	# Horizontal tab
+`v 	# Vertical tab (used for printer output)
+
+
+`#	# Comment-operator
+`$	# Variable operator
+``	# Escape character
+`'	# Single quote
+`"	# Double quote
+
+</code></pre>
+<hr>
+<h2>Create new object</h2>
+<pre><code class="co1">
+$newArr = @()
+$newArr += New-Object -TypeName PSObject -Property @{
+	Name 	= $env:username
+	ID	= 12
+	Address	= $null
+}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
