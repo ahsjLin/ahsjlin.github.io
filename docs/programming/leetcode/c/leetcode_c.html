@@ -1673,6 +1673,64 @@ void reverseString(char* s, int sSize){
 	}
 }
 </code></pre>
+<hr>
+<h2>349. Intersection of Two Arrays</h2>
+<pre><code class="co1"> /**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+int* intersection(int* nums1, int nums1Size, int* nums2, int nums2Size, int* returnSize){
+	bool table[1000] = {0};
+	int max = nums1Size &gt nums2Size ? nums1Size : nums2Size;
+	int *ans = (int*)malloc(max*sizeof(int));
+	int ansSize = 0;
+
+	for(int i=0; i&ltnums1Size; i++) 
+		if(table[nums1[i]]==false) 
+			table[nums1[i]]=true;
+
+	for(int i=0; i&ltnums2Size; i++) 
+		if(table[nums2[i]]==true) {
+			ans[ansSize] = nums2[i];
+			ansSize++;
+
+			/* 避免重複紀錄 */
+			table[nums2[i]]=false;
+		}
+
+	*returnSize = ansSize;
+	/* 調整空間 */
+	ans = (int*)realloc(ans, ansSize*sizeof(int));
+	return ans;
+}</code></pre>
+<hr>
+<h2>350. Intersection of Two Arrays II</h2>
+<pre><code class="co1">/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+int* intersect(int* nums1, int nums1Size, int* nums2, int nums2Size, int* returnSize){
+	int table[10000] = {0};
+	int* ans = (int*)calloc(1000, (nums1Size+nums2Size)*sizeof(int));
+	int ansSize = 0;
+	for(int i=0; i&ltnums1Size; i++) {
+		table[nums1[i]]++;
+	}
+	for(int i=0; i&ltnums2Size; i++) {
+		if(table[nums2[i]]&gt0) {
+			ans[ansSize++] = nums2[i];
+			table[nums2[i]]--;
+		}
+	}
+	*returnSize = ansSize;
+	ans = (int*)realloc(ans, ansSize*sizeof(int));
+	return ans;
+}</code></pre>
+<hr>
+<h2>367. Valid Perfect Square</h2>
+<pre><code class="co1">bool isPerfectSquare(int num){
+	long int i;
+	for(i=1; i*i&ltnum; i++);
+	return (i*i)==num ? true: false;
+}</code></pre>
 <footer>
 <h2>Reference</h2>
 
