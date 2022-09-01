@@ -309,6 +309,69 @@ $newArr += New-Object -TypeName PSObject -Property @{
 	Address	= $null
 }
 </code></pre>
+<hr>
+<hr>
+<h2>Function with Parameters</h2>
+<pre><code class="co1">
+function write-greeting {
+	param(
+		[Parameter(Mandatory, Position=0)]
+		[String]$name
+		[Parameter(Mandatory, Position=1)]
+		[Int]$age
+	)
+	"Hello $name, you are $age years old"
+}
+
+
+
+or simple function
+
+
+
+function write-greeting($name, $age) {
+	"Hello $name, you are $age years old"
+}
+
+
+
+
+# The order of the parameters on the invocation 
+# is matched to the order of the declaration in the function header(by default),
+# or can be specified using the Position Parameter Attribute.
+$greeting = Write-Greeting "Jim" 82
+
+# Alternatively
+$greeting = Write-Greeting -name "Bob" -age 82
+
+</code></pre>
+cmdletbinding - function will behave like a cmdlet
+<pre><code class="co1">
+function Verb-Noun
+{
+	[Cmdletbinding(DefaultParameterSetName='Parameter Set 1', 
+		SupportsShouldProcess=$true,
+		PositionalBinding=$false,
+		HelpUri = 'http://www.microsoft.com/',
+		ConfirmImpact='Medium'
+	)]
+
+	...
+
+}</code></pre>
+<h3>Mandatory Parameters</h3>
+<pre><code class="co1">function Get-Greeting {
+	param
+	(
+		[Parameter(Mandatory=$true)]$name
+	)
+	"Hello World $name"
+}</code></pre>
+<pre><code class="co1"># the command line will prompt for the value
+$greeting = Get-Greeting </code></pre>
+
+
+
 
 
 
