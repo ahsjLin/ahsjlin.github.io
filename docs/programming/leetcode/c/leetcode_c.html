@@ -1731,6 +1731,53 @@ int* intersect(int* nums1, int nums1Size, int* nums2, int nums2Size, int* return
 	for(i=1; i*i&ltnum; i++);
 	return (i*i)==num ? true: false;
 }</code></pre>
+
+<hr>
+<h2>374. Guess Number Higher or Lower</h2>
+<pre><code class="co1">
+/** 
+ * Forward declaration of guess API.
+ * @param  num   your guess
+ * @return 	     -1 if num is higher than the picked number
+ *			      1 if num is lower than the picked number
+ *               otherwise return 0
+ * int guess(int num);
+ */
+
+int guessNumber(int n){
+	long int ans, l, r;
+	l=1;
+	r=n;
+	while(l&lt=r) {
+		ans = l+(r-l)/2;
+		switch(guess(ans)) {
+			case 1: 
+				l = ans+1;
+				break;
+			case -1: 
+				r = ans-1;
+				break;
+			default:
+				l = r+1;
+				break;
+		}
+	}
+	return ans;
+}
+</code></pre>
+
+<hr>
+<h2>383. Ransom Note</h2>
+<pre><code class="co1">bool canConstruct(char * ransomNote, char * magazine){
+	int ch[26] = {0};
+	for(; *magazine; magazine++)
+		ch[*magazine - 'a']++;
+	for(; *ransomNote; ransomNote++)
+		if(ch[*ransomNote - 'a']--==0)
+			return false;
+	return true;
+}</code></pre>
+
 <footer>
 <h2>Reference</h2>
 
