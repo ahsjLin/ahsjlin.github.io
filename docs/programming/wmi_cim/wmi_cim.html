@@ -1,0 +1,67 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/code/code_color.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+<body>
+<h2>Search for a class</h2>
+<h3>CIM</h3>
+<pre><code class="co1">Get-CimClass -ClassName "*Process*" </code></pre>
+<h3>WMI</h3>
+<pre><code class="co1">Get-WmiObject -List -Class "*Process*" </code></pre>
+<hr>
+<h2>List classes in another namespace using the -NameSpace</h2>
+<h3>CIM</h3>
+<pre><code class="co1">Get-CimClass -Namespace "root/SecurityCenter2" </code></pre>
+<h3>WMI</h3>
+<pre><code class="co1">Get-WmiObject -Class "__Namespace" -Namespace "root" </code></pre>
+
+<hr>
+<h2>List available namespaces</h2>
+To find available child-namespaces of root (or another namespace), query the objects in the __NAMESPACE-class for that namespace.
+<h3>CIM</h3>
+<pre><code class="co1">Get-CimInstance -Namespace "root" -ClassName "__Namespace" </code></pre>
+<h3>WMI</h3>
+<pre><code class="co1">Get-WmiObject -List -Namespace "root" </code></pre>
+
+<hr>
+<h2>CIM find battery remaining</h2>
+<pre><code class="co1">$bat = Get-CimInstance cim_battery
+$bat.EstimatedChargeRemaining</code></pre>
+
+<hr>
+<h2>List classes</h2>
+<pre><code class="co1">Get-WmiObject -Namespace 'root\cimv2' -List "__*Registration*" </code></pre>
+
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>

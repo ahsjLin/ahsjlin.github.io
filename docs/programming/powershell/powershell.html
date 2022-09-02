@@ -614,6 +614,16 @@ Catch
 	... Do Something ...
 	"Non-Terminating Error: Invalid Process ID"
 }</code></pre>
+<hr>
+<h2>Credential</h2>
+輸出加密檔案xml
+<pre><code class="co1">$credential = get-credential
+$credential | Export-CliXml -Path 'C:\yourPath\cred.xml'</ode></pre>
+import加密檔案
+<pre><code class="co1">$credential = Import-CliXml -Path 'C:\yourPath\cred.xml' </code></pre>
+
+
+
 
 
 
