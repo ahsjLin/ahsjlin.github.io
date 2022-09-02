@@ -369,15 +369,251 @@ function Verb-Noun
 }</code></pre>
 <pre><code class="co1"># the command line will prompt for the value
 $greeting = Get-Greeting </code></pre>
+<h3>ValidateSet</h3>
+Need to restrict the possible values that a parameter can accept.
+<pre><code class="co1">param(
+	[ValidateSet('red', 'green', 'blue', IgnoreCase)]
+	[string]$Color
+) </code></pre>
+<h3>ValidateRange</h3>
+<pre><code class="co1">param(
+	[ValidateRange(0,120)]
+	[Int]$Age
+) </code></pre>
+<h3>ValidatePattern</h3>
+<pre><code class="co1">param(
+	[ValidatePattern("\w{4-6}\d{2}")]
+	[string]$UserName
+) </code></pre>
+<h3>Validatelength</h3>
+<pre><code class="co1">param(
+	[ValidateLength(0,15)]
+	[String]$PhoneNumber
+) </code></pre>
+<h3>ValidateCount</h3>
+This method of parameter validation tests the amount of arguments passed in, for example, an array of strings.
+<pre><code class="co1">param(
+	[ValidateCount(1,5)]
+	[String[]]$ComputerName
+) </code></pre>
+<h3>ValidateScript</h3>
+Finally, the ValidateScript method is extraordinarily flexible, taking a scriptblock and evaluating it using $_ to represent the passed argument.
+It then passes the argument if the result is $true (including any output as valid).<br>
+<br>
+This can be used to test that a file exists:
+<pre><code class="co1">param(
+	[ValidateScript({Test-Path $_})]
+	[IO.FileInfo]$Path
+) </code></pre>
+<pre><code class="co1">param(
+	[ValidateScript({Get-ADUser $_})]
+	[String]$UserName
+) </code></pre>
+<hr>
+<h2>listing available constructors for a class</h2>
+You can list available constructors by calling the static new-method without parethese.
+<pre><code class="co1">[DateTime]::new
+OverloadDefinitions                                                            
+-------------------                                                            
+datetime new(long ticks)                                                       
+datetime new(long ticks, System.DateTimeKind kind)                             
+datetime new(int year, int month, int day)                                     
+datetime new(int year, int month, int day, System.Globalization.Calendar       
+calendar)                                                                      
+datetime new(int year, int month, int day, int hour, int minute, int second)   
+datetime new(int year, int month, int day, int hour, int minute, int second,   
+System.DateTimeKind kind)                                                      
+datetime new(int year, int month, int day, int hour, int minute, int second,   
+System.Globalization.Calendar calendar)                                        
+datetime new(int year, int month, int day, int hour, int minute, int second,   
+int millisecond)                                                               
+datetime new(int year, int month, int day, int hour, int minute, int second,   
+int millisecond, System.DateTimeKind kind)                                     
+datetime new(int year, int month, int day, int hour, int minute, int second,   
+int millisecond, System.Globalization.Calendar calendar)                       
+datetime new(int year, int month, int day, int hour, int minute, int second,   
+int millisecond, System.Globalization.Calendar calendar, System.DateTimeKind   
+kind)                 
+</code></pre>
+<hr>
+<h2>Methods and properties</h2>
+<pre><code class="co1">class Person {
+	[string] $FirstName
+	[string] $LastName
+	[string] Greeting() {
+		return "Greetings, {0} {1}" -f $this.FirstName, $this.LastName
+	}
+}
+
+$x = [Person]::new()
+$x.FirstName = "Jane"
+$x.LastName = "Doe"
+$greeting = $x.Greeting() # output: "Greetings, Jane Doe!"
+
+</code></pre>
+<h3>Overloading</h3>
+<pre><code class="co1">class Person {
+	[string] $name
+	[int] $age
+
+	Person([string] $name) {
+		$this.name = $name
+	}
+
+	Person([string]$name, [int]$age) {
+		$this.name = $name
+		$this.age n $age
+	}
+}</code></pre>
+<hr>
+<h3>Inheritance from Parent class to Child class</h3>
+<pre><code class="co1">class ParentClass 
+{
+	[string] $meg = "It's under the parent class"
+	[string] getMessage()
+	{
+		return ("Message: {0}" -f $this.meg)
+	}
+}
+
+# bar extends Foo and inherits its members
+class ChildClass : ParentClass
+{
+	
+}
 
 
+$Inherit = [ChildClass]::new()
+</code></pre>
+so, <code>$Inherit.meg</code> will give you the "It's under the Parent Class"
+<hr>
+<h2>Create a Module Manifest</h2>
+<pre><code class="co1">@{
+	RootModule = 'myModule.psm1'
+	ModuleVersion = '1.0'
+	CompatiblePSEditions = @('Core')
+	GUID = '6382 ... 32x'
+	Author = 'Bob'
+	CompanyName = 'myCompany'
+	Copyright = '(c) 2018 all rights'
+	Description = 'It's description.'
+	FunctionsToExport = @()
+	CmdletsToExport = @()
+	VariablesToExport = @()
+	AliasesToExport = @()
+	DscResourcesToExport = @()
+} </code></pre>
+<hr>
+<h2>Simple Module Example</h2>
+<pre><code class="co1">function Add {
+	[CmdletBind()]
+	param (
+		[int] $x
+		[int] $y
+	)
+
+	return $x + $y
+}
+
+Export-ModuleMember -Function Add
+</code></pre>
+<hr>
+<h2>PowerShell profiles</h2>
+A PowerShell profile is used to load user defined variables and functions automatically.<br>
+PowerShell profiles are not automatically created for users.
+<pre><code class="co1">$PROFILE | Format-List -Force
+$PROFILE.AllUsersAllHosts</code></pre>
+<hr>
+<h2>Calculated Properties</h2>
+Display file properties.
+<pre><code class="co1">Get-ChildItem -Path C:\myDir | Select-Object Name, CreateTim, Length 
+
+# calcualted properties
+Get-ChildItem -Path C:\myDir | Select-Object Name, @{name="Size_In_KB"; Expression={$_.Length / 1Kb}}
 
 
+</code></pre>
 
+<hr>
+<h2>Using the .Net Math Class</h2>
+Knowing which methods are available you can use:
+<pre><code class="co1">[System.Math] | Get-Member -Static -MemberType Methods</code></pre>
+Examples
+<pre><code class="co1">[System.Math]::Floor(9.33) # 9
+[System.Math]::Ceiling(9.333) # 10
+[System.Math]::Pow(4,3) # 64
+[System.Math]::Sqrt(49) # 7</code></pre>
+<hr>
+<h2>Variables</h2>
+<h3>$PSItem</h3>
+Same as $_.
+<pre><code class="co1">Get-Process | ForEach-Object -Process {
+	$PSItem.Name
+}</code></pre>
+<h3>$?</h3>
+Contains the execution status of the last operation.<br>
+It contains TRUE if the last operation succeeded and FALSE if it failed.<br>
+Contains status of the last operation. When there is no error, it is set to Treu.
+<pre><code class="co1">Write-Host "yes yes"
+$? # True</code></pre>
+<pre><code class="co1">Get-Process -Name nooo
+Write-Host -Object "Was the last operation successful? $?"</code></pre>
+<h3>$error</h3>
+Contains an array of error objects that represent the most recent errors.
+<pre><code class="co1">Get-Process -Name noooo
+Write-Host -Object ('The last error that occurred was: {0}', -f $error[0].Exception.Message)</code></pre>
+Remove error
+<pre><code class="co1">$error.remove($error[0]) </code></pre>
 
+<h3>$OFS</h3>
+Converting an array to a string. By default $OFS = " "
+<pre><code class="co1">$arr = 1, 2, 3
+$OFS = ",."
 
+$arr # 1,.2,.3</code></pre>
+<hr>
+Contains process ID of the current hosting process.
+<pre><code class="co1">$pid </code></pre>
 
+<hr>
+<h2>Splatting parameters</h2>
+<pre><code class="co1">$MyParameters = @{
+	Name = "iexplore"
+	FileVersionInfo = $true
+}</code></pre>
 
+# splatting
+Get-Process @MyParameters
+
+# without splatting
+Get-Process -Name "iexplore" -FileVersionInfo
+<hr>
+<h2>Write Preferences</h2>
+<pre><code class="co1">Write-Verbose "Detailed message"
+Write-Information "Information Message"
+Write-Debug "Debug Message"
+Write-Progress "Progress Message"
+Write-Warning "Warning Message"</code></pre>
+<hr>
+<h2>Basic job creation</h2>
+<pre><code class="co1"># Start a Script Block as background job: 
+$job = Start-Job -ScriptBlock {Get-Process}
+
+# Start a script as background job
+$job = Start-Job -FilePath "C:\yourScript.ps1"
+</code></pre>
+<hr>
+<h2>Error Handle</h2>
+<pre><code class="co1">Try
+{
+	... Something Error ...
+	Stop-Process -Id 123456 -ErrorAction Stop
+}
+Catch
+{
+	... Do Something ...
+	"Non-Terminating Error: Invalid Process ID"
+}</code></pre>
 
 
 
