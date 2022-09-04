@@ -184,13 +184,85 @@ ab|c
 # 包含tab及一些特殊的空白
 \s+
 </code></pre>
+<hr>
+<h2>匹配換行以外的字元.</h2>
+<pre><code class="co1">
+.
+</code></pre>
+<hr>
+<h2>flag</h2>
+<pre><code class="co1">
+# global 全域模式
+g
+</code></pre>
+<pre><code class="co1">
+# multiline
+m</code></pre>
+<pre><code class="co1">
+# case insensitive 忽略大小寫
+i</code></pre>
+<pre><code class="co1">
+# singleline 單行模式
+s</code></pre>
+<hr>
+<a href="https://regexone.com/" target="_blank">練習題</a>
+
+<hr>
+<h2>Capture Group</h2>
+() 掛號起來的的內容可以被Group顯示
+<pre><code class="co1">
+&ltscript src=['"]([^'"]+)['"]&gt\s*&lt/script&gt
+</code></pre>
+<hr>
+<hr>
+<h2>shy group</h2>
+問號冒號<br>
+不會去group那個內容
+<pre><code class="co1">
+(?:)
+</code></pre>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ex6cCWDwNJU?start=3626" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<hr>
+<hr>
+<h2>Backreferences</h2>
+<pre><code class="co1">
+var str = 'abc=abc,def=def,abc=def,def=abc'
+var regexp = /(abc|def)=\1/g;
+bar result = str.match(regexp);
+
+console.log(result[0]); // "abc=abc"
+console.log(result[1]); // "def=def"
+</code></pre>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ex6cCWDwNJU?start=3626" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ex6cCWDwNJU?start=5470" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<hr>
+<h2>Lookaround (左右合樣)</h2>
+比對左右有沒有相符合的字
+<pre><code class="co1">
+# 驗證至少6位有大小寫加數字的密碼
+# 範例
+^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,30}$
+</code></pre>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ex6cCWDwNJU?start=4682" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<hr>
+<hr>
+<h2>Greedy Mode</h2>
+<pre><code class="co1">
+# 盡可能找出最長a到b之間的字串
+a.*b
+</code></pre>
+Non-Greedy Mode
+<pre><code class="co1">
+# 只找第一個到a到b的字串
+a.*?b
+</code></pre>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ex6cCWDwNJU?start=5139" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-
-
-
-
-
+<hr>
+<h2>email regex rfc822</h2>
+<a href="http://www.ex-parrot.com/~pdw/Mail-RFC822-Address.html" target="_blank">標準版</a>
 
 
 
