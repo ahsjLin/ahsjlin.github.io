@@ -1807,6 +1807,45 @@ char findTheDifference(char * s, char * t){
 	return c;
 }
 </code></pre>
+<hr>
+<h2>392. Is Subsequence</h2>
+<pre><code class="co1">
+bool isSubsequence(char * s, char * t){
+	if(!*s) return true;
+	int sLen = strlen(s);
+	int tLen = strlen(t);
+	/* 確認長度正確 */
+	int check = 0;
+	for(int i=0; i&lttLen; i++) {
+		if(t[i]==s[check])
+			check++;
+	}
+	if(check==0)
+		return false;
+	else if(check == sLen)
+		return true;
+	return false;
+}
+</code></pre>
+<hr>
+<h2>404. Sum of Left Leaves</h2>
+<pre><code class="co1">/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+
+int sumOfLeftLeaves(struct TreeNode* root){
+	if(!root) return 0;
+	int sumOfLeft = 0;
+	if(root-&gtleft!=NULL && root-&gtleft-&gtleft==NULL && root-&gtleft-&gtright==NULL)
+		sumOfLeft += root-&gtleft-&gtval;
+	return sumOfLeft + sumOfLeftLeaves(root-&gtleft) + sumOfLeftLeaves(root-&gtright);
+}</code></pre>
 <footer>
 <h2>Reference</h2>
 
