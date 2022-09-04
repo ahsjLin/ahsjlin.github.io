@@ -26,6 +26,173 @@ function graph(name){
 <body>
 <a href="https://regex101.com/" target="_blank">Regular Expressions(比對的網站)</a><br>
 <a href="https://5xruby.tw/posts/15min-regular-expression" target="_blank">Regular Expressions(符號)</a><br>
+<hr>
+有分pattern 和 flag
+<hr>
+<h2>從開頭找</h2>
+<pre><code class="co1">
+^
+# ex.
+# 從開頭找3個數字
+# ^\d{3}
+124679 # 124
+</code></pre>
+<hr>
+<h2>匹配幾個數字</h2>
+<pre><code class="co1">
+# 匹配3個數字
+\d{3}
+
+# 除了數字外
+\D
+
+</code></pre>
+<hr>
+<h2>匹配尾部</h2>
+<pre><code class="co1">
+$
+# ex
+# 匹配尾部4個數字
+# \d{4}$
+347859 # 7859
+</code></pre>
+<hr>
+<hr>
+<h2>特殊符號</h2>
+<pre><code class="co1">
+# 字元種類
+# []內的只能匹配一次
+[]
+# ex
+[ab] 
+
+# input: abc
+# output: ab
+
+# input: bac
+# output: ba
+
+</code></pre>
+<pre><code class="co1">
+# 否定[]內的字元種類
+[^]
+# ex
+[^ab]
+
+# input: abc
+# output: c
+
+# input: bac
+# output: c
+</code></pre>
+<pre><code class="co1">
+#初始符號
+^
+# ex
+^a
+
+# input: abc
+# output: a
+
+# input: bac
+# output: 
+</code></pre>
+
+<pre><code class="co1">
+#結束符號
+$
+# ex
+c$
+
+# input: abc
+# output: c
+
+# input: bac
+# output: c</code></pre>
+
+<pre><code class="co1"># +
+匹配到一次就會盡可能繼續匹配
+# ex
+a+
+# input: aaaaaabcccs
+# output: aaaaaa # 盡可能找a下去</code></pre>
+<pre><code class="co1"># *
+#匹配次數可以是0~無限次
+# ex
+ab*
+# 匹配到a, 則b可以是沒有
+
+# input: acbb
+# output: a
+
+# input: abbbbb
+# output: abbbbb</code></pre>
+<pre><code class="co1"># ?
+# 匹配次數可以是0次或1次
+# ex
+ab?
+
+# input: abbbbbbc
+# output: ab
+
+# input: accccv
+# output: a
+</code></pre>
+<pre><code class="co1"># 有次數限制
+# ex
+ab{2,3}
+
+# input: abbccc
+# output: abb
+
+# input: ab
+# output: 
+
+# {2,}
+# 2次到無限次的意思
+</code></pre>
+<pre><code class="co1"># or
+# ex
+ab|c
+
+
+# input: abbbbb
+# output: ab
+
+#input: acsd
+# output: c</code></pre>
+<hr>
+<h2>跳脫符號\</h2>
+<pre><code class="co1">
+# /不能使用, 則可以使用\
+\/
+</code></pre>
+<hr>
+<hr>
+<h2>匹配字母數字底線</h2>
+<pre><code class="co1">
+\w+
+
+# 相反(包含換行)
+\W+
+</code></pre>
+
+<hr>
+<hr>
+<h2>空格字元和換行</h2>
+<pre><code class="co1">
+# 包含tab及一些特殊的空白
+\s+
+</code></pre>
+
+
+
+
+
+
+
+
+
 
 
 
