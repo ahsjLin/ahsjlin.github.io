@@ -1900,6 +1900,30 @@ char ** fizzBuzz(int n, int* returnSize){
 	return ret;
 }
 </code></pre>
+<hr>
+<h2>414. Third Maximum Number</h2>
+<pre><code class="co1">int thirdMax(int* nums, int numsSize){
+	long f = ((long)INT_MIN) -1;
+	long s = ((long)INT_MIN) -1;
+	long t = ((long)INT_MIN) -1;
+
+	int i=0;
+	for(; i&ltnumsSize; i++) {
+		if(nums[i]&gtf) {
+			t = s;
+			s = f;
+			f = nums[i];
+		} else if(nums[i]&gts && nums[i]!=f) {
+			t = s;
+			s = nums[i];
+		} else if(nums[i]&gtt && nums[i]!=s && nums[i]!=f) {
+			t = nums[i];
+		}
+	}
+	if(t==(((long)INT_MIN)-1))
+		return (int) f;
+	return (int)t;
+}</code></pre>
 <footer>
 <h2>Reference</h2>
 
