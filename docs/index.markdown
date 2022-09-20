@@ -238,16 +238,32 @@ layout: default
 <a href="https://www.youtube.com/watch?v=QooShJqKLVk" target="_blank">星星剛消掉欸</a> <br />
 <a href="https://www.youtube.com/watch?v=-vBE1AlSEoI" target="_blank">當警衛也不錯啊</a> <br />
 <a href="https://www.youtube.com/watch?v=awGy4cjAZoM" target="_blank">我是一根豆芽菜</a> <br />
-<a href="https://www.youtube.com/watch?v=wB6fken8thI" target="_blank">輪到我的回合了</a> <br />
 <a href="https://www.youtube.com/watch?v=N1CgZAncU-M" target="_blank">很幸苦欸</a> <br />
 <a href="https://www.youtube.com/watch?v=dB9UivyaUj8" target="_blank">古代詩人也一堆迷因R</a> <br />
-<a href="https://www.youtube.com/watch?v=dTTXwxZ4b6w" target="_blank">太帥了吧</a> <br />
-<a href="https://www.youtube.com/watch?v=Uf4UW6QhHqM" target="_blank">那個弧線跟圓 匠人精神</a> <br />
 <a href="https://www.youtube.com/watch?v=UmrN4_S1b2M" target="_blank">10美金Bug >> Debug</a> <br />
-<a href="https://www.youtube.com/watch?v=9ytQmBIxXJU" target="_blank">桃之助</a> <br />
 
 ### Animal
 <a href="https://www.youtube.com/watch?v=n2OEHlkCXio" target="_blank">不要玩麻雀</a> <br />
+<a href="https://www.youtube.com/watch?v=NZS3z3WUmjU" target="_blank">Easier</a> <br />
+
+### 白銀山 - Red
+<a href="https://www.youtube.com/watch?v=wakDjILjpQw" target="_blank">.</a> <br />
+<a href="https://www.youtube.com/watch?v=lVdZD0gZJ1E" target="_blank">..</a> <br />
+<a href="https://www.youtube.com/watch?v=h6JaqN_LRsg" target="_blank">...</a> <br />
+<a href="https://www.youtube.com/watch?v=2YbqO0yNjhQ" target="_blank">....</a> <br />
+<a href="https://www.youtube.com/watch?v=AGKIvlEAvI4" target="_blank">.....</a> <br />
+<a href="https://www.youtube.com/watch?v=K00trZq6cvY" target="_blank">......</a> <br />
+<a href="https://www.youtube.com/watch?v=JvM1gSIHEhU" target="_blank">.......</a> <br />
+
+### Other
+<a href="https://www.youtube.com/watch?v=9ytQmBIxXJU" target="_blank">桃之助</a> <br />
+<a href="https://www.youtube.com/watch?v=bW4I4OdirTA" target="_blank">只要你不尷尬</a> <br />
+<a href="https://www.youtube.com/watch?v=R4liNqaDmvU" target="_blank">遇到同行</a> <br />
+<a href="https://www.youtube.com/watch?v=GgO6f0t8dDo" target="_blank">認真的男人</a> <br />
+<a href="https://www.youtube.com/watch?v=Uf4UW6QhHqM" target="_blank">那個弧線跟圓 匠人精神</a> <br />
+<a href="https://www.youtube.com/watch?v=dTTXwxZ4b6w" target="_blank">太帥了吧</a> <br />
+<a href="https://www.youtube.com/watch?v=wB6fken8thI" target="_blank">輪到我的回合了</a> <br />
+<a href="https://www.youtube.com/watch?v=nyzR6J-D1-0" target="_blank">生命只是物理現象</a> <br />
 
 ### Music <img width="5%" height="5%" src="./assets/images/listen.ico" alt="img_music" />
 <a href="https://www.youtube.com/watch?v=oCTGXSK9hWo" target="_blank">Here we are again</a> <br />
