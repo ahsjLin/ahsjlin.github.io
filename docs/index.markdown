@@ -246,7 +246,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=n2OEHlkCXio" target="_blank">不要玩麻雀</a> <br />
 <a href="https://www.youtube.com/watch?v=NZS3z3WUmjU" target="_blank">Easier</a> <br />
 
-### 白銀山 - Red
+### Red
 <a href="https://www.youtube.com/watch?v=wakDjILjpQw" target="_blank">.</a> <br />
 <a href="https://www.youtube.com/watch?v=lVdZD0gZJ1E" target="_blank">..</a> <br />
 <a href="https://www.youtube.com/watch?v=h6JaqN_LRsg" target="_blank">...</a> <br />
