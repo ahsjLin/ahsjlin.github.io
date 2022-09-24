@@ -1,0 +1,99 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+	var file = "src/" + name;
+	window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/code/code_color.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+<body>
+<h2>Bubble Sort</h2>
+<pre><code class="co1">#include &ltstdio.h&gt
+#include &ltstdlib.h&gt
+#include &ltstring.h&gt
+using namespace std;
+
+void Swap(char *a, char *b) {
+	int lenA = strlen(a);
+	int lenB = strlen(b);
+
+	char *tmp = (char*)calloc((lenA+1), sizeof(char));
+
+	strncpy(tmp, a, lenA+1);
+
+	strncpy(a, b, lenB+1);
+	a[lenB] = '\0';
+
+	strncpy(b, tmp, lenA+1);
+	b[lenA] = '\0';
+
+	free(tmp);
+}
+
+void sort(char **array, int num) {
+    for (int i = 0; i &lt num; i++) {
+        for (int j = 0; j &lt num-1; j++) {
+            if ((int)array[j][0] &gt (int)array[j+1][0]) {
+		    Swap(array[j], array[j+1]);
+            }
+        }
+    }
+}
+
+int main() {
+    int num, len;
+    printf("Input number and length:\n");
+    scanf("%d %d", &num, &len);
+    
+    char **array = (char **) malloc((sizeof(char *)) * num);
+    for (int i = 0; i &lt num; i++) {
+        array[i] = (char *) malloc(sizeof(char) * len);
+    }
+    
+    for (int i = 0; i &lt num; i++) {
+		scanf("%s", array[i]);
+    }
+
+    puts("=============");
+    
+    // sort the string
+    sort(array, num);
+    
+    // print the string
+    for (int i = 0; i &lt num; i++) {
+            printf("%s\n", array[i]);
+    }
+    
+    free(array);
+    return 0;
+}</code></pre>
+
+
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>
