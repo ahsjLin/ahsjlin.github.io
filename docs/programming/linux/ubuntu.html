@@ -115,6 +115,17 @@ systemctl disable hv-kvp-daemon.service
 <a href="https://askubuntu.com/questions/452488/the-command-could-not-be-located-because-usr-bin-is-not-included-in-the-path" target="_blank">reference</a>
 
 <hr>
+<h2>windows底下安裝ubuntu</h2>
+<a href="https://itsfoss.com/install-bash-on-windows/" target="_blank">ref</a><br>
+<ul>
+	<li>turn windows features on or off</li>
+	<li>select "Virtual Machine Platform" and "Windows Subsystem for Linux".</li>
+	<li>open powershell as administrator and type</li>
+	<pre><code class="co1">Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -norestart
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all</code></pre>
+	<li>download linux version os in windows store</li>
+</ul>
+<hr>
 <footer>
 <h2>Reference</h2>
 
