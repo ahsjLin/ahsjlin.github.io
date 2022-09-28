@@ -294,7 +294,9 @@ layout: default
 <a href="https://www.youtube.com/watch?v=QWN8ZnqElq4" target="_blank">無眠</a> <br />
 <a href="https://www.youtube.com/watch?v=xrooMGuRhgY" target="_blank">白羊</a> <br />
 <a href="https://www.youtube.com/watch?v=peEAo2J7SuU" target="_blank">拼圖</a> <br />
-<a href="https://www.youtube.com/watch?v=PdX3Fu0dkWI" target="_blank">大海</a> <br />
+<!-- 隱藏
+<a href="https://www.youtube.com/watch?v=PdX3Fu0dkWI" target="_blank">大海</a> <br /> -->
+<a href="https://www.youtube.com/watch?v=g8VxNPrzIzA" target="_blank">大海</a> <br />
 <a href="https://www.youtube.com/watch?v=TSnhluY4SWw" target="_blank">山海</a> <br />
 <a href="https://www.youtube.com/watch?v=_Y3JpKNVvcc" target="_blank">煙花</a> <br />
 <a href="https://www.youtube.com/watch?v=M6gcoDN9jBc" target="_blank">逆夢</a> <br />
