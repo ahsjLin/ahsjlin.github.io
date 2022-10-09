@@ -110,6 +110,33 @@ const *a; // 內容不可改變<br>
 * const a; // 位址不能改變<br>
 void display(const int array[], int size); // array的內容不能改變
 
+<hr>
+<h2>Template</h2>
+template T的型態可以改變, 也可以使用template &ltclass T, class U&gt實現多個不同型態變數。
+<pre><code class="co1">#include &ltiostream&gt
+
+using namespace std;
+template &ltclass T&gt
+T GetNumber (T a, T b) {
+  std::cout &lt&lt "a: " &lt&lt a &lt&lt std::endl;
+  std::cout &lt&lt "b: " &lt&lt b &lt&lt std::endl;
+  return a + b;
+}
+
+
+int main () {
+  int ret;
+  ret = GetNumber&ltint&gt(2, 3);
+  std::cout &lt&lt "Return value: " &lt&lt ret &lt&lt std::endl;
+
+  // Output:
+  // a: 2
+  // b: 3
+  // Return value: 5
+
+  return 0;
+}</code></pre>
+
 
 
 <hr>
