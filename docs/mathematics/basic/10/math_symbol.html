@@ -1,0 +1,91 @@
+<html>
+<head>
+<title></title>
+
+<!-- latex math javascript-->
+<script 
+id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+</script>
+<!-- open raw text -->
+<script charset="utf-8">
+function graph(name){
+ var file = "src/" + name;
+ window.open(file);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
+<link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/code/code_color.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+<body>
+<h3>常用的數學記號</h3>
+\( \mathbb{N} \): 正整數(自然數)(有時候包含0, 看書的定義)<br>
+<b>ex.</b> \( 1, 2, 3, 4,... \)
+<br>
+<br>
+\( \mathbb{Z} \): 整數<br>
+<b>ex.</b> \( ... -2, -1, 0, 1, 2, ... \)
+<br>
+<br>
+\( \mathbb{Q} \): 有理數(可分成兩個整數的分數型態)<br>
+<b>ex.</b> \(  \frac{a}{b} \Leftrightarrow \{\{a,b\}\subset \mathbb{Z} \cap b\neq 0\}\)
+<br>
+\( \frac{7}{1}, \frac{3}{5}, ... \)
+<br>
+<br>
+\( \mathbb{R} \): 實數(包含無理數)
+<br>
+<br>
+\( \mathbb{C} \): 複數
+<hr>
+<h2>集合記號</h2>
+<h3>屬於與不屬於</h3>
+\( x\in \mathbb{Z} \): 記做"x屬於整數"<br>
+<b>ex.</b> \( 3 \in \{... , -2, -1, 0, 1, 2, 3, ...\} \)
+<br>
+<br>
+\( y\not\in \mathbb{N} \): 記做"y不屬於自然數"<br>
+<b>ex.</b> \( \frac{2}{5} \not\in \{1, 2, 3, 4, ...\} \)
+
+<h3>包含與不包含(subset and not subset)</h3>
+\( i\subset Q \): 記做i包含於有理數 (有理數包含i)(i裡所有元素皆屬於有理數)<br>
+<b>ex.</b> \( \{\sqrt{2}, 3, \frac{6}{5}\} \subset \mathbb{Q}  \)
+
+<br>
+<br>
+\( j\not\subset \mathbb{Z} \): 記做j不包含於整數(j的元素裡至少有一個不屬於整數)
+<br>
+<b>ex.</b> \( \{\sqrt{2}, \frac{2}{7}, 5, 10\} \not\subset \{\dots,-1, 0, 1, 2, \dots \} \)
+
+<h3>區間記號</h3>
+<h4>閉區間</h4>
+\( [a,b] \Leftrightarrow \{i\;|\;a\leq i\leq b\} \)
+<h4>開區間</h4>
+\(
+(c,d) \Leftrightarrow \{i\;|\;a&lt i&lt b\}
+\)
+<h4>左半開區間</h4>
+\(
+(e,f] \Leftrightarrow \{i\;|\;e&lti\leq f\}
+\)
+<h4>右半開區間</h4>
+\(
+[g,h) \Leftrightarrow \{i\;|\; g\leq i&lth\}
+\)
+
+
+
+<hr>
+<footer>
+<h2>Reference</h2>
+
+</footer>
+
+</body>
+</html>

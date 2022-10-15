@@ -34,6 +34,40 @@ function graph(name){
 <h4>考古76 - 台大電機(p.589)</h4>
 <a href="previous_exam\NTU\95\co\write_exe_instr_with_nop.html" target="_blank">$20不是會更新嗎? 為什麼第一行的lw會寫在label "copy"外</a>
 
+<h2>LeetCode</h2>
+<a href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/" target="_blank">448. Find All Numbers Disappeared in an Array</a>
+<pre><code class="co1">int* findDisappearedNumbers(int* nums, int numsSize, int* returnSize) {
+    *returnSize=0;
+    for(int i=0;i&ltnumsSize;i++)
+    {
+        int m=abs(nums[i])-1;
+        if(nums[m]&gt0)
+        {
+            nums[m]=-nums[m];
+            (*returnSize)++;
+        }
+        else
+        {}
+    }
+    *returnSize = numsSize-(*returnSize);
+    int *res=(int *)malloc(sizeof(int) * (*returnSize));
+    int k=0;
+    for(int i=0;i&ltnumsSize;i++)
+    {
+        if(nums[i]&gt0){
+            res[k]=i+1;
+           
+            k++;
+        }
+    }
+    return res;
+}</code></pre><br>
+<a href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/solutions/92972/c-simple-solution-beats-92/" target="_blank">src</a>
+
+<hr>
+<h2>LeetCode</h2>
+<a href="https://leetcode.com/problems/assign-cookies/description/" target="_blank">455. Assign Cookies</a>
+
 
 <hr>
 <footer>

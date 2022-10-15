@@ -101,6 +101,28 @@ int romanToInt(char * s){
 	return rev;
 }</code></pre>
 <a href="https://leetcode.com/problems/roman-to-integer/discuss/2373950/1LINERFastest-Solution-Explained-O(n)time-complexity-O(n)space-complexity" target="_blank">用Hash Table解法</a>
+人家好厲害
+<pre><code class="co1">int romanToInt(char * s)
+{
+    int t['X' + 1] = {
+        ['I'] = 1,
+        ['V'] = 5,
+        ['X'] = 10,
+        ['L'] = 50,
+        ['C'] = 100,
+        ['D'] = 500,
+        ['M'] = 1000,
+    };
+    int res = 0;
+    for (int i = 0; s[i]; i++) {
+        if (t[s[i]] &lt t[s[i+1]])
+            res -= t[s[i]];
+        else
+            res += t[s[i]];
+    }
+    return res;
+}</code></pre>
+
 <hr>
 <h2>14. Longest Common Prefix</h2>
 <pre><code class="co1">char * longestCommonPrefix(char ** strs, int strsSize){
@@ -1925,6 +1947,77 @@ char ** fizzBuzz(int n, int* returnSize){
 	return (int)t;
 }</code></pre>
 <footer>
+<hr>
+<h2>434. Number of Segments in a String</h2>
+<pre><code class="co1">int countSegments(char * s){
+  if(strlen(s) == 0) return 0;
+
+  int counter = 0; 
+
+  for (int i = 0; i &lt strlen(s); i++) {
+    if(s[i] != ' ') {
+      while (s[i] != ' ' && i &lt strlen(s)) i++;
+      counter++;
+    }
+  }
+
+  return counter;
+}
+</code></pre>
+<pre><code class="co1">int countSegments(char * s){
+  if(strlen(s) == 0) return 0;
+
+  bool isWord = false;
+  int counter = 0; 
+
+  for (int i = 0; i &lt strlen(s); i++) {
+    if (s[i] == ' ') {
+      isWord = false;
+    }
+    if (isWord == false && s[i] != ' ') {
+      isWord = true;
+      counter++;
+    }
+  }
+
+  return counter;
+}</code></pre>
+<hr>
+<h2>441. Arranging Coins</h2>
+<pre><code class="co1">int arrangeCoins(int n){
+  int row = 1;
+  while((n = n-row) &gt= 0) row++;
+  return row-1;
+}</code></pre>
+
+<hr>
+<h2>448. Find All Numbers Disappeared in an Array</h2>
+<pre><code class="co1">/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+int* findDisappearedNumbers(int* nums, int numsSize, int* returnSize){
+  *returnSize = 0;
+  int *RetArr = (int*) malloc (numsSize*sizeof(int));
+  bool *Tmp = (bool*) calloc((numsSize+1), sizeof(bool));
+
+  for (int i = 0; i &lt numsSize; i++) {
+    if (Tmp[nums[i]] == 0) {
+      Tmp[nums[i]] = 1;
+    }
+  }
+
+  //
+  // checking disappear number
+  //
+  for (int i = 1; i &lt numsSize+1; i++) {
+    if( Tmp[i] == 0) {
+      RetArr[*returnSize] = i;
+      (*returnSize)++;
+    }
+  }
+  RetArr = realloc (RetArr, (*returnSize) * sizeof(int));
+  return RetArr;
+}</code></pre>
 <h2>Reference</h2>
 
 </footer>
