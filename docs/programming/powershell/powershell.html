@@ -630,6 +630,22 @@ get-command -Noun s*
 </code></pre>
 
 
+<hr>
+<h2>Write-Host 和 Write-Output 差異</h2>
+<pre><code class="co1">Write-Host # 只提供stdout功能(只有輸出) </code></pre>
+<pre><code class="co1">Write-Output # 提供stdout和redirection
+
+# example
+$msg = Write-Output "Hello World!"
+$msg
+# output
+# "Hello World!"
+
+# alias "Echo" and "Write"</code></pre>
+
+<hr>
+<h2>Set - Alias</h2>
+
 
 
 <hr>
