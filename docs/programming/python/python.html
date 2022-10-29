@@ -26,11 +26,64 @@ function graph(name){
 <h3>install pip</h3>
 <a href="https://phoenixnap.com/kb/install-numpy" target="_blank">How to install modules.</a>
 <hr>
-<h3>numpy</h3>
+<h3>Numpy</h3>
 <a href="https://numpy.org/doc/stable/reference/generated/numpy.array.html" target="_blank">Create an array.</a>
 <br/>
 <a href="https://numpy.org/doc/stable/reference/generated/numpy.matmul.html" target="_blank">matrix multiplication</a>
 <br/>
+<hr>
+<h3>Matplotlib</h3>
+常用模組<br>
+<pre><code class="co1">import matplotlib.pyplot as plt
+import numpy as np</code></pre>
+<br>
+<br>
+多個figure顯示<br>
+<pre><code class="co1">import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(-3,3, 50)
+
+y1 = 2*x + 1
+
+y2 = x**2
+
+##
+# plt.figure(num=3) -&gt Meaning figure order is third.
+# plt.figure(figsize=(8,5)) -&gt figure scale
+##
+
+
+# First Figure
+plt.figure()
+plt.plot(x, y1)
+
+# Second Figure
+plt.figure()
+plt.plot(x, y2)
+
+# display figure
+plt.show()
+
+# 如果要在同一條線上作圖, 只要figure就行了。
+
+</code></pre>
+
+<br>
+<br>
+plt.plot()的參數
+<pre><code class="co1"># line color
+plt.plot(color='red')
+
+# line width
+plt.plot(linewidth=1.0)
+
+# line style
+plt.plot(linestyle='--')</code></pre>
+
+
+
+
 
 
 
