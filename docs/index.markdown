@@ -22,7 +22,7 @@ layout: default
 
 ### <a href="previous_exam/frame.html" target="_blank">Past Exam</a>
 
-<!-- ### <a href="diary/diary.html" target="_blank">Diary</a> -->
+### <a href="diary/diary.html" target="_blank">Diary</a>
 
 ### <a href="dump/dump.html" target="_blank">Dump</a>
 <!--

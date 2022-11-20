@@ -1,0 +1,257 @@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@ Usepackage @@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\documentclass{beamer}
+
+%\usetheme{Madrid}
+%\usecolortheme{beaver}
+
+% setting margin
+%\usepackage[a4paper,left=0.5in,right=0.5in]{geometry}
+% color package
+\usepackage{xcolor}
+% tablur combine
+\usepackage{multirow}
+
+%--------------------
+%-- define comment --
+%--------------------
+%\long\def\/*#1*/{}
+%__ define comment __
+%____________________
+
+%------------------
+%-- math package --
+%------------------
+\usepackage{amssymb,amsmath,stmaryrd} 
+%------------------
+\usepackage{mathtools}
+%Reference: 
+%http://texdoc.net/texmf-dist/doc/latex/mathtools/mathtools.pdf
+%__ math package __
+%__________________
+
+
+%------------------------------------
+%-- insert {} to multiple folders ---
+%------------------------------------
+\usepackage{graphicx}
+\graphicspath{{./images/},{./image/}} 
+%__ insert {} to multiple folders ___
+%____________________________________
+
+
+%------------------
+%-- use chinese ---
+%------------------
+\usepackage{CJKutf8}
+%__ use chinese ___
+%__________________
+
+%----------------------
+%-- use draw package --
+%----------------------
+\usepackage{tikz}
+%__ use draw package __
+%______________________
+
+
+%----------
+%-- url ---
+%----------
+\usepackage{hyperref}
+% sample
+% \url{http://...}
+% \href{http://...}{text hyperlink}
+%__ url ___
+%__________
+
+%----------------
+%-- underline ---
+%----------------
+\usepackage{soul}
+% using with
+% ul{...}
+%__ underline ___
+%________________
+
+%----------------------
+%-- background color --
+%----------------------
+\usepackage{lipsum}
+\usepackage[most]{tcolorbox}
+\definecolor{bg}{RGB}{255,249,227}
+\definecolor{block_green}{RGB}{203,247,235}
+%__ background color __
+%______________________
+
+%----------
+%-- code --
+%----------
+\usepackage{listings}
+%__ code __
+%__________
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@@@@@@ Enumerate command @@@@@@@@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\makeatletter
+\newcommand\setItemnumber[1]{\setcounter{enum\romannumeral\@enumdepth}{\numexpr#1-1\relax}}
+\makeatother
+
+% command
+%\setItemnumber{5}
+%============== Enumerate command ===============
+%================================================
+
+%--------------------
+% -- Merge pdf ------
+\usepackage{pdfpages}
+
+%\includepdf[pages=-]{paper1}
+
+%--------------------
+%--------------------
+
+%----------------------------------------   multiple columns
+\usepackage{multicol}
+
+% begin{multicols}{2}
+%
+% end{multicols}
+%---------------------
+%------------------------------------------------------------
+%
+%               multiple divide add substract 
+%
+%------------------------------------------------------------
+% add multiple
+\usepackage{xlop}
+
+% \opmul{384}{56}
+% \opadd{1234}{567}
+
+% divide
+\usepackage{polynom}
+
+% \input{longdiv}
+% \longdiv{12345}{13}
+%
+%______________ multiple divide add substract _______________
+%____________________________________________________________
+
+%--------------------   font
+%\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+
+%========= Usepackage =========
+%==============================
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+%@@@@@@@@@ Document @@@@@@@@@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\title{\textbf{TOEIC}}
+\author{\textbf{sjLin}}
+%\date{}
+%------------
+%-- Start ---
+%------------
+\begin{document}
+
+{\fontfamily{lmss}\selectfont
+% bsmi
+\begin{CJK*}{UTF8}{bkai}
+
+\maketitle
+
+%__ Start ___
+%____________
+
+
+
+
+\begin{frame}
+\frametitle{聽力測驗\;-\;100題}
+
+\begin{itemize}
+\item 照片敘述\;-\;播放4個選項\;不會顯示\;6題
+\item 應答問題\;-\;播放3個選項\;不會顯示\;25題
+\item 簡短對話\;-\;每段對話有三小題\;每題3個選項\;會顯示\;13段對話\;39題
+\item 簡短獨白\;-\;每段對話有三小題\;其中有兩段需要搭配圖表  共30題
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{閱讀測驗\;-\;100題}
+\begin{itemize}
+\item 單句填空\;-\; 4個選項完成句子\;30題
+\item 短文填空\;-\; 4篇短文\;每篇有4個空格\;4個選項填空\;16題
+\item 閱讀測驗\;54題
+\begin{itemize}
+\item 單篇文章\;-\;2～4題\;共29題
+\item 雙篇文章\;-\;每兩篇搭配5題\;共10題
+\item 三篇文章\;-\;每三篇搭配5題\;共15題
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\section{閱讀測驗}
+\begin{frame}
+\frametitle{閱讀測驗\;注意}
+單篇文章的最後或倒數第二題難度較難
+\end{frame}
+\begin{frame}
+\frametitle{閱讀測驗\;全域搜尋，局部搜尋}
+\textbf{全域搜尋的題目}\;需要看完整個文章
+\begin{itemize}
+\item What is indicated [mentioned/stated/suggested] in the form?
+\item What can be inferred from the questionnaire?
+\item What is NOT mentioned in the advertisement?
+\item According to the article, which of the following is true?
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{局部搜尋}
+\begin{itemize}
+\item Who is Mary Smith? 職業名稱旁多半會有名字
+\item What time does the store open on Tuesday? 搜尋有時間的部分
+\item Where is the head office located? 搜尋有地點的部分
+\item How much does a one-year subscription cost? 搜尋有寫價格的部分
+\item Why did Leslie Adams contact Mark Kurzweiler? 注意人名， 且有聯絡原因的部分
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{多篇文章}
+多半在單篇就可以找到答案\\
+代表性問題
+\begin{itemize}
+\item 問目的， 大多在標題或開頭幾行\\
+What is the purpose of this notice?
+\item 題目出現NOT， 多用消去法， 可以稍後答題 \\
+What is NOT mentioned in the advertisement?
+\item 問同義詞， 必須從文章前後文去判斷\\
+In paragraph 1, line 1, the word "affluent" is closest in meaning to?
+\item 問具體內容\\
+Who is Ralph Jacobsen?
+
+\item 問文章類型， 正解通常是說明書等手冊\\
+Where would these directions most likely be found?
+\end{itemize}
+\end{frame}
+%------------
+%-- Finish --
+%------------
+\end{CJK*}
+}
+\end{document}
+%__ Finish __
+%____________
+
+%========= Document =========
+%============================
