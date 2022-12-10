@@ -423,7 +423,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=rlRSJNHS40s" target="_blank">我沒有用 沒辦法給你想要的生活</a> <br />
 <a href="https://www.youtube.com/watch?v=limO55Q_2VM" target="_blank">藍</a> <br />
 <a href="https://www.youtube.com/watch?v=v-7ygGWkU8A" target="_blank">yet</a> <br />
-<a href="https://www.youtube.com/watch?v=Krz6paVJMSk" target="_blank">如常(草東</a> - <a href="https://www.youtube.com/watch?v=Krz6paVJMSk" target="_blank">素人</a> <br />
+<a href="https://www.youtube.com/watch?v=Krz6paVJMSk" target="_blank">如常(草東</a> - <a href="https://www.youtube.com/watch?v=XVR9e1xu9_M" target="_blank">素人</a> <br />
 <a href="https://www.youtube.com/watch?v=dKatg043PDU" target="_blank">故障</a> <br />
 <a href="https://www.youtube.com/watch?v=a1dxsIeuDK0" target="_blank">複寫</a> <br />
 <a href="https://www.youtube.com/watch?v=OZ8UHEFmMtE" target="_blank">晚風</a> <br />
