@@ -264,6 +264,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=dTTXwxZ4b6w" target="_blank">太帥了吧</a> <br />
 <a href="https://www.youtube.com/watch?v=wB6fken8thI" target="_blank">輪到我的回合了</a> <br />
 <a href="https://www.youtube.com/watch?v=nyzR6J-D1-0" target="_blank">生命只是物理現象</a> <br />
+<a href="https://www.youtube.com/watch?v=850uLTWXDEk" target="_blank">仁醫</a> <br />
 
 ### Music <img width="5%" height="5%" src="./assets/images/listen.ico" alt="img_music" />
 <a href="https://www.youtube.com/watch?v=oCTGXSK9hWo" target="_blank">Here we are again</a> <br />
