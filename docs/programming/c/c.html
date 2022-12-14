@@ -755,6 +755,25 @@ set cursor position
 <hr>
 <h2>Pointer</h2>
 <a href="https://hackmd.io/@sysprog/c-pointer" target="_blank">pointer</a>
+<hr>
+<h2>讀取的資料是由多個register內容組合出來</h2>
+<pre><code class="co1">
+UINT32 EXA;
+UINT32 EXB;
+UINT32 EXC;
+UINT32 EXD;
+
+CHAR8 ID[(32/8)*4+1] = {0};
+
+*(UINT32 *)ID = EXA;
+*(UINT32 *)ID = EXB;
+*(UINT32 *)ID = EXC;
+*(UINT32 *)ID = EXD;
+
+printf("%s\n", ID); // 前提是整個字串要是滿的
+
+</code></pre>
+
 
 
 
