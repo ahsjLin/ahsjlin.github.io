@@ -31,13 +31,13 @@ gST-&gtConOut-&gtClearScreen(gST-&gtConOut);
 </code></pre>
 <h2>EFI_GUID</h2>
 在const初始化的時候直接HOB_1賦予給HOB_2, 要是兩者都CONST才行 ( 搞了幾個小時 !@#$%^()[=-*
-<pre><code class="co1">EFI_GUID HOB_1
-CONST EFI_GUID HOB_2</code></pre>
+<pre><code class="co1">// Error Example
+EFI_GUID HOB_1;
+CONST EFI_GUID HOB_2 = HOB_1;
 
-
-
-
-
+// Correct Example
+CONST EFI_GUI HOB_3;
+CONST EFI_GUID HOB_4 = HOB_3;</code></pre>
 
 <hr>
 <footer>
