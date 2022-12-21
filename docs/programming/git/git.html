@@ -18,6 +18,9 @@ function graph(name){
 <link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/a/blue.css">
 <link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/table/block.css">
 <link rel="stylesheet" type="text/css" href="https://ahsjlin.github.io/html_head/css/code/code_color.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 
 
 
@@ -26,7 +29,7 @@ function graph(name){
 <h2>基本設定</h2>
 全域設定(雙引號不要少打)
 <pre>
-<code>
+<code class="co1">
 git config --global user.name "your name"
 git config --global user.email "yourEmail@email.com"
 </code>
@@ -35,14 +38,14 @@ git config --global user.email "yourEmail@email.com"
 如果不想每次上傳都要打帳號和token，可以在上傳一次之後，再打上<br />
 <pre>
 「2022/11/13更新」先用credential再打帳號和token(password)
-<code>
+<code class="co1">
 git config --global credential.helper store
 </code>
 </pre>
 可以儲存帳號和token。<br /> <br />
 如果想要在單個repository上傳的人不同，就輸入
 <pre>
-<code>
+<code class="co1">
 git config --local user.name "your name"
 git config --local user.email "yourEmail@email.com"
 </code>
@@ -52,13 +55,13 @@ git config --local user.email "yourEmail@email.com"
 <h2>Git gui</h2>
 How to run the gui mode of git in ubuntu?
 <pre>
-<code>
+<code class="co1">
 git citool
 </code>
 </pre>
 or
 <pre>
-<code>
+<code class="co1">
 gitk
 </code>
 </pre>
@@ -66,7 +69,7 @@ gitk
 <h2>基本git指令</h2>
 <h3>一次加入全部更新的資料</h3>
 <pre>
-<code>// three types
+<code class="co1">// three types
 git add .
 //
 git add *
@@ -75,7 +78,7 @@ git add --all
 </code>
 </pre>
 Except adding files or directory contains
-<pre><code>// -- let git know path
+<pre><code class="co1">// -- let git know path
 // windows
 git add --all -- :!path/to/file :!path/to/*
 
@@ -84,7 +87,7 @@ git add --all -- ':!path/to/file' ':!path/to/*'
 </code></pre>
 <h3>拿掉加入的資料</h3>
 <pre>
-<code>
+<code class="co1">
 git reset filename.extension
 </code>
 </pre>
@@ -156,25 +159,25 @@ push help說明: -u, -f 參數
 <h2>查看log</h2>
 可以看所有的commit
 <pre>
-<code>
+<code class="co1">
 git shortlog
 </code>
 </pre>
 參數: -n 依那個人上傳commit次數排列
 <pre>
-<code>
+<code class="co1">
 git shortlog -n
 </code
 </pre>
 參數: -e 依那個人上傳的email排列
 <pre>
-<code>
+<code class="co1">
 git shortlog -e
 </code
 </pre>
 參數: -s 那個人上傳總數
 <pre>
-<code>
+<code class="co1">
 git shortlog -s
 </code
 </pre>
@@ -184,7 +187,7 @@ git shortlog -s
 <br />
 假設不要顯示最近10個commit的歷史記錄
 <pre>
-<code>
+<code class="co1">
 git log --skip=10
 </code>
 </pre>
@@ -193,7 +196,7 @@ git log --skip=10
 參數可以是指定的日期之後 或 指定日期之前 或 一個範圍<br />
 假設想要知道2022-01-01到2022-04-01的log<br />
 <pre>
-<code>
+<code class="co1">
 git log --since=2022-01-01 --until=2022-04-01
 </code>
 </pre>
@@ -202,7 +205,7 @@ git log --since=2022-01-01 --until=2022-04-01
 大小寫有區別<br />
 假設要查有關Merge的關鍵字
 <pre>
-<code>
+<code class="co1">
 git log --grep="Merge"
 </code>
 </pre>
@@ -220,32 +223,32 @@ tag類似branch，但不同的是，tag是只記錄當下的狀態，不會因�
 tag適用區分版本的節點。<br />
 Lightweight:
 <pre>
-<code>
+<code class="co1">
 git tag tagName
 </code>
 </pre>
 Annotated:
 <pre>
-<code>
+<code class="co1">
 git tag -a tagName -m "tag note here"
 </code>
 </pre>
 可以用checkout去轉成tag的地方
 <pre>
-<code>
+<code class="co1">
 git checkout tagName
 </code>
 </pre>
 刪除tag:
 <pre>
-<code>
+<code class="co1">
 git tag -d tagName
 </code>
 </pre>
 <hr>
 <h3>Rename commit</h3>
 <pre>
-<code>
+<code class="co1">
 git commit --amend -a
 </code>
 </pre>
