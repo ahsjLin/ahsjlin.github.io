@@ -266,7 +266,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=nyzR6J-D1-0" target="_blank">生命只是物理現象</a> <br />
 <a href="https://www.youtube.com/watch?v=850uLTWXDEk" target="_blank">仁醫</a> <br />
 
-### Aspirin <img width="5%" height="5%" src="./assets/images/listen.ico" alt="img_music" />
+### Morphine <img width="5%" height="5%" src="./assets/images/listen.ico" alt="img_music" />
 <a href="https://www.youtube.com/watch?v=oCTGXSK9hWo" target="_blank">Here we are again</a> <br />
 <a href="https://www.youtube.com/watch?v=YhjK6n-EOjY" target="_blank">魚</a> <br />
 <a href="https://www.youtube.com/watch?v=_2-QF_Afh1I" target="_blank">借</a> <br />
