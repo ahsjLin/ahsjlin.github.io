@@ -346,6 +346,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=6Xu-TGL-_qk" target="_blank">愛在夏天</a> <br />
 <a href="https://www.youtube.com/watch?v=51SOZjKuaaQ" target="_blank">你的行李</a> <br />
 <a href="https://www.youtube.com/watch?v=-hiF_FnyC7A" target="_blank">時空錯位</a> <br />
+<a href="https://www.youtube.com/watch?v=IbQLtQZ42CY" target="_blank">蝴蝶之夏</a> <br />
 <a href="https://www.youtube.com/watch?v=iWenK1ys9U4" target="_blank">15樓窗外</a> <br />
 <a href="https://www.youtube.com/watch?v=OeJYC04XKh4" target="_blank">青春禮讚</a> <br />
 <a href="https://www.youtube.com/watch?v=bD12C-mGth4" target="_blank">夜間獨白</a> <br />
