@@ -1,4 +1,4 @@
----
+j---
 layout: default
 ---
 <script src="http://code.jquery.com/jquery-1.4.2.min.js"></script> <script> var x = document.getElementsByClassName("site-footer-credits"); setTimeout(() => { x[0].remove(); }, 10); </script>
@@ -307,6 +307,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=k1YQE3YeMyw" target="_blank">心悶</a> <br />
 <a href="https://www.youtube.com/watch?v=S4JLJVVjevI" target="_blank">捲菸</a> <br />
 <a href="https://www.youtube.com/watch?v=9bmrIlkhzyk" target="_blank">鯊魚</a> <br />
+<a href="https://www.youtube.com/watch?v=4gtBUA_aKMo" target="_blank">推理</a> <br />
 <a href="https://www.youtube.com/watch?v=sgDqHSQRJFg" target="_blank">365节</a> <br />
 <a href="https://www.youtube.com/watch?v=137QoB4tQfc" target="_blank">他媽的</a> <br />
 <a href="https://www.youtube.com/watch?v=pM9zZinLvkA" target="_blank">惡作劇</a> <br />
@@ -346,6 +347,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=cxNWXxBoaHg" target="_blank">雲煙成雨</a> <br />
 <a href="https://www.youtube.com/watch?v=6Xu-TGL-_qk" target="_blank">愛在夏天</a> <br />
 <a href="https://www.youtube.com/watch?v=51SOZjKuaaQ" target="_blank">你的行李</a> <br />
+<a href="https://www.youtube.com/watch?v=JRfp3P6OCDc" target="_blank">獨居男子</a> <br />
 <a href="https://www.youtube.com/watch?v=-hiF_FnyC7A" target="_blank">時空錯位</a> <br />
 <a href="https://www.youtube.com/watch?v=IbQLtQZ42CY" target="_blank">蝴蝶之夏</a> <br />
 <a href="https://www.youtube.com/watch?v=iWenK1ys9U4" target="_blank">15樓窗外</a> <br />
