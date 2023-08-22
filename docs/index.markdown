@@ -242,6 +242,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=N1CgZAncU-M" target="_blank">很幸苦欸</a> <br />
 <a href="https://www.youtube.com/watch?v=dB9UivyaUj8" target="_blank">古代詩人也一堆迷因R</a> <br />
 <a href="https://www.youtube.com/watch?v=UmrN4_S1b2M" target="_blank">10美金Bug >> Debug</a> <br />
+<a href="https://www.youtube.com/watch?v=Ss309TROols" target="_blank">林俊傑去感受飢餓</a> <br />
 
 ### Animal
 <a href="https://www.youtube.com/watch?v=n2OEHlkCXio" target="_blank">不要玩麻雀</a> <br />
