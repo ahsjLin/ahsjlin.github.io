@@ -244,6 +244,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=UmrN4_S1b2M" target="_blank">10美金Bug >> Debug</a> <br />
 <a href="https://www.youtube.com/watch?v=KcRWqSZlrJ8" target="_blank">女權自助餐</a> <br />
 <a href="https://www.youtube.com/watch?v=ozhHrzOXZkI=" target="_blank">I'm King Terry</a> <br />
+<a href="https://www.youtube.com/watch?v=ozhHrzOXZkI=" target="_blank">力宏該學學我們JJ</a> <br />
 
 ### Animal
 <a href="https://www.youtube.com/watch?v=n2OEHlkCXio" target="_blank">不要玩麻雀</a> <br />
