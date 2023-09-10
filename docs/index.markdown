@@ -245,6 +245,7 @@ layout: default
 <a href="https://www.youtube.com/watch?v=KcRWqSZlrJ8" target="_blank">女權自助餐</a> <br />
 <a href="https://www.youtube.com/watch?v=ozhHrzOXZkI" target="_blank">I'm King Terry</a> <br />
 <a href="https://www.youtube.com/watch?v=Ss309TROols" target="_blank">那個Punch lin太屌啦</a> <br />
+<a href="https://www.youtube.com/watch?v=U9bl8A5bc94" target="_blank">哲學系也頭大的哲學問題</a> <br />
 
 ### Animal
 <a href="https://www.youtube.com/watch?v=n2OEHlkCXio" target="_blank">不要玩麻雀</a> <br />
